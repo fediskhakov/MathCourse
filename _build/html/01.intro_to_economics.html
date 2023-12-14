@@ -1,0 +1,769 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>An introduction to economics &#8212; ECON7001</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01.intro_to_economics';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sets, numbers, coordinates, and distances" href="02.sets_numbers_coordinates_distances.html" />
+    <link rel="prev" title="Welcome" href="00.intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Welcome to the course!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/placeholder_logo.png" class="logo__image only-light" alt="ECON7001 - Home"/>
+    <script>document.write(`<img src="_static/placeholder_logo.png" class="logo__image only-dark" alt="ECON7001 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    ECON7001
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00.intro.html">Welcome</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">An introduction to economics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02.sets_numbers_coordinates_distances.html">Sets, numbers, coordinates, and distances</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse/issues/new?title=Issue%20on%20page%20%2F01.intro_to_economics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/01.intro_to_economics.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>An introduction to economics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-and-reading-guide">Sources and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-economics">What is economics?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-components-of-economics">Core components of economics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-presence-of-scarcity">The presence of scarcity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-behaviour-of-an-individual-who-is-faced-with-scarcity">The behaviour of an individual who is faced with scarcity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interaction-of-individuals-that-face-scarcity">The interaction of individuals that face scarcity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-scarcity">What is scarcity?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-budget-constraint">A budget constraint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-time-constraint">A time constraint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-production-possibilities-constraint">A production possibilities constraint</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scarcity-and-choice">Scarcity and choice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choice-and-cost">Choice and cost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opportunity-cost">Opportunity cost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of-constrained-optimisation">The importance of constrained optimisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-interactions-between-individuals">Economic interactions between individuals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circular-flow-diagram-examples">Circular flow diagram examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-three-main-components-of-mathematical-micro-economics">The three main components of mathematical (micro-)economics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optimisation-in-economics-motivational-quotes">Optimisation in economics: motivational quotes</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="an-introduction-to-economics">
+<h1>An introduction to economics<a class="headerlink" href="#an-introduction-to-economics" title="Permalink to this heading">#</a></h1>
+<section id="sources-and-reading-guide">
+<h2>Sources and reading guide<a class="headerlink" href="#sources-and-reading-guide" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Alchian, AA and WR Allen (1972), <em>University economics: Elements of inquiry</em>, Wadsworth Publishing Company, USA: Chapters 1, 2, 3, 4, and 20 (pp. 2–52 and 384–404).</p></li>
+<li><p>Alchian, AA, and WR Allen (1983), <em>Exchange and production: Competition, coordination and control (third edition)</em>, Wadsworth Publishing Company, USA: Chapter 1 (pp. 1–12).</p></li>
+<li><p>Ausubel, LM, and RJ Deneckere (1993), “A generalized theorem of the maximum”, <em>Economic Theory 3(1)</em>, January, pp. 99–107.</p></li>
+<li><p>Case, KE, RC Fair, and SM Oster (2017), <em>Principles of Economics (Twelfth Edition) (Global Edition)</em>, Pearson Education, Italy: Chapters 1 and 2 (pp. 35–75).</p></li>
+<li><p>Frank, RH (2006), <em>Microeconomics and behavior (sixth edition)</em>, McGraw-Hill, USA: Chapter 1 (pp. 3–26).</p></li>
+<li><p>Gans, J, S King, N Byford, and NG Mankiw (2018), <em>Principles of microeconomics (seventh Asia-Pacific edition)</em>, Cengage Learning Australia, China: Chapters 1, 2, and 3 (pp. 4–67).</p></li>
+<li><p>Gravelle, H, and R Rees (2004), <em>Microeconomics (third edition)</em>, Pearson Education, United Kingdom: Chapter 1 (pp. 1–10).</p></li>
+<li><p>Hamermesh, DS (2006), <em>Economics is everywhere (second edition)</em>, McGraw-Hill-Irwin, USA: Chapter 1 (pp. 3–14).</p></li>
+<li><p>Heyne, P (2000), <em>A student’s guide to economics</em>, Edited by JA Eglarz, Intercollegiate Studies Institute (ISI) Books, USA.</p></li>
+<li><p>Heyne, PL, PJ Boettke, and DL Prychitko (2014), <em>The economic way of thinking (thirteenth edition)</em>, The Pearson New International Edition, Pearson Education, USA: Chapters 1 and 2 (pp. 1–44).</p></li>
+<li><p>Hirshleifer, J, A Glazer, and D Hirshleifer (2005), <em>Price theory and applications: Decisions, markets, and information (seventh edition)</em>, Cambridge University Press, USA: Chapter 1 (pp. 2–26).</p></li>
+<li><p>Kunimoto, T (2010), <em>Lecture notes on mathematics for economists</em>, Unpublished, McGill University, Canada, 18 May, Page 6.</p></li>
+<li><p>Malinvaude, E. (1972), <em>Lectures on microeconomic theory</em>, Advanced Textbooks in Economics Volume 2, North Holland Publishing Company, Scotland, Translated by Mrs. A. Silvey: Page 1.</p></li>
+<li><p>Mankiw, NG (2003), <em>Macroeconomics (fifth edition)</em>, Worth Publishers, USA: Chapter 1 (pp. 2-14).</p></li>
+<li><p>Perloff, JM (2014), <em>Microeconomics with calculus (third edition) (global edition)</em>, Pearson Education Limited, USA: Chapter 1 (pp. 23–30).</p></li>
+<li><p>Robbins, LC (1984), <em>An essay on the nature and significance of economic science (third edition)</em>, With a foreword by WJ Baumol, New York University Press, Hong Kong. (The first edition of this book was published in 1932.)</p></li>
+<li><p>Vohra, RV (2005), <em>Advanced mathematical economics</em>, Routledge, The United Kingdom: The Preface only.</p></li>
+<li><p>Waud, RN, P Maxwell and J Bonnici (1989), <em>Macroeconomics (Australian edition)</em>, Harper and Row Publishers, Australia: Chapters 8-10 (pp. 169-249).</p></li>
+</ul>
+</section>
+<section id="what-is-economics">
+<h2>What is economics?<a class="headerlink" href="#what-is-economics" title="Permalink to this heading">#</a></h2>
+<p>Economists try to explain social phenomena in terms of the behaviour of an individual who is confronted with scarcity and the interaction of that individual with other individuals who also face scarcity. This is perhaps best captured by Malinvaude’s definition of economics:</p>
+<blockquote>
+<div><p><em>“· · · economics is the science which studies how scarce resources are employed for the satisfaction of the needs of men living in society: on the one hand, it is interested in the essential operations of production, distribution and consumption of goods, and on the other hand, in the institutions and activities whose object
+it is to facilitate these operations.” (Italics in original.)</em></p>
+</div></blockquote>
+<p>– (From page one of Malinvaude, E. (1972), Lectures on microeconomic theory, Advanced Textbooks in Economics Volume 2, North Holland Publishing Company, Scotland, translated by Mrs. A. Silvey.)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A definition of economics along these lines (that is, one that emphasises the importance of scarcity) can be traced back at least as far as Lord Lionel Robbins’ justifiably famous “essay on the nature and significance of economic science”. Chapter one of this essay contains a very nice discussion of the definition of economics and its history.</p>
+<ul class="simple">
+<li><p>The first edition of this essay was published in 1932.</p></li>
+<li><p>The third edition of this essay was published in 1984.</p></li>
+</ul>
+</div>
+</section>
+<section id="core-components-of-economics">
+<h2>Core components of economics<a class="headerlink" href="#core-components-of-economics" title="Permalink to this heading">#</a></h2>
+<section id="the-presence-of-scarcity">
+<h3>The presence of scarcity<a class="headerlink" href="#the-presence-of-scarcity" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This is the defining feature of economics.</p></li>
+<li><p>It is this feature that distinguishes economics from other social sciences.</p></li>
+<li><p>In the absence of scarcity, economics would either not exist or look very different.</p></li>
+</ul>
+</section>
+<section id="the-behaviour-of-an-individual-who-is-faced-with-scarcity">
+<h3>The behaviour of an individual who is faced with scarcity<a class="headerlink" href="#the-behaviour-of-an-individual-who-is-faced-with-scarcity" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This involves the individual making a choice from a set of available (or feasible) alternatives.</p></li>
+<li><p>The need to make a choice implies the existence of foregone alternatives and hence a cost.</p></li>
+<li><p>The opportunity cost of something is the value of the best of the foregone alternatives.</p></li>
+<li><p>Individual choice is often modelled using “constrained optimisation” techniques.</p></li>
+</ul>
+</section>
+<section id="the-interaction-of-individuals-that-face-scarcity">
+<h3>The interaction of individuals that face scarcity<a class="headerlink" href="#the-interaction-of-individuals-that-face-scarcity" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Economic equilibrium (eg competitive equilibrium and Nash equilibrium).</p></li>
+<li><p>When does a system of equations have at least one solution?</p></li>
+<li><p>How do we find such a solution (if it exists)?</p></li>
+<li><p>How does any such solution vary with changes in the parameters (exogenous variables) of the economic system being studied? (This is known as comparative statics.)</p></li>
+<li><p>Use techniques from linear algebra and (for nonlinear cases) fixed point theorems.</p></li>
+</ul>
+</section>
+<section id="what-is-scarcity">
+<h3>What is scarcity?<a class="headerlink" href="#what-is-scarcity" title="Permalink to this heading">#</a></h3>
+<p>Scarcity basically means that the availability of an item is limited
+relative to the desired uses of that item.  Some important examples include:</p>
+<ul class="simple">
+<li><p>Scarcity of income or wealth (a budget constraint);</p></li>
+<li><p>Scarcity of time (a time constraint);</p></li>
+<li><p>Scarcity of productive resources and technological limitations (a production possibilities constraint).</p></li>
+</ul>
+</section>
+<section id="a-budget-constraint">
+<h3>A budget constraint<a class="headerlink" href="#a-budget-constraint" title="Permalink to this heading">#</a></h3>
+<p>Suppose that there are two goods: Good one and good two. The price per unit of good one is <span class="math notranslate nohighlight">\(p_1\)</span> and the price per unit of good two is <span class="math notranslate nohighlight">\(p_2\)</span>. The quantity of good one purchased by a consumer is <span class="math notranslate nohighlight">\(q_1\)</span> and the quantity of good two purchased by a consumer is <span class="math notranslate nohighlight">\(q_2\)</span>. Note that the consumer’s total expenditure is <span class="math notranslate nohighlight">\(p_1 q_1 + p_2 q_2\)</span>.</p>
+<p>Suppose that the consumer’s income is <span class="math notranslate nohighlight">\(y\)</span>. Ignoring the possibility of borrowing money from somewhere, the consumer cannot spend more than his or her income. This restriction is known as the budget constraint for the consumer. It can be
+represented mathematically by the inequality <span class="math notranslate nohighlight">\(p_1 q_1 + p_2 q_2 \leqslant y\)</span>. We typically also impose non-negativity constraints of the form <span class="math notranslate nohighlight">\(q_1 \geqslant 0\)</span> and <span class="math notranslate nohighlight">\(q_2 \geqslant 0\)</span>.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="_images/budget_line.png"><img alt="_images/budget_line.png" src="_images/budget_line.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The budget line</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/budget_set.png"><img alt="_images/budget_set.png" src="_images/budget_set.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">The budget set</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="a-time-constraint">
+<h3>A time constraint<a class="headerlink" href="#a-time-constraint" title="Permalink to this heading">#</a></h3>
+<p>Suppose that there are activities that can be undertaken: Labour (N) and Leisure (L).  The amount of time spent working is <span class="math notranslate nohighlight">\(t_N\)</span> and the amount of time spent relaxing is <span class="math notranslate nohighlight">\(t_L\)</span>.  Note that the total time that an individual spends on the various activities is <span class="math notranslate nohighlight">\(t_N + t_L\)</span>.</p>
+<p>Suppose that the total time available to the individual is <span class="math notranslate nohighlight">\(T\)</span>. If we assume that every unit of time must be used for some activity, and that only one activity can be undertaken at any point in time, then the individual faces a time constraint of the form <span class="math notranslate nohighlight">\(t_N + t_L = T\)</span>. We typically also impose non-negativity constraints of the form <span class="math notranslate nohighlight">\(t_N \geqslant 0\)</span> and <span class="math notranslate nohighlight">\(t_L \geqslant 0\)</span>.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/time_constraint.png"><img alt="_images/time_constraint.png" src="_images/time_constraint.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">A time constraint</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="a-production-possibilities-constraint">
+<h3>A production possibilities constraint<a class="headerlink" href="#a-production-possibilities-constraint" title="Permalink to this heading">#</a></h3>
+<p>Suppose that there are only two goods that can be produced: Food and housing. Given the current state of technology and the current stock of productive resources, for any given feasible amount of one of the goods that is produced, there is a limit on the maximum amount of the other good that can also be produced.</p>
+<p>If we graph the maximum amount of housing that can be produced for each feasible choice of an amount of food , then the resulting curve is known as the production possibilities frontier (PPF). This frontier can be represented by an equation of the form <span class="math notranslate nohighlight">\(F(Q_F, Q_H) = 0\)</span>, or alternatively by an equation of the form <span class="math notranslate nohighlight">\(Q_H = G(Q_F)\)</span>.</p>
+<p>The PPF, along with the area under it (bounded by the axes because of non-negativity constraints on production), is known as the Production Possibilities Set. This is the set of all possible feasible combinations of food and housing that could be produced under the current technology and resource constraints.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="_images/ppf.png"><img alt="_images/ppf.png" src="_images/ppf.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">A production possibilities constraint</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="scarcity-and-choice">
+<h2>Scarcity and choice<a class="headerlink" href="#scarcity-and-choice" title="Permalink to this heading">#</a></h2>
+<p>The presence of scarcity means that individuals and societies must make choices. When you are required to make a choice between various alternatives, you are implicitly giving up the opportunities that you do not select in order to obtain the opportunity that you do select.</p>
+<p>In the context of a budget constraint, if an individual purchases one more unit of good X , then he must give up <span class="math notranslate nohighlight">\((P_X / P_Y)\)</span> units of good <span class="math notranslate nohighlight">\(Y\)</span>. In the context of a time constraint, if an individual takes an additional hour of leisure, then he must reduce the time that he works by one hour. This means that he will earn less income. As such, he will have to reduce his consumption by some amount. In the context of a production possibilities constraint, if a society that is currently on its PPF decides to produce one more unit of good <span class="math notranslate nohighlight">\(Y\)</span>, then it will need to produce fewer units of good <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<section id="choice-and-cost">
+<h3>Choice and cost<a class="headerlink" href="#choice-and-cost" title="Permalink to this heading">#</a></h3>
+<p>When you select your most preferred option from the available alternatives, you are effectively giving up all of the other options that were available to you. The fact that you must give up alternative outcomes when you choose a particular option means that there is a cost associated with your choice.</p>
+</section>
+<section id="opportunity-cost">
+<h3>Opportunity cost<a class="headerlink" href="#opportunity-cost" title="Permalink to this heading">#</a></h3>
+<p>As we have seen, scarcity requires choices and choices impose costs. In effect, the existence of costs is intimately related to the presence of scarcity. Costs arise because you must give up some option (or options) in order to obtain something that you want.</p>
+<div class="caution admonition">
+<p class="admonition-title">Definition</p>
+<p>The value to you of the best (most preferred by you) of the alternative options that you give up is known as the <strong>opportunity cost</strong> of the option that you select.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In economics, the word “cost” should always be taken to mean “opportunity cost”. Note that this might not be the same as the accounting cost or the monetary cost of something.</p>
+</div>
+</section>
+<section id="the-importance-of-constrained-optimisation">
+<h3>The importance of constrained optimisation<a class="headerlink" href="#the-importance-of-constrained-optimisation" title="Permalink to this heading">#</a></h3>
+<p>Given that scarcity is the defining feature of economics, it should not be surprising that constrained optimisation plays a central role in economic analysis. Indeed, constrained optimisation is very much a “bread and butter” skill for economists. It would difficult to make a living as an economist without some knowledge of constrained optimisation techniques.</p>
+<p>According to Ausubel and Deneckere (1993, p. 99):</p>
+<blockquote>
+<div><p><em>“Almost every economic problem involves the study of an agent’s optimal choice as a function of certain parameters or state variables. For example, demand theory is concerned with an agent’s optimal consumption as a function of prices and income, while capital theory studies the optimal investment rule as a function of the existing capital stock.”</em></p>
+</div></blockquote>
+</section>
+<section id="economic-interactions-between-individuals">
+<h3>Economic interactions between individuals<a class="headerlink" href="#economic-interactions-between-individuals" title="Permalink to this heading">#</a></h3>
+<p>Most people are not hermits. In general, individuals interact with other individuals on at least some occasions. These interactions are an important component of the subject matter of economics. Economics is, after all, one of the “social” sciences.</p>
+<p>The interactions that occur between individuals that are important for economics take many forms and occur in many places. They include interactions in output markets, input markets and various institutions. Some of these interactions can be illustrated in a stylised diagrammatic representation of an economy known as a “circular flow of economic activity” diagram. These “circular flow” diagrams can incorporate varying levels of detail.</p>
+<p>The next four slides contain some examples for a closed economy. While not being a formal economic model itself, a sufficiently detailed circular flow diagram can provide a very useful guide to the construction of a formal general equilibrium economic model of an economy.</p>
+</section>
+<section id="circular-flow-diagram-examples">
+<h3>Circular flow diagram examples<a class="headerlink" href="#circular-flow-diagram-examples" title="Permalink to this heading">#</a></h3>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="_images/circular_flow1.png"><img alt="_images/circular_flow1.png" src="_images/circular_flow1.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Circular flow example 1: households and firms</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="_images/circular_flow2.png"><img alt="_images/circular_flow2.png" src="_images/circular_flow2.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Circular flow example 2: adding government</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="_images/circular_flow3.png"><img alt="_images/circular_flow3.png" src="_images/circular_flow3.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Circular flow example 3: households, firms and financial markets</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="_images/circular_flow4.png"><img alt="_images/circular_flow4.png" src="_images/circular_flow4.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Circular flow example 4: households, firms, financial markets and government</span><a class="headerlink" href="#id8" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="the-three-main-components-of-mathematical-micro-economics">
+<h3>The three main components of mathematical (micro-)economics<a class="headerlink" href="#the-three-main-components-of-mathematical-micro-economics" title="Permalink to this heading">#</a></h3>
+<p>Takashi Kunimoto (Unpublished lecture notes on mathematical economics, 18 May 2010, page 6) notes that, according to Rakesh Vohra (2005, Preface), the three core technical components that underlie much of economic theory are as follows.</p>
+<ul class="simple">
+<li><p>Feasibility questions</p></li>
+<li><p>Optimality questions</p></li>
+<li><p>Equilibrium (fixed-point) questions</p></li>
+</ul>
+<p>This is consistent with the earlier discussion in these lecture slides. One of the main tasks of mathematical (micro-) economics is the provision of techniques to represent, analyse, and answer these three questions (and various other related questions).</p>
+</section>
+<section id="optimisation-in-economics-motivational-quotes">
+<h3>Optimisation in economics: motivational quotes<a class="headerlink" href="#optimisation-in-economics-motivational-quotes" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>“For since the fabric of the universe is most perfect and the work of a most wise Creator, nothing at all takes place in the universe in which some rule of maximum or minimum does not appear.”</p>
+</div></blockquote>
+<p>– Leonhard Euler in the introduction to <em>De Curvis Elasticis</em>, Additamentum 1 to <em>Methodus inveniendi lineas curvas maximi minimive proprietate gaudentes, sive Solutio problematis isoperimetrici latissimo sensu accepti</em> (1744).</p>
+<br>
+<blockquote>
+<div><p>“Constrained-maximization problems are mother’s milk to the well-trained economist.”</p>
+</div></blockquote>
+<p>– From page 88 of Caves, Richard E (1980), “Industrial organisation, corporate strategy and structure”, <em>The Journal of Economic Literature 18(1)</em>, March, pp. 64–92.</p>
+<br>
+<blockquote>
+<div><p>“Almost every economic problem involves the study of an agent’s optimal choice as a function of certain parameters or state variables. For example, demand theory is concerned with an agent’s optimal consumption as a function of prices and income, while capital theory studies the optimal investment rule as a function of the existing capital stock.”</p>
+</div></blockquote>
+<p>– From page 99 of Ausubel, LM, and RJ Deneckere (1993), “A generalized theorem of the maximum”, <em>Economic Theory 3(1)</em>, January, pp. 99–107.</p>
+<br>
+<blockquote>
+<div><p>“The very name of my subject, economics, suggests economizing or maximising. · · · So at the very foundations of our subject maximization is involved.”</p>
+</div></blockquote>
+<p>– From page 249 of Samuelson, (1972), “Maximum principles in analytical economics”, <em>The American Economic Review 62(3)</em>, June, pp. 249–262. This journal article is the text of Paul Samuelson’s Nobel Memorial Prize Lecture from 11 November 1970.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="00.intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02.sets_numbers_coordinates_distances.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Sets, numbers, coordinates, and distances</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-and-reading-guide">Sources and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-economics">What is economics?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-components-of-economics">Core components of economics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-presence-of-scarcity">The presence of scarcity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-behaviour-of-an-individual-who-is-faced-with-scarcity">The behaviour of an individual who is faced with scarcity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interaction-of-individuals-that-face-scarcity">The interaction of individuals that face scarcity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-scarcity">What is scarcity?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-budget-constraint">A budget constraint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-time-constraint">A time constraint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-production-possibilities-constraint">A production possibilities constraint</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scarcity-and-choice">Scarcity and choice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choice-and-cost">Choice and cost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opportunity-cost">Opportunity cost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of-constrained-optimisation">The importance of constrained optimisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-interactions-between-individuals">Economic interactions between individuals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circular-flow-diagram-examples">Circular flow diagram examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-three-main-components-of-mathematical-micro-economics">The three main components of mathematical (micro-)economics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optimisation-in-economics-motivational-quotes">Optimisation in economics: motivational quotes</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fedor Iskhakov
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

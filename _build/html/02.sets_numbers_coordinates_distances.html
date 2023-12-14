@@ -1,0 +1,559 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Sets, numbers, coordinates, and distances &#8212; ECON7001</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02.sets_numbers_coordinates_distances';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="An introduction to economics" href="01.intro_to_economics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Welcome to the course!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/placeholder_logo.png" class="logo__image only-light" alt="ECON7001 - Home"/>
+    <script>document.write(`<img src="_static/placeholder_logo.png" class="logo__image only-dark" alt="ECON7001 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    ECON7001
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00.intro.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01.intro_to_economics.html">An introduction to economics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sets, numbers, coordinates, and distances</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse/issues/new?title=Issue%20on%20page%20%2F02.sets_numbers_coordinates_distances.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/02.sets_numbers_coordinates_distances.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sets, numbers, coordinates, and distances</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-guide">Reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sets-and-elements">Sets and elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#russell-s-paradox">Russell’s Paradox</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sets-numbers-coordinates-and-distances">
+<h1>Sets, numbers, coordinates, and distances<a class="headerlink" href="#sets-numbers-coordinates-and-distances" title="Permalink to this heading">#</a></h1>
+<section id="reading-guide">
+<h2>Reading guide<a class="headerlink" href="#reading-guide" title="Permalink to this heading">#</a></h2>
+<p>Introductory level references:</p>
+<ul class="simple">
+<li><p>Haeussler, EF Jr, and RS Paul (1987), <em>Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition)</em>, Prentice-Hall, USA:Chapter 0.2 (pp. 1–3).</p></li>
+<li><p>Sydsaeter, K, P Hammond, A Strom, and A Carvajal (2016), <em>Essential mathematics for economic analysis (fifth edition)</em>, Pearson Education, Italy: Chapters 1.1, 2.1, and 5.5 (pp. 1–12, 19–22, and 160–163).</p></li>
+<li><p>Shannon, J (1995), <em>Mathematics for business, economics and finance</em>, John Wiley and Sons, Brisbane: Chapter 1.2 and 1,3 (pp.2–11).</p></li>
+</ul>
+<p>More advanced references:</p>
+<ul class="simple">
+<li><p>Banks, J, G Elton and J Strantzen (2009), <em>Topology and analysis: Unit text for MAT3TA (2009 and 2010 edition)</em>, Department of Mathematics and Statistics, La Trobe University, Bundoora, February.</p></li>
+<li><p>Corbae, D, MB Stinchcombe and J Zeman (2009), <em>An introduction to mathematical analysis for economic theory and econometrics</em>, Princeton University Press, USA: Chapters 1 and 2 (pp. 1-71).</p></li>
+<li><p>Halmos, PR (1960), <em>Naive set theory</em>, The University Series in Undergraduate Mathematics, D Van Nostrand Company, USA.</p></li>
+<li><p>Kolmogorov, AN and SV Fomin (1970), <em>Introductory real analysis</em>, Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition), Dover Publications, USA: Chapter 1 (pp. 1-36).</p></li>
+<li><p>Simon, C, and L Blume (1994), <em>Mathematics for economists</em>, WW Norton and Co, USA: Appendix A1 (pp. 847-858).</p></li>
+</ul>
+</section>
+<section id="sets-and-elements">
+<h2>Sets and elements<a class="headerlink" href="#sets-and-elements" title="Permalink to this heading">#</a></h2>
+<p>A set (<span class="math notranslate nohighlight">\(X\)</span>) is a collection of objects. A particular object within a set (<span class="math notranslate nohighlight">\(x\)</span>) is known as an element of that set. The idea that x is an element of X is written in mathematical notation as <span class="math notranslate nohighlight">\(x \in X\)</span>.</p>
+<p>Suppose that there are elements that do not belong to <span class="math notranslate nohighlight">\(X\)</span>. Let <span class="math notranslate nohighlight">\(y\)</span> be one such element. The idea that <span class="math notranslate nohighlight">\(y\)</span> is not an element of <span class="math notranslate nohighlight">\(X\)</span> is written in mathematical
+notation as <span class="math notranslate nohighlight">\(y \notin X\)</span> .</p>
+<p>A set that does not contain any elements is said to be empty. An empty set is denoted by either <span class="math notranslate nohighlight">\(\varnothing\)</span> or <span class="math notranslate nohighlight">\(\{\}\)</span>.</p>
+<p>There are two fundamental ways of defining a particular set:</p>
+<ul class="simple">
+<li><p>The first of these is to exhaustively list all of the elements of the set.</p>
+<ul>
+<li><p>Example 1: <span class="math notranslate nohighlight">\(X = {1, 2, 3}\)</span></p></li>
+<li><p>Example 2: <span class="math notranslate nohighlight">\(Y = {1, 2, 3, · · · , 100}\)</span></p></li>
+<li><p>Example 3: <span class="math notranslate nohighlight">\(\mathbb{N} = {1, 2, 3, · · · }\)</span></p></li>
+</ul>
+</li>
+<li><p>The second of these is to specify one or more properties that characterise all of the elements in the set.</p>
+<ul>
+<li><p>Example 4: <span class="math notranslate nohighlight">\(X = {n \in \mathbb{N} : n &lt; 4}\)</span></p></li>
+<li><p>Example 5: <span class="math notranslate nohighlight">\(Y = {n ∈ \mathbb{N} : n \leqslant 100}\)</span></p></li>
+</ul>
+</li>
+</ul>
+<section id="russell-s-paradox">
+<h3>Russell’s Paradox<a class="headerlink" href="#russell-s-paradox" title="Permalink to this heading">#</a></h3>
+<p>It would be nice if we could always associate some type of set with any particular property that we might consider. In other words, it would be nice if for any property <span class="math notranslate nohighlight">\(\mathbb{A}\)</span>, we could form a set <span class="math notranslate nohighlight">\(\{x \in X : \mathbb{A}(x) \text{ is true}\}\)</span> that consisted of all of the elements that satisfy this property. Unfortunately, this is not the case.</p>
+<p>This was established by Bertrand Russell. He did this by developing the following paradox.</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathbb{A}\)</span> be the property “is a set and does not belong to itself”. Suppose that <span class="math notranslate nohighlight">\(A\)</span> is the set of all sets that possess property <span class="math notranslate nohighlight">\(\mathbb{A}\)</span>. Is <span class="math notranslate nohighlight">\(A \in A\)</span>?</p>
+<p>If <span class="math notranslate nohighlight">\(A \in A\)</span>, then it must be the case that <span class="math notranslate nohighlight">\(A\)</span> possesses property <span class="math notranslate nohighlight">\(\mathbb{A}\)</span>. This means that <span class="math notranslate nohighlight">\(A \notin A\)</span>. Contradiction! Thus it must be the case that <span class="math notranslate nohighlight">\(A \notin A\)</span>. But if <span class="math notranslate nohighlight">\(A\)</span> is a set and <span class="math notranslate nohighlight">\(A \notin A\)</span>, then it clearly possesses property <span class="math notranslate nohighlight">\(\mathbb{A}\)</span>. Thus <span class="math notranslate nohighlight">\(A \in A\)</span>. Contradiction. Thus it must be the case that <span class="math notranslate nohighlight">\(A \in A\)</span>.</p>
+<p>We have a paradox. It cannot be the case that both <span class="math notranslate nohighlight">\(A \in A\)</span> and <span class="math notranslate nohighlight">\(A \notin A\)</span>.</p>
+<p>One possible resolution to Russell’s paradox is to not allow mathematical objects like this particular <span class="math notranslate nohighlight">\(A\)</span> to be considered a set.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01.intro_to_economics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">An introduction to economics</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-guide">Reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sets-and-elements">Sets and elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#russell-s-paradox">Russell’s Paradox</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fedor Iskhakov
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
