@@ -1,0 +1,1064 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Mappings: functions and correspondences &#8212; ECON7001</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '03.mappings_functions_correspondences';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Sets, numbers, coordinates, and distances" href="02.sets_numbers_coordinates_distances.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Welcome to the course!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/placeholder_logo.png" class="logo__image only-light" alt="ECON7001 - Home"/>
+    <script>document.write(`<img src="_static/placeholder_logo.png" class="logo__image only-dark" alt="ECON7001 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    EMET7001
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00.intro.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01.intro_to_economics.html">An introduction to economics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02.sets_numbers_coordinates_distances.html">Sets, numbers, coordinates, and distances</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Mappings: functions and correspondences</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse/issues/new?title=Issue%20on%20page%20%2F03.mappings_functions_correspondences.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/03.mappings_functions_correspondences.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mappings: functions and correspondences</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-guide">Reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mappings">Mappings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#images">Images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-images">Pre-images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-mappings">Types of mappings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#into-and-onto">Into and onto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#composite-functions">Composite functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-to-one-functions">One-to-one functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-decreasing-and-strictly-increasing-functions">Non-decreasing and strictly increasing functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-application-utility-functions-are-not-unique">Economic application: utility functions are not unique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-a-cobb-douglas-utility-function">Example: A Cobb-Douglas utility function</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-types-of-functions">Some types of functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-functions">Polynomial functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Examples</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affine-functions-and-linear-functions">Affine functions and linear functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-functions">Exponential functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#popular-choices-of-base">Popular choices of base</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-arithmetic">Exponential arithmetic</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-functions">Power functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#power-function-arithmetic">Power function arithmetic</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-rectangular-hyperbola">A rectangular hyperbola</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithms">Logarithms</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-or-naperian-logarithms">Natural (or Naperian) logarithms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithmic-arithmetic">Logarithmic arithmetic</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-functions">Rational functions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="mappings-functions-and-correspondences">
+<h1>Mappings: functions and correspondences<a class="headerlink" href="#mappings-functions-and-correspondences" title="Permalink to this heading">#</a></h1>
+<section id="reading-guide">
+<h2>Reading guide<a class="headerlink" href="#reading-guide" title="Permalink to this heading">#</a></h2>
+<p>Introductory mathematical economics references:</p>
+<ul class="simple">
+<li><p>Haeussler, EF Jr, and RS Paul (1987), <em>Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition)</em>, Prentice-Hall, USA:Chapters 0, 3, 4, 5, and 17.1.</p></li>
+<li><p>Sydsaeter, K, P Hammond, A Strom, and A Carvajal (2016), <em>Essential mathematics for economic analysis (fifth edition)</em>, Pearson Education, Italy: Chapters 2, 4, 5, 9.6 (pp. 350-351 only), 11.1, and 11.5.</p></li>
+<li><p>Shannon, J (1995), <em>Mathematics for business, economics and finance</em>, John Wiley and Sons, Brisbane: Chapters 1, 2, and 6.</p></li>
+</ul>
+<p>Advanced high school references:</p>
+<ul class="simple">
+<li><p>Coroneos, J. (Undated a), <em>A Higher School Certificate Course in Mathematics: Year Eleven, Three Unit Course</em>, Coroneos Publications, Australia: Chapters 1, 2, 4, and 7.</p></li>
+<li><p>Coroneos, J. (Undated b), <em>A Higher School Certificate Course in Mathematics: Years Eleven and Twelve, Revised Four Unit Course (for Mathematics Extension Two)</em>, Coroneos Publications, Australia: Chapters 1 and 2.</p></li>
+</ul>
+<p>Introductory mathematics references:</p>
+<ul class="simple">
+<li><p>Adams, RA, and C Essex (2018), <em>Calculus: A complete course (ninth edition)</em> Pearson, Canada: Chapters P, 3, and 11.</p></li>
+<li><p>Kline, M (1967), <em>Calculus: An intuitive and physical approach (second edition)</em>, The 1998 Dover republication of the original John Wiley and Sons second edition, Dover Publications, USA: pp. 419–432.</p></li>
+<li><p>Silverman, RA (1969), <em>Modern calculus and analytic geometry</em>, The 2002 Dover corrected republication of the original 1969 Macmillan Company edition, Dover Publications, USA: Chapters 7 and 14.</p></li>
+<li><p>Spivak, M (2006), <em>Calculus (third edition)</em>, Cambridge University Press, The United Kingdom: Chapters 1, 2, 3, 4, 16, 18, and 19.</p></li>
+<li><p>Thomas, GB Jr, and RL Finney (1996), <em>Calculus and analytic geometry (ninth edition)</em>, The 1998 corrected reprint version, Addison-Wesley Publishing Company, USA: Chapters P, 6, and 12.</p></li>
+</ul>
+<p>More advanced references:</p>
+<ul class="simple">
+<li><p>Banks, J, G Elton and J Strantzen (2009), <em>Topology and analysis: Unit text for MAT3TA (2009 and 2010 edition)</em>, Department of Mathematics and Statistics, La Trobe University, Bundoora, February.</p></li>
+<li><p>Corbae, D, MB Stinchcombe and J Zeman (2009), <em>An introduction to mathematical analysis for economic theory and econometrics</em>, Princeton University Press, USA: Chapter 2 (pp. 15-71).</p></li>
+<li><p>Kolmogorov, AN and SV Fomin (1970), <em>Introductory real analysis</em>, Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition), Dover Publications, USA: Chapter 1 (pp. 1-36).</p></li>
+<li><p>Simon, C, and L Blume (1994), <em>Mathematics for economists</em>, WW Norton and Co, USA: Chapters 2 and 13 (pp. 10-38 and 273-299).</p></li>
+</ul>
+<p>Websites:</p>
+<p>The following websites contain discussions of the concept of relatively prime, or co-prime, numbers and polynomials. This is relevant to the topic of rational functions and partial fractions.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.mathsisfun.com/definitions/relatively-prime.html">https://www.mathsisfun.com/definitions/relatively-prime.html</a></p></li>
+<li><p><a class="reference external" href="http://mathworld.wolfram.com/RelativelyPrime.html">http://mathworld.wolfram.com/RelativelyPrime.html</a></p></li>
+<li><p><a class="reference external" href="https://www.varsitytutors.com/hotmath/hotmath_help/topics/relatively-prime">https://www.varsitytutors.com/hotmath/hotmath_help/topics/relatively-prime</a></p></li>
+</ul>
+</section>
+<section id="mappings">
+<h2>Mappings<a class="headerlink" href="#mappings" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> be two sets. A rule <span class="math notranslate nohighlight">\(f\)</span> that assigns one or more elements of <span class="math notranslate nohighlight">\(Y\)</span> to each element of <span class="math notranslate nohighlight">\(X\)</span> is called a <strong>mapping</strong> from <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(Y\)</span>. It is denoted by <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span>.</p>
+<p>The set <span class="math notranslate nohighlight">\(X\)</span> is known as the <strong>domain</strong> of the mapping <span class="math notranslate nohighlight">\(f\)</span>. The mapping must be defined for every element of <span class="math notranslate nohighlight">\(X\)</span>. This means that <span class="math notranslate nohighlight">\(x \in X \implies f(x) \in Y\)</span>.</p>
+<p>The set <span class="math notranslate nohighlight">\(Y\)</span> is known as the <strong>co-domain</strong> of the mapping <span class="math notranslate nohighlight">\(f\)</span>. Mappings are not required to generate <span class="math notranslate nohighlight">\(Y\)</span> from <span class="math notranslate nohighlight">\(X\)</span>. This means that there might exist one or more elements <span class="math notranslate nohighlight">\(y \in Y\)</span> such that <span class="math notranslate nohighlight">\(y \ne f(x)\)</span> for any <span class="math notranslate nohighlight">\(x \in X\)</span>.</p>
+<p>The set of values <span class="math notranslate nohighlight">\(y \in Y\)</span> that can be generated from <span class="math notranslate nohighlight">\(X\)</span> by the function <span class="math notranslate nohighlight">\(f\)</span> is known as the <strong>image</strong> of <span class="math notranslate nohighlight">\(X\)</span> under <span class="math notranslate nohighlight">\(f\)</span>. Sometimes the image of <span class="math notranslate nohighlight">\(X\)</span> under <span class="math notranslate nohighlight">\(f\)</span> is referred to as the <strong>range</strong> of <span class="math notranslate nohighlight">\(f\)</span>. We will denote the range of <span class="math notranslate nohighlight">\(f\)</span> by <span class="math notranslate nohighlight">\(f(X)\)</span>.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/mapping_diagram.png"><img alt="_images/mapping_diagram.png" src="_images/mapping_diagram.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Diagrammatic representation of a mapping</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="images">
+<h3>Images<a class="headerlink" href="#images" title="Permalink to this heading">#</a></h3>
+<p>Consider a mapping <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span>.
+The <em>image of the point</em> <span class="math notranslate nohighlight">\(x \in X\)</span> under the mapping <span class="math notranslate nohighlight">\(f\)</span> is the point, or collection of points, given by <span class="math notranslate nohighlight">\(f(x) \in Y\)</span>.</p>
+<p>The <em>image of the set</em> <span class="math notranslate nohighlight">\(A \subseteq X\)</span> under the mapping <span class="math notranslate nohighlight">\(f\)</span> is the set <span class="math notranslate nohighlight">\(f(A) = \{f(x) \in Y : x \in A\}\)</span>.</p>
+<ul class="simple">
+<li><p>Clearly <span class="math notranslate nohighlight">\(f(A) \subseteq Y\)</span>.</p></li>
+</ul>
+<p>The <em>image of the domain</em> (<span class="math notranslate nohighlight">\(X\)</span>) under <span class="math notranslate nohighlight">\(f\)</span> is the set <span class="math notranslate nohighlight">\(f(X) = \{f(x) \in Y : x \in X \}\)</span>.</p>
+<ul class="simple">
+<li><p>Clearly <span class="math notranslate nohighlight">\(f(X) \subseteq Y\)</span>.</p></li>
+</ul>
+<p>Note that if <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span> and <span class="math notranslate nohighlight">\(A \subseteq X\)</span>, then <span class="math notranslate nohighlight">\(f(A) \subseteq f(X) \subseteq Y\)</span>.</p>
+</section>
+<section id="pre-images">
+<h3>Pre-images<a class="headerlink" href="#pre-images" title="Permalink to this heading">#</a></h3>
+<p>Consider a mapping <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span>.</p>
+<p>The <strong>pre-image</strong> <em>of the point</em> <span class="math notranslate nohighlight">\(y \in Y\)</span> under the mapping <span class="math notranslate nohighlight">\(f\)</span> is the point, or collection of points, in <span class="math notranslate nohighlight">\(X\)</span> for which <span class="math notranslate nohighlight">\(y = f(x)\)</span>.</p>
+<p>It is possible for a point <span class="math notranslate nohighlight">\(y \in Y\)</span> to have either</p>
+<ul class="simple">
+<li><p>no pre-image</p></li>
+<li><p>a unique pre-image, or</p></li>
+<li><p>multiple pre-images.
+If a point <span class="math notranslate nohighlight">\(y \in Y\)</span> has a unique pre-image under the mapping <span class="math notranslate nohighlight">\(f\)</span>, then it is denoted by <span class="math notranslate nohighlight">\(f^{−1}(y)\)</span>.</p></li>
+</ul>
+<p>The <em>pre-image of the set</em> <span class="math notranslate nohighlight">\(B \subseteq Y\)</span> under <span class="math notranslate nohighlight">\(f\)</span> is the set <span class="math notranslate nohighlight">\(f^{−1}(B) = \{x \in X : f(x) \in B\}\)</span>.</p>
+<p>Recall that it is possible for there to exist <span class="math notranslate nohighlight">\(y \in Y\)</span> such that <span class="math notranslate nohighlight">\(y \ne f(x)\)</span> for any <span class="math notranslate nohighlight">\(x \in X\)</span>. If the set B consists entirely of such points, then <span class="math notranslate nohighlight">\(f^{−1}(B) = \varnothing\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(f(x) \in Y\)</span> for all <span class="math notranslate nohighlight">\(x \in X\)</span>, it must be the case that <span class="math notranslate nohighlight">\(f^{-1}(Y) = X\)</span>.</p>
+</section>
+<section id="types-of-mappings">
+<h3>Types of mappings<a class="headerlink" href="#types-of-mappings" title="Permalink to this heading">#</a></h3>
+<p>There are four basic types of mappings. These are as follows.</p>
+<ul class="simple">
+<li><p>A one-to-one mapping:</p>
+<ul>
+<li><p>Each point in <span class="math notranslate nohighlight">\(X\)</span> has a unique image in <span class="math notranslate nohighlight">\(Y\)</span>; and</p></li>
+<li><p>Each point in <span class="math notranslate nohighlight">\(Y\)</span> has either a unique pre-image in <span class="math notranslate nohighlight">\(X\)</span> or no pre-image in <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ul>
+</li>
+<li><p>A many-to-one mapping:</p>
+<ul>
+<li><p>Each point in <span class="math notranslate nohighlight">\(X\)</span> has a unique image in <span class="math notranslate nohighlight">\(Y\)</span>; but</p></li>
+<li><p>At least one point in <span class="math notranslate nohighlight">\(Y\)</span> has multiple pre-images in <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ul>
+</li>
+<li><p>A one-to-many mapping:</p>
+<ul>
+<li><p>At least one point in <span class="math notranslate nohighlight">\(X\)</span> has multiple images in <span class="math notranslate nohighlight">\(Y\)</span>; but</p></li>
+<li><p>Each point in <span class="math notranslate nohighlight">\(Y\)</span> has either a unique pre-image in <span class="math notranslate nohighlight">\(X\)</span> or no pre-image in <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ul>
+</li>
+<li><p>A many-to-many mapping:</p>
+<ul>
+<li><p>At least one point in <span class="math notranslate nohighlight">\(X\)</span> has multiple images in <span class="math notranslate nohighlight">\(Y\)</span>; and</p></li>
+<li><p>At least one point in <span class="math notranslate nohighlight">\(Y\)</span> has multiple pre-images in <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<p>Mappings whose domain points all have unique images are known as
+<strong>functions</strong>. In other words, one-to-one mappings and many-to-one mappings are
+known as functions.</p>
+<p>A one-to-one function <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span> is called an <strong>injection</strong>. The pre-image of a one-to-one function is known as its <strong>inverse</strong>.</p>
+<p>Mappings that have at least one domain point with multiple images are known as <strong>correspondences</strong>. In other words, one-to-many mappings and many-to-many mappings are known as correspondences.</p>
+<p>Note that we could express a correspondence of the form <span class="math notranslate nohighlight">\(f : X \rightarrow Y\)</span> as a function of the form <span class="math notranslate nohighlight">\(g: X \rightarrow 2^Y\)</span>.</p>
+</section>
+<section id="into-and-onto">
+<h3>Into and onto<a class="headerlink" href="#into-and-onto" title="Permalink to this heading">#</a></h3>
+<p>Consider a mapping <span class="math notranslate nohighlight">\(f : X \rightarrow Y\)</span>. Clearly we must have <span class="math notranslate nohighlight">\(f(X) \subseteq Y\)</span>.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(f(X ) \subset Y\)</span>, so that <span class="math notranslate nohighlight">\(f(X) \ne Y\)</span>, we say that <span class="math notranslate nohighlight">\(f\)</span> maps <span class="math notranslate nohighlight">\(X\)</span> “into” <span class="math notranslate nohighlight">\(Y\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(X) = Y\)</span>, we say that <span class="math notranslate nohighlight">\(f\)</span> maps <span class="math notranslate nohighlight">\(X\)</span> “onto” <span class="math notranslate nohighlight">\(Y\)</span>.</p>
+<ul>
+<li><p>If <span class="math notranslate nohighlight">\(f(X) = Y\)</span> and <span class="math notranslate nohighlight">\(f\)</span> is a function, then we call <span class="math notranslate nohighlight">\(f\)</span> a <strong>surjection</strong>.</p></li>
+</ul>
+</li>
+</ul>
+<p>A mapping that is both an injection and a surjection is called a <strong>bijection</strong>. In other words, a function that is <em>both one-to-one and onto</em> is called a
+bijection.</p>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
+<p>Consider the mapping <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x) = x\)</span>. This is sometimes called the identity map. Note that <span class="math notranslate nohighlight">\(f\)</span> is both onto and one-to-one. This means that <span class="math notranslate nohighlight">\(f\)</span> is a bijection. It also means that the pre-image of <span class="math notranslate nohighlight">\(f\)</span> is an inverse function.</p>
+<p>Consider the mapping <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x) = x^2\)</span>. Note that <span class="math notranslate nohighlight">\(f\)</span> is into, but not onto, because <span class="math notranslate nohighlight">\(f^{−1}(R_{−−}) = \varnothing\)</span>, where <span class="math notranslate nohighlight">\(\mathbb{R}_{−−} = \{x \in \mathbb{R} : x &lt; 0\}\)</span>.</p>
+<p>Note also that f is many-to-one, and hence not one-to-one, because <span class="math notranslate nohighlight">\(2 \in \mathbb{R}, (−2) \in \mathbb{R}, 2 \ne (−2)\)</span>, and both <span class="math notranslate nohighlight">\(2^2 = 4\)</span> and <span class="math notranslate nohighlight">\((−2)^2 = 4\)</span>.
+This means that f is neither an injection nor a surjection. Thus it cannot be a bijection. It also means that the pre-image of f is not an inverse function.</p>
+</section>
+<section id="composite-functions">
+<h3>Composite functions<a class="headerlink" href="#composite-functions" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f : X \rightarrow Y\)</span> be a function of the form <span class="math notranslate nohighlight">\(y = f(x)\)</span>.
+Let <span class="math notranslate nohighlight">\(g : Y \rightarrow Z\)</span> be a function of the form <span class="math notranslate nohighlight">\(z = g(y)\)</span>.
+The composite function <span class="math notranslate nohighlight">\(h = g \circ f\)</span> is defined by <span class="math notranslate nohighlight">\(h(x) = g(f(x))\)</span>.
+The composite function <span class="math notranslate nohighlight">\(h = g \circ f\)</span> is a mapping <span class="math notranslate nohighlight">\(h : X \rightarrow Z\)</span> of the
+form <span class="math notranslate nohighlight">\(z = h(x)\)</span>.</p>
+<p>Example:
+Let <span class="math notranslate nohighlight">\(f : \mathbb{R}^2_{++} \rightarrow \mathbb{R}_{++}\)</span> be defined by
+<span class="math notranslate nohighlight">\(f(x_1, x_2) = x_1^\alpha \; x_2^{(1 − \alpha)}\)</span>
+for some fixed <span class="math notranslate nohighlight">\(\alpha \in (0, 1)\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(g : \mathbb{R}_{++} \rightarrow \mathbb{R}\)</span> be defined by <span class="math notranslate nohighlight">\(g(x) = ln(x)\)</span>.</p>
+<p>Then the composite function <span class="math notranslate nohighlight">\(h = g \circ f\)</span> is a mapping <span class="math notranslate nohighlight">\(h: \mathbb{R}^2_{++} \rightarrow \mathbb{R}\)</span> that is defined by <span class="math notranslate nohighlight">\(h(x_1, x_2) = g(f(x_1, x_2)) = ln(x_1^\alpha \; x_2^{(1 − \alpha)}) = \alpha \; ln(x_1) + (1 − \alpha) \; ln(x_2)\)</span></p>
+</section>
+<section id="one-to-one-functions">
+<h3>One-to-one functions<a class="headerlink" href="#one-to-one-functions" title="Permalink to this heading">#</a></h3>
+<p>A function <span class="math notranslate nohighlight">\(f : X \rightarrow Y\)</span> is <strong>one-to-one</strong> if</p>
+<div class="math notranslate nohighlight">
+\[x \ne y \iff f(x) \ne f(y)\]</div>
+<p>The contra-positive version of this condition is that</p>
+<div class="math notranslate nohighlight">
+\[f(x) = f(y) \iff x = y\]</div>
+<p>Examples:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f : \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x ) = x\)</span> is a one-to-one function.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f : \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x ) = x^2\)</span> is not a one-to-one function.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f : \mathbb{R}_+ \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> is a one-to-one function.</p></li>
+</ul>
+</section>
+<section id="non-decreasing-and-strictly-increasing-functions">
+<h3>Non-decreasing and strictly increasing functions<a class="headerlink" href="#non-decreasing-and-strictly-increasing-functions" title="Permalink to this heading">#</a></h3>
+<p>A function <span class="math notranslate nohighlight">\(f : X \rightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}\)</span>, is said to be a <strong>non-decreasing</strong> function if</p>
+<div class="math notranslate nohighlight">
+\[x \leqslant y \iff f(x) \leqslant f(y)\]</div>
+<p>A function <span class="math notranslate nohighlight">\(f : X \rightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}\)</span>, is said to be a <strong>strictly increasing</strong> function if both</p>
+<ul class="simple">
+<li><p>(a) <span class="math notranslate nohighlight">\(x = y \iff f(x) = f(y)\)</span>; and</p></li>
+<li><p>(b) <span class="math notranslate nohighlight">\(x &lt; y \iff f(x) &lt; f(y)\)</span>.</p></li>
+</ul>
+<p>Note the following:</p>
+<ul class="simple">
+<li><p>A strictly increasing function is also a one-to-one function.</p></li>
+<li><p>There are some one-to-one functions that are not strictly increasing.</p></li>
+<li><p>A strictly increasing function is also a non-decreasing function.</p></li>
+<li><p>There are some non-decreasing functions that are not strictly increasing.</p></li>
+</ul>
+</section>
+<section id="economic-application-utility-functions-are-not-unique">
+<h3>Economic application: utility functions are not unique<a class="headerlink" href="#economic-application-utility-functions-are-not-unique" title="Permalink to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(U : X \rightarrow \mathbb{R}\)</span> is a utility function that represents the weak preference relation <span class="math notranslate nohighlight">\(\succsim\)</span>. This means that <span class="math notranslate nohighlight">\(x \succsim y \iff U(x) \geqslant U(y)\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> be a strictly increasing function. Consider the composite function <span class="math notranslate nohighlight">\(V = f \circ U\)</span>. It can be shown that <span class="math notranslate nohighlight">\(V\)</span> is also a utility function that represents the weak preference relation <span class="math notranslate nohighlight">\(\succsim\)</span>. In other words, it can be shown that <span class="math notranslate nohighlight">\(x \succsim y \iff V(x) \geqslant V(y)\)</span>.</p>
+</section>
+<section id="example-a-cobb-douglas-utility-function">
+<h3>Example: A Cobb-Douglas utility function<a class="headerlink" href="#example-a-cobb-douglas-utility-function" title="Permalink to this heading">#</a></h3>
+<p>Consider a consumer whose preferences over bundles of strictly positive amounts of each of two commodities can be represented by a utility function <span class="math notranslate nohighlight">\(U : \mathbb{R}^2_{++} \rightarrow \mathbb{R}_{++}\)</span> of the form</p>
+<div class="math notranslate nohighlight">
+\[U(x_1, x_2) = Ax_1^\alpha x_2^\beta\]</div>
+<p>where <span class="math notranslate nohighlight">\(A &gt; 0, \alpha &gt; 0\)</span>, and <span class="math notranslate nohighlight">\(\beta &gt; 0\)</span>.</p>
+<p>Such preferences are known as Cobb-Douglas preferences.</p>
+<ul class="simple">
+<li><p>The function <span class="math notranslate nohighlight">\(f: \mathbb{R}_{++} \rightarrow \mathbb{R}_{++}\)</span> defined by <span class="math notranslate nohighlight">\(f(x) = \left( \frac{1}{A} \right)x\)</span> is strictly increasing. Thus we know that another utility function that represents this consumer’s preferences is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[V(x_1, x_2) = f(U((x_1, x_2)) = \left( \frac{1}{A} \right) (Ax_1^\alpha x_2^\beta) 
+= x_1^\alpha x_2^\beta\]</div>
+<ul class="simple">
+<li><p>The function <span class="math notranslate nohighlight">\(g: \mathbb{R}_{++} \rightarrow \mathbb{R}_{++}\)</span> defined by <span class="math notranslate nohighlight">\(g(x) = x^{\frac{1}{(\alpha + \beta)}}\)</span> is strictly increasing. (If any relevant surd expression can be either positive or negative, then we will assume that the positive option is chosen throughout this Cobb-Douglas preferences example.) Thus we know that another utility function that represents this consumer’s preferences is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[W(x_1, x_2) = g(V((x_1, x_2)) = (x_1^\alpha x_2^\beta)^{\frac{1}{(\alpha + \beta)}}
+= x_1^\gamma x_2^{(1 - \gamma)}\]</div>
+<p>where <span class="math notranslate nohighlight">\( \gamma = \frac{\alpha}{\alpha + \beta} \in (0, 1)\)</span>.</p>
+<ul class="simple">
+<li><p>The function <span class="math notranslate nohighlight">\(k: \mathbb{R}_{++} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(k(x) = ln(x )\)</span> is strictly increasing. Thus we know that another utility function that represents this consumer’s preferences is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[Z(x_1, x_2) = k(W((x_1, x_2)) = ln (x_1^\gamma x_2^{(1 - \gamma)})\]</div>
+<div class="math notranslate nohighlight">
+\[= \gamma \; ln(x_1) + (1 − \gamma) \; ln(x_2) \]</div>
+</section>
+</section>
+<section id="some-types-of-functions">
+<h2>Some types of functions<a class="headerlink" href="#some-types-of-functions" title="Permalink to this heading">#</a></h2>
+<p>Some types of univariate functions include the following:</p>
+<ul class="simple">
+<li><p>Polynomial functions</p>
+<ul>
+<li><p>These include constant functions, linear (and affine) functions, quadratic functions, and some power functions as special cases.</p></li>
+</ul>
+</li>
+<li><p>Exponentional functions</p></li>
+<li><p>Power functions</p></li>
+<li><p>Logarithmic functions</p></li>
+<li><p>Trigonometric functions</p>
+<ul>
+<li><p>We are unlikely to have enough time to cover trigonometric functions in this course.
+There are also multivariate versions of these types of functions.</p></li>
+</ul>
+</li>
+</ul>
+<section id="polynomial-functions">
+<h3>Polynomial functions<a class="headerlink" href="#polynomial-functions" title="Permalink to this heading">#</a></h3>
+<p>A <strong>polynomial function</strong> (of one variable) is a function of the form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+f(x) &amp;= \sum_{i = 0}^n a_i x^i
+\\
+&amp;= a_n x^n + a_{n − 1} x^{n − 1} + · · · + a_1 x^1 + a_0 x^0
+\\
+&amp;= a_n x^n + a_{n − 1} x^{n − 1} + · · · + a_1 x + a_0
+\end{align*}
+\end{split}\]</div>
+<p>In order to distinguish between different types of polynomials, we will typically assume that the coefficient on the term with the highest power of the variable <span class="math notranslate nohighlight">\(x\)</span> is non-zero. The only exception is the case in which this term involves <span class="math notranslate nohighlight">\(x^0 = 1\)</span>, in which case we will allow both <span class="math notranslate nohighlight">\(a_0 \ne 0\)</span> and <span class="math notranslate nohighlight">\(a_0 = 0\)</span>.</p>
+<section id="id1">
+<h4>Examples<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>A constant (degree zero) polynomial (<span class="math notranslate nohighlight">\(a_0 \ne 0\)</span> or <span class="math notranslate nohighlight">\(a_0 = 0\)</span>):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f(x) = a_0
+\]</div>
+<ul class="simple">
+<li><p>A linear (degree one) polynomial (<span class="math notranslate nohighlight">\(a_1 \ne 0\)</span>):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f(x) = a_1 x + a_0
+\]</div>
+<p>It is sometimes useful to distinguish between linear functions and affine functions. See below for details.</p>
+<ul class="simple">
+<li><p>A quadratic (degree two) polynomial (<span class="math notranslate nohighlight">\(a_2 \ne 0\)</span>):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f(x) = a_2 x^2 + a_1 x + a_0
+\]</div>
+<ul class="simple">
+<li><p>A cubic (degree three) polynomial (<span class="math notranslate nohighlight">\(a_3 \ne 0\)</span>):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f(x) = a_3 x^3 + a_2 x^2 + a_1 x + a_0
+\]</div>
+</section>
+</section>
+<section id="affine-functions-and-linear-functions">
+<h3>Affine functions and linear functions<a class="headerlink" href="#affine-functions-and-linear-functions" title="Permalink to this heading">#</a></h3>
+<p>We often loosely speak about a linear function of one variable being a function of the form <span class="math notranslate nohighlight">\(f(x) = a_1 x + a_0\)</span>, where <span class="math notranslate nohighlight">\(a_0 \in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(a_1 \in \mathbb{R} \setminus \{0\}\)</span> are fixed parameters, and <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> is the single variable.</p>
+<p>Sometimes, we want to be more precise than this in order to identify the special case in which <span class="math notranslate nohighlight">\(a_0 = 0\)</span>. In such cases, we call a function of the general form <span class="math notranslate nohighlight">\(f(x) = a_1 x + a_0\)</span>, in which <span class="math notranslate nohighlight">\(a_0 \in \mathbb{R}\)</span>, an <strong>affine function</strong>; and a function of the specific form <span class="math notranslate nohighlight">\(f(x) = a_1 x\)</span>, in which <span class="math notranslate nohighlight">\(a_0 = 0\)</span>, a <strong>linear function</strong>.</p>
+<p>Using this more precise terminology, the family of linear functions is a proper subset of the family of affine functions. Note that we assume that <span class="math notranslate nohighlight">\(a_1 \in \mathbb{R} \setminus \{0\}\)</span> in both cases.</p>
+</section>
+<section id="exponential-functions">
+<h3>Exponential functions<a class="headerlink" href="#exponential-functions" title="Permalink to this heading">#</a></h3>
+<p>An <strong>exponential function</strong> is a non-linear function in which the independent variable appears as an exponent.</p>
+<p>An example of an exponential function is</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = Ca^x
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is a fixed parameter (called the <strong>coefficient</strong>), <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span> is a fixed parameter (called the <strong>base</strong>), and <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> is an independent variable (called the <strong>exponent</strong>).</p>
+<ul class="simple">
+<li><p>Note that if <span class="math notranslate nohighlight">\(a = 0\)</span>, then <span class="math notranslate nohighlight">\(f(x)\)</span> is only defined for <span class="math notranslate nohighlight">\(x &gt; 0\)</span>.</p></li>
+<li><p>Note also that if <span class="math notranslate nohighlight">\(a &lt; 0\)</span>, then sometimes <span class="math notranslate nohighlight">\(f(x) \notin \mathbb{R}\)</span>. An example of this is the case when <span class="math notranslate nohighlight">\(C = 1, a = (−1)\)</span> and <span class="math notranslate nohighlight">\(x = \frac{1}{2}\)</span>. In this case, we have:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f(\frac{1}{2}) = (1)(−1)^{\frac{1}{2}} = \sqrt{−1} = i \notin \mathbb{R}
+\]</div>
+<section id="popular-choices-of-base">
+<h4>Popular choices of base<a class="headerlink" href="#popular-choices-of-base" title="Permalink to this heading">#</a></h4>
+<p>Two popular choices of base for exponential functions are <span class="math notranslate nohighlight">\(a = 10\)</span> and <span class="math notranslate nohighlight">\(a = e\)</span>, where <span class="math notranslate nohighlight">\(e\)</span> denotes Euler’s constant. Euler’s constant is defined to be the number</p>
+<div class="math notranslate nohighlight">
+\[
+e = \lim_{n \rightarrow \infty} \left(1 + \frac{1}{n} \right)^n
+\]</div>
+<p>Note that Euler’s constant is an irrational number. This means that it is a real number that cannot be represented as the ratio of an integer to a natural number.</p>
+<p>The function <span class="math notranslate nohighlight">\(f(x) = e^x\)</span> is sometimes called “the” exponential function.</p>
+</section>
+<section id="exponential-arithmetic">
+<h4>Exponential arithmetic<a class="headerlink" href="#exponential-arithmetic" title="Permalink to this heading">#</a></h4>
+<p>Assuming that the expressions are well-defined, we have the following laws of exponential arithmetic.</p>
+<ul class="simple">
+<li><p>The power of zero: <span class="math notranslate nohighlight">\(a_0 = 1\)</span> if <span class="math notranslate nohighlight">\(a \ne 0\)</span>, while <span class="math notranslate nohighlight">\(a^0\)</span> is undefined if <span class="math notranslate nohighlight">\(a = 0\)</span>.</p></li>
+<li><p>Multiplication of two exponential functions with the same base:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+(Ca^x)(Da^y) = CD a^{(x + y)}
+\]</div>
+<ul class="simple">
+<li><p>Division of two exponential functions with the same base:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{(Ca^x)}{(Da^y)} = \frac{C}{D} a^{(x - y)}
+\]</div>
+<ul class="simple">
+<li><p>An exponential function whose base is an exponential function:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+(Ca^x)^y = C^y a^{xy}
+\]</div>
+</section>
+</section>
+<section id="power-functions">
+<h3>Power functions<a class="headerlink" href="#power-functions" title="Permalink to this heading">#</a></h3>
+<p>A <strong>power function</strong> takes the form</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = Cx^a
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> is a fixed parameter, <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span> is a fixed parameter, and <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> is an independent variable.</p>
+<ul class="simple">
+<li><p>Note that when <span class="math notranslate nohighlight">\(a \in \mathbb{N}\)</span>, a power function can also be viewed as a polynomial function with a single term.</p></li>
+<li><p>Note that a power function can also be viewed as a type of exponential expression in which the base is <span class="math notranslate nohighlight">\(x\)</span> and the exponent is <span class="math notranslate nohighlight">\(a\)</span>. This means that the laws of exponential arithmetic carry over to “power function arithmetic”.</p></li>
+</ul>
+<section id="power-function-arithmetic">
+<h4>Power function arithmetic<a class="headerlink" href="#power-function-arithmetic" title="Permalink to this heading">#</a></h4>
+<p>Assuming that the expressions are well-defined, we have the following laws of power function arithmetic.</p>
+<ul class="simple">
+<li><p>The power of zero: <span class="math notranslate nohighlight">\(x_0 = 1\)</span> if <span class="math notranslate nohighlight">\(x \ne 0\)</span>, while <span class="math notranslate nohighlight">\(x^0\)</span> is undefined if <span class="math notranslate nohighlight">\(x = 0\)</span>.</p></li>
+<li><p>Multiplication of two power functions with the same base:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+(Cx^a)(Dx^b) = CD x^{(a + b)}
+\]</div>
+<ul class="simple">
+<li><p>Division of two power functions with the same base:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{(Cx^a)}{(Dx^b)} = \frac{C}{D} x^{(a - b)}
+\]</div>
+<ul class="simple">
+<li><p>A power function whose base is itself a power function:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+(Cx^a)^b = C^b x^{ab}
+\]</div>
+</section>
+<section id="a-rectangular-hyperbola">
+<h4>A rectangular hyperbola<a class="headerlink" href="#a-rectangular-hyperbola" title="Permalink to this heading">#</a></h4>
+<p>Consider the function <span class="math notranslate nohighlight">\(f : \mathbb{R} \setminus \{0\} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x) = \frac{a}{x}\)</span>, where <span class="math notranslate nohighlight">\(a \ne 0\)</span>. This is a special type of power function, as can be seen by noting that it can be rewritten as <span class="math notranslate nohighlight">\(f(x) = ax^{−1}\)</span>. The equation for the graph of this function is</p>
+<div class="math notranslate nohighlight">
+\[
+y = \frac{a}{x}
+\]</div>
+<p>Note that this equation can be rewritten as <span class="math notranslate nohighlight">\(xy = a\)</span>. This is the equation of a rectangular hyperbola.</p>
+<p><em>Graph it on the whiteboard for both the case where <span class="math notranslate nohighlight">\(a &gt; 0\)</span> and the case where <span class="math notranslate nohighlight">\(a &lt; 0\)</span>.</em></p>
+<ul class="simple">
+<li><p>Economic application: A constant “own-price elasticity of demand” demand curve.</p></li>
+</ul>
+</section>
+</section>
+<section id="logarithms">
+<h3>Logarithms<a class="headerlink" href="#logarithms" title="Permalink to this heading">#</a></h3>
+<p>A <strong>logarithm</strong> undoes an exponent.
+Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+log_a (a^x) = x
+\]</div>
+<p>The expression <span class="math notranslate nohighlight">\(log_a\)</span> stands for “log base <span class="math notranslate nohighlight">\(a\)</span>” or “logarithm base <span class="math notranslate nohighlight">\(a\)</span>”. Popular choices of base are <span class="math notranslate nohighlight">\(a = 10\)</span> and <span class="math notranslate nohighlight">\(a = e\)</span>.</p>
+<p>The function</p>
+<div class="math notranslate nohighlight">
+\[
+g(x) = log_a(x)
+\]</div>
+<p>is the “logarithm base <span class="math notranslate nohighlight">\(a\)</span>” function. The “logarithm base <span class="math notranslate nohighlight">\(a\)</span>” function is the inverse for the “exponential base <span class="math notranslate nohighlight">\(a\)</span>” function. The reason for this is that</p>
+<div class="math notranslate nohighlight">
+\[
+g(f(x)) = g(a^x) = log_a(a^x) = x
+\]</div>
+<section id="natural-or-naperian-logarithms">
+<h4>Natural (or Naperian) logarithms<a class="headerlink" href="#natural-or-naperian-logarithms" title="Permalink to this heading">#</a></h4>
+<p>A “logarithm base <em>e</em>” is known as a natural, or Naperian, logarithm. It is named after John Napier. See Shannon (1995, pp. 270-271) for a brief introduction to John Napier. The standard notation for a <strong>natural logarithm</strong> is <span class="math notranslate nohighlight">\(ln\)</span>, although you could also use <span class="math notranslate nohighlight">\(log_e\)</span>.</p>
+<p>The function</p>
+<div class="math notranslate nohighlight">
+\[ g(x) = ln(x) \]</div>
+<p>is the “logarithm base <span class="math notranslate nohighlight">\(e\)</span>” function. The natural logarithm function is the inverse function for “the” exponential function, since</p>
+<div class="math notranslate nohighlight">
+\[ g(f(x)) = g(e^x) = ln(e^x) = log_e(e^x) = x \]</div>
+<p><em>Illustrate the inverse (or “reflection through the 45 degree (y = x) line”) relationship between ln (x ) and ex on the whiteboard.</em></p>
+</section>
+<section id="logarithmic-arithmetic">
+<h4>Logarithmic arithmetic<a class="headerlink" href="#logarithmic-arithmetic" title="Permalink to this heading">#</a></h4>
+<p>Assuming that the expressions are well-defined, we have the following
+laws of logarithmic arithmetic.</p>
+<ul class="simple">
+<li><p>Multiplication of two logarithmic functions with the same base:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ log_a(xy) = log_a(x) + log_a(y) \]</div>
+<ul class="simple">
+<li><p>Division of two logarithmic functions with the same base:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[log_a \left( \frac{x}{y} \right) =  log_a(x) − log_a(y) \]</div>
+<ul class="simple">
+<li><p>A logarithmic function whose argument is an exponential function:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[log_a(x^y) = y \; log_a(x)\]</div>
+<p>Note that</p>
+<div class="math notranslate nohighlight">
+\[log_a(a) = log_a(a^1) = 1\]</div>
+</section>
+</section>
+<section id="rational-functions">
+<h3>Rational functions<a class="headerlink" href="#rational-functions" title="Permalink to this heading">#</a></h3>
+<p>A <strong>rational function</strong> <span class="math notranslate nohighlight">\(R(x)\)</span> is simply the ratio of two polynomial functions, <span class="math notranslate nohighlight">\(P(x)\)</span> and <span class="math notranslate nohighlight">\(Q(x)\)</span>. It takes the form</p>
+<div class="math notranslate nohighlight">
+\[
+R(x) = \frac{P(x)}{Q(x)} = 
+\frac{a_mx^m + a_{m−1} x^{m−1} + · · · + a_1 x + a_0}
+{b_n x^n + b_{n−1} x^{n−1} + · · · + b_1 x + b_0}
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[ P(x) = a_mx^m + a_{m−1} x^{m−1} + · · · + a_1 x + a_0 \]</div>
+<p>is an <span class="math notranslate nohighlight">\(m\)</span>-th order polynomial (so that <span class="math notranslate nohighlight">\(a_m \ne 0\)</span>), and</p>
+<div class="math notranslate nohighlight">
+\[ Q(x) =  b_n x^n + b_{n−1} x^{n−1} + · · · + b_1 x + b_0 \]</div>
+<p>is an <span class="math notranslate nohighlight">\(n\)</span>-th order polynomial (so that <span class="math notranslate nohighlight">\(b_n \ne 0\)</span>).</p>
+<ul class="simple">
+<li><p>Note that there is no requirement that the polynomial functions <span class="math notranslate nohighlight">\(P(x)\)</span> and <span class="math notranslate nohighlight">\(Q(x)\)</span> be of the same order. (In other words, we do not require that <span class="math notranslate nohighlight">\(m = n\)</span>.)</p></li>
+<li><p>The most interesting case is when <span class="math notranslate nohighlight">\(m &lt; n\)</span>. In such cases, the rational function <span class="math notranslate nohighlight">\(R(x)\)</span> is called a <strong>“proper” rational function</strong>.</p></li>
+<li><p>When <span class="math notranslate nohighlight">\(m &gt; n\)</span>, then we can always use the process of long division to write the original rational function <span class="math notranslate nohighlight">\(R(x)\)</span> as the sum of a polynomial function <span class="math notranslate nohighlight">\(Y(x)\)</span> and another proper rational function <span class="math notranslate nohighlight">\(R^∗(x)\)</span>.</p></li>
+</ul>
+<p>This is nicely illustrated by the following example from Chapter 14 of Silverman (1969).</p>
+<p>Consider the rational function <span class="math notranslate nohighlight">\(R(x) = \frac{x^2 + x − 1}{x − 1}\)</span>. Note the following.</p>
+<div class="math notranslate nohighlight">
+\[
+\usepackage{polynom}
+\polylongdiv{x^2 + x − 1}{x − 1}
+\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+R(x ) = x2 + x − 1
+x − 1 = (x + 2) +
+( 1
+x − 1
+)
+\]</div>
+<p>.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02.sets_numbers_coordinates_distances.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Sets, numbers, coordinates, and distances</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-guide">Reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mappings">Mappings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#images">Images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-images">Pre-images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-mappings">Types of mappings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#into-and-onto">Into and onto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#composite-functions">Composite functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-to-one-functions">One-to-one functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-decreasing-and-strictly-increasing-functions">Non-decreasing and strictly increasing functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-application-utility-functions-are-not-unique">Economic application: utility functions are not unique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-a-cobb-douglas-utility-function">Example: A Cobb-Douglas utility function</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-types-of-functions">Some types of functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-functions">Polynomial functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Examples</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affine-functions-and-linear-functions">Affine functions and linear functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-functions">Exponential functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#popular-choices-of-base">Popular choices of base</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-arithmetic">Exponential arithmetic</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-functions">Power functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#power-function-arithmetic">Power function arithmetic</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-rectangular-hyperbola">A rectangular hyperbola</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithms">Logarithms</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-or-naperian-logarithms">Natural (or Naperian) logarithms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithmic-arithmetic">Logarithmic arithmetic</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-functions">Rational functions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fedor Iskhakov
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
