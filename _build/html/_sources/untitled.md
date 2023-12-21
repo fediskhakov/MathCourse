@@ -1,0 +1,179 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
+# Welcome 
+
+Course title: **"Mathematical Techniques for Economic Analysis"**
+
+- Compulsory first math course in the *Master of Economics* program
+
+## Plan for this lecture
+
+1. Organization
+2. Administrative topics
+3. Course content
+5. Self-learning materials
+
+## Instructor
+
+**Fedor Iskhakov**
+Professor of Economics at RSE
+
+- Office: 1021 HW Arndt Building
+- Email: fedor.iskhakov@anu.edu.au
+- Web: [fedor.iskh.me](https://fedor.iskh.me)
+- Contact hours: TBA
+
+## Timetable
+
+**Face-to-face:**
+
+- Lectures: TBA
+
+**Online:**
+
+- Echo-360 recordings on Wattle
+- All notes and materials on (domain TBA)
+
+Face-to-face is strictly preferred
+
+## Course web pages
+
+- [Wattle](https://wattlecourses.anu.edu.au/course/view.php?id=TBA)
+Schedule, announcements, teaching team contacts, recordings, assignment, grades
+
+- [Online notes](domain TBA)
+Lecture notes, slides, assignment tasks
+
+- Lecture slides should appear online the previous day before the lecture
+- Details on assessment including the exam instructions will appear on Wattle
+
+
+## Tutorials
+
+- Enrollments open on *Wattle*
+
+Tutorial questions
+- posted on the course website
+- not assessed, help you learn and prepare
+
+Tutorials start on week 2
+
+
+## Tutors
+TBA
+
+
+## Prerequisites
+
+None specifically; [Course overview](https://programsandcourses.anu.edu.au/2024/course/EMET7001) and
+[Class summary](https://programsandcourses.anu.edu.au/2024/course/EMET7001/First%20Semester/4098)
+
+Prior knowledge of maths, however, will be helpful:
+- basic algebra
+- basic calculus
+- some idea of what a matrix is, etc.
+
+
+## Focus?
+
+This course will teach you the foundational mathematical concepts that you will need for other courses in your degree.  For example, [Optimisation for Economics and Financial Economics (ECON6102)](https://programsandcourses.anu.edu.au/course/ECON6012) is the compulsory second math course in the *Master of Economics* program.  ECON6102 is a general course on mathematical modeling for economics and financial economics, but optimization will be an important and recurring theme.
+
+
+## Assessment
+
+TBA
+
+
+## Questions
+
+1. Administrative questions: RSE admin
+
+  - **Bronwyn Cammack** Senior School Administrator
+  - Email: enquiries.rse@anu.edu.au
+
+  - "I can not register for the tutorial group"
+
+2. Content related questions: please, refer to the tutors
+
+  - "I don't understand why this function is convex"
+
+3. Other questions: to Fedor
+
+  - "I'm working hard but still can not keep up"
+  - "Can I please have extra assignment for more practice"
+
+## Attendance
+
+- Please, **do not** use email for *instructional* questions\Instead make use of the office hours
+
+- Attendance of tutorials is *very highly* recommended\
+You will make your life much easier this way
+
+- Attendance of lectures is *highly* recommended\
+But not mandatory
+
+## Comments for lectures notes/slides
+
+- Cover exactly what you are required to know
+- Code inserts are the exception, they are not assessable
+
+In particular, you need to know:
+- The definitions from the notes
+- The facts from the notes
+- How to apply facts and definitions
+
+If a concept in not in the lecture notes, it is not assessable
+
+## Definitions and facts
+
+The lectures notes/slides are full of definitions and facts.
+
+```{admonition} Definition
+:class: caution
+
+Functions $f: \mathbb{R} \rightarrow \mathbb{R}$ is called *continuous at* $x$ if, for any sequence $\{x_n\}$ converging to $x$, we have $f(x_n) \rightarrow f(x)$.
+```
+
+Possible exam question: "Show  that if functions $f$ and $g$ are continuous at $x$, so is $f+g$."
+
+You should start the answer with the definition of continuity: 
+
+"Let $\{x_n\}$ be any sequence converging to $x$. We need to show that $f(x_n) + g(x_n) \rightarrow f(x) + g(x)$. To see this, note that ..."
+
+## Facts
+
+In the lecture notes/slides you will often see
+
+```{admonition} Fact
+:class: important
+The only $N$-dimensional subset of $\mathbb{R}^N$ is $\mathbb{R}^N$.
+```
+This means either:
+- theorem
+- proposition
+- lemma
+- true statement
+
+All well known results. You need to remember them, have some intuition for, and be able to apply.
+
+## Note on Assessments
+
+Assessable = definitions and facts + last year level math + a few simple steps of logic
+
+Exams and tests will award:
+- Hard work
+- Deeper understanding of the concepts
+
+In each question there will be a *easy* path to the solution
