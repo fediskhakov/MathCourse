@@ -1,0 +1,2038 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Univariate differentiation &#8212; ECON7001</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '06.univariate_differentiation';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Sequences, series and limits" href="05.sequences_series_limits.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Welcome to the course!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/placeholder_logo.png" class="logo__image only-light" alt="ECON7001 - Home"/>
+    <script>document.write(`<img src="_static/placeholder_logo.png" class="logo__image only-dark" alt="ECON7001 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    EMET7001
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00.intro.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01.intro_to_economics.html">An introduction to economics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02.sets_numbers_coordinates_distances.html">Sets, numbers, coordinates, and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03.mappings_functions_correspondences.html">Mappings: functions and correspondences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04.equations_inequalities_binary_relations.html">Equations, inequalities, and binary relations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05.sequences_series_limits.html">Sequences, series and limits</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Univariate differentiation</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse/issues/new?title=Issue%20on%20page%20%2F06.univariate_differentiation.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/06.univariate_differentiation.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Univariate differentiation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-guide">Reading guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introductory-level-references">Introductory level references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-advanced-references">More advanced references</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-setting">The setting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-limit">What is a limit?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-structure-of-epsilon-delta-arguments">The structure of <span class="math notranslate nohighlight">\(\epsilon–\delta\)</span> arguments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-rules-about-limits">Some useful rules about limits</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity">Continuity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Examples</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives">Derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-derivatives-of-some-commonly-encountered-functions">The (first) derivatives of some commonly encountered functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-differentiation-rules">Some useful differentiation rules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-quotient-rule-is-redundant">The quotient rule is redundant</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-relationship-between-continuity-and-differentiability">The relationship between continuity and differentiability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-does-not-imply-differentiability">Continuity does NOT imply differentiability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiability-implies-continuity">Differentiability implies continuity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-order-derivatives">Higher-order derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-first-and-second-derivatives">Interpreting first and second derivatives</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-functions">Increasing functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decreasing-functions">Decreasing functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-functions">Convex functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concave-functions">Concave functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-local-maximum-turning-points">Peak (local maximum) turning points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trough-local-minimum-turning-points">Trough (local minimum) turning points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inflection-points">Inflection points</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-economic-applications-of-derivatives">Some economic applications of derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-revenue-and-marginal-cost">Marginal revenue and marginal cost</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-revenue-for-a-monopolist">Marginal revenue for a monopolist</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#point-elasticities">Point elasticities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unconstrained-optimisation">Unconstrained optimisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-extrema-of-functions">Finding extrema of functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#some-terminology">Some terminology</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-points-of-a-function">Critical points of a function</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id45">Examples</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-derivative-approach-to-optimisation">The first derivative approach to optimisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-derivative-approach-to-optimisation">The second derivative approach to optimisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#profit-maximisation-in-general">Profit maximisation in general</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-derivatives-to-approximate-things">Using derivatives to approximate things</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-approximations-of-functions">Taylor series approximations of functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-approximation-to-a-change-in-a-function-s-value">Differential approximation to a change in a function’s value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-application-of-linear-differential-approximation">An application of linear differential approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-hopital-s-rule-for-limits-of-indeterminate-form">L’Hopital’s rule for limits of indeterminate form</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="univariate-differentiation">
+<h1>Univariate differentiation<a class="headerlink" href="#univariate-differentiation" title="Permalink to this heading">#</a></h1>
+<section id="reading-guide">
+<h2>Reading guide<a class="headerlink" href="#reading-guide" title="Permalink to this heading">#</a></h2>
+<section id="introductory-level-references">
+<h3>Introductory level references<a class="headerlink" href="#introductory-level-references" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="#id39" title="T Bradley. Essential mathematics for economics and business (third edition). John Wiley and Sons, 2008.">Bra08</a>]</span>: Chapter 6 (pp. 257–357).</p></li>
+<li><p><span id="id2">[<a class="reference internal" href="#id12" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">HJP87</a>]</span>: Chapters 10, 11, 12, and 13 (pp. 375–532).</p></li>
+<li><p><span id="id3">[<a class="reference internal" href="#id14" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">Sha95</a>]</span>: Chapter 8 (pp. 356–407).</p></li>
+<li><p><span id="id4">[<a class="reference internal" href="#id13" title="K Sydsæter, P Hammond, A Strøm, and A Carvajal. Essential mathematics for economic analysis (fifth edition). Pearson Education, 2016.">SHSC16</a>]</span>: Chapters 6, 7, and 8.</p></li>
+</ul>
+</section>
+<section id="more-advanced-references">
+<h3>More advanced references<a class="headerlink" href="#more-advanced-references" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span id="id5">[<a class="reference internal" href="#id34" title="F Ayres Jr and E Mendelson. Calculus (sixth edition). McGraw-Hill, 2013.">AJM13</a>]</span></p></li>
+<li><p><span id="id6">[<a class="reference internal" href="#id38" title="AC Chiang and K Wainwright. Fundamental methods of mathematical economics (fourth edition). McGraw-Hill, 2005.">CW05</a>]</span>: Chapters 6–10 (pp. 124–290).</p></li>
+<li><p><span id="id7">[<a class="reference internal" href="#id18" title="M Kline. Calculus: An intuitive and physical approach (second edition). Dover Publications, 1967. The 1998 Dover republication of the original John Wiley and Sons second edition.">Kli67</a>]</span>: Chapters 2, 4, 5, 6, 7, 12, 13, and 20.</p></li>
+<li><p><span id="id8">[<a class="reference internal" href="#id19" title="RA Silverman. Modern calculus and analytic geometry. Dover Publications, 1969. The 2002 Dover corrected republication of the original 1969 Macmillan Company edition.">Sil69</a>]</span>: Chapters 4, 5, and 6.</p></li>
+<li><p><span id="id9">[<a class="reference internal" href="#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">SB94</a>]</span>:</p></li>
+<li><p><span id="id10">[<a class="reference internal" href="#id20" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">Spi06</a>]</span>: Chapters 3–12 (pp. 39–249).</p></li>
+</ul>
+<div class="docutils container" id="id11">
+<dl class="citation">
+<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id5">AJM13</a></span></dt>
+<dd><p>F Ayres Jr and E Mendelson. <em>Calculus (sixth edition)</em>. McGraw-Hill, 2013.</p>
+</dd>
+<dt class="label" id="id39"><span class="brackets">Bra08</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id46">2</a>)</span></dt>
+<dd><p>T Bradley. <em>Essential mathematics for economics and business (third edition)</em>. John Wiley and Sons, 2008.</p>
+</dd>
+<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id6">CW05</a></span></dt>
+<dd><p>AC Chiang and K Wainwright. <em>Fundamental methods of mathematical economics (fourth edition)</em>. McGraw-Hill, 2005.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id2">HJP87</a></span></dt>
+<dd><p>EF Haeussler Jr and RS Paul. <em>Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition)</em>. Prentice-Hall, 1987.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id7">Kli67</a></span></dt>
+<dd><p>M Kline. <em>Calculus: An intuitive and physical approach (second edition)</em>. Dover Publications, 1967. The 1998 Dover republication of the original John Wiley and Sons second edition.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id3">Sha95</a></span></dt>
+<dd><p>J Shannon. <em>Mathematics for business, economics and finance</em>. John Wiley and Sons, 1995.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id8">Sil69</a></span></dt>
+<dd><p>RA Silverman. <em>Modern calculus and analytic geometry</em>. Dover Publications, 1969. The 2002 Dover corrected republication of the original 1969 Macmillan Company edition.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id9">SB94</a></span></dt>
+<dd><p>C Simon and L Blume. <em>Mathematics for economists</em>. WW Norton and Co, 1994.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets">Spi06</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id40">2</a>,<a href="#id41">3</a>,<a href="#id42">4</a>)</span></dt>
+<dd><p>M Spivak. <em>Calculus (third edition)</em>. Cambridge University Press, 2006.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id4">SHSC16</a></span></dt>
+<dd><p>K Sydsæter, P Hammond, A Strøm, and A Carvajal. <em>Essential mathematics for economic analysis (fifth edition)</em>. Pearson Education, 2016.</p>
+</dd>
+</dl>
+</div>
+</section>
+</section>
+<section id="the-setting">
+<h2>The setting<a class="headerlink" href="#the-setting" title="Permalink to this heading">#</a></h2>
+<p>We will be working with the metric space known as Euclidean one-space.
+This space is denoted by <span class="math notranslate nohighlight">\((\mathbb{R}, d )\)</span>, where</p>
+<div class="math notranslate nohighlight">
+\[d (x, y ) = \sqrt{(y − x )^2} = |y − x |\]</div>
+<p>is the Euclidean metric (or distance function) on \mathbb{R}.</p>
+<p>We will be considering some of the properties of functions that take the form <span class="math notranslate nohighlight">\(f : X \rightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}\)</span>. In particular, we will be interested in limits, continuity and differentiability.</p>
+</section>
+<section id="what-is-a-limit">
+<h2>What is a limit?<a class="headerlink" href="#what-is-a-limit" title="Permalink to this heading">#</a></h2>
+<p>Consider a function, <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span>. This function can be written as <span class="math notranslate nohighlight">\(f(x)\)</span>. Note that <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> here. Furthermore, for each point <span class="math notranslate nohighlight">\(x_0 \in \mathbb{R}\)</span>, we have <span class="math notranslate nohighlight">\(f(x_0) \in \mathbb{R}\)</span> as well. In other words, the domain of <span class="math notranslate nohighlight">\(f\)</span> is <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, while the range of <span class="math notranslate nohighlight">\(f\)</span> is a (possibly improper) subset of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+<p><span id="id40">[<a class="reference internal" href="#id20" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">Spi06</a>]</span> (p. 90) provides the following informal definition of a limit: “The function <span class="math notranslate nohighlight">\(f\)</span> approaches the limit <span class="math notranslate nohighlight">\(l\)</span> near [the point <span class="math notranslate nohighlight">\(x =\)</span>] <span class="math notranslate nohighlight">\(a\)</span>,
+if we can make <span class="math notranslate nohighlight">\(f(x)\)</span> as close as we like to <span class="math notranslate nohighlight">\(l\)</span> by requiring that <span class="math notranslate nohighlight">\(x\)</span> be sufficiently close to, but unequal to, <span class="math notranslate nohighlight">\(a\)</span>.”</p>
+<p><span id="id41">[<a class="reference internal" href="#id20" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">Spi06</a>]</span> (p. 96) provides the following formal definition of a limit: “The function <span class="math notranslate nohighlight">\(f\)</span> <strong>approaches the limit <span class="math notranslate nohighlight">\(l\)</span> near</strong> [the point <span class="math notranslate nohighlight">\(x =\)</span>] <span class="math notranslate nohighlight">\(a\)</span> means: for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is some <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that, for all <span class="math notranslate nohighlight">\(x\)</span>, if
+<span class="math notranslate nohighlight">\(0 &lt; |x − a| &lt; \delta\)</span>, then <span class="math notranslate nohighlight">\(|f (x ) − l | &lt; \epsilon\)</span>.”. (Bold in the original.)</p>
+<p>The formal definition provided by Spivak is known as an <strong>epsilon-delta</strong> (<span class="math notranslate nohighlight">\(\epsilon-\delta\)</span>) definition of the limit concept. It could also be written as follows:</p>
+<p>The limit of <span class="math notranslate nohighlight">\(f\)</span> as <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(a\)</span> is <span class="math notranslate nohighlight">\(l\)</span> if, for each <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists some <span class="math notranslate nohighlight">\(\delta_\epsilon &gt; 0\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[ 0 &lt; d (x, a) &lt; \delta_\epsilon \Rightarrow d (f (x ) , l ) &lt; \epsilon \]</div>
+<p>Suppose that the limit of <span class="math notranslate nohighlight">\(f\)</span> as <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(a\)</span> is <span class="math notranslate nohighlight">\(l\)</span>. We can write this as</p>
+<div class="math notranslate nohighlight">
+\[ \lim_{x  \rightarrow a} f (x ) = l \]</div>
+<figure class="align-center" id="id47">
+<a class="reference internal image-reference" href="_images/epsilon_delta.png"><img alt="_images/epsilon_delta.png" src="_images/epsilon_delta.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">An illustration of an epsilon-delta limit argument</span><a class="headerlink" href="#id47" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="the-structure-of-epsilon-delta-arguments">
+<h2>The structure of <span class="math notranslate nohighlight">\(\epsilon–\delta\)</span> arguments<a class="headerlink" href="#the-structure-of-epsilon-delta-arguments" title="Permalink to this heading">#</a></h2>
+<p>Suppose that we want to attempt to show that <span class="math notranslate nohighlight">\(\lim _{x \rightarrow a} f(x)=b\)</span>.</p>
+<p>In order to do this, we need to show that, for any choice <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>, there exists some <span class="math notranslate nohighlight">\(\delta_{\epsilon}&gt;0\)</span> such that, whenever <span class="math notranslate nohighlight">\(|x-a|&lt;\delta_{\epsilon}\)</span>, it is the case that <span class="math notranslate nohighlight">\(|f(x)-b|&lt;\epsilon\)</span>.</p>
+<ul class="simple">
+<li><p>We write <span class="math notranslate nohighlight">\(\delta_{\epsilon}\)</span> to indicate that the choice of <span class="math notranslate nohighlight">\(\delta\)</span> is allowed to vary with the choice of <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p></li>
+</ul>
+<p>An often fruitful approach to the construction of a formal <span class="math notranslate nohighlight">\(\epsilon-\delta\)</span> limit argument is to proceed as follows:</p>
+<ol class="arabic simple">
+<li><p>Start with the end-point that we need to establish: <span class="math notranslate nohighlight">\(|f(x)-b|&lt;\epsilon\)</span>.</p></li>
+<li><p>Use appropriate algebraic rules to rearrange this “final” inequality into something of the form <span class="math notranslate nohighlight">\(|k(x)(x-a)|&lt;\epsilon\)</span>.</p></li>
+<li><p>This new version of the required inequality can be rewritten as <span class="math notranslate nohighlight">\(|k(x)||(x-a)|&lt;\epsilon\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(k(x)=k\)</span>, a constant that does not vary with <span class="math notranslate nohighlight">\(x\)</span>, then this inequality becomes <span class="math notranslate nohighlight">\(|k||x-a|&lt;\epsilon\)</span>. In such cases, we must have <span class="math notranslate nohighlight">\(|x-a|&lt;\frac{\epsilon}{|k|}\)</span>, so that an appropriate choice of <span class="math notranslate nohighlight">\(\delta_{\epsilon}\)</span> is <span class="math notranslate nohighlight">\(\delta_{\epsilon}=\frac{\epsilon}{|k|}\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(k(x)\)</span> does vary with <span class="math notranslate nohighlight">\(x\)</span>, then we have to work a little bit harder.</p></li>
+</ol>
+<p>Suppose that <span class="math notranslate nohighlight">\(k(x)\)</span> does vary with <span class="math notranslate nohighlight">\(x\)</span>. How might we proceed in that case? One possibility is to see if we can find a restriction on the range of values for <span class="math notranslate nohighlight">\(\delta\)</span> that we consider that will allow us to place an upper bound on the value taken by <span class="math notranslate nohighlight">\(|k(x)|\)</span>.</p>
+<p>In other words, we try and find some restriction on <span class="math notranslate nohighlight">\(\delta\)</span> that will ensure that <span class="math notranslate nohighlight">\(|k(x)|&lt;K\)</span> for some finite <span class="math notranslate nohighlight">\(K&gt;0\)</span>. The type of restriction on the values of <span class="math notranslate nohighlight">\(\delta\)</span> that you choose would ideally look something like <span class="math notranslate nohighlight">\(\delta&lt;D\)</span>, for some fixed real number <span class="math notranslate nohighlight">\(D&gt;0\)</span>. (The reason for this is that it is typically small deviations of <span class="math notranslate nohighlight">\(x\)</span> from a that will cause us problems rather than large deviations of <span class="math notranslate nohighlight">\(x\)</span> from a.)</p>
+<p>If <span class="math notranslate nohighlight">\(0&lt;|k(x)|&lt;K\)</span> whenever <span class="math notranslate nohighlight">\(0&lt;\delta&lt;D\)</span>, then we have</p>
+<div class="math notranslate nohighlight">
+\[
+|k(x)||x-a|&lt;\epsilon \Longleftrightarrow K|x-a|&lt;\epsilon \Longleftrightarrow|x-a|&lt;\frac{\epsilon}{K} .
+\]</div>
+<p>In such cases, an appropriate choice of <span class="math notranslate nohighlight">\(\delta_{\epsilon}\)</span> is <span class="math notranslate nohighlight">\(\delta_{\epsilon}=\min \left\{\frac{\epsilon}{K}, D\right\}\)</span>.</p>
+</section>
+<section id="some-useful-rules-about-limits">
+<h2>Some useful rules about limits<a class="headerlink" href="#some-useful-rules-about-limits" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>In practice, we would like to be able to find at least some limits without having to resort to the formal “epsilon-delta” arguments that define them. The following rules can sometimes assist us with this.</p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span> be a fixed constant, <span class="math notranslate nohighlight">\(a \in \mathbb{R}, \alpha \in \mathbb{R}, \beta \in \mathbb{R}, n \in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(f: \mathbb{R} \longrightarrow \mathbb{R}\)</span> be a function for which <span class="math notranslate nohighlight">\(\lim _{x \rightarrow a} f(x)=\alpha\)</span>, and <span class="math notranslate nohighlight">\(g: \mathbb{R} \longrightarrow \mathbb{R}\)</span> be a function for which <span class="math notranslate nohighlight">\(\lim _{x \rightarrow a} g(x)=\beta\)</span>.</p></li>
+<li><p>The following rules apply for limits.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim _{x \rightarrow a} c=c\)</span> for any <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim _{x \rightarrow a}(c f(x))=c\left(\lim _{x \rightarrow a} f(x)\right)=c \alpha\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim _{x \rightarrow a}(f(x)+g(x))=\left(\lim _{x \rightarrow a} f(x)\right)+\left(\lim _{x \rightarrow a} g(x)\right)=\alpha+\beta\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim _{x \rightarrow a}(f(x) g(x))=\left(\lim _{x \rightarrow a} f(x)\right)\left(\lim _{x \rightarrow a} g(x)\right)=\alpha \beta\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim _{x \rightarrow a}\left(\frac{f(x)}{g(x)}\right)=\frac{\lim _{x \rightarrow a} f(x)}{\lim _{x \rightarrow a} g(x)}=\frac{\alpha}{\beta}\)</span> whenever <span class="math notranslate nohighlight">\(\beta \neq 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim _{x \rightarrow a} \sqrt[n]{f(x)}=\sqrt[n]{\lim _{x \rightarrow a} f(x)}=\sqrt[n]{\alpha}\)</span> whenever <span class="math notranslate nohighlight">\(\sqrt[n]{\alpha}\)</span> is defined.</p></li>
+<li><p>After we have learned about differentiation, we will learn about another useful rule for limits that is known as “L’Hopital’s rule”.</p></li>
+</ul>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
+<p>Example 1</p>
+<ul class="simple">
+<li><p>This is an example in which the chosen function will be very nicely behaved at all points <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>.</p></li>
+<li><p>Consider the function <span class="math notranslate nohighlight">\(f(x)=x\)</span> and the point <span class="math notranslate nohighlight">\(x=2\)</span>. We will show formally that <span class="math notranslate nohighlight">\(\lim _{x \rightarrow 2} f(x)=2\)</span>.</p></li>
+<li><p>Note that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+d(f(x), 2)=|x-2|=d(x, 2) .
+\]</div>
+<ul class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>. We have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+d(f(x), 2)&lt;\epsilon \Longleftrightarrow|x-2|&lt;\epsilon
+\]</div>
+<ul class="simple">
+<li><p>Suppose that we let <span class="math notranslate nohighlight">\(\delta_{\epsilon}=\epsilon\)</span>. Since <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>, we must have <span class="math notranslate nohighlight">\(\delta_{\epsilon}&gt;0\)</span>.</p></li>
+<li><p>Consider points in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> that satisfy the condition</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+0&lt;d(x, 2)&lt;\delta_{\epsilon} 
+\]</div>
+<ul class="simple">
+<li><p>Consider points in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> that satisfy the condition</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+0&lt;d(x, 2)&lt;\delta_{\epsilon}
+\]</div>
+<ul class="simple">
+<li><p>Note that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+0&lt;d(x, 2)&lt;\delta_{\epsilon} &amp; \Longleftrightarrow 0&lt;|x-2|&lt;\delta_{\epsilon} \\
+&amp; \Longleftrightarrow 0&lt;d(f(x), 2)&lt;\delta_{\epsilon}
+\end{aligned}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Thus we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+0&lt;d(x, 2)&lt;\delta_{\epsilon} \Longrightarrow d(f(x), 2)&lt;\delta_{\epsilon} \text {. }
+\]</div>
+<ul class="simple">
+<li><p>Since we chose <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> arbitrarily, this must be true for all <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>. This means that <span class="math notranslate nohighlight">\(\lim _{x \rightarrow 2} f(x)=2\)</span>.</p></li>
+</ul>
+<p>Example 2</p>
+<ul class="simple">
+<li><p>This example is drawn from Willis Lauritz Peterson of the University of Utah.</p></li>
+<li><p>Consider the mapping <span class="math notranslate nohighlight">\(f: \mathbb{R} \longrightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x)=7 x-4\)</span>. We want to show that <span class="math notranslate nohighlight">\(\lim _{x \rightarrow 2} f(x)=10\)</span>.</p></li>
+<li><p>Note that <span class="math notranslate nohighlight">\(|f(x)-10|=|7 x-4-10|=|7 x-14|=|7(x-2)|=\)</span> <span class="math notranslate nohighlight">\(|7||x-2|=7|x-2|\)</span>.</p></li>
+<li><p>We require <span class="math notranslate nohighlight">\(|f(x)-10|&lt;\epsilon\)</span>. Note that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+|f(x)-10|&lt;\epsilon \Longleftrightarrow 7|x-2|&lt;\epsilon \Longleftrightarrow|x-2|&lt;\frac{\epsilon}{7}
+\]</div>
+<ul class="simple">
+<li><p>Thus, for any <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>, if <span class="math notranslate nohighlight">\(\delta_{\epsilon}=\frac{\epsilon}{7}\)</span>, then <span class="math notranslate nohighlight">\(|f(x)-10|&lt;\epsilon\)</span> whenever <span class="math notranslate nohighlight">\(|x-2|&lt;\delta_{\epsilon}\)</span>.</p></li>
+</ul>
+<p>Example 3</p>
+<ul class="simple">
+<li><p>Consider the mapping <span class="math notranslate nohighlight">\(f: \mathbb{R} \longrightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x)=x^{2}\)</span>. We want to show that <span class="math notranslate nohighlight">\(\lim _{x \rightarrow 2} f(x)=4\)</span>.</p></li>
+<li><p>Note that <span class="math notranslate nohighlight">\(|f(x)-4|=\left|x^{2}-4\right|=|(x+2)(x-2)|=|x+2||x-2|\)</span>.</p></li>
+<li><p>Suppose that <span class="math notranslate nohighlight">\(|x-2|&lt;\delta\)</span>, which in turn means that <span class="math notranslate nohighlight">\((2-\delta)&lt;x&lt;(2+\delta)\)</span>. Thus we have <span class="math notranslate nohighlight">\((4-\delta)&lt;(x+2)&lt;(4+\delta)\)</span>.</p></li>
+<li><p>Let us restrict attention to <span class="math notranslate nohighlight">\(\delta \in(0,1)\)</span>. This gives us <span class="math notranslate nohighlight">\(3&lt;(x+2)&lt;5\)</span>, so that <span class="math notranslate nohighlight">\(|x+2|&lt;5\)</span>.</p></li>
+<li><p>Thus, when <span class="math notranslate nohighlight">\(|x-2|&lt;\delta\)</span> and <span class="math notranslate nohighlight">\(\delta \in(0,1)\)</span>, we have <span class="math notranslate nohighlight">\(|f(x)-4|=|x+2||x-2|&lt;5 \delta\)</span>.</p></li>
+<li><p>We require <span class="math notranslate nohighlight">\(|f(x)-4|&lt;\epsilon\)</span>. One way to ensure this is to set <span class="math notranslate nohighlight">\(\delta_{\epsilon}=\min \left(1, \frac{\epsilon}{5}\right)\)</span>.</p></li>
+</ul>
+<p>Example 4
+This example is drawn from Willis Lauritz Peterson of the University of Utah.</p>
+<p>Consider the mapping <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x) = x^2 − 3x + 1\)</span>.</p>
+<p>We want to show that <span class="math notranslate nohighlight">\(lim_{x \rightarrow 2} f(x ) = −1\)</span>.</p>
+<ul class="simple">
+<li><p>Note that <span class="math notranslate nohighlight">\(|f(x) − (−1)| = |x^2 − 3x + 1 + 1| = |x^2 − 3x + 2| = |(x − 1)(x − 2)| = |x − 1||x − 2|\)</span>.</p></li>
+<li><p>Suppose that <span class="math notranslate nohighlight">\(|x − 2| &lt; \delta\)</span>, which in turn means that <span class="math notranslate nohighlight">\((2 − \delta) &lt; x &lt; (2 + \delta)\)</span>. Thus we have <span class="math notranslate nohighlight">\((1 − \delta) &lt; (x − 1) &lt; (1 + \delta)\)</span>.</p></li>
+<li><p>Let us restrict attention to <span class="math notranslate nohighlight">\(\delta \in (0, 1)\)</span>. This gives us <span class="math notranslate nohighlight">\(0 &lt; (x − 1) &lt; 2\)</span>, so that <span class="math notranslate nohighlight">\(|x − 1| &lt; 2\)</span>.</p></li>
+<li><p>Thus, when <span class="math notranslate nohighlight">\(|x − 2| &lt; \delta\)</span> and <span class="math notranslate nohighlight">\(\delta \in (0, 1)\)</span>, we have <span class="math notranslate nohighlight">\(|f (x ) − (−1)| = |x − 1||x − 2| &lt; 2\delta\)</span>.</p></li>
+<li><p>We require <span class="math notranslate nohighlight">\(|f (x ) − (−1)| &lt; \epsilon\)</span>. One way to ensure this is to set <span class="math notranslate nohighlight">\(\delta_\epsilon = \min(1, \frac{\epsilon}{2} )\)</span>.</p></li>
+</ul>
+<p>Example 5</p>
+<p>Limits can sometimes exist even when the function being considered is not so well behaved. One such example is provided by <span id="id42">[<a class="reference internal" href="#id20" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">Spi06</a>]</span> (pp. 91–92). It involves the use of a trigonometric function.</p>
+<p>As we will not be considering such functions elsewhere in this unit, this particular example will not assessed in this unit. However, the fact that a function might have a limit at a point where it is not defined is worth noting.</p>
+<p>The example involves the function <span class="math notranslate nohighlight">\(f: \mathbb{R} \setminus 0 \rightarrow \mathbb{R}\)</span> that is defined by <span class="math notranslate nohighlight">\(f (x ) = x sin ( \frac{1}{x})\)</span>.</p>
+<p>Clearly this function is not defined when <span class="math notranslate nohighlight">\(x = 0\)</span>. Furthermore, it can be shown that <span class="math notranslate nohighlight">\(\lim_{x  \rightarrow 0} sin ( \frac{1}{x})\)</span> does not exist. However, it can also be shown that <span class="math notranslate nohighlight">\(lim_{x  \rightarrow 0} f (x ) = 0\)</span>.</p>
+<p>The reason for this is that <span class="math notranslate nohighlight">\(sin (\theta) \in [−1, 1]\)</span> for all <span class="math notranslate nohighlight">\(\theta \in \mathbb{R}\)</span>. Thus <span class="math notranslate nohighlight">\(sin ( \frac{1}{x} )\)</span> is bounded above and below by finite numbers as <span class="math notranslate nohighlight">\(x \rightarrow 0\)</span>. This allows the <span class="math notranslate nohighlight">\(x\)</span> component of <span class="math notranslate nohighlight">\(x sin (\frac{1}{x})\)</span> to dominate as <span class="math notranslate nohighlight">\(x \rightarrow 0\)</span>.</p>
+<p>Example 6</p>
+<p>Limits do not always exist. In this example, we consider a case in which the limit of a function as <span class="math notranslate nohighlight">\(x\)</span> approaches a particular point does not exist.</p>
+<p>Consider the mapping <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x ) = \begin{cases} 
+1 \quad \text{ if } x &gt; 5; \\
+0 \quad \text{ if } x &lt; 5
+\end{cases}
+\end{split}\]</div>
+<p>We want to show that <span class="math notranslate nohighlight">\(\lim_{x  \rightarrow 5} f (x )\)</span> does not exist.</p>
+<p>Suppose that the limit does exist. Denote the limit by <span class="math notranslate nohighlight">\(l\)</span>. Recall that <span class="math notranslate nohighlight">\(d (x, y ) = \{ (y − x )2 \}^{\frac{1}{2}} = |y − x |\)</span>. Let <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(|5 − x | &lt; \delta\)</span>, then <span class="math notranslate nohighlight">\(5 − \delta &lt; x &lt; 5 + \delta\)</span>, so that <span class="math notranslate nohighlight">\(x \in (5 − \delta, 5 + \delta)\)</span>.</p>
+<p>Note that <span class="math notranslate nohighlight">\(x \in (5 − \delta, 5 + \delta) = (5 − \delta, 5) \cup [5, 5 + \delta)\)</span>, where <span class="math notranslate nohighlight">\((5 − \delta, 5) \ne \varnothing\)</span> and <span class="math notranslate nohighlight">\([5, 5 + \delta) \ne \varnothing\)</span>.</p>
+<p>Thus we know the following:</p>
+<ol class="arabic simple">
+<li><p>There exist some <span class="math notranslate nohighlight">\(x \in (5 − \delta, 5) \subseteq (5 − \delta, 5 + \delta)\)</span>, so that <span class="math notranslate nohighlight">\(f (x ) = 0\)</span> for some <span class="math notranslate nohighlight">\(x \in (5 − \delta, 5 + \delta)\)</span>.</p></li>
+<li><p>There exist some <span class="math notranslate nohighlight">\(x \in [5, 5 + \delta) \subseteq (5 − \delta, 5 + \delta)\)</span>, so that <span class="math notranslate nohighlight">\(f (x ) = 1\)</span> for some <span class="math notranslate nohighlight">\(x \in (5 − \delta, 5 + \delta)\)</span>.</p></li>
+<li><p>The image set under <span class="math notranslate nohighlight">\(f\)</span> for <span class="math notranslate nohighlight">\((5 − \delta, 5 + \delta)\)</span> is <span class="math notranslate nohighlight">\(f ((5 − \delta, 5 + \delta)) = \{ f (x ) : x \in (5 − \delta, 5 + \delta) \} = \{ 0, 1 \} \subseteq [0, 1]\)</span>.</p></li>
+<li><p>Note that for any choice of <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>, <span class="math notranslate nohighlight">\([0, 1]\)</span> is the smallest connected interval that contains the image set <span class="math notranslate nohighlight">\(f ((5 − \delta, 5 + \delta)) = \{ 0, 1 \}\)</span>.</p></li>
+</ol>
+<p>Hence, in order for the limit to exist, we need <span class="math notranslate nohighlight">\([0, 1] \subseteq (l − \epsilon, l + \epsilon)\)</span>
+for all <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>.  But for <span class="math notranslate nohighlight">\(\epsilon \in (0, \frac{1}{2})\)</span>, there is no <span class="math notranslate nohighlight">\(l \in \mathbb{R}\)</span> for which this is the case.  Thus we can conclude that <span class="math notranslate nohighlight">\(\lim_{x  \rightarrow 5} f (x )\)</span> does not exist.</p>
+</section>
+</section>
+<section id="continuity">
+<h2>Continuity<a class="headerlink" href="#continuity" title="Permalink to this heading">#</a></h2>
+<p>Our focus here is on continuous real-valued functions of a single real variable. In other words, functions of the form <span class="math notranslate nohighlight">\(f : X \rightarrow \mathbb{R}\)</span> where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}\)</span>.</p>
+<p>Before looking at the picky technical details of the concept of continuity, it is worth thinking about that concept intuitively. Basically, a real-valued function of a single real-valued variable is <strong>continuous</strong> if you could potentially draw its graph without lifting your pen from the page. In other words, there are no holes in the graph of the function and there are no jumps in the graph of the function.</p>
+<p>Now for the slightly picky technical details!</p>
+<ul class="simple">
+<li><p>A function is continuous <em>at the point</em> <span class="math notranslate nohighlight">\(x_0 \in X\)</span> if <span class="math notranslate nohighlight">\(\lim_{x \rightarrow x_0} f (x ) = f (x_0)\)</span>.</p></li>
+<li><p>A function is continuous on a connected interval <span class="math notranslate nohighlight">\((a, b) \subseteq X\)</span> for which <span class="math notranslate nohighlight">\(a &lt; b\)</span> if it is continuous at all points in that interval. In other words, a function is continuous on <span class="math notranslate nohighlight">\((a, b) \subseteq X\)</span> for which <span class="math notranslate nohighlight">\(a &lt; b\)</span> if <span class="math notranslate nohighlight">\(\lim_{x \rightarrow x_0} f (x ) = f (x_0)\)</span> for all <span class="math notranslate nohighlight">\(x_0 \in (a, b)\)</span>.</p></li>
+<li><p>A function is <strong>continuous</strong> if it is continuous at every point in its domain. In other words, a function is continuous if <span class="math notranslate nohighlight">\(\lim_{x \rightarrow x_0} f (x ) = f (x_0)\)</span> for all <span class="math notranslate nohighlight">\(x_0 \in X\)</span>.</p></li>
+</ul>
+<p>Now for the really picky technical details!</p>
+<p>Let <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}^n\)</span>, <span class="math notranslate nohighlight">\(d^n\)</span> be the <span class="math notranslate nohighlight">\(n\)</span>–dimensional Euclidean distance and <span class="math notranslate nohighlight">\(d\)</span> be the one–dimensional Euclidean distance.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(f : X \rightarrow \mathbb{R}\)</span>.
+The mapping <span class="math notranslate nohighlight">\(f\)</span> is said to be <strong>continuous</strong> at the point <span class="math notranslate nohighlight">\(x_0 \in X\)</span> if, given any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(d(f (x ), f (x_0)) &lt; \epsilon\)</span> whenever <span class="math notranslate nohighlight">\(d^n(x, x_0) &lt; \delta\)</span>.</p>
+<p>This is a formal version of the statement that <span class="math notranslate nohighlight">\(\lim_{x \rightarrow x_0} f (x ) = f (x_0)\)</span>.</p>
+<figure class="align-center" id="id48">
+<a class="reference internal image-reference" href="_images/continuity.png"><img alt="_images/continuity.png" src="_images/continuity.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Epsilon-delta continuity diagram</span><a class="headerlink" href="#id48" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id49">
+<a class="reference internal image-reference" href="_images/discontinuity.png"><img alt="_images/discontinuity.png" src="_images/discontinuity.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Epsilon-delta discontinuity diagram</span><a class="headerlink" href="#id49" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id43">
+<h3>Examples<a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h3>
+<p>Example 1</p>
+<p>Consider the mapping <span class="math notranslate nohighlight">\(f : \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x ) = x_2\)</span>. We want to show that <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous at the point <span class="math notranslate nohighlight">\(x = 2\)</span>.</p>
+<p>Recall that <span class="math notranslate nohighlight">\(d (x, y ) = \{ (y − x )2 \}^{\frac{1}{2}} = |y − x |\)</span>.</p>
+<p>Note that <span class="math notranslate nohighlight">\(|f (2) − f (x )| = |f (x ) − f (2)| = |x^2 − 4| = |x − 2||x + 2|\)</span>.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(|2 − x | &lt; \delta\)</span>. This means that <span class="math notranslate nohighlight">\(|x − 2| &lt; \delta\)</span>, which in turn means that <span class="math notranslate nohighlight">\((2 − \delta) &lt; x &lt; (2 + \delta)\)</span>. Thus we have <span class="math notranslate nohighlight">\((4 − \delta) &lt; (x + 2) &lt; (4 + \delta)\)</span>.</p>
+<p>Let us restrict attention to <span class="math notranslate nohighlight">\(\delta \in (0, 1)\)</span>. This gives us <span class="math notranslate nohighlight">\(3 &lt; (x + 2) &lt; 5\)</span>, so that <span class="math notranslate nohighlight">\(|x + 2| &lt; 5\)</span>.</p>
+<p>We have <span class="math notranslate nohighlight">\(|f (2) − f (x )| = |f (x ) − f (2)| = |x − 2||x + 2| &lt; (\delta)(5) = 5\delta\)</span>.</p>
+<p>We require <span class="math notranslate nohighlight">\(|f (2) − f (x )| &lt; \epsilon\)</span>. One way to ensure this is to set <span class="math notranslate nohighlight">\(\delta = min(1, \frac{\epsilon}{5})\)</span>.</p>
+<p>Example 2</p>
+<p>Consider the mapping <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x ) = x\)</span>. We want to show that <span class="math notranslate nohighlight">\(f (x )\)</span> is continuous for all <span class="math notranslate nohighlight">\(x \in X\)</span>.</p>
+<p>Recall that <span class="math notranslate nohighlight">\(d (x, y ) = \{ (y − x )2 \}^{\frac{1}{2}} = |y − x |\)</span>.</p>
+<p>Consider an arbitrary point <span class="math notranslate nohighlight">\(x = a\)</span>. Note that <span class="math notranslate nohighlight">\(|f (a) − f (x )| = |a − x |\)</span>.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(|a − x | &lt; \delta\)</span>.</p>
+<p>Note that if we set <span class="math notranslate nohighlight">\(\delta = \epsilon\)</span>, we have <span class="math notranslate nohighlight">\(|f (a) − f (x )| &lt; \epsilon\)</span>.</p>
+<p>Thus we know that <span class="math notranslate nohighlight">\(f\)</span> is continuous at the point <span class="math notranslate nohighlight">\(x = a\)</span>. Since <span class="math notranslate nohighlight">\(a\)</span> was chosen arbitrarily, we now that this is true for all <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span>. This means that <span class="math notranslate nohighlight">\(f\)</span> is continuous for all <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>.</p>
+<p>Example 3 (discontinuity)</p>
+<p>Consider the mapping <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x ) =
+\begin{cases} 
+1 \quad \text{ if } x &gt; 5; \\
+0 \quad \text{ if } x &lt; 5
+\end{cases}
+\end{split}\]</div>
+<p>We have already shown that <span class="math notranslate nohighlight">\(\lim_{x  \rightarrow 5} f (x )\)</span> does not exist. This means that it is impossible for <span class="math notranslate nohighlight">\(lim_{x  \rightarrow 5} f (x ) = f (5)\)</span>. As such, we know that <span class="math notranslate nohighlight">\(f (x )\)</span> is not continuous at the point <span class="math notranslate nohighlight">\(x = 5\)</span>.</p>
+<p>This means that f (x ) is not a continuous function.</p>
+<p>However, it can be shown that (i) <span class="math notranslate nohighlight">\(f(x )\)</span> is continuous on the interval <span class="math notranslate nohighlight">\((−\infty, 5)\)</span>, and that (ii) <span class="math notranslate nohighlight">\(f (x )\)</span> is continuous on the interval <span class="math notranslate nohighlight">\((5, \infty)\)</span>. Can
+you explain why this is the case?</p>
+<p>Example 4 (discontinuity)</p>
+<p>Consider the mapping <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f (x ) = \begin{cases}
+\frac{1}{x} \quad \text{ if } x \ne 0; \\
+0 \quad \text{ if } x = 0.
+\end{cases}
+\end{split}\]</div>
+<p>This function is a rectangular hyperbola when <span class="math notranslate nohighlight">\(x \ne 0\)</span>, but it takes on the value <span class="math notranslate nohighlight">\(0\)</span> when <span class="math notranslate nohighlight">\(x = 0\)</span>. Recall that the rectangular hyperbola part of this function is not defined at the point <span class="math notranslate nohighlight">\(x = 0\)</span>.</p>
+<p>This function is discontinuous at the point <span class="math notranslate nohighlight">\(x = 0\)</span>. <em>Illustrate the graph of this function on the whiteboard.</em></p>
+<p>Example 5 (discontinuity)</p>
+<p>Consider the mapping <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f (x ) = \begin{cases} 
+1 \quad \text{ if } x \in Q; \\
+0 \quad \text{ if } x \notin Q
+\end{cases}
+\end{split}\]</div>
+<p>This function is sometimes known as Dirichlet’s discontinuous function. It is discontinuous at every point in its domain.</p>
+</section>
+</section>
+<section id="derivatives">
+<h2>Derivatives<a class="headerlink" href="#derivatives" title="Permalink to this heading">#</a></h2>
+<p>If it exists, the derivative of a function tells us the direction and magnitude of the change in the dependent variable that will be induced by a very small increase in the independent variable.</p>
+<p>If it exists, the derivative of a function at a point is equal to the slope of the straight line that is tangent to the function at that point.</p>
+<p>You should try and guess now what the derivative of a linear function of the form <span class="math notranslate nohighlight">\(f (x ) = ax + b\)</span> will be.</p>
+<section id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h3>
+<p>Consider a function <span class="math notranslate nohighlight">\(f : X \rightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}\)</span>.
+Let <span class="math notranslate nohighlight">\((x_0, f (x_0))\)</span> and <span class="math notranslate nohighlight">\((x_0 + h, f (x_0 + h))\)</span> be two points that lie on the graph of this function.</p>
+<p>Draw a straight line between these two points. The slope of this line is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\frac{\text{rise}}{\text{run}} &amp;= \frac{y_2 − y_1}{x_2 − x_1} \\
+&amp;= \frac{f (x_0 + h) − f (x_0)}{x_0 + h − x_0} \\
+&amp;= \frac{f (x_0 + h) − f (x_0)}{h}
+\end{align*}
+\end{split}\]</div>
+<p>What happens to this slope as <span class="math notranslate nohighlight">\(h \rightarrow 0\)</span> (that is, as the second point
+gets very close to the first point?</p>
+<p>The <strong>derivative</strong> of the function <span class="math notranslate nohighlight">\(f(x)\)</span> at the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span>, if it exists, is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+f^{\prime}\left(x_{0}\right)
+=\left.\frac{d f}{d x}\right|_{x=x_{0}}
+=\lim _{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h} .
+\]</div>
+<p>This is simply the slope of the straight line that is tangent to the function <span class="math notranslate nohighlight">\(f(x)\)</span> at the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span>.</p>
+<p>We will now proceed to use this definition to find the derivative of some simple functions. This is sometimes called “finding the derivative of a function from first principles”.</p>
+<div class="tip admonition">
+<p class="admonition-title">Example: the (first) derivative of a constant function</p>
+<p>Consider the function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x)=b\)</span>, where <span class="math notranslate nohighlight">\(b \in \mathbb{R}\)</span> is a constant.
+Clearly we have <span class="math notranslate nohighlight">\(f\left(x_{0}\right)=f\left(x_{0}+h\right)=b\)</span> for all choices of <span class="math notranslate nohighlight">\(x_{0}\)</span> and <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h}=\frac{b-b}{h}=\frac{0}{h}=0
+\]</div>
+<p>for all choices of <span class="math notranslate nohighlight">\(x_{0}\)</span> and <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<p>This means that</p>
+<div class="math notranslate nohighlight">
+\[
+\lim _{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h}=\lim _{h \rightarrow 0} 0=0
+\]</div>
+<p>As such, we can conclude that</p>
+<div class="math notranslate nohighlight">
+\[
+f^{\prime}(x)=\frac{d f}{d x}=0
+\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example: the (first) derivative of a linear function</p>
+<p>Consider the function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x)=a x+b\)</span>.  Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f(x+h) &amp; =a(x+h)+b \\
+&amp; =a x+a h+b \\
+&amp; =a x+b+a h \\
+&amp; =f(x)+a h .
+\end{aligned}
+\end{split}\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{f(x+h)-f(x)}{h}=\frac{f(x)+a h-f(x)}{h}=\frac{a h}{h}=a .
+\]</div>
+<p>This means that <span class="math notranslate nohighlight">\(\lim _{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h}=\lim _{h \rightarrow 0} a=a\)</span>.</p>
+<p>As such, we can conclude that <span class="math notranslate nohighlight">\(f^{\prime}(x)=\frac{d f}{d x}=a\)</span>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example: the (first) derivative of a quadratic power function</p>
+<p>Consider the function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x)=x^{2}\)</span>.  Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f(x+h) &amp; =(x+h)^{2} \\
+&amp; =x^{2}+2 x h+h^{2} \\
+&amp; =f(x)+2 x h+h^{2}
+\end{aligned}
+\end{split}\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{f(x+h)-f(x)}{h} &amp; =\frac{f(x)+2 x h+h^{2}-f(x)}{h} \\
+&amp; =\frac{2 x h+h^{2}}{h} \\
+&amp; =2 x+h .
+\end{aligned}
+\end{split}\]</div>
+<p>This means that <span class="math notranslate nohighlight">\(\lim _{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h}=\lim _{h \rightarrow 0}(2 x+h)=2 x\)</span>.</p>
+<p>As such, we can conclude that <span class="math notranslate nohighlight">\(f^{\prime}(x)=\frac{d f}{d x}=2 x\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example: the (first) derivative of a quadratic polynomial function</p>
+<p>Consider the function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x)=a x^{2}+b x+c\)</span>. Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f(x+h) &amp; =a(x+h)^{2}+b(x+h)+c \\
+&amp; =a\left(x^{2}+2 x h+h^{2}\right)+b x+b h+c \\
+&amp; =a x^{2}+2 a x h+a h^{2}+b x+b h+c \\
+&amp; =\left(a x^{2}+b x+c\right)+(2 a x+b) h+a h^{2} \\
+&amp; =f(x)+(2 a x+b) h+a h^{2} .
+\end{aligned}
+\end{split}\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{f(x+h)-f(x)}{h} &amp; =\frac{f(x)+(2 a x+b) h+a h^{2}-f(x)}{h} \\
+&amp; =\frac{(2 a x+b) h+a h^{2}}{h} \\
+&amp; =(2 a x+b)+a h \\
+&amp; =2 a x+b+a h .
+\end{aligned}
+\end{split}\]</div>
+<p>This means that</p>
+<div class="math notranslate nohighlight">
+\[
+\lim _{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h}=\lim _{h \rightarrow 0}(2 a x+b+a h)=2 a x+b
+\]</div>
+<p>As such, we can conclude that <span class="math notranslate nohighlight">\(f^{\prime}(x)=\frac{d f}{d x}=2 a x+b\)</span>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example: the (first) derivative of a positive integer power function</p>
+<p>Consider the function <span class="math notranslate nohighlight">\(f: \mathbb{R} \longrightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x)=x^{n}\)</span>, where <span class="math notranslate nohighlight">\(n \in \mathbb{N}=\mathbb{Z}_{++}\)</span>. We know from the binomial theorem that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f(x+h) &amp; =(x+h)^{n} \\
+&amp; =\sum_{r=0}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r} \\
+&amp; =\left(\begin{array}{l}
+n \\
+0
+\end{array}\right) x^{n} h^{0}+\sum_{r=1}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r} \\
+&amp; =1 x^{n}(1)+\sum_{r=1}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r} \\
+&amp; =x^{n}+\sum_{r=1}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r} .
+\end{aligned}
+\end{split}\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{f(x+h)-f(x)}{h} &amp; =f(x)+\sum_{r=1}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r} \\
+&amp; =\frac{f(x)+\sum_{r=1}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r}-f(x)}{h} \\
+&amp; =\frac{\sum_{r=1}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r}}{h} \\
+&amp; =\sum_{r=1}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r-1} \\
+&amp; =\left(\begin{array}{l}
+n \\
+1
+\end{array}\right) x^{n-1} h^{0}+\sum_{r=2}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r-1} \\
+&amp; =n x^{n-1}(1)+\sum_{r=2}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r-1}
+\end{aligned}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{f(x+h)-f(x)}{h} &amp; =n x^{n-1}+\sum_{r=2}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r-1} \\
+&amp; =n x^{n-1}+\sum_{r=2}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r-1}
+\end{aligned}
+\end{split}\]</div>
+<p>This means that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\lim _{h \rightarrow 0} \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h}=\lim _{h \rightarrow 0}\left(n x^{n-1}+\sum_{r=2}^{n}\left(\begin{array}{l}
+n \\
+r
+\end{array}\right) x^{n-r} h^{r-1}\right)=n x^{n-1}
+\end{split}\]</div>
+<p>As such, we can conclude that</p>
+<div class="math notranslate nohighlight">
+\[
+f^{\prime}(x)=\frac{d f}{d x}=n x^{n-1}
+\]</div>
+</div>
+</section>
+<section id="the-first-derivatives-of-some-commonly-encountered-functions">
+<h3>The (first) derivatives of some commonly encountered functions<a class="headerlink" href="#the-first-derivatives-of-some-commonly-encountered-functions" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(f(x)=a\)</span>, where <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span> is a constant, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=0\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x)=a x+b\)</span>, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=a\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x)=a x^{2}+b x+c\)</span>, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=2 a x+b\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x)=x^{n}\)</span>, where <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=n x^{n-1}\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x)=\frac{1}{x^{n}}=x^{-n}\)</span>, where <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=-n x^{-n-1}=-n x^{-(n+1)}=\frac{-n}{x^{n+1}}\)</span>. (Note that we need to assume that <span class="math notranslate nohighlight">\(x \neq 0\)</span>.)</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x)=e^{x}=\exp (x)\)</span>, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=e^{x}=\exp (x)\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x)=\ln (x)\)</span>, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=\frac{1}{x}\)</span>. (Recall that <span class="math notranslate nohighlight">\(\ln (x)\)</span> is only defined for <span class="math notranslate nohighlight">\(x&gt;0\)</span>, so we need to assume that <span class="math notranslate nohighlight">\(x&gt;0\)</span> here.)</p></li>
+</ul>
+</section>
+<section id="some-useful-differentiation-rules">
+<h3>Some useful differentiation rules<a class="headerlink" href="#some-useful-differentiation-rules" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Scalar Multiplication Rule: If <span class="math notranslate nohighlight">\(f(x)=c g(x)\)</span> where <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span> is a constant, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=c g^{\prime}(x)\)</span>.</p></li>
+<li><p>Summation Rule: If <span class="math notranslate nohighlight">\(f(x)=g(x)+h(x)\)</span>, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=g^{\prime}(x)+h^{\prime}(x)\)</span>.</p></li>
+<li><p>Product Rule: If <span class="math notranslate nohighlight">\(f(x)=g(x) h(x)\)</span>, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=g^{\prime}(x) h(x)+h^{\prime}(x) g(x)\)</span>.</p></li>
+<li><p>Quotient Rule: If <span class="math notranslate nohighlight">\(f(x)=\frac{g(x)}{h(x)}\)</span>, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=\frac{g^{\prime}(x) h(x)-h^{\prime}(x) g(x)}{[h(x)]^{2}}\)</span>.</p></li>
+<li><p>Chain Rule: If <span class="math notranslate nohighlight">\(f(x)=g(h(x))\)</span>, then <span class="math notranslate nohighlight">\(f^{\prime}(x)=g^{\prime}(h(x)) h^{\prime}(x)\)</span>.</p></li>
+<li><p>The Inverse Function Rule: Suppose that the function <span class="math notranslate nohighlight">\(y=f(x)\)</span> has a well defined inverse function <span class="math notranslate nohighlight">\(x=f^{-1}(y)\)</span>. If appropriate regularity conditions hold, then</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{d x}{d y}=\frac{1}{\left(\frac{d y}{d x}\right)}
+\]</div>
+</section>
+<section id="the-quotient-rule-is-redundant">
+<h3>The quotient rule is redundant<a class="headerlink" href="#the-quotient-rule-is-redundant" title="Permalink to this heading">#</a></h3>
+<p>In a sense, the quotient rule is redundant. The reason for this is that it can be obtained from a combination of the product rule and the chain rule.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(f(x)=\frac{g(x)}{h(x)}\)</span>. Note that</p>
+<div class="math notranslate nohighlight">
+\[
+f(x)=\frac{g(x)}{h(x)}=g(x)[h(x)]^{-1}
+\]</div>
+<p>Let <span class="math notranslate nohighlight">\([h(x)]^{-1}=k(x)\)</span>.  We know from the chain rule that</p>
+<div class="math notranslate nohighlight">
+\[
+k^{\prime}(x)=(-1)[h(x)]^{-2} h^{\prime}(x)=\frac{-h^{\prime}(x)}{[h(x)]^{2}}
+\]</div>
+<p>Note that
+$<span class="math notranslate nohighlight">\(
+f(x)=\frac{g(x)}{h(x)}=g(x)[h(x)]^{-1}=g(x) k(x) .
+\)</span>$</p>
+<p>We know from the product rule that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f^{\prime}(x) &amp; =g^{\prime}(x) k(x)+k^{\prime}(x) g(x) \\
+&amp; =g^{\prime}(x)[h(x)]^{-1}+\left(\frac{-h^{\prime}(x)}{[h(x)]^{2}}\right) g(x) \\
+&amp; =\frac{g^{\prime}(x)}{h(x)}-\frac{h^{\prime}(x) g(x)}{[h(x)]^{2}} \\
+&amp; =\frac{g^{\prime}(x) h(x)}{[h(x)]^{2}}-\frac{h^{\prime}(x) g(x)}{[h(x)]^{2}} \\
+&amp; =\frac{g^{\prime}(x) h(x)-h^{\prime}(x) g(x)}{[h(x)]^{2}} .
+\end{aligned}
+\end{split}\]</div>
+<p>This is simply the quotient rule!</p>
+<div class="tip admonition">
+<p class="admonition-title">Example: the (first) derivative of an exponential function</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(f(x)=a^{x}\)</span>, where <span class="math notranslate nohighlight">\(a \in \mathbb{R}_{++}=(0, \infty)\)</span> and <span class="math notranslate nohighlight">\(x \neq 0\)</span>. Note that</p>
+<div class="math notranslate nohighlight">
+\[
+\ln (f(x))=\ln \left(a^{x}\right)=x \ln (a) .
+\]</div>
+<p>We know from the chain rule that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d f(x)}{d x}=\left(\frac{d f(x)}{d \ln (f(x))}\right)\left(\frac{d \ln (f(x))}{d x}\right)
+\]</div>
+<p>We know from the inverse function rule that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d f(x)}{d \ln (f(x))}=\frac{1}{\left(\frac{d \ln (f(x))}{d f(x)}\right)}=\frac{1}{\left(\frac{1}{a^{x}}\right)}=a^{x}
+\]</div>
+<p>We know from the scalar multiplication rule that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{d \ln (f(x))}{d x} &amp; =\frac{d x \ln (a)}{d x} \\
+&amp; =\ln (a)\left(\frac{d x}{d x}\right) \\
+&amp; =\ln (a)(1) \\
+&amp; =\ln (a) .
+\end{aligned}
+\end{split}\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d a^{x}}{d x}=a^{x} \ln (a)
+\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example: the (first) derivative of a logarithmic function</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(f(x)=\log _{a}(x)\)</span>, where <span class="math notranslate nohighlight">\(a \in \mathbb{R}_{++}=(0, \infty)\)</span> and <span class="math notranslate nohighlight">\(x&gt;0\)</span>.  Note that</p>
+<div class="math notranslate nohighlight">
+\[
+a^{f(x)}=a^{\log _{a}(x)}=x .
+\]</div>
+<p>We know from the chain rule that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d f(x)}{d x}=\left(\frac{d f(x)}{d a^{f(x)}}\right)\left(\frac{d a^{f(x)}}{d x}\right)
+\]</div>
+<p>We know from the inverse function rule that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d f(x)}{d a^{f(x)}}=\frac{1}{\left(\frac{d a^{f(x)}}{d f(x)}\right)}=\frac{1}{\left(a^{f(x)} \ln (a)\right)}=\frac{1}{x \ln (a)}
+\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{d a^{x}}{d x} &amp; =\left(\frac{1}{x \ln (a)}\right)\left(\frac{d x}{d x}\right) \\
+&amp; =\left(\frac{1}{x \ln (a)}\right)(1) \\
+&amp; =\frac{1}{x \ln (a)} .
+\end{aligned}
+\end{split}\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example: product rule</p>
+<p>Consider the function <span class="math notranslate nohighlight">\(f(x)=(a x+b)(c x+d)\)</span>.</p>
+<p>Differentiation Approach One:
+Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f(x) &amp; =(a x+b)(c x+d) \\
+&amp; =a c x^{2}+a d x+b c x+b d \\
+&amp; =a c x^{2}+(a d+b c) x+b d
+\end{aligned}
+\end{split}\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f^{\prime}(x) &amp; =2 a c x+(a d+b c) \\
+&amp; =2 a c x+a d+b c
+\end{aligned}
+\end{split}\]</div>
+<p>Differentiation Approach Two:
+Note that <span class="math notranslate nohighlight">\(f(x)=g(x) h(x)\)</span> where <span class="math notranslate nohighlight">\(g(x)=a x+b\)</span> and <span class="math notranslate nohighlight">\(h(x)=c x+d\)</span>.
+This means that <span class="math notranslate nohighlight">\(g^{\prime}(x)=a\)</span> and <span class="math notranslate nohighlight">\(g^{\prime}(x)=c\)</span>.
+Thus we know, from the product rule, that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f^{\prime}(x) &amp; =g^{\prime}(x) h(x)+h^{\prime}(x) g(x) \\
+&amp; =a(c x+d)+c(a x+b) \\
+&amp; =a c x+a d+a c x+b c \\
+&amp; =2 a c x+a d+b c .
+\end{aligned}
+\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="the-relationship-between-continuity-and-differentiability">
+<h2>The relationship between continuity and differentiability<a class="headerlink" href="#the-relationship-between-continuity-and-differentiability" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Continuity is a necessary, but not sufficient, condition for differentiability.</p>
+<ul>
+<li><p>Being a necessary condition means that “not continuous” implies “not differentiable”, which means that differentiable implies continuous.</p></li>
+<li><p>Not being a sufficient condition means that continuous does NOT imply differentiable.</p></li>
+</ul>
+</li>
+<li><p>Differentiability is a sufficient, but not necessary, condition for continuity.</p>
+<ul>
+<li><p>Being a sufficient condition means that differentiable implies continuous.</p></li>
+<li><p>Not being a necessary condition means that “not differentiable” does NOT imply “not continuous”, which means that continuous does NOT imply differentiable.</p></li>
+</ul>
+</li>
+</ul>
+<section id="continuity-does-not-imply-differentiability">
+<h3>Continuity does NOT imply differentiability<a class="headerlink" href="#continuity-does-not-imply-differentiability" title="Permalink to this heading">#</a></h3>
+<p>Consider the function</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x)=\left\{\begin{array}{cc}
+2 x &amp; \text { if } x \leq 1 \\
+\frac{1}{2} x+\frac{3}{2} &amp; \text { if } x \geq 1
+\end{array}\right.
+\end{split}\]</div>
+<p>(There is no problem with this double definition at the point <span class="math notranslate nohighlight">\(x=1\)</span> because the two parts of the function are equal at that point.)</p>
+<p>This function is continuous at <span class="math notranslate nohighlight">\(x=1\)</span> because</p>
+<div class="math notranslate nohighlight">
+\[
+\lim _{x \rightarrow 1} 2 x=2=\lim _{x \rightarrow 1}\left(\frac{1}{2} x+\frac{3}{2}\right)
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+f(1)=2
+\]</div>
+<p>However, this function is not differentiable at <span class="math notranslate nohighlight">\(x=1\)</span> because</p>
+<div class="math notranslate nohighlight">
+\[
+\lim _{h \uparrow 1} \frac{f(1+h)-f(1)}{h}=2
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+\lim _{h \downarrow 1} \frac{f(1+h)-f(1)}{h}=\frac{1}{2}
+\]</div>
+<p>Since</p>
+<div class="math notranslate nohighlight">
+\[
+\lim _{h \uparrow 1} \frac{f(1+h)-f(1)}{h} \neq \lim _{h \downarrow 1} \frac{f(1+h)-f(1)}{h}
+\]</div>
+<p>we know that</p>
+<div class="math notranslate nohighlight">
+\[
+\lim _{h \rightarrow 1} \frac{f(1+h)-f(1)}{h}
+\]</div>
+<p>does not exist.</p>
+</section>
+<section id="differentiability-implies-continuity">
+<h3>Differentiability implies continuity<a class="headerlink" href="#differentiability-implies-continuity" title="Permalink to this heading">#</a></h3>
+<p>Consider a function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span> where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}\)</span>.
+Suppose that</p>
+<div class="math notranslate nohighlight">
+\[
+\lim _{h \rightarrow 0}\left(\frac{f(a+h)-f(a)}{h}\right)
+\]</div>
+<p>exists.</p>
+<p>We want to show that this implies that <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous at the point <span class="math notranslate nohighlight">\(a \in X\)</span>.  The following proof of this proposition is drawn from <span id="id44">[]</span> (Chapter 8, Solved Problem 2).</p>
+<p>First, note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\lim _{h \rightarrow 0}(f(a+h)-f(a))=\lim _{h \rightarrow 0}\left\{\left(\frac{h}{h}\right)(f(a+h)-f(a))\right\} \\
+=\lim _{h \rightarrow 0}\left\{h\left(\frac{f(a+h)-f(a)}{h}\right)\right\} \\
+=\lim _{h \rightarrow 0}(h) \lim _{h \rightarrow 0}\left(\frac{f(a+h)-f(a)}{h}\right) \\
+=(0)\left(\lim _{h \rightarrow 0}\left(\frac{f(a+h)-f(a)}{h}\right)\right) \\
+=0 .
+\end{gathered}
+\end{split}\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\lim _{h \rightarrow 0}(f(a+h)-f(a))=0 .
+\]</div>
+<p>Now note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\lim _{h \rightarrow 0}(f(a+h)-f(a))=\lim _{h \rightarrow 0} f(a+h)-\lim _{h \rightarrow 0} f(a) \\
+=\left(\lim _{h \rightarrow 0} f(a+h)\right)-f(a)
+\end{gathered}
+\end{split}\]</div>
+<p>Upon combining these two results, we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\lim _{h \rightarrow 0} f(a+h)\right)-f(a)=0 \Longleftrightarrow \lim _{h \rightarrow 0} f(a+h)=f(a) .
+\]</div>
+<p>Finally, note that</p>
+<div class="math notranslate nohighlight">
+\[
+\lim _{x \rightarrow a} f(x)=\lim _{h \rightarrow 0} f(a+h) .
+\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\lim _{x \rightarrow a} f(x)=f(a)
+\]</div>
+<p>This means that <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous at the point <span class="math notranslate nohighlight">\(x=a\)</span>.</p>
+</section>
+</section>
+<section id="higher-order-derivatives">
+<h2>Higher-order derivatives<a class="headerlink" href="#higher-order-derivatives" title="Permalink to this heading">#</a></h2>
+<p>Suppose that <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}\)</span>, is an <span class="math notranslate nohighlight">\(n\)</span>-times continuously differentiable function for some <span class="math notranslate nohighlight">\(n \geqslant 2\)</span>.</p>
+<p>We can view the first derivative of this function as a function in its own right. This can be seen by letting <span class="math notranslate nohighlight">\(g(x)=f^{\prime}(x)\)</span>.</p>
+<p>The second derivative of <span class="math notranslate nohighlight">\(f(x)\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span> twice is simply the first derivative of <span class="math notranslate nohighlight">\(g(x)\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>In other words,</p>
+<div class="math notranslate nohighlight">
+\[
+f^{\prime \prime}(x)=g^{\prime}(x)
+\]</div>
+<p>or, if you prefer,</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d^{2} f}{d x^{2}}=\frac{d g}{d x}
+\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d^{2} f}{d x^{2}}=\frac{d}{d x}\left(\frac{d f}{d x}\right)
+\]</div>
+<p>The same approach can be used for defining third and higher order derivative.
+Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+f^{(k)}(x)=\frac{d^{k} f}{d x^{k}}=\frac{d}{d x}\left(\frac{d^{k-1} f}{d x^{k-1}}\right)
+\]</div>
+<p>for all <span class="math notranslate nohighlight">\(k \in\{1,2, \cdots, n\}\)</span>, where we define</p>
+<div class="math notranslate nohighlight">
+\[
+f^{(0)}(x)=f(x)
+\]</div>
+<div class="admonition-example-higher-order-derivatives admonition">
+<p class="admonition-title">Example: higher-order derivatives</p>
+<ul class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(f(x)=x^{n}\)</span></p></li>
+<li><p>Then we have:</p></li>
+<li><p><span class="math notranslate nohighlight">\(f^{\prime}(x)=\frac{d f(x)}{d x}=n x^{n-1}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f^{\prime \prime}(x)=\frac{d f^{\prime}(x)}{d x}=n(n-1) x^{n-2}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(f^{\prime \prime \prime}(x)=\frac{d f^{\prime \prime}(x)}{d x}=n(n-1)(n-2) x^{n-3}\)</span>,</p></li>
+<li><p>and so on and so forth until</p></li>
+<li><p><span class="math notranslate nohighlight">\(f^{(k)}(x)=\frac{d f^{(k-1)}(x)}{d x}=n(n-1)(n-2) \cdots(n-(k-1)) x^{n-k}\)</span>,</p></li>
+<li><p>and so on and so forth until</p></li>
+<li><p><span class="math notranslate nohighlight">\(f^{(n)}(x)=\frac{d f^{(n-1)}(x)}{d x}=n(n-1)(n-2) \cdots(1) x^{0}\)</span>.</p></li>
+<li><p>Note that <span class="math notranslate nohighlight">\(n(n-1)(n-2) \cdots(1)=n\)</span> ! and <span class="math notranslate nohighlight">\(x^{0}=1\)</span> (asuming that <span class="math notranslate nohighlight">\(x \neq 0\)</span> ).</p></li>
+<li><p>This means that <span class="math notranslate nohighlight">\(f^{(n)}(x)=n\)</span> !, which is a constant.</p></li>
+<li><p>As such, we know that <span class="math notranslate nohighlight">\(f^{(n+1)}(x)=\frac{d f^{(n)}(x)}{d x}=0\)</span>.</p></li>
+<li><p>This means that <span class="math notranslate nohighlight">\(f^{(n+j)}(x)=0\)</span> for all <span class="math notranslate nohighlight">\(j \in \mathbb{N}\)</span>.</p></li>
+</ul>
+</div>
+<section id="interpreting-first-and-second-derivatives">
+<h3>Interpreting first and second derivatives<a class="headerlink" href="#interpreting-first-and-second-derivatives" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The first and second order derivatives of a function provide useful information about the shape of that function.</p></li>
+<li><p>The first derivative tells us about the slope of a function. Is it increasing, decreasing, or constant over some interval? At what point or points, if any, does the sign of the slope of the function change? (Such points are known as turning points.)</p></li>
+<li><p>The second derivative tells us about the curvature of the function. Is it convex or concave over some interval? At what point or points, if any, does the curvature of the function change? (Such points are known as inflexion points.)</p></li>
+</ul>
+</section>
+</section>
+<section id="increasing-functions">
+<h2>Increasing functions<a class="headerlink" href="#increasing-functions" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A function is said to be <strong>increasing</strong> on the non-empty interval <span class="math notranslate nohighlight">\((a, b) \subseteq \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(f\left(x_{0}\right) \leqslant f\left(x_{1}\right)\)</span> whenever <span class="math notranslate nohighlight">\(x_{0}&lt;x_{1}\)</span>, where <span class="math notranslate nohighlight">\(x_{0} \in(a, b)\)</span> and <span class="math notranslate nohighlight">\(x_{1} \in(a, b)\)</span>.</p>
+<ul>
+<li><p>If <span class="math notranslate nohighlight">\(f^{\prime}(x) \geqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>, then the function <span class="math notranslate nohighlight">\(f(x)\)</span> is increasing on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>.</p></li>
+</ul>
+</li>
+<li><p>A function is said to be <strong>strictly increasing</strong> on the non-empty interval <span class="math notranslate nohighlight">\((a, b) \subseteq \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(f\left(x_{0}\right)&lt;f\left(x_{1}\right)\)</span> whenever <span class="math notranslate nohighlight">\(x_{0}&lt;x_{1}\)</span>, where <span class="math notranslate nohighlight">\(x_{0} \in(a, b)\)</span> and <span class="math notranslate nohighlight">\(x_{1} \in(a, b)\)</span>.</p>
+<ul>
+<li><p>If <span class="math notranslate nohighlight">\(f^{\prime}(x)&gt;0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>, then the function <span class="math notranslate nohighlight">\(f(x)\)</span> is strictly increasing on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="decreasing-functions">
+<h2>Decreasing functions<a class="headerlink" href="#decreasing-functions" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A function is said to be <strong>decreasing</strong> on the non-empty interval <span class="math notranslate nohighlight">\((a, b) \subseteq \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(f\left(x_{0}\right) \geqslant f\left(x_{1}\right)\)</span> whenever <span class="math notranslate nohighlight">\(x_{0}&lt;x_{1}\)</span>, where <span class="math notranslate nohighlight">\(x_{0} \in(a, b)\)</span> and <span class="math notranslate nohighlight">\(x_{1} \in(a, b)\)</span>.</p>
+<ul>
+<li><p>If <span class="math notranslate nohighlight">\(f^{\prime}(x) \leqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>, then the function <span class="math notranslate nohighlight">\(f(x)\)</span> is decreasing on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>.</p></li>
+</ul>
+</li>
+<li><p>A function is said to be <strong>strictly decreasing</strong> on the non-empty interval <span class="math notranslate nohighlight">\((a, b) \subseteq \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(f\left(x_{0}\right)&gt;f\left(x_{1}\right)\)</span> whenever <span class="math notranslate nohighlight">\(x_{0}&lt;x_{1}\)</span>, where <span class="math notranslate nohighlight">\(x_{0} \in(a, b)\)</span> and <span class="math notranslate nohighlight">\(x_{1} \in(a, b)\)</span>.</p>
+<ul>
+<li><p>If <span class="math notranslate nohighlight">\(f^{\prime}(x)&lt;0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>, then the function <span class="math notranslate nohighlight">\(f(x)\)</span> is strictly decreasing on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="convex-functions">
+<h2>Convex functions<a class="headerlink" href="#convex-functions" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A function is said to be <strong>convex</strong> on the non-empty interval <span class="math notranslate nohighlight">\((a, b) \subseteq \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(f\left(\lambda x_{0}+(1-\lambda) x_{1}\right) \leqslant \lambda f\left(x_{0}\right)+(1-\lambda) f\left(x_{1}\right)\)</span> whenever <span class="math notranslate nohighlight">\(x_{0} \in(a, b), x_{1} \in(a, b)\)</span> and <span class="math notranslate nohighlight">\(x_{0} \neq x_{1}\)</span>.</p>
+<ul>
+<li><p>In other words, a function is convex on an interval if the graph of the straight line joining any two distinct points in that interval lies on or above the graph of the function between those two points.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f^{\prime \prime}(x) \geqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>, then the function <span class="math notranslate nohighlight">\(f(x)\)</span> is convex on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>.</p></li>
+</ul>
+</li>
+<li><p>A function is said to be <strong>strictly convex</strong> on the non-empty interval <span class="math notranslate nohighlight">\((a, b) \subseteq \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(f\left(\lambda x_{0}+(1-\lambda) x_{1}\right)&lt;\lambda f\left(x_{0}\right)+(1-\lambda) f\left(x_{1}\right)\)</span> whenever <span class="math notranslate nohighlight">\(x_{0} \in(a, b), x_{1} \in(a, b)\)</span> and <span class="math notranslate nohighlight">\(x_{0} \neq x_{1}\)</span>.</p>
+<ul>
+<li><p>In other words, a function is strictly convex on an interval if the graph of the straight line joining any two distinct points in that interval lies strictly above the graph of the function between those two points.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f^{\prime \prime}(x)&gt;0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>, then the function <span class="math notranslate nohighlight">\(f(x)\)</span> is strictly convex on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="concave-functions">
+<h2>Concave functions<a class="headerlink" href="#concave-functions" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A function is said to be <strong>concave</strong> on the non-empty interval <span class="math notranslate nohighlight">\((a, b) \subseteq \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(f\left(\lambda x_{0}+(1-\lambda) x_{1}\right) \geqslant \lambda f\left(x_{0}\right)+(1-\lambda) f\left(x_{1}\right)\)</span> whenever <span class="math notranslate nohighlight">\(x_{0} \in(a, b), x_{1} \in(a, b)\)</span> and <span class="math notranslate nohighlight">\(x_{0} \neq x_{1}\)</span>.</p>
+<ul>
+<li><p>In other words, a function is concave on an interval if the graph of the straight line joining any two distinct points in that interval lies on or below the graph of the function between those two points.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f^{\prime \prime}(x) \leqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>, then the function <span class="math notranslate nohighlight">\(f(x)\)</span> is convex on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>.</p></li>
+</ul>
+</li>
+<li><p>A function is said to be <strong>strictly concave</strong> on the non-empty interval <span class="math notranslate nohighlight">\((a, b) \subseteq \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(f\left(\lambda x_{0}+(1-\lambda) x_{1}\right)&gt;\lambda f\left(x_{0}\right)+(1-\lambda) f\left(x_{1}\right)\)</span> whenever <span class="math notranslate nohighlight">\(x_{0} \in(a, b), x_{1} \in(a, b)\)</span> and <span class="math notranslate nohighlight">\(x_{0} \neq x_{1}\)</span>.</p>
+<ul>
+<li><p>In other words, a function is strictly concave on an interval if the graph of the straight line joining any two distinct points in that interval lies strictly below the graph of the function between those two points.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f^{\prime \prime}(x)&lt;0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>, then the function <span class="math notranslate nohighlight">\(f(x)\)</span> is strictly convex on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="peak-local-maximum-turning-points">
+<h2>Peak (local maximum) turning points<a class="headerlink" href="#peak-local-maximum-turning-points" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The point <span class="math notranslate nohighlight">\(c\)</span> yields a <strong>local maximum</strong> of the function <span class="math notranslate nohighlight">\(f(x)\)</span> if there exists some non-empty interval <span class="math notranslate nohighlight">\((a, b)\)</span> that is a subset of the domain of the function such that <span class="math notranslate nohighlight">\(c \in(a, b)\)</span> and <span class="math notranslate nohighlight">\(f(x) \leqslant f(c)\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>.</p></li>
+<li><p>If (i) <span class="math notranslate nohighlight">\(f^{\prime}(c)=0\)</span>, (ii) <span class="math notranslate nohighlight">\(f^{\prime}(x) \geqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, c)\)</span> where <span class="math notranslate nohighlight">\(a&lt;c\)</span>, and (iii) <span class="math notranslate nohighlight">\(f^{\prime}(x) \leqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(c, b)\)</span> where <span class="math notranslate nohighlight">\(c&lt;b\)</span>, then the point <span class="math notranslate nohighlight">\(x=c\)</span> yields a local maximum of the function <span class="math notranslate nohighlight">\(f\)</span> over the non-empty interval <span class="math notranslate nohighlight">\((a, b)\)</span>.</p></li>
+<li><p>If (i) <span class="math notranslate nohighlight">\(f^{\prime}(c)=0\)</span> and (ii) <span class="math notranslate nohighlight">\(f^{\prime \prime}(c)&lt;0\)</span>, then the point <span class="math notranslate nohighlight">\(x=c\)</span> yields a strict local maximum of the function <span class="math notranslate nohighlight">\(f\)</span> over some non-empty interval <span class="math notranslate nohighlight">\((a, b)\)</span> such that <span class="math notranslate nohighlight">\(c \in(a, b)\)</span>.</p>
+<ul>
+<li><p>Note that we need <span class="math notranslate nohighlight">\(f^{\prime \prime}(c)&lt;0\)</span> here. If <span class="math notranslate nohighlight">\(f^{\prime \prime}(c)=0\)</span>, then this theorem does not apply. In such a case, a different approach must be used to determine whether or not the point <span class="math notranslate nohighlight">\(x=c\)</span> yields a local maximum of the function.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="trough-local-minimum-turning-points">
+<h2>Trough (local minimum) turning points<a class="headerlink" href="#trough-local-minimum-turning-points" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The point <span class="math notranslate nohighlight">\(c\)</span> yields a <strong>local minimum</strong> of the function <span class="math notranslate nohighlight">\(f(x)\)</span> if there exists some non-empty interval <span class="math notranslate nohighlight">\((a, b)\)</span> that is a subset of the domain of the function such that <span class="math notranslate nohighlight">\(c \in(a, b)\)</span> and <span class="math notranslate nohighlight">\(f(x) \geqslant f(c)\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>.</p></li>
+<li><p>If (i) <span class="math notranslate nohighlight">\(f^{\prime}(c)=0\)</span>, (ii) <span class="math notranslate nohighlight">\(f^{\prime}(x) \leqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, c)\)</span> where <span class="math notranslate nohighlight">\(a&lt;c\)</span>, and (iii) <span class="math notranslate nohighlight">\(f^{\prime}(x) \geqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(c, b)\)</span> where <span class="math notranslate nohighlight">\(c&lt;b\)</span>, then the point <span class="math notranslate nohighlight">\(x=c\)</span> yields a local minimum of the function <span class="math notranslate nohighlight">\(f\)</span> over the non-empty interval <span class="math notranslate nohighlight">\((a, b)\)</span>.</p></li>
+<li><p>If (i) <span class="math notranslate nohighlight">\(f^{\prime}(c)=0\)</span> and (ii) <span class="math notranslate nohighlight">\(f^{\prime \prime}(c)&gt;0\)</span>, then the point <span class="math notranslate nohighlight">\(x=c\)</span> yields a strict local minimum of the function <span class="math notranslate nohighlight">\(f\)</span> over some non-empty interval <span class="math notranslate nohighlight">\((a, b)\)</span> such that <span class="math notranslate nohighlight">\(c \in(a, b)\)</span>.</p>
+<ul>
+<li><p>Note that we need <span class="math notranslate nohighlight">\(f^{\prime \prime}(c)&gt;0\)</span> here. If <span class="math notranslate nohighlight">\(f^{\prime \prime}(c)=0\)</span>, then this theorem does not apply. In such a case, a different approach must be used to determine whether or not the point <span class="math notranslate nohighlight">\(x=c\)</span> yields a local minimum of the function.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="inflection-points">
+<h2>Inflection points<a class="headerlink" href="#inflection-points" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>An <strong>inflection point</strong> of a function is a point at which the curvature of the function changes from either convex to concave or concave to convex.</p></li>
+<li><p>The point <span class="math notranslate nohighlight">\(x=c\)</span> is an inflection point of the twice differentiable function <span class="math notranslate nohighlight">\(f(x)\)</span> if there exists some interval <span class="math notranslate nohighlight">\((a, b)\)</span> that is a subset of the domain of <span class="math notranslate nohighlight">\(f(x)\)</span> such that <span class="math notranslate nohighlight">\(c \in(a, b)\)</span> and either (a) both (i) <span class="math notranslate nohighlight">\(f^{\prime \prime}(x) \geqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, c)\)</span> and (ii) <span class="math notranslate nohighlight">\(f^{\prime \prime}(x) \leqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(c, b)\)</span>, or (b) both (i) <span class="math notranslate nohighlight">\(f^{\prime \prime}(x) \leqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, c)\)</span> and (ii) <span class="math notranslate nohighlight">\(f^{\prime \prime}(x) \geqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(c, b)\)</span>.</p></li>
+<li><p>Suppose that the function <span class="math notranslate nohighlight">\(f(x)\)</span> is twice continuously differentiable on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>, where that interval is a subset of the domain of the function. If <span class="math notranslate nohighlight">\(c \in(a, b)\)</span> is an inflection point of the function <span class="math notranslate nohighlight">\(f(x)\)</span>, then <span class="math notranslate nohighlight">\(f^{\prime \prime}(c)=0\)</span>.</p></li>
+<li><p>Suppose that the function <span class="math notranslate nohighlight">\(f(x)\)</span> is twice continuously differentiable on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>, where that interval is a subset of the domain of the function and <span class="math notranslate nohighlight">\(c \in(a, b)\)</span>. If both (i) <span class="math notranslate nohighlight">\(f^{\prime \prime}(c)=0\)</span> and (ii) <span class="math notranslate nohighlight">\(f^{\prime \prime}(c)\)</span> changes sign at the point <span class="math notranslate nohighlight">\(x=c\)</span>, then the point <span class="math notranslate nohighlight">\(x=c\)</span> is an inflection point of the function <span class="math notranslate nohighlight">\(f(x)\)</span>.</p></li>
+</ul>
+<section id="some-economic-applications-of-derivatives">
+<h3>Some economic applications of derivatives<a class="headerlink" href="#some-economic-applications-of-derivatives" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Obtaining marginal revenue from total revenue and marginal cost from total cost.</p></li>
+<li><p>The relationship between the marginal cost curve and the average cost curve. (See separate handout.)</p></li>
+<li><p>Marginal revenue for a single-price monopolist that faces a linear demand curve. (See separate handout.)</p></li>
+<li><p>The calculation of elasticities, with a particular focus on the own-price elasticity of demand, cross-price elasticities of demand, the income elasticity of demand, and the own-price elasticity of supply.</p></li>
+</ul>
+<section id="marginal-revenue-and-marginal-cost">
+<h4>Marginal revenue and marginal cost<a class="headerlink" href="#marginal-revenue-and-marginal-cost" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>If a firm’s total revenue as a function of output is given by the function <span class="math notranslate nohighlight">\(R(Q)\)</span>, then its marginal revenue is given by the first derivative of that function:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+MR(Q)=\frac{d R(Q)}{d Q}=R^{\prime}(Q)
+\]</div>
+<ul class="simple">
+<li><p>If a firm’s total cost as a function of output is given by the function <span class="math notranslate nohighlight">\(C(Q)\)</span>, then its marginal cost is given by the first derivative of that function:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+MC(Q)=\frac{d C(Q)}{d Q}=C^{\prime}(Q)
+\]</div>
+</section>
+<section id="marginal-revenue-for-a-monopolist">
+<h4>Marginal revenue for a monopolist<a class="headerlink" href="#marginal-revenue-for-a-monopolist" title="Permalink to this heading">#</a></h4>
+<p>Consider a single-priced monopolist that faces an inverse demand curve that is given by the function <span class="math notranslate nohighlight">\(P(Q)\)</span>. Since demand curves usually slope down, we will assume that <span class="math notranslate nohighlight">\(P^{\prime}(Q)&lt;0\)</span>. The total revenue for this monopolist is given by <span class="math notranslate nohighlight">\(R(Q)=P(Q) Q\)</span>. As such, the marginal revenue for this monopolist is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M R(Q) &amp; =R^{\prime}(Q) \\
+&amp; =P^{\prime}(Q) Q+(1) P(Q) \\
+&amp; =P^{\prime}(Q) Q+P(Q) \\
+&amp; =P(Q)+P^{\prime}(Q) Q \\
+&amp; &lt;P(Q)
+\end{aligned}
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(P(Q)\)</span> will be the market price when the monopolist produces <span class="math notranslate nohighlight">\(Q&gt;0\)</span> units of output and <span class="math notranslate nohighlight">\(P^{\prime}(Q)&lt;0\)</span>, we know that marginal revenue is less than the market price for a monopolist.</p>
+<p>The two terms that make up marginal revenue for a monopolist can be given a very intuitive explanation. If the monopolist increases its output by a small amount, it receives the market price for the additional output (hence the <span class="math notranslate nohighlight">\(P(Q)\)</span> term), but it loses some revenue due to the lower price that it will receive for all of the pre-existing output (the <span class="math notranslate nohighlight">\(P^{\prime}(Q) Q\)</span> term).</p>
+<ul class="simple">
+<li><p>The additional output is known as the “marginal” unit of output.</p></li>
+<li><p>The pre-existing units of output are known as the “infra-marginal” units of output.</p></li>
+</ul>
+<p><em>Illustrate the relationship between the inverse market demand curve for a monopolist’s product and the marginal revenue curve for the monopolist on the white-board.</em></p>
+</section>
+<section id="point-elasticities">
+<h4>Point elasticities<a class="headerlink" href="#point-elasticities" title="Permalink to this heading">#</a></h4>
+<p>Suppose that <span class="math notranslate nohighlight">\(y=f(x)\)</span>. The <strong>elasticity of <span class="math notranslate nohighlight">\(y\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span></strong> is defined to be the percentage change in <span class="math notranslate nohighlight">\(y\)</span> that is induced by a small percentage change in <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>In calculus terms, this is given by the function</p>
+<div class="math notranslate nohighlight">
+\[
+\epsilon_{x}^{y}(x)=\left(\frac{x}{y}\right)\left(\frac{d y}{d x}\right)=\frac{x f^{\prime}(x)}{f(x)}
+\]</div>
+<p>It can also be calculated using calculus as</p>
+<div class="math notranslate nohighlight">
+\[
+\epsilon_{x}^{y}(x)=\frac{d \ln (y)}{d \ln (x)}
+\]</div>
+<p>We can use the chain rule and the inverse function rule to show that these two formulae for the elasticity of <span class="math notranslate nohighlight">\(y\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span> are equivalent. Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{d \ln (y)}{d \ln (x)} &amp; =\left(\frac{d \ln (y)}{d y}\right)\left(\frac{d y}{d x}\right)\left(\frac{d x}{d \ln (x)}\right) \\
+&amp; =\left(\frac{1}{y}\right)\left(\frac{d y}{d x}\right)\left(\frac{1}{\left(\frac{d \ln (x)}{d x}\right)}\right) \\
+&amp; =\left(\frac{1}{y}\right)\left(\frac{d y}{d x}\right)\left(\frac{1}{\left(\frac{1}{x}\right)}\right) \\
+&amp; =\left(\frac{x}{y}\right)\left(\frac{d y}{d x}\right) .
+\end{aligned}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Suppose that the demand curve for a commodity is given by <span class="math notranslate nohighlight">\(Q=D(P)\)</span>. In this case, the own-price elasticity of demand for this commodity is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\epsilon_{P}^{D}(P)=\left(\frac{P}{Q}\right)\left(\frac{d Q}{d P}\right)=\frac{P D^{\prime}(P)}{D(P)}
+\]</div>
+<ul class="simple">
+<li><p>Suppose that the supply curve for a commodity is given by <span class="math notranslate nohighlight">\(Q=S(P)\)</span>. In this case, the own-price elasticity of supply for this commodity is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\epsilon_{P}^{S}(P)=\left(\frac{P}{Q}\right)\left(\frac{d Q}{d P}\right)=\frac{P S^{\prime}(P)}{S(P)}
+\]</div>
+</section>
+</section>
+</section>
+<section id="unconstrained-optimisation">
+<h2>Unconstrained optimisation<a class="headerlink" href="#unconstrained-optimisation" title="Permalink to this heading">#</a></h2>
+<p>Consider a function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}\)</span>. This function can be written as <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<p>We are going to define the concepts of local maximum, local minimum, global maximum and global minimum for this function. We will then examine some techniques for finding such extrema.</p>
+<p>Note that the open interval <span class="math notranslate nohighlight">\((a, b)\)</span> is the set</p>
+<div class="math notranslate nohighlight">
+\[
+\{x \in \mathbb{R}: a&lt;x&lt;b\} .
+\]</div>
+<p>If <span class="math notranslate nohighlight">\((a, b) \subseteq X\)</span>, we can rewrite this set as</p>
+<div class="math notranslate nohighlight">
+\[
+\{x \in X: a&lt;x&lt;b\} .
+\]</div>
+<ul class="simple">
+<li><p>The point <span class="math notranslate nohighlight">\(x_{0} \in X\)</span> yields a <strong>local maximum</strong> of the function <span class="math notranslate nohighlight">\(f(x)\)</span> if there exists some open interval <span class="math notranslate nohighlight">\((a, b) \subset X\)</span> that contains <span class="math notranslate nohighlight">\(x_{0}\)</span> and for which <span class="math notranslate nohighlight">\(f\left(x_{0}\right) \geq f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>.</p></li>
+<li><p>The point <span class="math notranslate nohighlight">\(x_{0} \in X\)</span> yields a <strong>local minimum</strong> of the function <span class="math notranslate nohighlight">\(f(x)\)</span> if there exists some open interval <span class="math notranslate nohighlight">\((a, b) \subset X\)</span> that contains <span class="math notranslate nohighlight">\(x_{0}\)</span> and for which <span class="math notranslate nohighlight">\(f\left(x_{0}\right) \leq f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>.</p></li>
+<li><p>The point <span class="math notranslate nohighlight">\(x_{0} \in X\)</span> yields a <strong>global maximum</strong> of the function <span class="math notranslate nohighlight">\(f(x)\)</span> if <span class="math notranslate nohighlight">\(f\left(x_{0}\right) \geq f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in X\)</span>.</p></li>
+<li><p>The point <span class="math notranslate nohighlight">\(x_{0} \in X\)</span> yields a <strong>global minimum</strong> of the function <span class="math notranslate nohighlight">\(f(x)\)</span> if <span class="math notranslate nohighlight">\(f\left(x_{0}\right) \leq f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in X\)</span>.</p></li>
+</ul>
+<section id="finding-extrema-of-functions">
+<h3>Finding extrema of functions<a class="headerlink" href="#finding-extrema-of-functions" title="Permalink to this heading">#</a></h3>
+<p>There are a variety of rules that can be used to help identify the extrema of functions.  In this unit, we will mention two such rules.</p>
+<ul class="simple">
+<li><p>The first set of rules focus only on the first derivative of the function. We will call this approach the “first derivative approach”.</p></li>
+<li><p>The second set of rules focus on both the first derivative of the function and the second derivative of the function. We will call this approach the “second derivative approach”.</p></li>
+</ul>
+<section id="some-terminology">
+<h4>Some terminology<a class="headerlink" href="#some-terminology" title="Permalink to this heading">#</a></h4>
+<p>Consider the problem “Maximise the function <span class="math notranslate nohighlight">\(f(x)\)</span> on the set <span class="math notranslate nohighlight">\(X\)</span> “. This requires us to find a point <span class="math notranslate nohighlight">\(x_{0} \in X\)</span> such that <span class="math notranslate nohighlight">\(f\left(x_{0}\right) \geq f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in X\)</span>.</p>
+<p>The solution to the problem is the maximum value obtained by the function over the set <span class="math notranslate nohighlight">\(X\)</span>. This is given by <span class="math notranslate nohighlight">\(f\left(x_{0}\right)\)</span> and is known as a (maximum) value function. Formally, the value function for this problem is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(x_{0}\right) \equiv \max \{f(x): x \in X\}
+\]</div>
+<p>The value (or possibly values) of <span class="math notranslate nohighlight">\(x\)</span> that solve this optimisation problem are sometimes known as “arg max”s because they are the arguments that yield a maximum value of the objective function on the constraint set. Formally, if <span class="math notranslate nohighlight">\(f\left(x_{0}\right) \geq f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in X\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+x_{0} \in \arg \max \{f(x): x \in X\}
+\]</div>
+<p>If there is a unique value of <span class="math notranslate nohighlight">\(x\)</span> that solves the constrained maximisation problem, then we would have</p>
+<div class="math notranslate nohighlight">
+\[
+x_{0}=\arg \max \{f(x): x \in X\} .
+\]</div>
+<p>Similarly, consider the problem “Minimise the function <span class="math notranslate nohighlight">\(f(x)\)</span> on the set <span class="math notranslate nohighlight">\(X\)</span> “. This requires us to find a point <span class="math notranslate nohighlight">\(x_{0} \in X\)</span> such that <span class="math notranslate nohighlight">\(f\left(x_{0}\right) \leq f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in X\)</span>.</p>
+<p>The solution to the problem is the minimum value obtained by the function over the set <span class="math notranslate nohighlight">\(X\)</span>. This is given by <span class="math notranslate nohighlight">\(f\left(x_{0}\right)\)</span> and is known as a (minimum) value function. Formally, the value function for this problem is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(x_{0}\right) \equiv \min \{f(x): x \in X\}
+\]</div>
+<p>The value (or possibly values) of <span class="math notranslate nohighlight">\(x\)</span> that solve this optimisation problem are sometimes known as “arg min”s because they are the arguments that yield a minimum value of the objective function on the constraint set.  Formally, if <span class="math notranslate nohighlight">\(f\left(x_{0}\right) \leq f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in X\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+x_{0} \in \arg \min \{f(x): x \in X\} .
+\]</div>
+<p>If there is a unique value of <span class="math notranslate nohighlight">\(x\)</span> that solves the constrained minimisation problem, then we would have</p>
+<div class="math notranslate nohighlight">
+\[
+x_{0}=\arg \min \{f(x): x \in X\} .
+\]</div>
+</section>
+</section>
+<section id="critical-points-of-a-function">
+<h3>Critical points of a function<a class="headerlink" href="#critical-points-of-a-function" title="Permalink to this heading">#</a></h3>
+<p>Consider a function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}\)</span>. This function can be written as <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<p>The point <span class="math notranslate nohighlight">\(x_{0} \in X\)</span> is a critical point for the function <span class="math notranslate nohighlight">\(f(x)\)</span> if either</p>
+<div class="math notranslate nohighlight">
+\[
+f^{\prime}(x)=0 \text { when } x=x_{0}
+\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[f^{\prime}(x) \text{ is undefined when } x=x_{0}\]</div>
+<p>Critical points are important because they are sometimes a local extremum of a function. Note, however, that a critical point of a function will not necessarily yield a local extremum for that function. In other words, being a critical point is a necessary, but not a sufficient, condition for that point to yield an extremum of the function.</p>
+<section id="id45">
+<h4>Examples<a class="headerlink" href="#id45" title="Permalink to this heading">#</a></h4>
+<p>Example 1</p>
+<ul class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(f(x)=x^{n}\)</span>, where <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(n&gt;1\)</span>. Then <span class="math notranslate nohighlight">\(f^{\prime}(x)=n x^{n-1}\)</span>. Clearly <span class="math notranslate nohighlight">\(n x^{n-1}\)</span> is defined for all <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>. Note that <span class="math notranslate nohighlight">\(n x^{n-1}=0\)</span> if and only if <span class="math notranslate nohighlight">\(x=0\)</span>. Thus the only critical point for this function occurs when <span class="math notranslate nohighlight">\(x=0\)</span>.</p></li>
+</ul>
+<p>Example 2</p>
+<ul class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(f(x)=\ln (x)\)</span>, where <span class="math notranslate nohighlight">\(x \in(0, \infty)\)</span>. Then <span class="math notranslate nohighlight">\(f^{\prime}(x)=\frac{1}{x}\)</span>. Note that <span class="math notranslate nohighlight">\(\frac{1}{x}\)</span> is not defined when <span class="math notranslate nohighlight">\(x=0\)</span>. However, the point <span class="math notranslate nohighlight">\(x=0\)</span> is NOT a critical value of the function <span class="math notranslate nohighlight">\(\ln (x)\)</span>. The reason for this is that the point <span class="math notranslate nohighlight">\(x=0\)</span> does not belong the domain of this function, which is the open interval <span class="math notranslate nohighlight">\((0, \infty)\)</span>. Furthermore, we know that <span class="math notranslate nohighlight">\(\frac{1}{x} \neq 0\)</span> for any choice of <span class="math notranslate nohighlight">\(x\)</span>. Thus we can conclude that there are no critical values for the function <span class="math notranslate nohighlight">\(\ln (x)\)</span>.</p></li>
+</ul>
+<p>Example 3</p>
+<p>Consider the function</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x)=\left\{\begin{array}{cc}
+2 x &amp; \text { if } x \leq 1 \\
+\frac{1}{2} x+\frac{3}{2} &amp; \text { if } x \geq 1
+\end{array}\right.
+\end{split}\]</div>
+<ul class="simple">
+<li><p>There is no problem with this double definition at the point <span class="math notranslate nohighlight">\(x=1\)</span> because the two parts of the function are equal at that point.</p></li>
+<li><p>We have already shown that this function is continuous on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> but that it is not differentiable at the point <span class="math notranslate nohighlight">\(x=1\)</span>.</p></li>
+<li><p>On the interval <span class="math notranslate nohighlight">\((-\infty, 1)\)</span>, we have <span class="math notranslate nohighlight">\(f^{\prime}(x)=2 \neq 0\)</span>. Thus there are no critical points of this function on that interval.</p></li>
+<li><p>On the interval <span class="math notranslate nohighlight">\((1, \infty)\)</span>, we have <span class="math notranslate nohighlight">\(f^{\prime}(x)=\frac{1}{2} \neq 0\)</span>. As such, there are no critical points of this function on that interval either.</p></li>
+</ul>
+<p>However, <span class="math notranslate nohighlight">\(f^{\prime}(x)\)</span> when <span class="math notranslate nohighlight">\(x=1\)</span>. Since the point <span class="math notranslate nohighlight">\(x=1\)</span> belongs to the domain of this function, we know that it is a critical point of the function.  Thus we can conclude that the only critical point of this function occurs when <span class="math notranslate nohighlight">\(x=1\)</span>.</p>
+</section>
+</section>
+<section id="the-first-derivative-approach-to-optimisation">
+<h3>The first derivative approach to optimisation<a class="headerlink" href="#the-first-derivative-approach-to-optimisation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Suppose that (i) <span class="math notranslate nohighlight">\(x_{0} \in(a, b) \subseteq X \subseteq \mathbb{R}\)</span>, (ii) <span class="math notranslate nohighlight">\(x_{0}\)</span> is a critical point of <span class="math notranslate nohighlight">\(X\)</span>, (iii) <span class="math notranslate nohighlight">\(f^{\prime}(x)&gt;0\)</span> for all <span class="math notranslate nohighlight">\(x \in\left(a, x_{0}\right)\)</span> and (iv) <span class="math notranslate nohighlight">\(f^{\prime}(x)&lt;0\)</span> for all <span class="math notranslate nohighlight">\(x \in\left(x_{0}, b\right)\)</span>. Then the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span> will yield a maximum of the function <span class="math notranslate nohighlight">\(f(x)\)</span> on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>. If <span class="math notranslate nohighlight">\((a, b) \subset X\)</span>, we can only conclude that <span class="math notranslate nohighlight">\(f\left(x_{0}\right)\)</span> is a local maximum of the function. If <span class="math notranslate nohighlight">\((a, b)=X\)</span>, we can conclude that <span class="math notranslate nohighlight">\(f\left(x_{0}\right)\)</span> is a global maximum of the function.</p></li>
+<li><p>Suppose that (i) <span class="math notranslate nohighlight">\(x_{0} \in(a, b) \subseteq X \subseteq \mathbb{R}\)</span>, (ii) <span class="math notranslate nohighlight">\(x_{0}\)</span> is a critical point of <span class="math notranslate nohighlight">\(X\)</span>, (iii) <span class="math notranslate nohighlight">\(f^{\prime}(x)&lt;0\)</span> for all <span class="math notranslate nohighlight">\(x \in\left(a, x_{0}\right)\)</span> and (iv) <span class="math notranslate nohighlight">\(f^{\prime}(x)&gt;0\)</span> for all <span class="math notranslate nohighlight">\(x \in\left(x_{0}, b\right)\)</span>. Then the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span> will yield a minimum of the function <span class="math notranslate nohighlight">\(f(x)\)</span> on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>. If <span class="math notranslate nohighlight">\((a, b) \subset X\)</span>, we can only conclude that <span class="math notranslate nohighlight">\(f\left(x_{0}\right)\)</span> is a local minimum of the function. If <span class="math notranslate nohighlight">\((a, b)=X\)</span>, we can conclude that <span class="math notranslate nohighlight">\(f\left(x_{0}\right)\)</span> is a global minimum of the function.</p></li>
+</ul>
+</section>
+<section id="the-second-derivative-approach-to-optimisation">
+<h3>The second derivative approach to optimisation<a class="headerlink" href="#the-second-derivative-approach-to-optimisation" title="Permalink to this heading">#</a></h3>
+<p>The second derivative approach to unconstrained optimisation problems makes use of both the first derivative of a function and the second derivative of a function. The first derivative component of this approach is known as the <strong>first-order condition</strong>. The second derivative component of this approach is known as the <strong>second-order condition</strong>.</p>
+<ul class="simple">
+<li><p>The point <span class="math notranslate nohighlight">\(x_{0} \in X \subseteq \mathbb{R}\)</span> yields a local maximum of the function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span> if both (i) <span class="math notranslate nohighlight">\(f^{\prime}\left(x_{0}\right)=0\)</span> and (ii) <span class="math notranslate nohighlight">\(f^{\prime \prime}\left(x_{0}\right)&lt;0\)</span>.</p></li>
+<li><p>The point <span class="math notranslate nohighlight">\(x_{0} \in X \subseteq \mathbb{R}\)</span> yields a local minimum of the function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span> if both (i) <span class="math notranslate nohighlight">\(f^{\prime}\left(x_{0}\right)=0\)</span> and (ii) <span class="math notranslate nohighlight">\(f^{\prime \prime}\left(x_{0}\right)&gt;0\)</span>.</p></li>
+<li><p>Note that if both (i) <span class="math notranslate nohighlight">\(f^{\prime}\left(x_{0}\right)=0\)</span> and (ii) <span class="math notranslate nohighlight">\(f^{\prime \prime}\left(x_{0}\right)=0\)</span>, then we might not be able to use the second derivative approach to solve the problem.</p></li>
+</ul>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<p>This is an extension of Worked Example 4.9 in <span id="id46">[<a class="reference internal" href="#id39" title="T Bradley. Essential mathematics for economics and business (third edition). John Wiley and Sons, 2008.">Bra08</a>]</span> (pp. 162-163).
+Consider a monopolist that produces a single good. Suppose that the demand function for this good is <span class="math notranslate nohighlight">\(Q=65-5 P\)</span>. The monopolist has a fixed cost of <span class="math notranslate nohighlight">\(\$ 30\)</span> and a constant marginal cost of <span class="math notranslate nohighlight">\(\$ 2\)</span> per unit of the good that is produced.  We have previously shown that the profit function for this monopolist (assuming that it cannot price discriminate) is</p>
+<div class="math notranslate nohighlight">
+\[
+\pi(Q)=-\left(\frac{1}{5}\right) Q^{2}+11 Q-30
+\]</div>
+<p>The first derivative of the profit function for this monopolist is</p>
+<div class="math notranslate nohighlight">
+\[
+\pi^{\prime}(Q)=-\left(\frac{2}{5}\right) Q+11
+\]</div>
+<p>The second derivative of the profit function for this monopolist is</p>
+<div class="math notranslate nohighlight">
+\[
+\pi^{\prime \prime}(Q)=-\left(\frac{2}{5}\right)
+\]</div>
+<p>The first-order condition for profit maximisation by this monopolist is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\pi^{\prime}(Q) &amp; =0 \\
+\Longleftrightarrow-\left(\frac{2}{5}\right) Q+11 &amp; =0 \\
+\Longleftrightarrow \quad 11 &amp; =\left(\frac{2}{5}\right) Q \\
+\Longleftrightarrow \quad 55 &amp; =2 Q \\
+\Longleftrightarrow \quad Q_{0} &amp; =\frac{55}{2} .
+\end{aligned}
+\end{split}\]</div>
+<p>Note that</p>
+<div class="math notranslate nohighlight">
+\[
+\pi^{\prime \prime}(Q)=-\left(\frac{2}{5}\right) \text { for all } Q \in[0, \infty)
+\]</div>
+<p>Thus the second-order condition for profit maximisation by this monopolist is satisfied. Indeed, since the second order condition is satisfied for all possible values of <span class="math notranslate nohighlight">\(Q\)</span> and not just for our candidate value of <span class="math notranslate nohighlight">\(Q\)</span>, we can conclude that <span class="math notranslate nohighlight">\(Q_{0}=\frac{55}{2}\)</span> will yield a global profit maximum for the monopolist.</p>
+<p>The maximum amount of profit that this monopolist can earn is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\pi^{*} &amp; =\pi\left(Q_{0}\right) \\
+&amp; =\pi\left(\frac{55}{2}\right) \\
+&amp; =-\left(\frac{1}{5}\right) Q_{0}^{2}+11 Q_{0}-30 \\
+&amp; =-\left(\frac{1}{5}\right)\left(\frac{55}{2}\right)^{2}+11\left(\frac{55}{2}\right)-30 \\
+&amp; =-(0.2)(756.25)+11(27.5)-30 \\
+&amp; =151.25+302.5-30 \\
+&amp; =\$ 423.75 .
+\end{aligned}
+\end{split}\]</div>
+</section>
+<section id="profit-maximisation-in-general">
+<h3>Profit maximisation in general<a class="headerlink" href="#profit-maximisation-in-general" title="Permalink to this heading">#</a></h3>
+<p>Suppose that the profits earned by a firm are given by the function</p>
+<div class="math notranslate nohighlight">
+\[
+\pi(Q)=R(Q)-C(Q)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(R(Q)\)</span> is the firm’s total revenue as a a function of output and <span class="math notranslate nohighlight">\(C(Q)\)</span> is the firm’s total cost as a function of output.</p>
+<p>We want to consider the firm’s profit maximisation problem. We will employ the first-derivative approach to solving this problem.</p>
+<p>Suppose that profit as a function of output <span class="math notranslate nohighlight">\((\pi(Q))\)</span> is at least twice continuously differentiable. This means that any critical point for this function will involve its first derivative equalling zero.</p>
+<p>Suppose that a unique critical point of this variety exists. It will involve <span class="math notranslate nohighlight">\(\pi^{\prime}(Q)=0\)</span>. Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\pi^{\prime}(Q) &amp; =R^{\prime}(Q)-C^{\prime}(Q) \\
+&amp; =M R(Q)-M C(Q)
+\end{aligned}
+\end{split}\]</div>
+<p>Thus the critical point will occur when</p>
+<div class="math notranslate nohighlight">
+\[
+M R(Q)-M C(Q)=0
+\]</div>
+<p>which requires that</p>
+<div class="math notranslate nohighlight">
+\[
+M R(Q)=M C(Q)
+\]</div>
+<p>Denote this critical point by <span class="math notranslate nohighlight">\(Q_{0}\)</span>. A sufficient condition for <span class="math notranslate nohighlight">\(Q_{0}\)</span> to generate the maximum possible profit for the firm is that both</p>
+<div class="math notranslate nohighlight">
+\[
+\text { (i) } \pi^{\prime}(Q)&gt;0 \text { for all } Q&lt;Q_{0}
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+\text { (ii) } \pi^{\prime}(Q)&lt;0 \text { for all } Q&gt;Q_{0} \text {. }
+\]</div>
+<p>Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\pi^{\prime}(Q)&gt;0 &amp; \Longleftrightarrow M R(Q)-M C(Q)&gt;0 \\
+&amp; \Longleftrightarrow M R(Q)&gt;M C(Q)
+\end{aligned}
+\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\pi^{\prime}(Q)&lt;0 &amp; \Longleftrightarrow M R(Q)-M C(Q)&lt;0 \\
+&amp; \Longleftrightarrow M R(Q)&lt;M C(Q) .
+\end{aligned}
+\end{split}\]</div>
+<p>Thus a sufficient set of conditions for <span class="math notranslate nohighlight">\(Q_{0}\)</span> to generate the maximum possible profit for the firm is that</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(M R\left(Q_{0}\right)=M C\left(Q_{0}\right)\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(M R(Q)&gt;M C(Q)\)</span> for all <span class="math notranslate nohighlight">\(Q&lt;Q_{0}\)</span>, and</p></li>
+<li><p><span class="math notranslate nohighlight">\(M R(Q)&lt;M C(Q)\)</span> for all <span class="math notranslate nohighlight">\(Q&gt;Q_{0}\)</span>.</p></li>
+</ol>
+</section>
+</section>
+<section id="using-derivatives-to-approximate-things">
+<h2>Using derivatives to approximate things<a class="headerlink" href="#using-derivatives-to-approximate-things" title="Permalink to this heading">#</a></h2>
+<p>In situations where functions are rather complicated (especially when they are non-linear and non-separable in the components that make use of the independent variable), it is sometimes convenient to approximate the function, or the change in the value generated by the function, rather than calculate it directly. Obviously, we need to worry about the accuracy of the approximation when we do this.</p>
+<p>Derivatives can be used to form some such approximations. In particular, they can be used to form the following approximations:</p>
+<ul class="simple">
+<li><p>Polynomial (Power Series) approximations of a function.</p>
+<ul>
+<li><p>We will look at an example of this known as a Taylor series approximation of a function <span class="math notranslate nohighlight">\(f(x)\)</span> around the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span>.</p></li>
+<li><p>The special case of a Taylor series approximation of the function <span class="math notranslate nohighlight">\(f(x)\)</span> that takes place around the point <span class="math notranslate nohighlight">\(x=0\)</span> is known as a McLauren series approximation of that function.</p></li>
+</ul>
+</li>
+<li><p>We will also look at differential approximations to the change in the value taken by a function when there is a change in the value taken by the independent variable.</p></li>
+</ul>
+<section id="taylor-series-approximations-of-functions">
+<h3>Taylor series approximations of functions<a class="headerlink" href="#taylor-series-approximations-of-functions" title="Permalink to this heading">#</a></h3>
+<p>Consider the function <span class="math notranslate nohighlight">\(f:(a, b) \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(-\infty&lt;a&lt;b&lt;\infty\)</span>. Denote this function by <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(f(x)\)</span> is at least <span class="math notranslate nohighlight">\(n\)</span>-times differentiable with respect to <span class="math notranslate nohighlight">\(x\)</span> on the interval <span class="math notranslate nohighlight">\((a, b)\)</span>, and let <span class="math notranslate nohighlight">\(x_{0} \in(a, b)\)</span>.  The <strong><span class="math notranslate nohighlight">\(n\)</span>-th order Taylor series approximation</strong> of <span class="math notranslate nohighlight">\(f(x)\)</span> around the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span> is defined to be:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+f(x) \approx \sum_{k=0}^{n}\left(\frac{1}{k !}\right) f^{(k)}\left(x_{0}\right)\left(x-x_{0}\right)^{k} \\
+\approx\left(\frac{1}{0 !}\right) f^{(0)}\left(x_{0}\right)\left(x-x_{0}\right)^{0}+\left(\frac{1}{1 !}\right) f^{(1)}\left(x_{0}\right)\left(x-x_{0}\right)^{1} \\
++\left(\frac{1}{2 !}\right) f^{(2)}\left(x_{0}\right)\left(x-x_{0}\right)^{2}+\cdots+\left(\frac{1}{n !}\right) f^{(n)}\left(x_{0}\right)\left(x-x_{0}\right)^{n} \\
+\approx\left(\frac{1}{1}\right) f\left(x_{0}\right)+\left(\frac{1}{1}\right) f^{\prime}\left(x_{0}\right)\left(x-x_{0}\right)+\left(\frac{1}{2}\right) f^{\prime \prime}\left(x_{0}\right)\left(x-x_{0}\right)^{2} \\
++\cdots+\left(\frac{1}{n !}\right) f^{(n)}\left(x_{0}\right)\left(x-x_{0}\right)^{n} \\
+\approx f\left(x_{0}\right)+f^{\prime}\left(x_{0}\right)\left(x-x_{0}\right)+\left(\frac{1}{2}\right) f^{\prime \prime}\left(x_{0}\right)\left(x-x_{0}\right)^{2} \\
++\cdots+\left(\frac{1}{n !}\right) f^{(n)}\left(x_{0}\right)\left(x-x_{0}\right)^{n} 
+\end{gathered}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>A <strong>linear (or first-order) Taylor series approximation</strong> of a function would take the form</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f(x) \approx f\left(x_{0}\right)+f^{\prime}\left(x_{0}\right)\left(x-x_{0}\right) 
+\]</div>
+<ul class="simple">
+<li><p>A <strong>quadratic (or second-order) Taylor series approximation</strong> of a function would take the form</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f(x) \approx f\left(x_{0}\right)+f^{\prime}\left(x_{0}\right)\left(x-x_{0}\right)+\left(\frac{1}{2}\right) f^{\prime \prime}\left(x_{0}\right)\left(x-x_{0}\right)^{2}
+\]</div>
+<ul class="simple">
+<li><p>If the function was differentiable an infinite number of times, then we could imagine forming the <strong><span class="math notranslate nohighlight">\(\infty\)</span>-order Taylor series approximation</strong> of it around the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span>. This would take the form</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f(x) \approx \sum_{k=0}^{\infty}\left(\frac{1}{k !}\right) f^{(k)}\left(x_{0}\right)\left(x-x_{0}\right)^{k}
+\]</div>
+<p>It is important to remember that Taylor series approximations of functions are just that: An approximation of the function.</p>
+<p>The accuracy of the approximation will depend on a number of factors. These include the form of the underlying function, the closeness of the independent variable <span class="math notranslate nohighlight">\((x)\)</span> to the value around which the Taylor series approximation is centred <span class="math notranslate nohighlight">\(\left(x_{0}\right)\)</span>, and the order of the approximation.</p>
+<p>In many cases, the Taylor series approximation of a function <span class="math notranslate nohighlight">\(f(x)\)</span> that is centred on the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span> will be a reasonably accurate approximation of the function in a sufficiently small neighbourhood of the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span>.</p>
+<p>Nonetheless, it is important to recognise that we will usually have</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) \approx\left(\sum_{k=0}^{n}\left(\frac{1}{k !}\right) f^{(k)}\left(x_{0}\right)\left(x-x_{0}\right)^{k}\right)+R_{n+1}(x)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(R_{n+1}(x)\)</span> is a “remainder” term.</p>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\(n\)</span> th-order Taylor series approximation of the function <span class="math notranslate nohighlight">\(f(x)\)</span> around the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span> is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f(x) \approx \sum_{k=0}^{n}\left(\frac{1}{k !}\right) f^{(k)}\left(x_{0}\right)\left(x-x_{0}\right)^{k}
+\]</div>
+<p>If the function being approximated is at least <span class="math notranslate nohighlight">\((n+1)\)</span>-times differentiable on an interval that includes both the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span> and the point <span class="math notranslate nohighlight">\(x\)</span>, then Lagrange has shown that the remainder term that reconciles the above Taylor series approximation of <span class="math notranslate nohighlight">\(f(x)\)</span> with the value taken by the function itself is exactly given by the expression</p>
+<div class="math notranslate nohighlight">
+\[
+R_{n+1}(x)=\left(\frac{1}{(n+1) !}\right) f^{(n+1)}(z)\left(x-x_{0}\right)^{n+1}
+\]</div>
+<p>for some <span class="math notranslate nohighlight">\(z\)</span> between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(x_{0}\)</span>. (If <span class="math notranslate nohighlight">\(x&lt;x_{0}\)</span>, then <span class="math notranslate nohighlight">\(z \in\left(x, x_{0}\right)\)</span>. If <span class="math notranslate nohighlight">\(x&gt;x_{0}\)</span>, then <span class="math notranslate nohighlight">\(z \in\left(x_{0}, x\right)\)</span>.)</p>
+</section>
+<section id="differential-approximation-to-a-change-in-a-function-s-value">
+<h3>Differential approximation to a change in a function’s value<a class="headerlink" href="#differential-approximation-to-a-change-in-a-function-s-value" title="Permalink to this heading">#</a></h3>
+<p>Consider a function <span class="math notranslate nohighlight">\(y=f(x)\)</span> that is at least once differentiable on some non-empty interval <span class="math notranslate nohighlight">\((a, b)\)</span>.  Suppose that the value of the independent variable changes from some initial value <span class="math notranslate nohighlight">\(x \in(a, b)\)</span> to some final value <span class="math notranslate nohighlight">\(x+\Delta x \in(a, b)\)</span>.</p>
+<p>The exact impact of this change on the value taken by the function is <span class="math notranslate nohighlight">\(\Delta y=f(x+\Delta x)-f(x)\)</span>.</p>
+<p>We might think about calculating an approximation of this change by using a linear (first-order) Taylor series of the function <span class="math notranslate nohighlight">\(f(x+\Delta x)\)</span> around the point <span class="math notranslate nohighlight">\(x\)</span>. This approximation takes the form</p>
+<div class="math notranslate nohighlight">
+\[
+f(x+\Delta x) \approx f(x)+f^{\prime}(x)((x+\Delta x)-x)=f(x)+f^{\prime}(x) \Delta x
+\]</div>
+<p>If we employ this approximation, then we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta y \approx f(x)+f^{\prime}(x) \Delta x-f(x)=f^{\prime}(x) \Delta x
+\]</div>
+<p>Recall that in many cases, if <span class="math notranslate nohighlight">\(x+\Delta x\)</span> is sufficiently close to <span class="math notranslate nohighlight">\(x\)</span>, then the linear Taylor series approximation for <span class="math notranslate nohighlight">\(f(x+\Delta x)\)</span> around the point <span class="math notranslate nohighlight">\(x\)</span> will be reasonably accurate. If this is the case, then the linear (or first-order) approximation to the change in the value of the function <span class="math notranslate nohighlight">\(f(x)\)</span> when the independent variable moves from <span class="math notranslate nohighlight">\(x\)</span> to <span class="math notranslate nohighlight">\(x+\Delta x\)</span> that we derived above will also be reasonably accurate when <span class="math notranslate nohighlight">\(x+\Delta x\)</span> is sufficiently close to <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>In other words, it will be reasonably accurate when <span class="math notranslate nohighlight">\(\Delta x\)</span> is sufficiently small in absolute value terms (that is, close to zero). In such cases, we typically use <span class="math notranslate nohighlight">\(d x\)</span> to denote <span class="math notranslate nohighlight">\(\Delta x\)</span>, and <span class="math notranslate nohighlight">\(d y\)</span> to denote <span class="math notranslate nohighlight">\(\Delta y\)</span>. This means that if <span class="math notranslate nohighlight">\(f(x)\)</span> is at least once differentiable and <span class="math notranslate nohighlight">\(d x\)</span> bis sufficiently small, then</p>
+<div class="math notranslate nohighlight">
+\[
+d y \approx f^{\prime}(x) d x
+\]</div>
+<p>This expression is known as the linear (or first-order) <strong>differential</strong> of the function <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+</section>
+<section id="an-application-of-linear-differential-approximation">
+<h3>An application of linear differential approximation<a class="headerlink" href="#an-application-of-linear-differential-approximation" title="Permalink to this heading">#</a></h3>
+<p>The change in the natural logarithm of a variable is approximately equal to the corresponding proprtionate change in that variable. As such, we can interpret the change in the natural logarithm of the price level in an economy as a good indicator of inflation in that economy (as long as the change in the price level is not too large). This can be seen by noting that if <span class="math notranslate nohighlight">\(p=\ln (P)\)</span>, where <span class="math notranslate nohighlight">\(P\)</span> is the price level in an economy, then</p>
+<div class="math notranslate nohighlight">
+\[
+d p \approx\left(\frac{d \ln (P)}{d P}\right) d P \Longleftrightarrow d p \approx\left(\frac{1}{P}\right) d P \Longleftrightarrow d p \approx \frac{d P}{P}
+\]</div>
+<p>Ted Sieper places the natural log of the price level on the horizontal axis of a diagrammatic representation of a version of the “IS-LM” macroeconomic model, thereby enabling him to use the above result to interpret horizontal distances in that diagram as a measure of inflation (or expected inflation).  This is a very interesting and insightful paper that is well worth a read at some stage during your study of economics.</p>
+<p>See Sieper, E (1987), “Policy irrelevance is not the rule”, Unpublished working paper, ANU, Canberra, November. Available online at: <a class="reference external" href="https://files.brontecapital.com/ted_sieper_paper.pdf">https://files.brontecapital.com/ted_sieper_paper.pdf</a>.</p>
+</section>
+<section id="l-hopital-s-rule-for-limits-of-indeterminate-form">
+<h3>L’Hopital’s rule for limits of indeterminate form<a class="headerlink" href="#l-hopital-s-rule-for-limits-of-indeterminate-form" title="Permalink to this heading">#</a></h3>
+<p>Consider the function <span class="math notranslate nohighlight">\(f(x)=\frac{g(x)}{h(x)}\)</span>. Suppose that <span class="math notranslate nohighlight">\(g(x)\)</span> and <span class="math notranslate nohighlight">\(h(x)\)</span> are both differentiable at all points on a non-empty interval <span class="math notranslate nohighlight">\((a, b)\)</span> that contains the point <span class="math notranslate nohighlight">\(x=x_{0}\)</span>, with the possible exception that they might not be differentiable at the point <span class="math notranslate nohighlight">\(x_{0}\)</span>.</p>
+<p>Suppose also that <span class="math notranslate nohighlight">\(h^{\prime}(x) \neq 0\)</span> for all <span class="math notranslate nohighlight">\(x \in(a, b)\)</span>.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\lim _{x \rightarrow x_{0}} g(x)=\lim _{x \rightarrow x_{0}} h(x)=0\)</span> and <span class="math notranslate nohighlight">\(\lim _{x \rightarrow x_{0}}\left(\frac{g^{\prime}(x)}{h^{\prime}(x)}\right)=L\)</span>, then according to L’Hopital’s rule for ” <span class="math notranslate nohighlight">\(\left(\frac{0}{0}\right)\)</span> ” indeterminate forms, we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\lim _{x \rightarrow x_{0}} f(x)=\lim _{x \rightarrow x_{0}}\left(\frac{g(x)}{h(x)}\right)=\lim _{x \rightarrow x_{0}}\left(\frac{g^{\prime}(x)}{h^{\prime}(x)}\right)=L
+\]</div>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\lim _{x \rightarrow x_{0}} g(x)= \pm \infty\)</span>, <span class="math notranslate nohighlight">\(\lim _{x \rightarrow x_{0}} h(x)= \pm \infty\)</span> and <span class="math notranslate nohighlight">\(\lim _{x \rightarrow x_{0}}\left(\frac{g^{\prime}(x)}{h^{\prime}(x)}\right)=L\)</span>, then according to L’Hopital’s rule for ” <span class="math notranslate nohighlight">\(\left(\frac{ \pm \infty}{ \pm \infty}\right)\)</span> ” indeterminate forms, we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\lim _{x \rightarrow x_{0}} f(x)=\lim _{x \rightarrow x_{0}}\left(\frac{g(x)}{h(x)}\right)=\lim _{x \rightarrow x_{0}}\left(\frac{g^{\prime}(x)}{h^{\prime}(x)}\right)=L
+\]</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05.sequences_series_limits.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Sequences, series and limits</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-guide">Reading guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introductory-level-references">Introductory level references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-advanced-references">More advanced references</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-setting">The setting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-limit">What is a limit?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-structure-of-epsilon-delta-arguments">The structure of <span class="math notranslate nohighlight">\(\epsilon–\delta\)</span> arguments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-rules-about-limits">Some useful rules about limits</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity">Continuity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Examples</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives">Derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-derivatives-of-some-commonly-encountered-functions">The (first) derivatives of some commonly encountered functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-differentiation-rules">Some useful differentiation rules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-quotient-rule-is-redundant">The quotient rule is redundant</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-relationship-between-continuity-and-differentiability">The relationship between continuity and differentiability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-does-not-imply-differentiability">Continuity does NOT imply differentiability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiability-implies-continuity">Differentiability implies continuity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-order-derivatives">Higher-order derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-first-and-second-derivatives">Interpreting first and second derivatives</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-functions">Increasing functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decreasing-functions">Decreasing functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-functions">Convex functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concave-functions">Concave functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-local-maximum-turning-points">Peak (local maximum) turning points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trough-local-minimum-turning-points">Trough (local minimum) turning points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inflection-points">Inflection points</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-economic-applications-of-derivatives">Some economic applications of derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-revenue-and-marginal-cost">Marginal revenue and marginal cost</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-revenue-for-a-monopolist">Marginal revenue for a monopolist</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#point-elasticities">Point elasticities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unconstrained-optimisation">Unconstrained optimisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-extrema-of-functions">Finding extrema of functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#some-terminology">Some terminology</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-points-of-a-function">Critical points of a function</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id45">Examples</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-derivative-approach-to-optimisation">The first derivative approach to optimisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-derivative-approach-to-optimisation">The second derivative approach to optimisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#profit-maximisation-in-general">Profit maximisation in general</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-derivatives-to-approximate-things">Using derivatives to approximate things</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-approximations-of-functions">Taylor series approximations of functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-approximation-to-a-change-in-a-function-s-value">Differential approximation to a change in a function’s value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-application-of-linear-differential-approximation">An application of linear differential approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-hopital-s-rule-for-limits-of-indeterminate-form">L’Hopital’s rule for limits of indeterminate form</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fedor Iskhakov, based on notes by D.S. Eldridge
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

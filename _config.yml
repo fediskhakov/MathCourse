@@ -3,7 +3,7 @@
 
 # Book settings
 title                       : ECON7001  # The title of the book. Will be placed in the left navbar.
-author                      : Fedor Iskhakov  # The author of the book
+author                      : Fedor Iskhakov, based on notes by D.S. Eldridge # The author of the book
 copyright                   : "2024"  # Copyright year to be placed in the footer
 logo                        : "_static/img/placeholder_logo.png"  # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")

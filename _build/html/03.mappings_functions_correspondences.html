@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Mappings: functions and correspondences &#8212; ECON7001</title>
   
@@ -67,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '03.mappings_functions_correspondences';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Equations, inequalities, and binary relations" href="04.equations_inequalities_binary_relations.html" />
     <link rel="prev" title="Sets, numbers, coordinates, and distances" href="02.sets_numbers_coordinates_distances.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -180,6 +181,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="01.intro_to_economics.html">An introduction to economics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02.sets_numbers_coordinates_distances.html">Sets, numbers, coordinates, and distances</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Mappings: functions and correspondences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04.equations_inequalities_binary_relations.html">Equations, inequalities, and binary relations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05.sequences_series_limits.html">Sequences, series and limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06.univariate_differentiation.html">Univariate differentiation</a></li>
 </ul>
 
     </div>
@@ -375,7 +379,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-guide">Reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-guide">Reading guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introductory-mathematical-economics-references">Introductory mathematical economics references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-high-school-references">Advanced high school references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introductory-mathematics-references">Introductory mathematics references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-advanced-references">More advanced references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-list">Reference list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#websites">Websites</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mappings">Mappings</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#images">Images</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-images">Pre-images</a></li>
@@ -391,7 +403,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-types-of-functions">Some types of functions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-functions">Polynomial functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Examples</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">Examples</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affine-functions-and-linear-functions">Affine functions and linear functions</a></li>
@@ -411,6 +423,17 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-functions">Rational functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-fractions">Partial fractions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-results-about-functions">Some useful results about functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#size-cardinality-of-a-set">Size (cardinality) of a set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-economic-examples-of-mappings">Some economic examples of mappings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utility-functions">Utility functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marshallian-demand-functions">Marshallian demand functions</a></li>
 </ul>
 </li>
 </ul>
@@ -428,33 +451,91 @@ document.write(`
 <h1>Mappings: functions and correspondences<a class="headerlink" href="#mappings-functions-and-correspondences" title="Permalink to this heading">#</a></h1>
 <section id="reading-guide">
 <h2>Reading guide<a class="headerlink" href="#reading-guide" title="Permalink to this heading">#</a></h2>
-<p>Introductory mathematical economics references:</p>
+<section id="introductory-mathematical-economics-references">
+<h3>Introductory mathematical economics references<a class="headerlink" href="#introductory-mathematical-economics-references" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Haeussler, EF Jr, and RS Paul (1987), <em>Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition)</em>, Prentice-Hall, USA:Chapters 0, 3, 4, 5, and 17.1.</p></li>
-<li><p>Sydsaeter, K, P Hammond, A Strom, and A Carvajal (2016), <em>Essential mathematics for economic analysis (fifth edition)</em>, Pearson Education, Italy: Chapters 2, 4, 5, 9.6 (pp. 350-351 only), 11.1, and 11.5.</p></li>
-<li><p>Shannon, J (1995), <em>Mathematics for business, economics and finance</em>, John Wiley and Sons, Brisbane: Chapters 1, 2, and 6.</p></li>
+<li><p><span id="id1">[<a class="reference internal" href="06.univariate_differentiation.html#id12" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">HJP87</a>]</span>: Chapters 0, 3, 4, 5, and 17.1.</p></li>
+<li><p><span id="id2">[<a class="reference internal" href="06.univariate_differentiation.html#id13" title="K Sydsæter, P Hammond, A Strøm, and A Carvajal. Essential mathematics for economic analysis (fifth edition). Pearson Education, 2016.">SHSC16</a>]</span>: Chapters 2, 4, 5, 9.6 (pp. 350-351 only), 11.1, and 11.5.</p></li>
+<li><p><span id="id3">[<a class="reference internal" href="06.univariate_differentiation.html#id14" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">Sha95</a>]</span>: Chapters 1, 2, and 6.</p></li>
 </ul>
-<p>Advanced high school references:</p>
+</section>
+<section id="advanced-high-school-references">
+<h3>Advanced high school references<a class="headerlink" href="#advanced-high-school-references" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Coroneos, J. (Undated a), <em>A Higher School Certificate Course in Mathematics: Year Eleven, Three Unit Course</em>, Coroneos Publications, Australia: Chapters 1, 2, 4, and 7.</p></li>
-<li><p>Coroneos, J. (Undated b), <em>A Higher School Certificate Course in Mathematics: Years Eleven and Twelve, Revised Four Unit Course (for Mathematics Extension Two)</em>, Coroneos Publications, Australia: Chapters 1 and 2.</p></li>
+<li><p><span id="id4">[<a class="reference internal" href="#id19" title="J Coroneos. A Higher School Certificate Course in Mathematics: Year Eleven, Three Unit Course. Coroneos Publications, n.d.">Cord.a</a>]</span>: Chapters 1, 2, 4, and 7.</p></li>
+<li><p><span id="id5">[<a class="reference internal" href="#id20" title="J Coroneos. A Higher School Certificate Course in Mathematics: Years Eleven and Twelve, Revised Four Unit Course (for Mathematics Extension Two). Coroneos Publications, n.d.">Cord.b</a>]</span>: Chapters 1 and 2.</p></li>
 </ul>
-<p>Introductory mathematics references:</p>
+</section>
+<section id="introductory-mathematics-references">
+<h3>Introductory mathematics references<a class="headerlink" href="#introductory-mathematics-references" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Adams, RA, and C Essex (2018), <em>Calculus: A complete course (ninth edition)</em> Pearson, Canada: Chapters P, 3, and 11.</p></li>
-<li><p>Kline, M (1967), <em>Calculus: An intuitive and physical approach (second edition)</em>, The 1998 Dover republication of the original John Wiley and Sons second edition, Dover Publications, USA: pp. 419–432.</p></li>
-<li><p>Silverman, RA (1969), <em>Modern calculus and analytic geometry</em>, The 2002 Dover corrected republication of the original 1969 Macmillan Company edition, Dover Publications, USA: Chapters 7 and 14.</p></li>
-<li><p>Spivak, M (2006), <em>Calculus (third edition)</em>, Cambridge University Press, The United Kingdom: Chapters 1, 2, 3, 4, 16, 18, and 19.</p></li>
-<li><p>Thomas, GB Jr, and RL Finney (1996), <em>Calculus and analytic geometry (ninth edition)</em>, The 1998 corrected reprint version, Addison-Wesley Publishing Company, USA: Chapters P, 6, and 12.</p></li>
+<li><p><span id="id6">[<a class="reference internal" href="#id21" title="RA Adams and C Essex. Calculus: A complete course (ninth edition). Pearson, 2018.">AE18</a>]</span>: Chapters P, 3, and 11.</p></li>
+<li><p><span id="id7">[<a class="reference internal" href="06.univariate_differentiation.html#id18" title="M Kline. Calculus: An intuitive and physical approach (second edition). Dover Publications, 1967. The 1998 Dover republication of the original John Wiley and Sons second edition.">Kli67</a>]</span>: pp. 419–432.</p></li>
+<li><p><span id="id8">[<a class="reference internal" href="06.univariate_differentiation.html#id19" title="RA Silverman. Modern calculus and analytic geometry. Dover Publications, 1969. The 2002 Dover corrected republication of the original 1969 Macmillan Company edition.">Sil69</a>]</span>: Chapters 7 and 14.</p></li>
+<li><p><span id="id9">[<a class="reference internal" href="06.univariate_differentiation.html#id20" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">Spi06</a>]</span>: Chapters 1, 2, 3, 4, 16, 18, and 19.</p></li>
+<li><p><span id="id10">[<a class="reference internal" href="#id25" title="GB Thomas Jr and RL Finney. Calculus and analytic geometry (ninth edition). Addison-Wesley Publishing Company, 1996. The 1998 corrected reprint version.">TJF96</a>]</span>: Chapters P, 6, and 12.</p></li>
 </ul>
-<p>More advanced references:</p>
+</section>
+<section id="more-advanced-references">
+<h3>More advanced references<a class="headerlink" href="#more-advanced-references" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Banks, J, G Elton and J Strantzen (2009), <em>Topology and analysis: Unit text for MAT3TA (2009 and 2010 edition)</em>, Department of Mathematics and Statistics, La Trobe University, Bundoora, February.</p></li>
-<li><p>Corbae, D, MB Stinchcombe and J Zeman (2009), <em>An introduction to mathematical analysis for economic theory and econometrics</em>, Princeton University Press, USA: Chapter 2 (pp. 15-71).</p></li>
-<li><p>Kolmogorov, AN and SV Fomin (1970), <em>Introductory real analysis</em>, Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition), Dover Publications, USA: Chapter 1 (pp. 1-36).</p></li>
-<li><p>Simon, C, and L Blume (1994), <em>Mathematics for economists</em>, WW Norton and Co, USA: Chapters 2 and 13 (pp. 10-38 and 273-299).</p></li>
+<li><p><span id="id11">[<a class="reference internal" href="05.sequences_series_limits.html#id23" title="J Banks, G Elton, and J Strantzen. Topology and analysis: Unit text for MAT3TA (2009 and 2010 edition). Department of Mathematics and Statistics, La Trobe University, 2009.">BES09</a>]</span></p></li>
+<li><p><span id="id12">[<a class="reference internal" href="05.sequences_series_limits.html#id24" title="D Corbae, MB Stinchcombe, and J Zeman. An introduction to mathematical analysis for economic theory and econometrics. Princeton University Press, 2009.">CSZ09</a>]</span>: Chapter 2 (pp. 15-71).</p></li>
+<li><p><span id="id13">[<a class="reference internal" href="05.sequences_series_limits.html#id25" title="AN Kolmogorov and SV Fomin. Introductory real analysis. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).">KF70</a>]</span>: Chapter 1 (pp. 1-36).</p></li>
+<li><p><span id="id14">[<a class="reference internal" href="06.univariate_differentiation.html#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">SB94</a>]</span>: Chapters 2 and 13 (pp. 10-38 and 273-299).</p></li>
 </ul>
-<p>Websites:</p>
+</section>
+<section id="reference-list">
+<h3>Reference list<a class="headerlink" href="#reference-list" title="Permalink to this heading">#</a></h3>
+<div class="docutils container" id="id15">
+<dl class="citation">
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id6">AE18</a></span></dt>
+<dd><p>RA Adams and C Essex. <em>Calculus: A complete course (ninth edition)</em>. Pearson, 2018.</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id11">BES09</a></span></dt>
+<dd><p>J Banks, G Elton, and J Strantzen. <em>Topology and analysis: Unit text for MAT3TA (2009 and 2010 edition)</em>. Department of Mathematics and Statistics, La Trobe University, 2009.</p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id12">CSZ09</a></span></dt>
+<dd><p>D Corbae, MB Stinchcombe, and J Zeman. <em>An introduction to mathematical analysis for economic theory and econometrics</em>. Princeton University Press, 2009.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id4">Cord.a</a></span></dt>
+<dd><p>J Coroneos. <em>A Higher School Certificate Course in Mathematics: Year Eleven, Three Unit Course</em>. Coroneos Publications, n.d.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id5">Cord.b</a></span></dt>
+<dd><p>J Coroneos. <em>A Higher School Certificate Course in Mathematics: Years Eleven and Twelve, Revised Four Unit Course (for Mathematics Extension Two)</em>. Coroneos Publications, n.d.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id1">HJP87</a></span></dt>
+<dd><p>EF Haeussler Jr and RS Paul. <em>Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition)</em>. Prentice-Hall, 1987.</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id7">Kli67</a></span></dt>
+<dd><p>M Kline. <em>Calculus: An intuitive and physical approach (second edition)</em>. Dover Publications, 1967. The 1998 Dover republication of the original John Wiley and Sons second edition.</p>
+</dd>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id13">KF70</a></span></dt>
+<dd><p>AN Kolmogorov and SV Fomin. <em>Introductory real analysis</em>. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id3">Sha95</a></span></dt>
+<dd><p>J Shannon. <em>Mathematics for business, economics and finance</em>. John Wiley and Sons, 1995.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id8">Sil69</a></span></dt>
+<dd><p>RA Silverman. <em>Modern calculus and analytic geometry</em>. Dover Publications, 1969. The 2002 Dover corrected republication of the original 1969 Macmillan Company edition.</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id14">SB94</a></span></dt>
+<dd><p>C Simon and L Blume. <em>Mathematics for economists</em>. WW Norton and Co, 1994.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id9">Spi06</a></span></dt>
+<dd><p>M Spivak. <em>Calculus (third edition)</em>. Cambridge University Press, 2006.</p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id2">SHSC16</a></span></dt>
+<dd><p>K Sydsæter, P Hammond, A Strøm, and A Carvajal. <em>Essential mathematics for economic analysis (fifth edition)</em>. Pearson Education, 2016.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id10">TJF96</a></span></dt>
+<dd><p>GB Thomas Jr and RL Finney. <em>Calculus and analytic geometry (ninth edition)</em>. Addison-Wesley Publishing Company, 1996. The 1998 corrected reprint version.</p>
+</dd>
+</dl>
+</div>
+</section>
+<section id="websites">
+<h3>Websites<a class="headerlink" href="#websites" title="Permalink to this heading">#</a></h3>
 <p>The following websites contain discussions of the concept of relatively prime, or co-prime, numbers and polynomials. This is relevant to the topic of rational functions and partial fractions.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.mathsisfun.com/definitions/relatively-prime.html">https://www.mathsisfun.com/definitions/relatively-prime.html</a></p></li>
@@ -462,16 +543,17 @@ document.write(`
 <li><p><a class="reference external" href="https://www.varsitytutors.com/hotmath/hotmath_help/topics/relatively-prime">https://www.varsitytutors.com/hotmath/hotmath_help/topics/relatively-prime</a></p></li>
 </ul>
 </section>
+</section>
 <section id="mappings">
 <h2>Mappings<a class="headerlink" href="#mappings" title="Permalink to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> be two sets. A rule <span class="math notranslate nohighlight">\(f\)</span> that assigns one or more elements of <span class="math notranslate nohighlight">\(Y\)</span> to each element of <span class="math notranslate nohighlight">\(X\)</span> is called a <strong>mapping</strong> from <span class="math notranslate nohighlight">\(X\)</span> into <span class="math notranslate nohighlight">\(Y\)</span>. It is denoted by <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span>.</p>
 <p>The set <span class="math notranslate nohighlight">\(X\)</span> is known as the <strong>domain</strong> of the mapping <span class="math notranslate nohighlight">\(f\)</span>. The mapping must be defined for every element of <span class="math notranslate nohighlight">\(X\)</span>. This means that <span class="math notranslate nohighlight">\(x \in X \implies f(x) \in Y\)</span>.</p>
 <p>The set <span class="math notranslate nohighlight">\(Y\)</span> is known as the <strong>co-domain</strong> of the mapping <span class="math notranslate nohighlight">\(f\)</span>. Mappings are not required to generate <span class="math notranslate nohighlight">\(Y\)</span> from <span class="math notranslate nohighlight">\(X\)</span>. This means that there might exist one or more elements <span class="math notranslate nohighlight">\(y \in Y\)</span> such that <span class="math notranslate nohighlight">\(y \ne f(x)\)</span> for any <span class="math notranslate nohighlight">\(x \in X\)</span>.</p>
 <p>The set of values <span class="math notranslate nohighlight">\(y \in Y\)</span> that can be generated from <span class="math notranslate nohighlight">\(X\)</span> by the function <span class="math notranslate nohighlight">\(f\)</span> is known as the <strong>image</strong> of <span class="math notranslate nohighlight">\(X\)</span> under <span class="math notranslate nohighlight">\(f\)</span>. Sometimes the image of <span class="math notranslate nohighlight">\(X\)</span> under <span class="math notranslate nohighlight">\(f\)</span> is referred to as the <strong>range</strong> of <span class="math notranslate nohighlight">\(f\)</span>. We will denote the range of <span class="math notranslate nohighlight">\(f\)</span> by <span class="math notranslate nohighlight">\(f(X)\)</span>.</p>
-<figure class="align-center" id="id2">
+<figure class="align-center" id="id45">
 <a class="reference internal image-reference" href="_images/mapping_diagram.png"><img alt="_images/mapping_diagram.png" src="_images/mapping_diagram.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Diagrammatic representation of a mapping</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Diagrammatic representation of a mapping</span><a class="headerlink" href="#id45" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="images">
@@ -674,8 +756,8 @@ f(x) &amp;= \sum_{i = 0}^n a_i x^i
 \end{align*}
 \end{split}\]</div>
 <p>In order to distinguish between different types of polynomials, we will typically assume that the coefficient on the term with the highest power of the variable <span class="math notranslate nohighlight">\(x\)</span> is non-zero. The only exception is the case in which this term involves <span class="math notranslate nohighlight">\(x^0 = 1\)</span>, in which case we will allow both <span class="math notranslate nohighlight">\(a_0 \ne 0\)</span> and <span class="math notranslate nohighlight">\(a_0 = 0\)</span>.</p>
-<section id="id1">
-<h4>Examples<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<section id="id44">
+<h4>Examples<a class="headerlink" href="#id44" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>A constant (degree zero) polynomial (<span class="math notranslate nohighlight">\(a_0 \ne 0\)</span> or <span class="math notranslate nohighlight">\(a_0 = 0\)</span>):</p></li>
 </ul>
@@ -896,21 +978,365 @@ R(x) = \frac{P(x)}{Q(x)} =
 </ul>
 <p>This is nicely illustrated by the following example from Chapter 14 of Silverman (1969).</p>
 <p>Consider the rational function <span class="math notranslate nohighlight">\(R(x) = \frac{x^2 + x − 1}{x − 1}\)</span>. Note the following.</p>
-<div class="math notranslate nohighlight">
-\[
-\usepackage{polynom}
-\polylongdiv{x^2 + x − 1}{x − 1}
-\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/polynomial_long_div.png"><img alt="_images/polynomial_long_div.png" src="_images/polynomial_long_div.png" style="width: 40%;" /></a>
+</figure>
 <p>Thus we have</p>
 <div class="math notranslate nohighlight">
 \[
-R(x ) = x2 + x − 1
-x − 1 = (x + 2) +
-( 1
-x − 1
-)
+R(x) = \frac{x^2 + x − 1}{x − 1} = (x + 2) + \left( \frac{1}{x − 1} \right)
 \]</div>
-<p>.</p>
+<p>If <span class="math notranslate nohighlight">\(R(x)\)</span> is a non-proper rational function, then it can be written as the sum of a polynomial function (<span class="math notranslate nohighlight">\(Y(x)\)</span>) and a proper rational function (<span class="math notranslate nohighlight">\(R^∗(x)\)</span>), so that <span class="math notranslate nohighlight">\(R(x) = Y(x) + R^∗(x)\)</span>.  In the example above, we had <span class="math notranslate nohighlight">\(R(x) = \frac{x^2 + x − 1}{x − 1}\)</span>, <span class="math notranslate nohighlight">\(Y(x) = (x + 2)\)</span>, and <span class="math notranslate nohighlight">\(R^∗(x) = \left( \frac{1}{x − 1} \right)\)</span>, so that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{x^2 + x − 1}{x − 1} = (x + 2) + \left( \frac{1}{x − 1} \right)
+\]</div>
+<p>The proper rational function component is sometimes known as a “remainder” term.</p>
+<p>In cases where <span class="math notranslate nohighlight">\(R(x)\)</span> is a proper rational function to begin with, then we have <span class="math notranslate nohighlight">\(Y(x) = 0\)</span>, leaving us only with the remainder term.</p>
+<p>The remainder term <span class="math notranslate nohighlight">\(R^∗(x)\)</span> can sometimes be converted into a more convenient form by using the technique of “Partial Fractions”.</p>
+</section>
+<section id="partial-fractions">
+<h3>Partial fractions<a class="headerlink" href="#partial-fractions" title="Permalink to this heading">#</a></h3>
+<p>Consider two rational functions, <span class="math notranslate nohighlight">\(R_1(x) = \frac{P_1(x)}{Q_1(x)}\)</span> and <span class="math notranslate nohighlight">\(R_2(x) = \frac{P_2(x)}{Q_2(x)}\)</span>.  Note that the sum of these two rational functions forms a third rational function, since</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+R_3(x) = R_1(x) + R_2(x) 
+= \frac{P_1(x)}{Q_1(x)} + \frac{P_2(x)}{Q_2(x)} \\
+= \frac{(P_1(x) Q_2(x) + P_2(x) Q_1(x))}{Q_1(x) Q_2(x)}
+\end{split}\]</div>
+<p>If we reverse this process, we can write the rational function <span class="math notranslate nohighlight">\(\frac{(P_1(x) Q_2(x) + P_2(x) Q_1(x))}{Q_1(x) Q_2(x)}\)</span> as the sum of two other rational functions, <span class="math notranslate nohighlight">\(\frac{P_1(x)}{Q_1(x)}\)</span> and <span class="math notranslate nohighlight">\(\frac{P_2(x)}{Q_2(x)}\)</span>. This decomposition is known as a <strong>“partial fractions” decomposition</strong>.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(P(x)\)</span> and <span class="math notranslate nohighlight">\(Q(x)\)</span> are <strong>relatively prime</strong> polynomials.</p>
+<ul class="simple">
+<li><p>Two polynomials (or, indeed, two integers) are said to be “relatively prime” (or “co-prime”) if their “highest common factor” (which is also known as their “greatest common divisor”) is the number “one”.</p></li>
+</ul>
+<p>Suppose also that the degree of the polynomial <span class="math notranslate nohighlight">\(M(x)\)</span> is strictly less than the degree of the polynomial <span class="math notranslate nohighlight">\(P(x) Q(x)\)</span>.</p>
+<ul class="simple">
+<li><p>This means that the rational function <span class="math notranslate nohighlight">\(R^∗(x) = \frac{M(x)}{P(x) Q(x)}\)</span> is a proper rational function. Under these circumstances there exist two unique polynomial functions, <span class="math notranslate nohighlight">\(A(x)\)</span> and <span class="math notranslate nohighlight">\(B(x)\)</span>, such that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+R^∗(x) = \frac{M(x)}{P(x) Q(x)}
+= \frac{A(x)}{P(x)} + \frac{B(x)}{Q(x)}
+\]</div>
+<p>where the degree of <span class="math notranslate nohighlight">\(A(x)\)</span> is strictly less than the degree of <span class="math notranslate nohighlight">\(P(x)\)</span> and
+the degree of <span class="math notranslate nohighlight">\(B(x)\)</span> is strictly less than the degree of <span class="math notranslate nohighlight">\(Q(x)\)</span>.</p>
+<section id="example">
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h4>
+<p>The following example comes from Coroneos (Undated b, pp. 86–87, Example 1).</p>
+<p>Consider the rational function <span class="math notranslate nohighlight">\(R(x) = \frac{7}{(x − 3)(x^2 + 4)}\)</span>. First, note that the degree of the numerator is zero, while the degree of the denominator is three. Thus <span class="math notranslate nohighlight">\(R(x)\)</span> is a proper rational function.</p>
+<p>Second, note that the only factors of <span class="math notranslate nohighlight">\((x − 3)\)</span> are <span class="math notranslate nohighlight">\((x − 3)\)</span> and <span class="math notranslate nohighlight">\(1\)</span>, while the only factors of <span class="math notranslate nohighlight">\((x^2 + 4)\)</span> are <span class="math notranslate nohighlight">\((x^2 + 4)\)</span>, <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\((x + 2i)\)</span> and <span class="math notranslate nohighlight">\((x − 2i)\)</span>. (In this course, you will not need to worry about the last two of these factors, because we will restrict attention to only real roots of polynomials.)</p>
+<p>Thus the highest common factor of <span class="math notranslate nohighlight">\((x − 3)\)</span> and <span class="math notranslate nohighlight">\((x^2 + 4)\)</span> is <span class="math notranslate nohighlight">\(1\)</span>. This means that <span class="math notranslate nohighlight">\((x − 3)\)</span> and <span class="math notranslate nohighlight">\((x^2 + 4)\)</span> are relatively prime. Thus we know that a partial fractions decomposition of <span class="math notranslate nohighlight">\(R(x)\)</span> exists for this example.</p>
+<p>We want to find two polynomials, <span class="math notranslate nohighlight">\(A(x)\)</span> and <span class="math notranslate nohighlight">\(B(x)\)</span>, such that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{7}{(x − 3)(x^2 + 4)} = \frac{A(x)}{(x − 3)} + \frac{B(x)}{(x^2 + 4)}
+\]</div>
+<p>degree<span class="math notranslate nohighlight">\((A(x)) &lt; 1\)</span>, and degree<span class="math notranslate nohighlight">\((B(x)) &lt; 2\)</span>.</p>
+<p>Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{7}{(x − 3)(x^2 + 4)} = \frac{A(x)}{(x − 3)} + \frac{B(x)}{(x^2 + 4)} \\
+\iff 
+\frac{7}{(x − 3)(x^2 + 4)} = \frac{A(x) (x^2 + 4) + B(x) (x - 3)}{(x - 3)(x^2 + 4)}
+\end{split}\]</div>
+<p>This requires that</p>
+<div class="math notranslate nohighlight">
+\[ A(x) (x^2 + 4) + B(x) (x − 3) = 7 \]</div>
+<ul class="simple">
+<li><p>Since degree<span class="math notranslate nohighlight">\((A(x)) &lt; 1\)</span>, we know that degree<span class="math notranslate nohighlight">\((A(x)) = 0\)</span>. This means that <span class="math notranslate nohighlight">\(A(x) = ax^0 = a\)</span> for some <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span>.</p></li>
+<li><p>Since degree<span class="math notranslate nohighlight">\((B(x)) &lt; 2\)</span>, we know that either degree<span class="math notranslate nohighlight">\((B(x)) = 0\)</span> or degree<span class="math notranslate nohighlight">\((B(x)) = 1\)</span>. This means that <span class="math notranslate nohighlight">\(B(x) = bx^1 + cx^0 = bx + c\)</span> for some <span class="math notranslate nohighlight">\(b \in \mathbb{R}\)</span> and some <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span>. (If degree<span class="math notranslate nohighlight">\((B(x)) = 0\)</span>, then <span class="math notranslate nohighlight">\(b = 0\)</span>. If degree<span class="math notranslate nohighlight">\((B(x)) = 1\)</span>, then <span class="math notranslate nohighlight">\(b \ne 0\)</span>.)</p></li>
+</ul>
+<p>Thus we need</p>
+<div class="math notranslate nohighlight">
+\[ a(x^2 + 4) + (bx + c)(x − 3) = 7 \]</div>
+<p>This requires that</p>
+<div class="math notranslate nohighlight">
+\[ ax^2 + 4a + bx^2 − 3bx + cx − 3c = 7 \]</div>
+<p>which can be simplified to obtain</p>
+<div class="math notranslate nohighlight">
+\[ (a + b)x^2 + (c − 3b)x + (4a − 3c) = 0x^2 + 0x + 7 \]</div>
+<p>Thus we have the following system of three linear equations in three
+unknown variables that we need to solve.</p>
+<ul class="simple">
+<li><p>Equation (1): <span class="math notranslate nohighlight">\(a + b = 0 \implies b = −a\)</span>.</p></li>
+<li><p>Equation (2) <span class="math notranslate nohighlight">\(c − 3b = 0 \implies c = 3b\)</span>.</p></li>
+<li><p>Equation (3): <span class="math notranslate nohighlight">\(4a − 3c = 7\)</span>.</p></li>
+</ul>
+<p>Equations (1) and (2) imply that <span class="math notranslate nohighlight">\(c = −3a\)</span>. This result and Equation (3) imply that <span class="math notranslate nohighlight">\(13a = 7\)</span>.
+Thus we know that <span class="math notranslate nohighlight">\(a = \frac{7}{13}\)</span>, <span class="math notranslate nohighlight">\(b = \frac{−7}{13}\)</span>, and <span class="math notranslate nohighlight">\(c = \frac{−21}{13}\)</span>.</p>
+<p>This means that</p>
+<div class="math notranslate nohighlight">
+\[ A(x) = a = \frac{7}{13}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[B(x) = bx + c = \frac{−7}{13} x + \frac{(−21)}{13} 
+= \frac{−7}{13} x - \frac{(21)}{13}
+= \frac{−7}{13} (x + 3)
+\]</div>
+<p>As such, we can conclude that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{7}{(x − 3)(x^2 + 4)} = \frac{A(x)}{(x − 3)} + \frac{B(x)}{(x^2 + 4)} \\
+= \frac{(\frac{7}{13})}{x - 3} + \frac{(\frac{-7}{13})(x + 3)}{x^2 + 4} \\
+= \frac{7}{13(x - 3)} - \frac{7(x + 3)}{13(x^2 + 4)}
+\end{split}\]</div>
+</section>
+</section>
+</section>
+<section id="some-useful-results-about-functions">
+<h2>Some useful results about functions<a class="headerlink" href="#some-useful-results-about-functions" title="Permalink to this heading">#</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Fact</p>
+<p>The pre-image of the union of two sets is equal to the union of the pre-images of each of the two sets: <span class="math notranslate nohighlight">\(f^{−1}(A \cup B) = f^{−1}(A) \cup f^{−1}(B)\)</span>.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span> and consider two sets, <span class="math notranslate nohighlight">\(A \subseteq Y\)</span> and <span class="math notranslate nohighlight">\(B \subseteq Y\)</span>. We want to show that the pre-image of the union of two sets is equal
+to the union of the pre-images of each of the two sets:
+<span class="math notranslate nohighlight">\(f^{−1}(A \cup B) = f^{−1}(A) \cup f^{−1}(B)\)</span>.</p>
+<p class="sd-card-text">Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+f^{−1}(A \cup B) &amp;= \{x \in X: f(x) \in A \cup B\} \\
+&amp;= \{x \in X : f(x) \in A \text{, or } f(x) \in B \text{, or both}\} \\
+&amp;= \{x \in X : f(x) \in A\} \cup \{x \in X : f(x) \in B\} \\
+&amp;= f^{−1}(A) \cup f^{−1}(B)
+\end{align*}
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Example: <span class="math notranslate nohighlight">\(f: \mathbb{Z} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(z) = z^2, A = [0, 9] \subset \mathbb{R}\)</span>, and <span class="math notranslate nohighlight">\(B = [5, 25] \subset \mathbb{R}\)</span>. <span class="math notranslate nohighlight">\(A \cup B = [0, 25] \subset \mathbb{R}\)</span>.</p>
+<p class="sd-card-text">The pre-image mapping here is given by <span class="math notranslate nohighlight">\(f^{−1}(y) = \pm \sqrt{y}\)</span> if <span class="math notranslate nohighlight">\(\pm \sqrt{y}\)</span> is an integer, and <span class="math notranslate nohighlight">\(f^{−1}(y) = \varnothing\)</span> otherwise. Note that this pre-image mapping is not an inverse function, because <span class="math notranslate nohighlight">\(\pm \sqrt{y}\)</span> is sometimes multi-valued.</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f^{−1}(A \cup B) = \{−5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5\}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f^{−1}(A) = \{−3, −2, −1, 0, 1, 2, 3\}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f^{−1}(B) = \{−5, −4, −3, 3, 4, 5\}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f^{−1}(A) \cup f^{-1}(B) = \{−5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5\} = f^{−1}(A \cup B)\)</span></p></li>
+</ul>
+</div>
+</details><div class="important admonition">
+<p class="admonition-title">Fact</p>
+<p>The pre-image of the intersection of two sets is equal to the intersection of the pre-images of each of the two sets: <span class="math notranslate nohighlight">\(f^{−1}(A \cap B) = f^{−1}(A) \cap f^{−1}(B)\)</span>.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span> and consider two sets, <span class="math notranslate nohighlight">\(A \subseteq Y\)</span> and <span class="math notranslate nohighlight">\(B \subseteq Y\)</span>. We want to show that the pre-image of the intersection of two sets is equal to the intersection of the pre-images of each of the two sets: <span class="math notranslate nohighlight">\(f^{−1}(A \cap B) = f^{−1}(A) \cap f^{−1}(B)\)</span>.</p>
+<p class="sd-card-text">Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+f^{−1}(A \cap B) &amp;= \{x \in X: f(x) \in A \cap B\} \\
+&amp;= \{x \in X : f(x) \in A \text{ and } f(x) \in B\} \\
+&amp;= \{x \in X : f(x) \in A\} \cap \{x \in X : f(x) \in B\} \\
+&amp;= f^{−1}(A) \cap f^{−1}(B)
+\end{align*}
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Example: <span class="math notranslate nohighlight">\(f: \mathbb{Z} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(z) = z^2, A = [0, 9] \subset \mathbb{R}\)</span>, and <span class="math notranslate nohighlight">\(B = [5, 25] \subset \mathbb{R}\)</span>. <span class="math notranslate nohighlight">\(A \cap B = [5, 9] \subset \mathbb{R}\)</span>.</p>
+<p class="sd-card-text">The pre-image mapping here is given by <span class="math notranslate nohighlight">\(f^{−1}(y) = \pm \sqrt{y}\)</span> if <span class="math notranslate nohighlight">\(\pm \sqrt{y}\)</span> is an integer, and <span class="math notranslate nohighlight">\(f^{−1}(y) = \varnothing\)</span> otherwise. Note that this pre-image mapping is not an inverse function, because <span class="math notranslate nohighlight">\(\pm \sqrt{y}\)</span> is sometimes multi-valued.</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f^{−1}(A \cap B) = \{−3, 3\}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f^{−1}(A) = \{−3, −2, −1, 0, 1, 2, 3\}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f^{−1}(B) = \{−5, −4, −3, 3, 4, 5\}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f^{−1}(A) \cap f^{-1}(B) = \{−3, 3\} = f^{−1}(A \cap B)\)</span></p></li>
+</ul>
+</div>
+</details><div class="important admonition">
+<p class="admonition-title">Fact</p>
+<p>The image of the union of two sets is equal to the union of the images of each of the two sets: <span class="math notranslate nohighlight">\(f(A \cup B) = f(A) \cup f(B)\)</span>.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span> and consider two sets, <span class="math notranslate nohighlight">\(A \subseteq Y\)</span> and <span class="math notranslate nohighlight">\(B \subseteq Y\)</span>. We want to show that the image of the union of two sets is equal to the union of the images of each of the two sets: <span class="math notranslate nohighlight">\(f(A \cup B) = f(A) \cup f(B)\)</span>.</p>
+<p class="sd-card-text">Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+f(A \cup B) &amp;= \{y \in Y: y = f(x) \text{ and } x \in A \cup B\} \\
+&amp;= \{f(x) \in Y : x \in A \cup B\} \\
+&amp;= \{f(x) \in Y : x \in A \text{, or } x \in B \text{, or both}\} \\
+&amp;= \{f(x) \in Y : x \in A\} \cup \{f(x) \in Y : x \in B\} \\
+&amp;= f(A) \cup f(B)
+\end{align*}
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Example: <span class="math notranslate nohighlight">\(f: \mathbb{Z} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(z) = z^2, A = \{1, 2, 3} \subset \mathbb{Z}\)</span>, and <span class="math notranslate nohighlight">\(B = \{2,3,4,5\} \subset \mathbb{Z}\)</span>.</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(A \cup B = \{1,2,3,4,5\} \subset \mathbb{Z}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f(A \cup B) = \{1, 4, 9, 16, 25\} \subset \mathbb{R}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f(A) = \{1, 4, 9\} \subset \mathbb{R}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f(B) = \{4, 9, 16, 25\} \subset \mathbb{R}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(f(A) \cup f(B) = \{1, 4, 9, 16, 25\} = f(A \cup B)\)</span></p></li>
+</ul>
+</div>
+</details><p>However, the image of the intersection of two sets is not necessarily equal to the intersection of the images of each of the two sets. In other words, there are some cases where <span class="math notranslate nohighlight">\(f(A \cap B) \ne f(A) \cap f(B)\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the mapping <span class="math notranslate nohighlight">\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x, y) = x\)</span>, along with the sets</p>
+<div class="math notranslate nohighlight">
+\[ A = \{(x, y) \in \mathbb{R}^2: x = 5, y = 5\} = \{(5, 5)\} \subset \mathbb{R}^2\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[ B = \{(x, y) \in \mathbb{R}^2: x = 5, y = 5\} = \{(5, 10)\} \subset \mathbb{R}^2\]</div>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(A \cap B = \varnothing\)</span>, so that <span class="math notranslate nohighlight">\(f(A \cap B) = f(\varnothing) = \varnothing\)</span>. Note also that</p>
+<div class="math notranslate nohighlight">
+\[f(A) = \{f(5, 5)\} = \{5\} \subset \mathbb{R}\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[f(B) = \{f(5, 10)\} = \{5\} \subset \mathbb{R}\]</div>
+<p class="sd-card-text">so that</p>
+<div class="math notranslate nohighlight">
+\[f(A) \cap f(B) = \{5\}\]</div>
+<p class="sd-card-text">Clearly, we have</p>
+<div class="math notranslate nohighlight">
+\[f(A \cap B) = \varnothing \ne \{5\} = f(A) \cap f(B)\]</div>
+</div>
+</details></section>
+<section id="size-cardinality-of-a-set">
+<h2>Size (cardinality) of a set<a class="headerlink" href="#size-cardinality-of-a-set" title="Permalink to this heading">#</a></h2>
+<p>The <strong>size (or cardinality)</strong> of a set is closely related to the number of elements in the set. Indeed, the size of a finite set is equal to the number of elements contained in that set. But how do we generalise this idea to sets that have an infinite number of elements? This is done through the use of functions.</p>
+<div class="important admonition">
+<p class="admonition-title">Fact</p>
+<p>The size of a finite set is equal to the number of elements contained in that set.</p>
+</div>
+<p>Because the size (or cardinality) of a set is closely related to the number of
+elements in the set, this makes it easy to distinguish between the size of sets with finite, but different, numbers of elements.</p>
+<ul class="simple">
+<li><p>The set <span class="math notranslate nohighlight">\(A = \{1, 2, 3\}\)</span> is smaller than the set <span class="math notranslate nohighlight">\(B = \{a, b, c, d, e\}\)</span> because there are only three elements in <span class="math notranslate nohighlight">\(A\)</span>, while there are five elements in <span class="math notranslate nohighlight">\(B\)</span> (and <span class="math notranslate nohighlight">\(3 &lt; 5\)</span>).</p></li>
+</ul>
+<p>It is also easy to distinguish between sets with finite numbers of elements and sets with an infinite number of elements.</p>
+<ul class="simple">
+<li><p>The set <span class="math notranslate nohighlight">\(A = \{1, 2, 3\}\)</span> is smaller than the set <span class="math notranslate nohighlight">\(\mathbb{N} = \{1, 2, 3, · · · \}\)</span> because there are only a finite number (three) of elements in <span class="math notranslate nohighlight">\(A\)</span>, while there are an infinite number of elements in <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> (and <span class="math notranslate nohighlight">\(3 &lt; \infty\)</span>).</p></li>
+</ul>
+<p>But how can we distinguish between the sizes of different sets when all of those sets have an infinite number of elements?</p>
+<ul class="simple">
+<li><p>Is <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> larger than, the same size as, or smaller than <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>?</p></li>
+<li><p>Is <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> larger than, the same size as, or smaller than <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>?</p></li>
+<li><p>Is <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> larger than, the same size as, or smaller than <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>?</p></li>
+</ul>
+<p>Let <span class="math notranslate nohighlight">\(\#A\)</span> denote the size, or cardinality, of the set A. Since <span class="math notranslate nohighlight">\(\mathbb{N} \subset \mathbb{Q} \subset \mathbb{R}\)</span>, we might expect that <span class="math notranslate nohighlight">\(\#\mathbb{N} &lt; \#\mathbb{Q} &lt; \#\mathbb{R}\)</span>. However, it turns out that this is not quite right (although the direction of this intuition is partially correct).</p>
+<p>This intuition can be used to accurately reveal that <span class="math notranslate nohighlight">\(\#\mathbb{N} \leqslant \#\mathbb{Q} \leqslant \#\mathbb{R}\)</span>.</p>
+<p>A more precise statement of the actual relationship between the cardinalities of these three sets <span class="math notranslate nohighlight">\(\#\mathbb{N} = \#\mathbb{Q} &lt; \#\mathbb{R}\)</span>.</p>
+<p>One way to generalise the notion of set size being related to the number of elements of a set to infinite sets is to think about one-to-one mappings between sets.</p>
+<ul class="simple">
+<li><p>If it is possible to construct a one-to-one function <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span>, then <span class="math notranslate nohighlight">\(Y\)</span> must be at least as large as <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+<li><p>If it is possible to construct a one-to-one and onto function <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span>, then both (a) <span class="math notranslate nohighlight">\(Y\)</span> must be at least as large as <span class="math notranslate nohighlight">\(X\)</span> and (b) <span class="math notranslate nohighlight">\(X\)</span> must be at least as large as <span class="math notranslate nohighlight">\(Y\)</span>. This means that <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> must have the same size.</p></li>
+</ul>
+<p>We are particularly interested in three classes of set size: finite, countably infinite, and uncountably infinite.</p>
+<div class="caution admonition">
+<p class="admonition-title">Definition</p>
+<p>A set is said to be a <strong>finite set</strong> if it has at most a finite number of
+elements.</p>
+<ul class="simple">
+<li><p>Note that since zero is a finite number, <span class="math notranslate nohighlight">\(\varnothing\)</span> is a finite set.</p></li>
+</ul>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Definition</p>
+<p>A set <span class="math notranslate nohighlight">\(X\)</span> with an infinite number of elements is said to be <strong>countably infinite</strong> if there exists a one-to-one and onto function <span class="math notranslate nohighlight">\(f: X \rightarrow \mathbb{N}\)</span>.</p>
+</div>
+<p>Clearly, countably infinite sets are larger than finite sets. Examples of countably infinite sets include <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>.
+Thus we have <span class="math notranslate nohighlight">\(\#\mathbb{N} = \#\mathbb{Q}\)</span>.</p>
+<p>All other sets with an infinite number of elements are said to be <strong>uncountably infinite</strong>. Since the smallest set with an infinite number of elements is <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>, uncountably infinite sets are larger than countably infinite sets. Examples of uncountably infinite sets include <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, <span class="math notranslate nohighlight">\([a, b]\)</span> where <span class="math notranslate nohighlight">\(a &lt; b\)</span> and <span class="math notranslate nohighlight">\((a, b)\)</span> where <span class="math notranslate nohighlight">\(a &lt; b\)</span>. Thus we have <span class="math notranslate nohighlight">\(\#\mathbb{N} = \#\mathbb{Q} &lt; \#\mathbb{R}\)</span>.</p>
+<div class="caution admonition">
+<p class="admonition-title">Definition</p>
+<p>A set that is either finite or countably infinite is said to be <strong>countable</strong>. A set that is uncountably infinite is said to be <strong>uncountable</strong>.</p>
+</div>
+<p>Some useful results about countable and uncountable sets:</p>
+<ul class="simple">
+<li><p>Every subset of a countable set is countable.</p></li>
+<li><p>The union of a countable number of countable sets is itself a countable set.</p></li>
+<li><p>Every infinite set (countable or uncountable) has a countable subset.</p></li>
+<li><p>Every infinite set has the same size as (at least) one of its proper subsets.</p></li>
+<li><p>Every non-empty set <span class="math notranslate nohighlight">\(X\)</span> is smaller than its power set <span class="math notranslate nohighlight">\(2^X\)</span>.</p></li>
+<li><p>(The Cantor-Bernstein Theorem): If <span class="math notranslate nohighlight">\(X_1 \subseteq X, Y_1 \subseteq Y, \#X_1 = \#Y \text{ and } \#Y_1 = \#X\)</span>, then <span class="math notranslate nohighlight">\(\#X = \#Y\)</span>.</p></li>
+</ul>
+</section>
+<section id="some-economic-examples-of-mappings">
+<h2>Some economic examples of mappings<a class="headerlink" href="#some-economic-examples-of-mappings" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Utility functions</p></li>
+<li><p>Production functions</p></li>
+<li><p>Marshallian demand functions</p></li>
+<li><p>Marshallian demand correspondences</p></li>
+<li><p>Hicksian demand functions</p></li>
+<li><p>Hicksian demand correspondences</p></li>
+<li><p>Supply functions</p></li>
+<li><p>Best response functions</p></li>
+<li><p>Best response correspondences</p></li>
+</ul>
+<section id="utility-functions">
+<h3>Utility functions<a class="headerlink" href="#utility-functions" title="Permalink to this heading">#</a></h3>
+<p>A utility function <span class="math notranslate nohighlight">\(U : X \rightarrow \mathbb{R}\)</span> maps a consumption set <span class="math notranslate nohighlight">\(X\)</span> into the real line. The consumption set <span class="math notranslate nohighlight">\(X\)</span> will typically be a set of possible commodity bundles or a set of possible bundles of characteristics.</p>
+<p>Often, it will be the case that <span class="math notranslate nohighlight">\(X = R^L_+\)</span>. Some examples include the following:</p>
+<ul class="simple">
+<li><p>Cobb-Douglas: <span class="math notranslate nohighlight">\(U(x_1, x_2) = x_1^\alpha x_2^{(1 − \alpha)}\)</span> where <span class="math notranslate nohighlight">\(\alpha \in (0, 1)\)</span>.</p></li>
+<li><p>Perfect Substitutes: <span class="math notranslate nohighlight">\(U(x_1, x_2) = x_1 + x_2\)</span>.</p></li>
+<li><p>Perfect Complements (or Leontief): <span class="math notranslate nohighlight">\(U(x_1, x_2) = \text{min}(x_1, x_2)\)</span>.</p></li>
+</ul>
+</section>
+<section id="marshallian-demand-functions">
+<h3>Marshallian demand functions<a class="headerlink" href="#marshallian-demand-functions" title="Permalink to this heading">#</a></h3>
+<p>An individual’s Marshallian demand function or correspondence
+<span class="math notranslate nohighlight">\(d: \mathbb{R}^L_{++} \times \mathbb{R}_{++} \rightarrow \mathbb{R}^L_+\)</span> maps the space of prices and income combinations into the space of commodity bundles. Example: Marshallian demands for Cobb-Douglas preferences in a two commodity world.</p>
+<p>Here we have a Marshallian demand function:</p>
+<div class="math notranslate nohighlight">
+\[
+d(p_1, p_2, y) = (x_1^d (p_1, p_2, y), x_2^d(p_1, p_2, y)) 
+= (\frac{\alpha y}{p_1}, \frac{(1 − \alpha)y}{p_2})
+\]</div>
+<p>Here we have a Marshallian demand correspondence:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+d(p_1, p_2, y) = (x_1^d (p_1, p_2, y), x_2^d(p_1, p_2, y)) 
+= 
+\begin{cases}
+( \frac{y}{p_1}, 0) \quad \text{ if } p_1 &lt; p_2 \\
+(\alpha, \frac{y − p_1 \alpha}{p_2} ) \text{ where } \alpha \in [0, \frac{y}{p_1}] \quad \text{ if } p1 = p2 \\
+(0, \frac{y}{p_2}) \quad \text{ if } p_1 &gt; p_2
+\end{cases}
+\end{split}\]</div>
 </section>
 </section>
 </section>
@@ -954,6 +1380,15 @@ x − 1
         <p class="prev-next-title">Sets, numbers, coordinates, and distances</p>
       </div>
     </a>
+    <a class="right-next"
+       href="04.equations_inequalities_binary_relations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Equations, inequalities, and binary relations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -969,7 +1404,15 @@ x − 1
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-guide">Reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-guide">Reading guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introductory-mathematical-economics-references">Introductory mathematical economics references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-high-school-references">Advanced high school references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introductory-mathematics-references">Introductory mathematics references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-advanced-references">More advanced references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-list">Reference list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#websites">Websites</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mappings">Mappings</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#images">Images</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-images">Pre-images</a></li>
@@ -985,7 +1428,7 @@ x − 1
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-types-of-functions">Some types of functions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-functions">Polynomial functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Examples</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">Examples</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affine-functions-and-linear-functions">Affine functions and linear functions</a></li>
@@ -1005,6 +1448,17 @@ x − 1
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-functions">Rational functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-fractions">Partial fractions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-results-about-functions">Some useful results about functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#size-cardinality-of-a-set">Size (cardinality) of a set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-economic-examples-of-mappings">Some economic examples of mappings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utility-functions">Utility functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marshallian-demand-functions">Marshallian demand functions</a></li>
 </ul>
 </li>
 </ul>
@@ -1021,7 +1475,7 @@ x − 1
   <div class="footer-item">
     
 <p class="component-author">
-By Fedor Iskhakov
+By Fedor Iskhakov, based on notes by D.S. Eldridge
 </p>
 
   </div>
