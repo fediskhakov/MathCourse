@@ -184,6 +184,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Equations, inequalities, and binary relations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05.sequences_series_limits.html">Sequences, series and limits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06.univariate_differentiation.html">Univariate differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07.linear_algebra.html">Linear algebra</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="08.multivariate_differential_calculus.html">Multivariate differential calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09.intro_to_optimisation.html">Introduction to optimisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10.univariate_integration.html">Univariate integration</a></li>
+
+
 </ul>
 
     </div>
@@ -385,7 +394,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-list">Reference list</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">Equations, inequalities and binary relations</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id76">Equations, inequalities and binary relations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-equations">Polynomial equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions-of-polynomial-equations">Solutions of polynomial equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equations">Linear equations</a></li>
@@ -423,11 +432,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-relations">Equivalence relations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id77">Examples</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordered-sets">Ordered sets</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id78">Examples</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-results-about-ordered-sets">Some useful results about ordered sets</a></li>
 </ul>
 </li>
@@ -452,72 +461,72 @@ document.write(`
 <section id="introductory-level-references">
 <h3>Introductory level references<a class="headerlink" href="#introductory-level-references" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><span id="id1">[<a class="reference internal" href="#id29" title="T Bradley. Essential mathematics for economics and business (fourth edition). John Wiley and Sons, 2013.">Bra13</a>]</span>: Chapters 1, 2, and 4.</p></li>
-<li><p><span id="id2">[<a class="reference internal" href="06.univariate_differentiation.html#id12" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">HJP87</a>]</span>: Chapters 1, 2, and 4.</p></li>
-<li><p><span id="id3">[<a class="reference internal" href="06.univariate_differentiation.html#id14" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">Sha95</a>]</span>: Chapters 1, 2, and 6.</p></li>
-<li><p><span id="id4">[<a class="reference internal" href="06.univariate_differentiation.html#id13" title="K Sydsæter, P Hammond, A Strøm, and A Carvajal. Essential mathematics for economic analysis (fifth edition). Pearson Education, 2016.">SHSC16</a>]</span>: Chapters 2 and 3.</p></li>
+<li><p><span id="id1">[<a class="reference internal" href="#id30" title="T Bradley. Essential mathematics for economics and business (fourth edition). John Wiley and Sons, 2013.">4Bra13</a>]</span>: Chapters 1, 2, and 4.</p></li>
+<li><p><span id="id2">[<a class="reference internal" href="#id14" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">4HJP87</a>]</span>: Chapters 1, 2, and 4.</p></li>
+<li><p><span id="id3">[<a class="reference internal" href="#id17" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">4Sha95</a>]</span>: Chapters 1, 2, and 6.</p></li>
+<li><p><span id="id4">[<a class="reference internal" href="#id15" title="K Sydsæter, P Hammond, A Strøm, and A Carvajal. Essential mathematics for economic analysis (fifth edition). Pearson Education, 2016.">4SHSC16</a>]</span>: Chapters 2 and 3.</p></li>
 </ul>
 </section>
 <hr class="docutils" />
 <section id="more-advanced-references">
 <h3>More advanced references<a class="headerlink" href="#more-advanced-references" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><span id="id5">[<a class="reference internal" href="05.sequences_series_limits.html#id24" title="D Corbae, MB Stinchcombe, and J Zeman. An introduction to mathematical analysis for economic theory and econometrics. Princeton University Press, 2009.">CSZ09</a>]</span>: Chapter 2 (pp. 15-71).</p></li>
-<li><p><span id="id6">[<a class="reference internal" href="05.sequences_series_limits.html#id25" title="AN Kolmogorov and SV Fomin. Introductory real analysis. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).">KF70</a>]</span>: Chapter 1 (pp. 1-36).</p></li>
-<li><p><span id="id7">[<a class="reference internal" href="#id30" title="H Gravelle and R Rees. Microeconomics. Longman Group, 1981.">GR81</a>]</span>: Chapter 3 (pp. 55-95).</p></li>
-<li><p><span id="id8">[<a class="reference internal" href="#id31" title="DM Kreps. A course in microeconomics. Harvester Wheatsheaf, 1990.">Kre90</a>]</span>: Chapter 2 (pp. 17-69).</p></li>
-<li><p><span id="id9">[<a class="reference internal" href="#id32" title="A Mas-Colell, MD Whinston, and JR Green. Microeconomic theory. Oxford University Press, 1995.">MCWG95</a>]</span>: Chapters 1-3 (pp. 5-104).</p></li>
-<li><p><span id="id10">[<a class="reference internal" href="#id33" title="A Rubinstein. Lecture notes in microeconomic theory: The economic agent. Princeton University Press, 2006.">Rub06</a>]</span>: Chapters 1-4 (pp. 1-51).</p></li>
-<li><p><span id="id11">[<a class="reference internal" href="#id34" title="HW Turnbull. Theory of equations (fifth edition). Oliver and Boyd, 1952. The 1963 reprint version.">Tur52</a>]</span></p></li>
-<li><p><span id="id12">[<a class="reference internal" href="#id35" title="HR Varian. Microeconomic analysis (third edition). WW Norton and Sons, 1992.">Var92</a>]</span>: Chapter 7 (pp. 94-115).</p></li>
+<li><p><span id="id5">[<a class="reference internal" href="#id26" title="D Corbae, MB Stinchcombe, and J Zeman. An introduction to mathematical analysis for economic theory and econometrics. Princeton University Press, 2009.">4CSZ09</a>]</span>: Chapter 2 (pp. 15-71).</p></li>
+<li><p><span id="id6">[<a class="reference internal" href="#id27" title="AN Kolmogorov and SV Fomin. Introductory real analysis. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).">4KF70</a>]</span>: Chapter 1 (pp. 1-36).</p></li>
+<li><p><span id="id7">[<a class="reference internal" href="#id31" title="H Gravelle and R Rees. Microeconomics. Longman Group, 1981.">4GR81</a>]</span>: Chapter 3 (pp. 55-95).</p></li>
+<li><p><span id="id8">[<a class="reference internal" href="#id32" title="DM Kreps. A course in microeconomics. Harvester Wheatsheaf, 1990.">4Kre90</a>]</span>: Chapter 2 (pp. 17-69).</p></li>
+<li><p><span id="id9">[<a class="reference internal" href="#id33" title="A Mas-Colell, MD Whinston, and JR Green. Microeconomic theory. Oxford University Press, 1995.">4MCWG95</a>]</span>: Chapters 1-3 (pp. 5-104).</p></li>
+<li><p><span id="id10">[<a class="reference internal" href="#id34" title="A Rubinstein. Lecture notes in microeconomic theory: The economic agent. Princeton University Press, 2006.">4Rub06</a>]</span>: Chapters 1-4 (pp. 1-51).</p></li>
+<li><p><span id="id11">[<a class="reference internal" href="#id35" title="HW Turnbull. Theory of equations (fifth edition). Oliver and Boyd, 1952. The 1963 reprint version.">4Tur52</a>]</span></p></li>
+<li><p><span id="id12">[<a class="reference internal" href="#id36" title="HR Varian. Microeconomic analysis (third edition). WW Norton and Sons, 1992.">4Var92</a>]</span>: Chapter 7 (pp. 94-115).</p></li>
 </ul>
 </section>
 <section id="reference-list">
 <h3>Reference list<a class="headerlink" href="#reference-list" title="Permalink to this heading">#</a></h3>
 <div class="docutils container" id="id13">
 <dl class="citation">
-<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id1">Bra13</a></span></dt>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id1">4Bra13</a></span></dt>
 <dd><p>T Bradley. <em>Essential mathematics for economics and business (fourth edition)</em>. John Wiley and Sons, 2013.</p>
 </dd>
-<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id5">CSZ09</a></span></dt>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id5">4CSZ09</a></span></dt>
 <dd><p>D Corbae, MB Stinchcombe, and J Zeman. <em>An introduction to mathematical analysis for economic theory and econometrics</em>. Princeton University Press, 2009.</p>
 </dd>
-<dt class="label" id="id30"><span class="brackets">GR81</span><span class="fn-backref">(<a href="#id7">1</a>,<a href="#id45">2</a>)</span></dt>
+<dt class="label" id="id31"><span class="brackets">4GR81</span><span class="fn-backref">(<a href="#id7">1</a>,<a href="#id79">2</a>)</span></dt>
 <dd><p>H Gravelle and R Rees. <em>Microeconomics</em>. Longman Group, 1981.</p>
 </dd>
-<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id2">HJP87</a></span></dt>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id2">4HJP87</a></span></dt>
 <dd><p>EF Haeussler Jr and RS Paul. <em>Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition)</em>. Prentice-Hall, 1987.</p>
 </dd>
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id6">KF70</a></span></dt>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id6">4KF70</a></span></dt>
 <dd><p>AN Kolmogorov and SV Fomin. <em>Introductory real analysis</em>. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).</p>
 </dd>
-<dt class="label" id="id31"><span class="brackets">Kre90</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id46">2</a>)</span></dt>
+<dt class="label" id="id32"><span class="brackets">4Kre90</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id80">2</a>)</span></dt>
 <dd><p>DM Kreps. <em>A course in microeconomics</em>. Harvester Wheatsheaf, 1990.</p>
 </dd>
-<dt class="label" id="id32"><span class="brackets">MCWG95</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id47">2</a>)</span></dt>
+<dt class="label" id="id33"><span class="brackets">4MCWG95</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id81">2</a>)</span></dt>
 <dd><p>A Mas-Colell, MD Whinston, and JR Green. <em>Microeconomic theory</em>. Oxford University Press, 1995.</p>
 </dd>
-<dt class="label" id="id33"><span class="brackets">Rub06</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id48">2</a>)</span></dt>
+<dt class="label" id="id34"><span class="brackets">4Rub06</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id82">2</a>)</span></dt>
 <dd><p>A Rubinstein. <em>Lecture notes in microeconomic theory: The economic agent</em>. Princeton University Press, 2006.</p>
 </dd>
-<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id3">Sha95</a></span></dt>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id3">4Sha95</a></span></dt>
 <dd><p>J Shannon. <em>Mathematics for business, economics and finance</em>. John Wiley and Sons, 1995.</p>
 </dd>
-<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id4">SHSC16</a></span></dt>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id4">4SHSC16</a></span></dt>
 <dd><p>K Sydsæter, P Hammond, A Strøm, and A Carvajal. <em>Essential mathematics for economic analysis (fifth edition)</em>. Pearson Education, 2016.</p>
 </dd>
-<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id11">Tur52</a></span></dt>
+<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id11">4Tur52</a></span></dt>
 <dd><p>HW Turnbull. <em>Theory of equations (fifth edition)</em>. Oliver and Boyd, 1952. The 1963 reprint version.</p>
 </dd>
-<dt class="label" id="id35"><span class="brackets">Var92</span><span class="fn-backref">(<a href="#id12">1</a>,<a href="#id49">2</a>)</span></dt>
+<dt class="label" id="id36"><span class="brackets">4Var92</span><span class="fn-backref">(<a href="#id12">1</a>,<a href="#id83">2</a>)</span></dt>
 <dd><p>HR Varian. <em>Microeconomic analysis (third edition)</em>. WW Norton and Sons, 1992.</p>
 </dd>
 </dl>
 </div>
 </section>
 </section>
-<section id="id42">
-<h2>Equations, inequalities and binary relations<a class="headerlink" href="#id42" title="Permalink to this heading">#</a></h2>
+<section id="id76">
+<h2>Equations, inequalities and binary relations<a class="headerlink" href="#id76" title="Permalink to this heading">#</a></h2>
 <p>Consider two real-valued functions that have the same domain (<span class="math notranslate nohighlight">\(X\)</span>), <span class="math notranslate nohighlight">\(f: X \rightarrow \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(g: X \rightarrow \mathbb{R}\)</span>.</p>
 <p>An equation takes the form <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span>. The solution to this equation consists of the set of values of <span class="math notranslate nohighlight">\(x \in X\)</span> that ensure the equation is satisfied.</p>
 <p>An inequality takes one of the forms <span class="math notranslate nohighlight">\(f(x) \leqslant g(x)\)</span>, or <span class="math notranslate nohighlight">\(f(x) \geqslant g(x)\)</span>, or <span class="math notranslate nohighlight">\(f(x) &gt; g(x)\)</span>, or <span class="math notranslate nohighlight">\(f(x) &gt; g(x)\)</span>. The solution to an inequality consists of the set of values of <span class="math notranslate nohighlight">\(x \in X\)</span> that ensure the inequality is satisfied.</p>
@@ -1026,10 +1035,10 @@ m! = (m)(m − 1)(m − 2) · · · (2) (1) \\
 <h3>Pascal’s triangle<a class="headerlink" href="#pascal-s-triangle" title="Permalink to this heading">#</a></h3>
 <p>If <span class="math notranslate nohighlight">\(n\)</span> is not too large, the binomial coefficients can be conveniently
 found by using Pascal’s triangle. The first eleven rows of Pascal’s triangle are provided in the following table. Can you see the relationship between the entries in Pascal’s triangle?</p>
-<figure class="align-center" id="id50">
+<figure class="align-center" id="id84">
 <a class="reference internal image-reference" href="_images/pascals_triangle.png"><img alt="_images/pascals_triangle.png" src="_images/pascals_triangle.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">First eleven rows of Pascal’s triangle</span><a class="headerlink" href="#id50" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">First eleven rows of Pascal’s triangle</span><a class="headerlink" href="#id84" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Note that the boundary entries of Pascal’s triangle are all ones. The reason for this is that they are either of the form <span class="math notranslate nohighlight">\(\binom{n}{0}\)</span> or <span class="math notranslate nohighlight">\(\binom{n}{n}\)</span> and we have <span class="math notranslate nohighlight">\(\binom{n}{0} = \binom{n}{n} = 1\)</span> for all <span class="math notranslate nohighlight">\(n \in \mathbb{Z}_+ = \N \cup {0}\)</span>.
@@ -1059,40 +1068,40 @@ is provided by the following equation:</p>
 </ul>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
-<figure class="align-center" id="id51">
+<figure class="align-center" id="id85">
 <a class="reference internal image-reference" href="_images/leq_example.png"><img alt="_images/leq_example.png" src="_images/leq_example.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Example of a binary relation: less than or equal to</span><a class="headerlink" href="#id51" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Example of a binary relation: less than or equal to</span><a class="headerlink" href="#id85" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-center" id="id52">
+<figure class="align-center" id="id86">
 <a class="reference internal image-reference" href="_images/lt_example.png"><img alt="_images/lt_example.png" src="_images/lt_example.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Example of a binary relation: strictly less than</span><a class="headerlink" href="#id52" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Example of a binary relation: strictly less than</span><a class="headerlink" href="#id86" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-center" id="id53">
+<figure class="align-center" id="id87">
 <a class="reference internal image-reference" href="_images/eq_example.png"><img alt="_images/eq_example.png" src="_images/eq_example.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Example of a binary relation: equal to</span><a class="headerlink" href="#id53" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Example of a binary relation: equal to</span><a class="headerlink" href="#id87" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-center" id="id54">
+<figure class="align-center" id="id88">
 <a class="reference internal image-reference" href="_images/proper_subset_example.png"><img alt="_images/proper_subset_example.png" src="_images/proper_subset_example.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Example of a binary relation: proper subset</span><a class="headerlink" href="#id54" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Example of a binary relation: proper subset</span><a class="headerlink" href="#id88" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-center" id="id55">
+<figure class="align-center" id="id89">
 <a class="reference internal image-reference" href="_images/weak_example.png"><img alt="_images/weak_example.png" src="_images/weak_example.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Example of a binary relation: subset</span><a class="headerlink" href="#id55" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Example of a binary relation: subset</span><a class="headerlink" href="#id89" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-center" id="id56">
+<figure class="align-center" id="id90">
 <a class="reference internal image-reference" href="_images/set_eq_example.png"><img alt="_images/set_eq_example.png" src="_images/set_eq_example.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Example of a binary relation: set equality</span><a class="headerlink" href="#id56" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Example of a binary relation: set equality</span><a class="headerlink" href="#id90" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1124,8 +1133,8 @@ is provided by the following equation:</p>
 <ul class="simple">
 <li><p>If <span class="math notranslate nohighlight">\(R\)</span> is an equivalence relation on <span class="math notranslate nohighlight">\(A\)</span>, then the collection <span class="math notranslate nohighlight">\(A/R\)</span> is a partition of <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
 </ul>
-<section id="id43">
-<h3>Examples<a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h3>
+<section id="id77">
+<h3>Examples<a class="headerlink" href="#id77" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The equality relation <span class="math notranslate nohighlight">\((=)\)</span> is an equivalence relation on <span class="math notranslate nohighlight">\(\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>.</p></li>
 <li><p>The set equality relation <span class="math notranslate nohighlight">\((=)\)</span> is an equivalence relation on the power set <span class="math notranslate nohighlight">\(2^A\)</span>, where <span class="math notranslate nohighlight">\(A = \{1, 2, 3\}\)</span>.</p></li>
@@ -1149,8 +1158,8 @@ is provided by the following equation:</p>
 <li><p>Note than an ordering is a partial ordering that is weakly complete. If this is the case, then the set <span class="math notranslate nohighlight">\(A\)</span> is said to ordered by the binary relation <span class="math notranslate nohighlight">\(R\)</span>.</p></li>
 </ul>
 <p>An ordered set <span class="math notranslate nohighlight">\(A\)</span> is said to be <strong>well ordered</strong> if every non-empty subset of <span class="math notranslate nohighlight">\(A\)</span> has a unique smallest element. That is, if <span class="math notranslate nohighlight">\(X \subseteq A\)</span> such that <span class="math notranslate nohighlight">\(X \ne \varnothing\)</span>, then there exists <span class="math notranslate nohighlight">\(\hat x \in X\)</span> such that <span class="math notranslate nohighlight">\(\hat x &lt; x\)</span> for all <span class="math notranslate nohighlight">\(x \in X\)</span>.</p>
-<section id="id44">
-<h3>Examples<a class="headerlink" href="#id44" title="Permalink to this heading">#</a></h3>
+<section id="id78">
+<h3>Examples<a class="headerlink" href="#id78" title="Permalink to this heading">#</a></h3>
 <p>Partially ordered sets:</p>
 <ul class="simple">
 <li><p>The sets <span class="math notranslate nohighlight">\(\mathbb{N}, \mathbb{Z}, \mathbb{Q}\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> are partially ordered by the equality relation <span class="math notranslate nohighlight">\((=)\)</span>.</p></li>
@@ -1243,7 +1252,7 @@ theory of consistent choice behaviour.</p>
 </ul>
 </li>
 </ul>
-<p>Further information about these properties can be found in <span id="id45">[<a class="reference internal" href="#id30" title="H Gravelle and R Rees. Microeconomics. Longman Group, 1981.">GR81</a>]</span>,  <span id="id46">[<a class="reference internal" href="#id31" title="DM Kreps. A course in microeconomics. Harvester Wheatsheaf, 1990.">Kre90</a>]</span>, <span id="id47">[<a class="reference internal" href="#id32" title="A Mas-Colell, MD Whinston, and JR Green. Microeconomic theory. Oxford University Press, 1995.">MCWG95</a>]</span>, <span id="id48">[<a class="reference internal" href="#id33" title="A Rubinstein. Lecture notes in microeconomic theory: The economic agent. Princeton University Press, 2006.">Rub06</a>]</span> and <span id="id49">[<a class="reference internal" href="#id35" title="HR Varian. Microeconomic analysis (third edition). WW Norton and Sons, 1992.">Var92</a>]</span>.</p>
+<p>Further information about these properties can be found in <span id="id79">[<a class="reference internal" href="#id31" title="H Gravelle and R Rees. Microeconomics. Longman Group, 1981.">4GR81</a>]</span>,  <span id="id80">[<a class="reference internal" href="#id32" title="DM Kreps. A course in microeconomics. Harvester Wheatsheaf, 1990.">4Kre90</a>]</span>, <span id="id81">[<a class="reference internal" href="#id33" title="A Mas-Colell, MD Whinston, and JR Green. Microeconomic theory. Oxford University Press, 1995.">4MCWG95</a>]</span>, <span id="id82">[<a class="reference internal" href="#id34" title="A Rubinstein. Lecture notes in microeconomic theory: The economic agent. Princeton University Press, 2006.">4Rub06</a>]</span> and <span id="id83">[<a class="reference internal" href="#id36" title="HR Varian. Microeconomic analysis (third edition). WW Norton and Sons, 1992.">4Var92</a>]</span>.</p>
 <p>The weak preference relation <span class="math notranslate nohighlight">\((\succsim)\)</span> can be used to construct the strict preference relation <span class="math notranslate nohighlight">\((\succ)\)</span> and the indifference relation <span class="math notranslate nohighlight">\((∼)\)</span>.</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(x \succ y\)</span> if and only if both (a) <span class="math notranslate nohighlight">\(x \succsim y\)</span> and (b) <span class="math notranslate nohighlight">\(y \not\succsim x\)</span>.</p></li>
@@ -1340,7 +1349,7 @@ defined as follows.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-list">Reference list</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">Equations, inequalities and binary relations</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id76">Equations, inequalities and binary relations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-equations">Polynomial equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions-of-polynomial-equations">Solutions of polynomial equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equations">Linear equations</a></li>
@@ -1378,11 +1387,11 @@ defined as follows.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-relations">Equivalence relations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id77">Examples</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordered-sets">Ordered sets</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id78">Examples</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-results-about-ordered-sets">Some useful results about ordered sets</a></li>
 </ul>
 </li>

@@ -11,3 +11,7 @@ chapters:
 - file: 04.equations_inequalities_binary_relations
 - file: 05.sequences_series_limits
 - file: 06.univariate_differentiation
+- file: 07.linear_algebra
+- file: 08.multivariate_differential_calculus
+- file: 09.intro_to_optimisation
+- file: 10.univariate_integration

@@ -1,0 +1,2091 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Multivariate differential calculus &#8212; ECON7001</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '08.multivariate_differential_calculus';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction to optimisation" href="09.intro_to_optimisation.html" />
+    <link rel="prev" title="Linear algebra" href="07.linear_algebra.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Welcome to the course!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/placeholder_logo.png" class="logo__image only-light" alt="ECON7001 - Home"/>
+    <script>document.write(`<img src="_static/placeholder_logo.png" class="logo__image only-dark" alt="ECON7001 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    EMET7001
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00.intro.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01.intro_to_economics.html">An introduction to economics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02.sets_numbers_coordinates_distances.html">Sets, numbers, coordinates, and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03.mappings_functions_correspondences.html">Mappings: functions and correspondences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04.equations_inequalities_binary_relations.html">Equations, inequalities, and binary relations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05.sequences_series_limits.html">Sequences, series and limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06.univariate_differentiation.html">Univariate differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07.linear_algebra.html">Linear algebra</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Multivariate differential calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09.intro_to_optimisation.html">Introduction to optimisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10.univariate_integration.html">Univariate integration</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse/issues/new?title=Issue%20on%20page%20%2F08.multivariate_differential_calculus.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/08.multivariate_differential_calculus.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Multivariate differential calculus</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-reading-guide">References and reading guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introductory-level-references">Introductory level references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intermediate-mathematical-economics-textbooks">Intermediate mathematical economics textbooks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-textbooks">Mathematics textbooks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#our-objective">Our objective</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-real-valued-multivariate-functions">Single-real-valued multivariate functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-derivatives">Partial derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-economic-applications">Some economic applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-utilities">Marginal utilities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-products">Marginal products</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elasticities-of-demand">Elasticities of demand</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cournot-aggregation">Cournot aggregation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engel-aggregation">Engel aggregation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-order-derivatives">Higher order derivatives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-partial-derivatives">Second-order partial derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#young-s-theorem">Young’s theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-differentials">Total differentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-implicit-function-theorem">The implicit function theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-of-implicit-functions">Derivatives of implicit functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-applications-of-implicit-functions">Some applications of implicit functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#level-sets-and-contour-sets">Level sets and contour sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slope-of-an-indifference-curve">The slope of an indifference curve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slope-of-a-budget-line">The slope of a budget line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slope-of-an-isoquant">The slope of an isoquant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slope-of-an-isocost">The slope of an isocost</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-inverse-function-theorem">The inverse function theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-elasticity-application-of-the-inverse-function-theorem">An elasticity application of the inverse function theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneous-functions">Homogeneous functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-s-theorem">Euler’s theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-homogeneity">Applications of homogeneity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#returns-to-scale">Returns to scale</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#decreasing-returns-to-scale">Decreasing returns to scale</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-returns-to-scale">Constant returns to scale</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-returns-to-scale">Increasing returns to scale</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cobb-douglas-production-functions">Cobb-Douglas production functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-aggregation">Euler aggregation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product-exhaustion">Product exhaustion</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="multivariate-differential-calculus">
+<h1>Multivariate differential calculus<a class="headerlink" href="#multivariate-differential-calculus" title="Permalink to this heading">#</a></h1>
+<section id="references-and-reading-guide">
+<h2>References and reading guide<a class="headerlink" href="#references-and-reading-guide" title="Permalink to this heading">#</a></h2>
+<p>This material does not originate with me. It has been drawn from, or influenced by, a number of sources. Some of these include those listed below.</p>
+<section id="introductory-level-references">
+<h3>Introductory level references<a class="headerlink" href="#introductory-level-references" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="#id40" title="T Bradley. Essential mathematics for economics and business (third edition). John Wiley and Sons, 2008.">8Bra08</a>]</span>: Chapter 7, Sections 1 to 3 (pp. 360-408).</p></li>
+<li><p><span id="id2">[<a class="reference internal" href="#id11" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">8HJP87</a>]</span>: Chapter 17, Sections 1 to 7 and Sections 9 to 10 (pp. 668-706 and 714-723).</p></li>
+<li><p><span id="id3">[<a class="reference internal" href="#id14" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">8Sha95</a>]</span>: Chapter 10, Sections 1 to 6 (pp. 450-489).</p></li>
+<li><p><span id="id4">[<a class="reference internal" href="#id12" title="K Sydsæter, P Hammond, A Strøm, and A Carvajal. Essential mathematics for economic analysis (fifth edition). Pearson Education, 2016.">8SHSC16</a>]</span>: Chapters 11 and 12 (pp. 407-494).</p></li>
+</ul>
+</section>
+<section id="intermediate-mathematical-economics-textbooks">
+<h3>Intermediate mathematical economics textbooks<a class="headerlink" href="#intermediate-mathematical-economics-textbooks" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span id="id5">[<a class="reference internal" href="#id44" title="AC Chiang. Fundamental methods of mathematical economics (third edition). McGraw-Hill, 1984.">8Chi84</a>]</span>: Chapters 6-8 and Chapter 10 (pp. 127-227 and 268-306).</p></li>
+<li><p><span id="id6">[<a class="reference internal" href="#id39" title="AC Chiang and K Wainwright. Fundamental methods of mathematical economics (fourth edition). McGraw-Hill, 2005.">8CW05</a>]</span>: Chapters 6 to 10 (pp. 124-290).</p></li>
+<li><p><span id="id7">[<a class="reference internal" href="#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">8SB94</a>]</span>: Chapters 2 to 5 (pp. 10-103).</p></li>
+</ul>
+</section>
+<section id="mathematics-textbooks">
+<h3>Mathematics textbooks<a class="headerlink" href="#mathematics-textbooks" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span id="id8">[<a class="reference internal" href="#id36" title="MR Spiegel. Schaum's outline of theory and problems of advanced calculus (SI metric edition). McGraw-Hill, 1981.">8Spi81a</a>]</span>: Chapters 4, 6, 7 and 8; pp. 57-79 and 101-179.</p></li>
+<li><p><span id="id9">[<a class="reference internal" href="#id37" title="MR Spiegel. Theory and problems of vector analysis and an introduction to tensor analysis (SI (metric) edition). McGraw-Hill, 1981.">8Spi81b</a>]</span>: Chapters 3 and 4; pp. 35-81.</p></li>
+</ul>
+<div class="docutils container" id="id10">
+<dl class="citation">
+<dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id1">8Bra08</a></span></dt>
+<dd><p>T Bradley. <em>Essential mathematics for economics and business (third edition)</em>. John Wiley and Sons, 2008.</p>
+</dd>
+<dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id5">8Chi84</a></span></dt>
+<dd><p>AC Chiang. <em>Fundamental methods of mathematical economics (third edition)</em>. McGraw-Hill, 1984.</p>
+</dd>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id6">8CW05</a></span></dt>
+<dd><p>AC Chiang and K Wainwright. <em>Fundamental methods of mathematical economics (fourth edition)</em>. McGraw-Hill, 2005.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets">8HJP87</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id77">2</a>)</span></dt>
+<dd><p>EF Haeussler Jr and RS Paul. <em>Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition)</em>. Prentice-Hall, 1987.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id3">8Sha95</a></span></dt>
+<dd><p>J Shannon. <em>Mathematics for business, economics and finance</em>. John Wiley and Sons, 1995.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets">8SB94</span><span class="fn-backref">(<a href="#id7">1</a>,<a href="#id74">2</a>,<a href="#id75">3</a>,<a href="#id76">4</a>)</span></dt>
+<dd><p>C Simon and L Blume. <em>Mathematics for economists</em>. WW Norton and Co, 1994.</p>
+</dd>
+<dt class="label" id="id36"><span class="brackets">8Spi81a</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id73">2</a>)</span></dt>
+<dd><p>MR Spiegel. <em>Schaum's outline of theory and problems of advanced calculus (SI metric edition)</em>. McGraw-Hill, 1981.</p>
+</dd>
+<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id9">8Spi81b</a></span></dt>
+<dd><p>MR Spiegel. <em>Theory and problems of vector analysis and an introduction to tensor analysis (SI (metric) edition)</em>. McGraw-Hill, 1981.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id4">8SHSC16</a></span></dt>
+<dd><p>K Sydsæter, P Hammond, A Strøm, and A Carvajal. <em>Essential mathematics for economic analysis (fifth edition)</em>. Pearson Education, 2016.</p>
+</dd>
+</dl>
+</div>
+</section>
+<section id="our-objective">
+<h3>Our objective<a class="headerlink" href="#our-objective" title="Permalink to this heading">#</a></h3>
+<p>We want to extend our discussion of differential calculus to a setting in which there is more than one choice variable. In other words, we want to examine multivariate real-valued functions.</p>
+<p>These are functions of the form <span class="math notranslate nohighlight">\(f: X \rightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}^{n}\)</span> and <span class="math notranslate nohighlight">\(n \in \mathbb{N} \backslash\{1\}\)</span> (that is, <span class="math notranslate nohighlight">\(n\)</span> is a natural number other than the number one).</p>
+<p>Often we will write such functions as <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span>.</p>
+<p>We will be focussing on two concepts. These are <strong>partial derivatives</strong> and <strong>total differentials</strong>.</p>
+</section>
+<section id="single-real-valued-multivariate-functions">
+<h3>Single-real-valued multivariate functions<a class="headerlink" href="#single-real-valued-multivariate-functions" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}^{n}\)</span> and <span class="math notranslate nohighlight">\(n \in \mathbb{N} \backslash\{1\}\)</span>. This type of function is a <strong>single-real-valued multivariate function</strong>.</p>
+<ul class="simple">
+<li><p>It is single-real-valued because, for any choice of inputs (independent variables), it produces a single real number as the output (dependent variable). The output might vary with the choice of inputs.</p></li>
+<li><p>It is multi-variate because there is more than one input (independent variable).</p></li>
+</ul>
+<p>Recall the following:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}^{n}\)</span> is the domain of <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is the co-domain of <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(X)=\{y \in \mathbb{R}: y=f(x)\)</span> for some <span class="math notranslate nohighlight">\(x \in X\}\)</span> is the image of <span class="math notranslate nohighlight">\(X\)</span> under <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p>Sometimes we might refer to <span class="math notranslate nohighlight">\(f(X)\)</span> as the range of the function <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p>Clearly <span class="math notranslate nohighlight">\(f(X) \subseteq \mathbb{R}\)</span>.</p></li>
+<li><p>Since <span class="math notranslate nohighlight">\(f\)</span> is a function, we know that it associates only one point in <span class="math notranslate nohighlight">\(f(X)\)</span> with any particular point in <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ul>
+</section>
+</section>
+<section id="partial-derivatives">
+<h2>Partial derivatives<a class="headerlink" href="#partial-derivatives" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Consider a function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}^{n}\)</span>. This function can be written as <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span>.</p></li>
+<li><p>Suppose that we hold the values that are taken by <span class="math notranslate nohighlight">\((n-1)\)</span> of the independent variables constant and only allow one of the independent variables to take on different values. Specifically, suppose that we fix the value of <span class="math notranslate nohighlight">\(x_{i}=\bar{x}_{i}\)</span> for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\} \backslash\{k\}\)</span> and allow only <span class="math notranslate nohighlight">\(x_{k}\)</span> to vary.</p></li>
+<li><p>To simplify notation, let</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+x_{-k}=\left(x_{1}, x_{2}, \cdots, x_{k-1}, x_{k+1}, \cdots, x_{n}\right)
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+\bar{x}_{-k}=\left(\bar{x}_{1}, \bar{x}_{2}, \cdots, \bar{x}_{k-1}, \bar{x}_{k+1}, \cdots, \bar{x}_{n}\right) .
+\]</div>
+<p>We can now think about the multivariate function as a univariate function, with <span class="math notranslate nohighlight">\(x_{k}\)</span> being the sole independent variable. To be precise, we have</p>
+<div class="math notranslate nohighlight">
+\[
+g\left(x_{k}\right)=f\left(x_{k} ; \bar{x}_{-k}\right) .
+\]</div>
+<p>Suppose that the univariate function <span class="math notranslate nohighlight">\(g\left(x_{k}\right)\)</span> is differentiable and that its derivative is given by</p>
+<div class="math notranslate nohighlight">
+\[
+g^{\prime}\left(x_{k}\right)=\frac{d g\left(x_{k}\right)}{d x_{k}}
+\]</div>
+<p>We use this derivative to define the partial derivative of the function <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span> with respect to the variable <span class="math notranslate nohighlight">\(x_{k}\)</span>. To be precise, we define this partial derivative as</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial f\left(x_{k}, x_{-k}\right)}{\partial x_{k}} \equiv \frac{d g\left(x_{k}\right)}{d x_{k}}
+\]</div>
+<p>As a matter of convenience will sometimes use the following notation for a partial derivative:</p>
+<div class="math notranslate nohighlight">
+\[
+f_{k}\left(x_{k}, x_{-k}\right)=\frac{\partial f\left(x_{k}, x_{-k}\right)}{\partial x_{k}} .
+\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(f_{k}\left(x_{k} ; \bar{x}_{-k}\right)\)</span> will potentially depend on the values taken by all of the independent variables, not just on the one that is allowed to vary.</p>
+<p>The formal definition of the partial derivative of the function <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span> with respect to the variable <span class="math notranslate nohighlight">\(x_{k}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{\partial f\left(x_{k}, x_{-k}\right)}{\partial x_{k}} &amp; \equiv \lim _{h \rightarrow 0}\left\{\frac{f\left(x_{k}+h, x_{-k}\right)-f\left(x_{k}, x_{-k}\right)}{\left(x_{k}+h\right)-x_{k}}\right\} \\
+&amp; =\lim _{h \rightarrow 0}\left\{\frac{f\left(x_{k}+h, x_{-k}\right)-f\left(x_{k}, x_{-k}\right)}{h}\right\} .
+\end{aligned}
+\end{split}\]</div>
+<p>Note that if we think of <span class="math notranslate nohighlight">\(f\left(x_{k}, x_{-k}\right)\)</span> as a univariate function of <span class="math notranslate nohighlight">\(x_{k}\)</span> alone, then this definition collapses to the definition of the first-order derivative of a univariate function.</p>
+<ul class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(S \subseteq \mathbb{R}^{n}\)</span> be an open set.</p></li>
+<li><p>Consider a function <span class="math notranslate nohighlight">\(f: S \longrightarrow \mathbb{R}^{n}\)</span>.</p></li>
+<li><p>This function can be written as <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span>.</p></li>
+<li><p>The vector of first-order partial derivatives of <span class="math notranslate nohighlight">\(f\)</span> at the point <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\left(\frac{\partial f(x)}{\partial x_{1}}, \frac{\partial f(x)}{\partial x_{2}}, \cdots, \frac{\partial f(x)}{\partial x_{n}}\right)^{T}\)</span>, is sometimes known as the gradient vector of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>. It is commonly denoted by one of <span class="math notranslate nohighlight">\(D_{x} f(x), \nabla f(x)\)</span>, or <span class="math notranslate nohighlight">\(\operatorname{grad} f(x)\)</span>.</p></li>
+<li><p>Theorem: If all <span class="math notranslate nohighlight">\(n\)</span> of the first-order partial derivatives of <span class="math notranslate nohighlight">\(f\)</span> exist and are continuous at the point <span class="math notranslate nohighlight">\(x \in X \subseteq \mathbb{R}^{n}\)</span>, then the function <span class="math notranslate nohighlight">\(f\)</span> is differentiable at the point <span class="math notranslate nohighlight">\(x \in X \subseteq \mathbb{R}^{n}\)</span>.</p></li>
+<li><p>Terminology: The function <span class="math notranslate nohighlight">\(f(x)\)</span> is said to be “(at least) once continuously differentiable on <span class="math notranslate nohighlight">\(X\)</span> ” if and only if all of the first-order partial derivatives of <span class="math notranslate nohighlight">\(f\)</span> exist and are continuous on <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 1<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(f(x, y)=2 x^{2}-x y+y^{2}\)</span>. We will use the definition of a partial derivative find the partial derivative of <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>. We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{\partial f}{\partial x} &amp;= \lim _{h \rightarrow 0}\left\{\frac{f(x+h, y)-f(x, y)}{(x+h)-x}\right\} \\
+&amp;= \lim _{h \rightarrow 0}\left\{\frac{f(x+h, y)-f(x, y)}{h}\right\} \\
+&amp;= \lim _{h \rightarrow 0}\left\{\frac{\left(2(x+h)^{2}-(x+h) y+y^{2}\right)}{h} -\frac{\left(2 x^{2}-x y+y^{2}\right)}{h}\right\} \\
+&amp;= \lim _{h \rightarrow 0}\left\{\frac{2\left(x^{2}+2 x h+h^{2}\right)-x y-h y}{h}
++ \frac{y^{2}-2 x^{2}+x y-y^{2}}{h}\right\} \\
+&amp;= \lim _{h \rightarrow 0}\left\{\frac{2 x^{2}+4 x h+2 h^{2}-x y-h y}{h} + \frac{y^{2}-2 x^{2}+x y-y^{2}}{h}\right\} \\
+&amp;= \lim _{h \rightarrow 0}\left\{\frac{4 x h+2 h^{2}-h y}{h}\right\} \\
+&amp;= \lim _{h \rightarrow 0}\{4 x+2 h-y\} \\
+&amp;= 4 x+2(0)-y \\
+&amp;= 4 x-y .
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 2<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(f(x, y)=x^{3} y+e^{x y^{2}}=x^{3} y+\exp \left(x y^{2}\right)\)</span>. We will use our knowledge of univariate calculus to find the partial derivative of <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span> and the partial derivative of <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(y\)</span>. We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{\partial f}{\partial x} &amp; =\frac{\partial}{\partial x}\left\{x^{3} y+\exp \left(x y^{2}\right)\right\} \\
+&amp; =\frac{\partial}{\partial x}\left\{x^{3} y\right\}+\frac{\partial}{\partial x}\left\{\exp \left(x y^{2}\right)\right\} \\
+&amp; =3 x^{2} y+y^{2} \exp \left\{x y^{2}\right\}
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{\partial f}{\partial y} &amp; =\frac{\partial}{\partial y}\left\{x^{3} y+\exp \left(x y^{2}\right)\right\} \\
+&amp; =\frac{\partial}{\partial y}\left\{x^{3} y\right\}+\frac{\partial}{\partial y}\left\{\exp \left(x y^{2}\right)\right\} \\
+&amp; =x^{3}+2 x y \exp \left\{x y^{2}\right\}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details><section id="some-economic-applications">
+<h3>Some economic applications<a class="headerlink" href="#some-economic-applications" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Marginal utilities;</p></li>
+<li><p>Marginal products;</p></li>
+<li><p>Various elasticities of demand;</p></li>
+<li><p>Cournot aggregation; and</p></li>
+<li><p>Engel aggregation.</p></li>
+</ul>
+</section>
+<section id="marginal-utilities">
+<h3>Marginal utilities<a class="headerlink" href="#marginal-utilities" title="Permalink to this heading">#</a></h3>
+<p>We will provide some illustrations of an application of the concept of a partial derivative by using a variety of different two-good utility functions. These utility functions take the form <span class="math notranslate nohighlight">\(f: \mathbb{R}_{+}^{2} \longrightarrow \mathbb{R}\)</span>. We will think of this as a function that ranks bundles of two commodities according to their desirability to the consumer.  The utility function may be written as</p>
+<div class="math notranslate nohighlight">
+\[
+U=U\left(Q_{1}, Q_{2}\right)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(U\)</span> is the level of utility (which is an ordinal concept, not a cardinal one, for people like me who worry about such things), <span class="math notranslate nohighlight">\(Q_{1}\)</span> is the amount of good one that is consumed and <span class="math notranslate nohighlight">\(Q_{2}\)</span> is the amount of good two that is consumed.</p>
+<p>We will consider a perfect substitutes utility function, a generalised perfect substitutes utility function, a Cobb-Douglas utility function and a constant elasticity of substitution utility function.</p>
+<p>We should emphasise that because utility is only an ordinal concept (only ranking is important), the concept of marginal utility is not a meaningful one. However, the related concept of a marginal rate of substitution is meaningful.</p>
+<div class="tip admonition">
+<p class="admonition-title">Perfect substitutes</p>
+<p>Suppose that we have a perfect substitutes utility function:</p>
+<div class="math notranslate nohighlight">
+\[
+U\left(Q_{1}, Q_{2}\right)=Q_{1}+Q_{2}
+\]</div>
+<p>The marginal utility of good one is simply the first-order partial derivative of this utility function with respect to the quantity of good one that is consumed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+M U_{1}\left(Q_{1}, Q_{2}\right)=\frac{\partial U\left(Q_{1}, Q_{2}\right)}{\partial Q_{1}}=\frac{\partial\left(Q_{1}+Q_{2}\right)}{\partial Q_{1}}=1
+\]</div>
+<p>The marginal utility of good two is simply the first-order partial derivative of this utility function with respect to the quantity of good two that is consumed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+M U_{2}\left(Q_{1}, Q_{2}\right)=\frac{\partial U\left(Q_{1}, Q_{2}\right)}{\partial Q_{2}}=\frac{\partial\left(Q_{1}+Q_{2}\right)}{\partial Q_{2}}=1
+\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Generalised perfect substitutes</p>
+<p>Suppose that we have a generalised perfect substitutes utility function:</p>
+<div class="math notranslate nohighlight">
+\[
+U\left(Q_{1}, Q_{2}\right)=\alpha Q_{1}+\beta Q_{2}
+\]</div>
+<p>The marginal utility of good one is simply the first-order partial derivative of this utility function with respect to the quantity of good one that is consumed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+M U_{1}\left(Q_{1}, Q_{2}\right)=\frac{\partial U\left(Q_{1}, Q_{2}\right)}{\partial Q_{1}}=\frac{\partial\left(\alpha Q_{1}+\beta Q_{2}\right)}{\partial Q_{1}}=\alpha
+\]</div>
+<p>The marginal utility of good two is simply the first-order partial derivative of this utility function with respect to the quantity of good two that is consumed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+M U_{2}\left(Q_{1}, Q_{2}\right)=\frac{\partial U\left(Q_{1}, Q_{2}\right)}{\partial Q_{2}}=\frac{\partial\left(\alpha Q_{1}+\beta Q_{2}\right)}{\partial Q_{2}}=\beta
+\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Cobb-Douglas</p>
+<p>Suppose that we have a Cobb-Douglas utility function:</p>
+<div class="math notranslate nohighlight">
+\[
+U\left(Q_{1}, Q_{2}\right)=Q_{1}^{\alpha} Q_{2}^{1-\alpha}
+\]</div>
+<p>The marginal utility of good one is simply the first-order partial derivative of this utility function with respect to the quantity of good one that is consumed.
+Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M U_{1}\left(Q_{1}, Q_{2}\right) &amp; =\frac{\partial U\left(Q_{1}, Q_{2}\right)}{\partial Q_{1}} \\
+&amp; =\frac{\partial Q_{1}^{\alpha} Q_{2}^{1-\alpha}}{\partial Q_{1}} \\
+&amp; =\alpha Q_{1}^{\alpha-1} Q_{2}^{1-\alpha} \\
+&amp; =\alpha Q_{1}^{-(1-\alpha)} Q_{2}^{1-\alpha} \\
+&amp; =\alpha\left(\frac{Q_{2}^{1-\alpha}}{Q_{1}^{1-\alpha}}\right) \\
+&amp; =\alpha\left(\frac{Q_{2}}{Q_{1}}\right)^{1-\alpha}
+\end{aligned}
+\end{split}\]</div>
+<p>The marginal utility of good two is simply the first-order partial derivative of this utility function with respect to the quantity of good two that is consumed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M U_{2}\left(Q_{1}, Q_{2}\right) &amp; =\frac{\partial U\left(Q_{1}, Q_{2}\right)}{\partial Q_{2}} \\
+&amp; =\frac{\partial Q_{1}^{\alpha} Q_{2}^{1-\alpha}}{\partial Q_{2}} \\
+&amp; =(1-\alpha) Q_{1}^{\alpha} Q_{2}^{1-\alpha-1} \\
+&amp; =(1-\alpha) Q_{1}^{\alpha} Q_{2}^{-\alpha} \\
+&amp; =(1-\alpha)\left(\frac{Q_{1}^{\alpha}}{Q_{2}^{\alpha}}\right) \\
+&amp; =(1-\alpha)\left(\frac{Q_{1}}{Q_{2}}\right)^{\alpha}
+\end{aligned}
+\end{split}\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">CES utility</p>
+<p>Suppose that we have a constant elasticity of substitution utility function:</p>
+<div class="math notranslate nohighlight">
+\[
+U\left(Q_{1}, Q_{2}\right)=\left(\alpha Q_{1}^{\rho}+\beta Q_{2}^{\rho}\right)^{\frac{1}{\rho}}
+\]</div>
+<p>The marginal utility of good one is simply the first-order partial derivative of this utility function with respect to the quantity of good one that is consumed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M U_{1}\left(Q_{1}, Q_{2}\right) &amp; =\frac{\partial U\left(Q_{1}, Q_{2}\right)}{\partial Q_{1}} \\
+&amp; =\frac{\partial\left(\left(\alpha Q_{1}^{\rho}+\beta Q_{2}^{\rho}\right)^{\frac{1}{\rho}}\right)}{\partial Q_{1}} \\
+&amp; =\left(\frac{1}{\rho}\right)\left(\alpha Q_{1}^{\rho}+\beta Q_{2}^{\rho}\right)^{\frac{1}{\rho}-1}\left(\rho \alpha Q_{1}^{\rho-1}\right) \\
+&amp; =\alpha Q_{1}^{\rho-1}\left(\alpha Q_{1}^{\rho}+\beta Q_{2}^{\rho}\right)^{\frac{(1-\rho)}{\rho}} .
+\end{aligned}
+\end{split}\]</div>
+<p>The marginal utility of good two is simply the first-order partial derivative of this utility function with respect to the quantity of good two that is consumed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M U_{2}\left(Q_{1}, Q_{2}\right) &amp; =\frac{\partial U\left(Q_{1}, Q_{2}\right)}{\partial Q_{2}} \\
+&amp; =\frac{\partial\left(\left(\alpha Q_{1}^{\rho}+\beta Q_{2}^{\rho}\right)^{\frac{1}{\rho}}\right)}{\partial Q_{2}} \\
+&amp; =\left(\frac{1}{\rho}\right)\left(\alpha Q_{1}^{\rho}+\beta Q_{2}^{\rho}\right)^{\frac{1}{\rho}-1}\left(\rho \beta Q_{2}^{\rho-1}\right) \\
+&amp; =\beta Q_{2}^{\rho-1}\left(\alpha Q_{1}^{\rho}+\beta Q_{2}^{\rho}\right)^{\frac{(1-\rho)}{\rho}} .
+\end{aligned}
+\end{split}\]</div>
+</div>
+</section>
+<section id="marginal-products">
+<h3>Marginal products<a class="headerlink" href="#marginal-products" title="Permalink to this heading">#</a></h3>
+<p>We will provide some illustrations of an application of the concept of a partial derivative by using a variety of different two-input and one-output production technologies. These technologies can be represented by a production function of the form <span class="math notranslate nohighlight">\(f: \mathbb{R}_{+}^{2} \longrightarrow \mathbb{R}_{+}\)</span>. We will think of this as a function that turns bundles of labour and capital into an amount of output.</p>
+<p>The production function may be written as</p>
+<div class="math notranslate nohighlight">
+\[
+Q=f(L, K)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q=f(L, K)\)</span> is the quantity of output that is produced when <span class="math notranslate nohighlight">\(L\)</span> units of labour and <span class="math notranslate nohighlight">\(K\)</span> units of capital are employed.</p>
+<p>We will consider a perfect substitutes production function, a generalised perfect substitutes production function, a Cobb-Douglas production function and a constant elasticity of substitution production function.</p>
+<div class="tip admonition">
+<p class="admonition-title">Perfect substitutes</p>
+<p>Suppose that we have a perfect substitutes production function:</p>
+<div class="math notranslate nohighlight">
+\[
+f(L, K)=L+K .
+\]</div>
+<p>The marginal product of labour is simply the first-order partial derivative of this production function with respect to the quantity of labour that is employed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+M P_{L}(L, K)=\frac{\partial f(L, K)}{\partial L}=\frac{\partial(L+K)}{\partial L}=1 .
+\]</div>
+<p>The marginal product of capital is simply the first-order partial derivative of this production function with respect to the quantity of capital that is employed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+M P_{K}(L, K)=\frac{\partial f(L, K)}{\partial K}=\frac{\partial(L+K)}{\partial K}=1
+\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Generalised perfect substitutes</p>
+<p>Suppose that we have a generalised perfect substitutes production function:</p>
+<div class="math notranslate nohighlight">
+\[
+f(L, K)=\alpha L+\beta K .
+\]</div>
+<p>The marginal product of labour is simply the first-order partial derivative of this production function with respect to the quantity of labour that is employed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+M P_{L}(L, K)=\frac{\partial f(L, K)}{\partial L}=\frac{\partial(\alpha L+\beta K)}{\partial L}=\alpha
+\]</div>
+<p>The marginal product of capital is simply the first-order partial derivative of this production function with respect to the quantity of capital that is employed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+M P_{K}(L, K)=\frac{\partial f(L, K)}{\partial K}=\frac{\partial(\alpha L+\beta K)}{\partial K}=\beta .
+\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Cobb-Douglas</p>
+<p>Suppose that we have a Cobb-Douglas production function:</p>
+<div class="math notranslate nohighlight">
+\[
+f(L, K)=A L^{\alpha} K^{\beta} .
+\]</div>
+<p>The marginal product of labour is simply the first-order partial derivative of this production function with respect to the quantity of labour that is employed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M P_{L}(L, K) &amp; =\frac{\partial f(L, K)}{\partial L} \\
+&amp; =\frac{\partial\left(A L^{\alpha} K^{\beta}\right)}{\partial L} \\
+&amp; =\alpha A L^{\alpha-1} K^{\beta}
+\end{aligned}
+\end{split}\]</div>
+<p>The marginal product of capital is simply the first-order partial derivative of this production function with respect to the quantity of capital that is employed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M P_{K}(L, K) &amp; =\frac{\partial f(L, K)}{\partial K} \\
+&amp; =\frac{\partial\left(A L^{\alpha} K^{\beta}\right)}{\partial K} \\
+&amp; =\beta A L^{\alpha} K^{\beta-1}
+\end{aligned}
+\end{split}\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">CES</p>
+<p>Suppose that we have a constant elasticity of substitution production function:</p>
+<div class="math notranslate nohighlight">
+\[
+f(L, K)=\left(\alpha L^{\rho}+\beta K^{\rho}\right)^{\frac{1}{\rho}} .
+\]</div>
+<p>The marginal product of labour is simply the first-order partial derivative of this production function with respect to the quantity of labour that is employed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M P_{L}(L, K) &amp; =\frac{\partial f(L, K)}{\partial L} \\
+&amp; =\frac{\partial\left(\left(\alpha L^{\rho}+\beta K^{\rho}\right)^{\frac{1}{\rho}}\right)}{\partial L} \\
+&amp; =\left(\frac{1}{\rho}\right)\left(\alpha L^{\rho}+\beta K^{\rho}\right)^{\frac{1}{\rho}-1}\left(\rho \alpha L^{\rho-1}\right) \\
+&amp; =\alpha L^{\rho-1}\left(\alpha L^{\rho}+\beta K^{\rho}\right)^{\frac{(1-\rho)}{\rho}} .
+\end{aligned}
+\end{split}\]</div>
+<p>The marginal product of capital is simply the first-order partial derivative of this production function with respect to the quantity of capital that is employed. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M P_{K}(L, K) &amp; =\frac{\partial f(L, K)}{\partial K} \\
+&amp; =\frac{\partial\left(\left(\alpha L^{\rho}+\beta K^{\rho}\right)^{\frac{1}{\rho}}\right)}{\partial K} \\
+&amp; =\left(\frac{1}{\rho}\right)\left(\alpha L^{\rho}+\beta K^{\rho}\right)^{\frac{1}{\rho}-1}\left(\rho \beta K^{\rho-1}\right) \\
+&amp; =\beta K^{\rho-1}\left(\alpha L^{\rho}+\beta K^{\rho}\right)^{\frac{(1-\rho)}{\rho}} .
+\end{aligned}
+\end{split}\]</div>
+</div>
+</section>
+<section id="elasticities-of-demand">
+<h3>Elasticities of demand<a class="headerlink" href="#elasticities-of-demand" title="Permalink to this heading">#</a></h3>
+<p>Suppose that an individual’s Marshallian (or “Walrasian” or “ordinary” or “uncompensated”) demand function for commodity <span class="math notranslate nohighlight">\(k\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{k}=D_{k}\left(p_{1}, p_{2}, \cdots, p_{n}, y\right),
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_{i}\)</span> is the price of commodity <span class="math notranslate nohighlight">\(i\)</span> for each <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span> and <span class="math notranslate nohighlight">\(y\)</span> is the consumer’s income.</p>
+<ul class="simple">
+<li><p>The own-price elasticity of demand for commodity <span class="math notranslate nohighlight">\(k\)</span> for this consumer is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\varepsilon_{k}^{k}\left(p_{1}, p_{2}, \cdots, p_{n}, y\right) &amp; =\left(\frac{p_{k}}{Q_{k}}\right)\left(\frac{\partial D_{k}}{\partial p_{k}}\right) \\
+&amp; =\left(\frac{p_{k}}{D_{k}\left(p_{1}, p_{2}, \cdots, p_{n}, y\right)}\right)\left(\frac{\partial D_{k}}{\partial p_{k}}\right) .
+\end{aligned}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>The cross-price elasticity of demand for commodity <span class="math notranslate nohighlight">\(k\)</span> with respect to the price of commodity <span class="math notranslate nohighlight">\(l\)</span> for this consumer is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\varepsilon_{l}^{k}\left(p_{1}, p_{2}, \cdots, p_{n}, y\right) &amp; =\left(\frac{p_{l}}{Q_{k}}\right)\left(\frac{\partial D_{k}}{\partial p_{l}}\right) \\
+&amp; =\left(\frac{p_{l}}{D_{k}\left(p_{1}, p_{2}, \cdots, p_{n}, y\right)}\right)\left(\frac{\partial D_{k}}{\partial p_{l}}\right) .
+\end{aligned}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>The income elasticity of demand for commodity <span class="math notranslate nohighlight">\(k\)</span> for this consumer is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\varepsilon_{y}^{k}\left(p_{1}, p_{2}, \cdots, p_{n}, y\right) &amp; =\left(\frac{y}{Q_{k}}\right)\left(\frac{\partial D_{k}}{\partial y}\right) \\
+&amp; =\left(\frac{y}{D_{k}\left(p_{1}, p_{2}, \cdots, p_{n}, y\right)}\right)\left(\frac{\partial D_{k}}{\partial y}\right) .
+\end{aligned}
+\end{split}\]</div>
+<p>We can use these elasticities to classify the types of commodities that are being considered:</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\varepsilon_{y}^{k}&gt;0\)</span>, then commodity <span class="math notranslate nohighlight">\(k\)</span> is a normal good. If <span class="math notranslate nohighlight">\(\varepsilon_{y}^{k}&lt;0\)</span>, then commodity <span class="math notranslate nohighlight">\(k\)</span> is an inferior good.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\varepsilon_{l}^{k}&gt;0\)</span>, then commodities <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(l\)</span> are substitutes. If <span class="math notranslate nohighlight">\(\varepsilon_{l}^{k}&lt;0\)</span>, then commodities <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(l\)</span> are complements.</p></li>
+<li><p>The Marshallian demand curve for most commodities will usually slope down. As such, we would usually expect <span class="math notranslate nohighlight">\(\varepsilon_{k}^{k}&lt;0\)</span>.</p></li>
+<li><p>However, there are circumstances in which the Marshallian demand curve for a commodity can slope up over some range of prices (at least in theory). Such commodities are known as Giffen goods. In such circumstances, we would have <span class="math notranslate nohighlight">\(\varepsilon_{k}^{k}&gt;0\)</span> over the relevant range of prices. Note that a necessary, but not sufficient, condition for a commodity to be a Giffen good is that it be an inferior good.</p></li>
+</ul>
+</section>
+<section id="cournot-aggregation">
+<h3>Cournot aggregation<a class="headerlink" href="#cournot-aggregation" title="Permalink to this heading">#</a></h3>
+<p>Suppose that a consumer’s preferences over bundles of <span class="math notranslate nohighlight">\(L\)</span> commodities are locally non-satiated in the neighbourhood of any potentially feasible commodity bundle. Then we know that budget exhaustion (which is sometimes called Walras’ law for the individual) must hold for the consumer. This ensures that</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{l=1}^{L} p_{l} x_{l}(p, y)=y
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(p=\left(p_{1}, p_{2}, \cdots, p_{n}\right)=\left(p_{k}, p_{-k}\right)\)</span> is the price vector, <span class="math notranslate nohighlight">\(y\)</span> is the consumer’s income and <span class="math notranslate nohighlight">\(x_{l}(p, y)\)</span> is the consumer’s Marshallian demand for good <span class="math notranslate nohighlight">\(l\)</span>.</p>
+<p>Note that this can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[
+p_{k} x_{k}\left(p_{k}, p_{-k}, y\right)+\sum_{l \neq k} p_{l} x_{l}(p, y)=y
+\]</div>
+<p>Partially differentiating both sides of this equation with respect to the price of commodity <span class="math notranslate nohighlight">\(k\)</span>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\left\{(1) x_{k}(p, y)+p_{k}\left(\frac{\partial x_{k}(p, y)}{\partial p_{k}}\right)\right\}+\sum_{l \neq k} p_{l}\left(\frac{\partial x_{l}(p, y)}{\partial p_{k}}\right)=0 .
+\]</div>
+<p>This can be simplified to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+x_{k}(p, y)+\sum_{l=1}^{L} p_{l} \frac{\partial x_{l}(p, y)}{\partial p_{k}}=0
+\]</div>
+<p>This can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{l=1}^{L} p_{l} \frac{\partial x_{l}(p, y)}{\partial p_{k}}=-x_{k}(p, y)
+\]</div>
+<p>This can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{l=1}^{L}\left(\frac{p_{k}}{p_{k}}\right)\left(\frac{x_{l}(p, y)}{x_{l}(p, y)}\right)\left(\frac{y}{y}\right) p_{l} \frac{\partial x_{l}(p, y)}{\partial p_{k}}=-x_{k}(p, y) .
+\]</div>
+<p>This can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{l=1}^{L}\left(\frac{p_{l} x_{l}(p, y)}{y}\right)\left(\frac{p_{k}}{x_{l}(p, y)}\right)\left(\frac{\partial x_{l}(p, y)}{\partial p_{k}}\right)=-\left(\frac{p_{k} x_{k}(p, y)}{y}\right) .
+\]</div>
+<p>This can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{l=1}^{L} s_{l} \varepsilon_{k}^{l}=-s_{k}
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[
+s_{l}=\frac{p_{l} x_{l}(p, y)}{y}
+\]</div>
+<p>is the budget share of commodity <span class="math notranslate nohighlight">\(l\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_{k}^{\prime}=\left(\frac{p_{k}}{x_{l}(p, y)}\right)\left(\frac{\partial x_{l}(p, y)}{\partial p_{k}}\right)
+\]</div>
+<p>is the <span class="math notranslate nohighlight">\(k\)</span> th commodity-price elasticity of demand for commodity <span class="math notranslate nohighlight">\(l\)</span>.</p>
+<p>The above formula is a result known as Cournot aggregation. It provides a relationship between the <span class="math notranslate nohighlight">\(k\)</span> th price elasticities of demand for the various commodities.</p>
+</section>
+<section id="engel-aggregation">
+<h3>Engel aggregation<a class="headerlink" href="#engel-aggregation" title="Permalink to this heading">#</a></h3>
+<p>Suppose that a consumer’s preferences over bundles of <span class="math notranslate nohighlight">\(L\)</span> commodities are locally non-satiated in the neighbourhood of any potentially feasible commodity bundle. Then we know that budget exhaustion (which is sometimes called Walras’ law for the individual) must hold for the consumer. This ensures that</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{l=1}^{L} p_{l} x_{l}(p, y)=y
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(p=\left(p_{1}, p_{2}, \cdots, p_{n}\right)\)</span> is the price vector, <span class="math notranslate nohighlight">\(y\)</span> is the consumer’s income and <span class="math notranslate nohighlight">\(x_{l}(p, y)\)</span> is the consumer’s Marshallian demand for good <span class="math notranslate nohighlight">\(I\)</span>.</p>
+<p>Partially differentiating both sides of this equation with respect to income, we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{l=1}^{L} p_{l}\left(\frac{\partial x_{l}(p, y)}{\partial y}\right)=1
+\]</div>
+<p>This can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{l=1}^{L}\left(\frac{y}{y}\right)\left(\frac{x_{l}(p, y)}{x_{l}(p, y)}\right) p_{l}\left(\frac{\partial x_{l}(p, y)}{\partial y}\right)=1
+\]</div>
+<p>This can be simplified to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{l=1}^{L}\left(\frac{p_{l} x_{l}(p, y)}{y}\right)\left(\frac{y}{x_{l}(p, y)}\right)\left(\frac{\partial x_{l}(p, y)}{\partial y}\right)=1
+\]</div>
+<p>This can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{l=1}^{L} s_{l} \varepsilon_{y}^{l}=1
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[
+s_{l}=\frac{p_{l} x_{l}(p, y)}{y}
+\]</div>
+<p>is the budget share of commodity <span class="math notranslate nohighlight">\(l\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_{y}^{l}=\left(\frac{y}{x_{l}(p, y)}\right)\left(\frac{\partial x_{l}(p, y)}{\partial y}\right)
+\]</div>
+<p>is the income elasticity of demand for commodity <span class="math notranslate nohighlight">\(l\)</span>.</p>
+<p>The above formula is a result known as Engel aggregation. It provides a relationship between the income elasticities of demand for the various commodities.</p>
+</section>
+</section>
+<section id="higher-order-derivatives">
+<h2>Higher order derivatives<a class="headerlink" href="#higher-order-derivatives" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}^{n}\)</span> be an open set and <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span> be a function that is differentiable on <span class="math notranslate nohighlight">\(X\)</span>, with <span class="math notranslate nohighlight">\(D_{X} f=\left(\frac{\partial f}{\partial x_{1}}, \frac{\partial f}{\partial x_{2}}, \cdots, \frac{\partial f}{\partial x_{n}}\right)^{T}\)</span>. The vector <span class="math notranslate nohighlight">\(D_{x} f(x)\)</span> is called the <strong>gradient vector</strong> of <span class="math notranslate nohighlight">\(f\)</span> at the point <span class="math notranslate nohighlight">\(x \in S\)</span>.</p>
+<p>Note that <span class="math notranslate nohighlight">\(\frac{\partial f}{\partial x_{k}}: X \longrightarrow \mathbb{R}\)</span> is itself a function.</p>
+<p>Suppose that the function <span class="math notranslate nohighlight">\(\frac{\partial f}{\partial x_{k}}(x)\)</span> is itself differentiable at the point <span class="math notranslate nohighlight">\(x \in X\)</span>. Often, we will want this to be the case for all <span class="math notranslate nohighlight">\(k \in\{1,2, \cdots, n\}\)</span>.</p>
+<ul class="simple">
+<li><p>Consider one such partial derivative, say <span class="math notranslate nohighlight">\(\frac{\partial f}{\partial x_{i}}\)</span>.</p></li>
+<li><p>For each <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>, we have <span class="math notranslate nohighlight">\(n\)</span> “second-order” partial derivatives of <span class="math notranslate nohighlight">\(\frac{\partial f}{\partial x_{i}}\)</span>. These take the form <span class="math notranslate nohighlight">\(\frac{\partial\left(\frac{\partial f}{\partial x_{i}}\right)}{\partial x_{k}}=\frac{\partial^{2} f}{\partial x_{k} \partial x_{i}}\)</span> for each <span class="math notranslate nohighlight">\(k \in\{1,2, \cdots, n\}\)</span>.</p></li>
+<li><p>Note that there are <span class="math notranslate nohighlight">\(n^{2}\)</span> such second-order partial derivatives of <span class="math notranslate nohighlight">\(f\)</span> in total.</p></li>
+<li><p>Thus we have <span class="math notranslate nohighlight">\(D_{x^{T}}\left(\frac{\partial f}{\partial x_{i}}\right)=\left(\frac{\partial^{2} f}{\partial x_{1} \partial x_{i}}, \frac{\partial^{2} f}{\partial x_{2} \partial x_{i}}, \cdots, \frac{\partial^{2} f}{\partial x_{n} \partial x_{i}}\right)\)</span> for each <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>.</p></li>
+</ul>
+<p>Suppose that each of the partial derivatives that make up <span class="math notranslate nohighlight">\(D_{x} f\)</span> are themselves differentiable functions at the point <span class="math notranslate nohighlight">\(x \in X\)</span>. The derivative of the gradient vector <span class="math notranslate nohighlight">\(D_{x} f\)</span> at the point <span class="math notranslate nohighlight">\(x \in X\)</span> is given by the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+D_{x^{T}}\left(D_{x} f(x)\right)=D_{x x^{T}}^{2} f(x)=\left(\begin{array}{cccc}
+\frac{\partial^{2} f(x)}{\partial x_{1}^{2}} &amp; \frac{\partial^{2} f(x)}{\partial x_{2} \partial x_{1}} &amp; \cdots &amp; \frac{\partial^{2} f(x)}{\partial x_{n} \partial x_{1}} \\
+\frac{\partial^{2} f(x)}{\partial x_{1} \partial x_{2}} &amp; \frac{\partial^{2} f(x)}{\partial x_{2}^{2}} &amp; \cdots &amp; \frac{\partial^{2} f(x)}{\partial x_{n} \partial x_{2}} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial^{2} f(x)}{\partial x_{1} \partial x_{n}} &amp; \frac{\partial^{2} f(x)}{\partial x_{2} \partial x_{n}} &amp; \cdots &amp; \frac{\partial^{2} f(x)}{\partial x_{n}^{2}}
+\end{array}\right)
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\frac{\partial^{2} f(x)}{\partial x_{i}^{2}}=\frac{\partial^{2} f(x)}{\partial x_{i} \partial x_{i}}\)</span></p>
+<p>The matrix <span class="math notranslate nohighlight">\(D_{x x^{T}}^{2}(x)\)</span> is called the <strong>Hessian matrix</strong> of <span class="math notranslate nohighlight">\(f\)</span> at the point <span class="math notranslate nohighlight">\(x \in S\)</span>.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(f\)</span> is twice-differentiable at every point <span class="math notranslate nohighlight">\(x \in X\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is said to be twice-differentiable on <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f\)</span> is twice-differentiable on <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(\frac{\partial^{2} f}{\partial x_{k} \partial x_{i}}\)</span> is a continuous function on <span class="math notranslate nohighlight">\(X\)</span> for all <span class="math notranslate nohighlight">\((i, k) \in\{1,2, \cdots, n\} \times\{1,2, \cdots, n\}\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is said to be twice continuously differentiable on <span class="math notranslate nohighlight">\(X\)</span>. This is denoted by <span class="math notranslate nohighlight">\(f \in C^{2}\)</span> on <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ul>
+<div class="caution admonition">
+<p class="admonition-title">Young’s theorem</p>
+<p>If <span class="math notranslate nohighlight">\(f \in C^{2}\)</span> on <span class="math notranslate nohighlight">\(X\)</span>, then <span class="math notranslate nohighlight">\(\frac{\partial^{2} f}{\partial x_{k} \partial x_{i}}=\frac{\partial^{2} f}{\partial x_{i} \partial x_{k}}\)</span> for all <span class="math notranslate nohighlight">\(i \neq k\)</span>.</p>
+<p>Young’s theorem ensures that the Hessian matrix for <span class="math notranslate nohighlight">\(f\)</span> will be symmetric when <span class="math notranslate nohighlight">\(f \in C^{2}\)</span> on <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</div>
+<p>It is possible to extend the process of differentiation for multivariate functions to even higher orders than second-order derivatives. Doing so for partial derivatives is relatively straight-forward. However, this will not be done in this course.</p>
+</section>
+<section id="second-order-partial-derivatives">
+<h2>Second-order partial derivatives<a class="headerlink" href="#second-order-partial-derivatives" title="Permalink to this heading">#</a></h2>
+<p>Consider a function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}^{n}\)</span> is an open set. This function can be written as <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span>. Assume that this function is at least twice continuously differentiable with respect to all of its arguments.</p>
+<p>Suppose that we want to find the second-order partial derivative of the underlying function <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span> with respect to the variable <span class="math notranslate nohighlight">\(x_{i}\)</span> first and then with respect to the variable <span class="math notranslate nohighlight">\(x_{j}\)</span> second. This notation for this second-order derivative is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial^{2} f\left(x_{1}, x_{2}, \cdots, x_{n}\right)}{\partial x_{j} \partial x_{i}}=f_{i j}\left(x_{1}, x_{2}, \cdots, x_{n}\right)
+\]</div>
+<p>Note that the first-order partial derivative of this function with respect to the variable <span class="math notranslate nohighlight">\(x_{i}\)</span> is a function in its own right:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{\partial f\left(x_{1}, x_{2}, \cdots, x_{n}\right)}{\partial x_{i}} &amp; =f_{i}\left(x_{1}, x_{2}, \cdots, x_{n}\right) \\
+&amp; =g^{i}\left(x_{1}, x_{2}, \cdots, x_{n}\right)
+\end{aligned}
+\end{split}\]</div>
+<p>We can use this function <span class="math notranslate nohighlight">\(g^{i}\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span> to define the second-order partial derivative of the underlying function <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span> with respect to the variable <span class="math notranslate nohighlight">\(x_{i}\)</span> first and then with respect to the variable <span class="math notranslate nohighlight">\(x_{j}\)</span> second To be precise, we have</p>
+<div class="math notranslate nohighlight">
+\[
+f_{i j}\left(x_{1}, x_{2}, \cdots, x_{n}\right) \equiv \frac{\partial g^{i}\left(x_{1}, x_{2}, \cdots, x_{n}\right)}{\partial x_{j}}
+\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial^{2} f\left(x_{1}, x_{2}, \cdots, x_{n}\right)}{\partial x_{j} \partial x_{i}}=\frac{\partial}{\partial x_{j}}\left(\frac{\partial f\left(x_{1}, x_{2}, \cdots, x_{n}\right)}{\partial x_{i}}\right)
+\]</div>
+<section id="young-s-theorem">
+<h3>Young’s theorem<a class="headerlink" href="#young-s-theorem" title="Permalink to this heading">#</a></h3>
+<p>Consider a function <span class="math notranslate nohighlight">\(f: X \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}^{n}\)</span> is an open set. This function can be written as <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span>.
+Suppose that this function is at least twice continuously differentiable with respect to all of its arguments in a non-empty neighbourhood around the point</p>
+<div class="math notranslate nohighlight">
+\[
+x^{0}=\left(x_{1}^{0}, x_{2}^{0}, \cdots, x_{n}^{0}\right) .
+\]</div>
+<p>In this case, the order of differentiation will not affect the second-order partial derivatives evaluated at the point <span class="math notranslate nohighlight">\(x^{0}\)</span>.  More precisely, in this case we will have</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial^{2} f\left(x_{1}^{0}, x_{2}^{0}, \cdots, x_{n}^{0}\right)}{\partial x_{j} \partial x_{i}}=\frac{\partial^{2} f\left(x_{1}^{0}, x_{2}^{0}, \cdots, x_{n}^{0}\right)}{\partial x_{i} \partial x_{j}}
+\]</div>
+<p>or, if you prefer,</p>
+<div class="math notranslate nohighlight">
+\[
+f_{i j}\left(x_{1}^{0}, x_{2}^{0}, \cdots, x_{n}^{0}\right)=f_{j i}\left(x_{1}^{0}, x_{2}^{0}, \cdots, x_{n}^{0}\right) .
+\]</div>
+<p>This result is known as Young’s theorem.  The result is trivially true when <span class="math notranslate nohighlight">\(i=j\)</span>. This is the case of second-order own partial derivatives.</p>
+<p>The result is also true, and much more interesting, when <span class="math notranslate nohighlight">\(i \neq j\)</span>. This is the case of second-order cross partial derivatives.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 1<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Recall the example in which</p>
+<div class="math notranslate nohighlight">
+\[
+f(x, y)=x^{3} y+e^{x y^{2}}=x^{3} y+\exp \left(x y^{2}\right)
+\]</div>
+<p class="sd-card-text">We have already found that</p>
+<div class="math notranslate nohighlight">
+\[
+f_{x}(x, y)=\frac{\partial f}{\partial x}=3 x^{2} y+y^{2} \exp \left\{x y^{2}\right\}
+\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[
+f_{y}(x, y)=\frac{\partial f}{\partial y}=x^{3}+2 x y \exp \left\{x y^{2}\right\}
+\]</div>
+<p class="sd-card-text">This means that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; f_{x x}(x, y) \\
+= &amp; \frac{\partial f_{x}(x, y)}{\partial x} \\
+= &amp; \frac{\partial\left(3 x^{2} y+y^{2} \exp \left\{x y^{2}\right\}\right)}{\partial x} \\
+= &amp; (2)\left(3 x^{2-1} y\right)+y^{2} \exp \left\{x y^{2}\right\}\left(y^{2}\right) \\
+= &amp; 6 x y+y^{4} \exp \left\{x y^{2}\right\}
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">It also means that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; f_{x y}(x, y) \\
+= &amp; \frac{\partial f_{x}(x, y)}{\partial y} \\
+= &amp; \frac{\partial\left(3 x^{2} y+y^{2} \exp \left\{x y^{2}\right\}\right)}{\partial y} \\
+= &amp; 3 x^{2}+\left\{(2 y)\left(\exp \left\{x y^{2}\right\}\right)\right. \\
+&amp; \left.+\left(\exp \left\{x y^{2}\right\}\right)(2 x y)\left(y^{2}\right)\right\} \\
+= &amp; 3 x^{2}+2 y \exp \left\{x y^{2}\right\}+2 x y^{3} \exp \left\{x y^{2}\right\} .
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">It also means that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; f_{y x}(x, y) \\
+= &amp; \frac{\partial f_{y}(x, y)}{\partial x} \\
+= &amp; \frac{\partial\left(x^{3}+2 x y \exp \left\{x y^{2}\right\}\right)}{\partial x} \\
+= &amp; 3 x^{2}+\left\{(2 y)\left(\exp \left\{x y^{2}\right\}\right)\right. \\
+&amp; \left.+\left(y^{2} \exp \left\{x y^{2}\right\}\right)(2 x y)\right\} \\
+= &amp; 3 x^{2}+2 y \exp \left\{x y^{2}\right\}+2 x y^{3} \exp \left\{x y^{2}\right\}
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">It also means that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; f_{y y}(x, y) \\
+= &amp; \frac{\partial f_{y}(x, y)}{\partial y} \\
+= &amp; \frac{\partial\left(x^{3}+2 x y \exp \left\{x y^{2}\right\}\right)}{\partial y} \\
+= &amp; 0+\left\{(2 x)\left(\exp \left\{x y^{2}\right\}\right)+\left(2 x y \exp \left\{x y^{2}\right\}\right)(2 x y)\right\} \\
+= &amp; 2 x \exp \left\{x y^{2}\right\}+4 x^{2} y^{2} \exp \left\{x y^{2}\right\} .
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(f_{x y}(x, y)=f_{y x}(x, y)\)</span> in this example.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 2<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Young’s theorem is only guaranteed to hold when the underlying function <span class="math notranslate nohighlight">\(f\)</span> is at least twice continuously differentiable in the neighbourhood of the point of interest.</p>
+<p class="sd-card-text">An example in which Young’s theorem cannot be applied because the underlying function is not twice continuously differentiable at the point of interest is provided by <span id="id73">[<a class="reference internal" href="#id36" title="MR Spiegel. Schaum's outline of theory and problems of advanced calculus (SI metric edition). McGraw-Hill, 1981.">8Spi81a</a>]</span> (p. 126, Worked Problem 43). This example is presented below.</p>
+<p class="sd-card-text">Consider the function <span class="math notranslate nohighlight">\(f: \mathbb{R}^{2} \longrightarrow \mathbb{R}\)</span> defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x, y)=\left\{\begin{array}{l}
+0 \text { if }(x, y)=(0,0) \\
+x y\left(\frac{x^{2}-y^{2}}{x^{2}+y^{2}}\right) \text { if }(x, y) \neq(0,0)
+\end{array}\right.
+\end{split}\]</div>
+<p class="sd-card-text">If <span class="math notranslate nohighlight">\((x, y)=(0,0)\)</span>, then the first-order partial derivatives are</p>
+<div class="math notranslate nohighlight">
+\[
+f_{x}(0,0)=\lim _{h \rightarrow 0} \frac{f(h, 0)-f(0,0)}{h}=\lim _{h \rightarrow 0} \frac{0}{h}=0
+\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[
+f_{y}(0,0)=\lim _{k \rightarrow 0} \frac{f(0, k)-f(0,0)}{k}=\lim _{k \rightarrow 0} \frac{0}{k}=0
+\]</div>
+<p class="sd-card-text">If <span class="math notranslate nohighlight">\((x, y) \neq(0,0)\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+f_{x}(x, y)=\frac{\partial}{\partial x}\left\{x y\left(\frac{x^{2}-y^{2}}{x^{2}+y^{2}}\right)\right\}=x y\left(\frac{4 x y^{2}}{\left(x^{2}+y^{2}\right)^{2}}\right)+y\left(\frac{x^{2}-y^{2}}{x^{2}+y^{2}}\right)
+\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[
+f_{y}(x, y)=\frac{\partial}{\partial y}\left\{x y\left(\frac{x^{2}-y^{2}}{x^{2}+y^{2}}\right)\right\}=x y\left(\frac{-4 x^{2} y}{\left(x^{2}+y^{2}\right)^{2}}\right)+x\left(\frac{x^{2}-y^{2}}{x^{2}+y^{2}}\right)
+\]</div>
+<p class="sd-card-text">If <span class="math notranslate nohighlight">\((x, y)=(0,0)\)</span>, then the second-order partial derivatives are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+f_{x x}(0,0)=\lim _{h \rightarrow 0} \frac{f_{x}(h, 0)-f_{x}(0,0)}{h}=\lim _{h \rightarrow 0} \frac{0}{h}=0, \\
+f_{y y}(0,0)=\lim _{k \rightarrow 0} \frac{f_{y}(0, k)-f_{y}(0,0)}{k}=\lim _{k \rightarrow 0} \frac{0}{k}=0, \\
+f_{x y}(0,0)=\lim _{k \rightarrow 0} \frac{f_{x}(0, k)-f_{x}(0,0)}{k}=\lim _{k \rightarrow 0} \frac{-k}{k}=-1
+\end{gathered}
+\end{split}\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[
+f_{y x}(0,0)=\lim _{h \rightarrow 0} \frac{f_{y}(h, 0)-f_{y}(0,0)}{h}=\lim _{h \rightarrow 0} \frac{h}{h}=1 .
+\]</div>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(f_{x y}(0,0) \neq f_{y x}(0,0)\)</span>.</p>
+</div>
+</details></section>
+</section>
+<section id="total-differentials">
+<h2>Total differentials<a class="headerlink" href="#total-differentials" title="Permalink to this heading">#</a></h2>
+<p>Consider a function <span class="math notranslate nohighlight">\(f: S \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(S \subseteq \mathbb{R}^{n}\)</span> is an open set. This function can be written as <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span>. Suppose that this function is at least twice continuously differentiable with respect to all of its arguments.</p>
+<p>Suppose that we want to consider the impact of a small change in each of the independent variables on the value of the function.</p>
+<p>Imagine that the initial values of the independent variables are</p>
+<div class="math notranslate nohighlight">
+\[
+x=\left(x_{1}, x_{2}, \cdots, x_{n}\right)
+\]</div>
+<p>Following the change, the new values of the independent variables are</p>
+<div class="math notranslate nohighlight">
+\[
+x+d x=\left(x_{1}+d x_{1}, x_{2}+d x_{2}, \cdots, x_{n}+d x_{n}\right)
+\]</div>
+<p>Note that the vector of changes in the independent variables is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d x &amp;= x+d x-x \\
+&amp;= \left(x_{1}+d x_{1}, x_{2}+d x_{2}, \cdots, x_{n}+d x_{n}\right)
+-\left(x_{1}, x_{2}, \cdots, x_{n}\right) \\
+&amp;=  \left(d x_{1}, d x_{2}, \cdots, d x_{n}\right) .
+\end{aligned}
+\end{split}\]</div>
+<p>The actual change in the value of the function that is induced by these changes in the independent variables is</p>
+<div class="math notranslate nohighlight">
+\[
+d f=f(x+d x)-f(x)
+\]</div>
+<p>When the function is non-linear, this actual change can be rather complicated to calculate explicitly.</p>
+<p>As such, we will often employ a first-order (or linear) differential approximation for <span class="math notranslate nohighlight">\(d f\)</span>. This approximation is known as the <strong>(first-order) total differential</strong> of the function. It is given by</p>
+<div class="math notranslate nohighlight">
+\[
+d f \approx \sum_{i=1}^{n}\left(\frac{\partial f}{\partial x_{i}}\right) d x_{i}
+\]</div>
+<p>If the function is twice continuously differentiable in all of its arguments and the change in each of the independent variables is sufficiently small, then this approximation for <span class="math notranslate nohighlight">\(d f\)</span> will be reasonably accurate.</p>
+</section>
+<section id="the-implicit-function-theorem">
+<h2>The implicit function theorem<a class="headerlink" href="#the-implicit-function-theorem" title="Permalink to this heading">#</a></h2>
+<p>This is Theorem 15.2 in <span id="id74">[<a class="reference internal" href="#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">8SB94</a>]</span> (p. 341).</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(G\left(x_{1}, x_{2}, \cdots, x_{n}, y\right)\)</span> is a function that is at least once continuously differentiable around the point <span class="math notranslate nohighlight">\(\left(x_{1}^{*}, x_{2}^{*}, \cdots, x_{n}^{*}, y^{*}\right)\)</span>. Suppose also that</p>
+<div class="math notranslate nohighlight">
+\[
+G\left(x_{1}^{*}, x_{2}^{*}, \cdots, x_{n}^{*}, y^{*}\right)=c \text { for some constant } c
+\]</div>
+<p>and that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial G}{\partial y}\left(x_{1}^{*}, x_{2}^{*}, \cdots, x_{n}^{*}, y^{*}\right) \neq 0
+\]</div>
+<p>Under these conditions, there is a function <span class="math notranslate nohighlight">\(y\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span> defined on some open ball <span class="math notranslate nohighlight">\(B\)</span> around the point <span class="math notranslate nohighlight">\(\left(x_{1}^{*}, x_{2}^{*}, \cdots, x_{n}^{*}\right)\)</span> that is at least once continuously differentiable such that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\text { (a) } G\left(x_{1}, x_{2}, \cdots, x_{n}, y\left(x_{1}, x_{2}, \cdots, x_{n}\right)\right)=c \\
+\text { for all }\left(x_{1}, x_{2}, \cdots, x_{n}\right) \in B, \\
+\text { (b) } y^{*}=y\left(x_{1}^{*}, x_{2}^{*}, \cdots, x_{n}^{*}\right) \text {; and } \\
+\text { (c) } \frac{\partial y}{\partial x_{i}}\left(x_{1}^{*}, x_{2}^{*}, \cdots, x_{n}^{*}\right)=-\left(\frac{\frac{\partial G}{\partial x_{i}}\left(x_{1}^{*}, x_{2}^{*}, \cdots, x_{n}^{*}, y^{*}\right)}{\frac{\partial G}{\partial y}\left(x_{1}^{*}, x_{2}^{*}, \cdots, x_{n}^{*}, y^{*}\right)}\right) \\
+\text { for each } i \in\{1,2, \cdots, n\} .
+\end{gathered}
+\end{split}\]</div>
+<section id="derivatives-of-implicit-functions">
+<h3>Derivatives of implicit functions<a class="headerlink" href="#derivatives-of-implicit-functions" title="Permalink to this heading">#</a></h3>
+<p>Suppose that we know that some variable <span class="math notranslate nohighlight">\(y\)</span> is a function of <span class="math notranslate nohighlight">\(n\)</span> other variables <span class="math notranslate nohighlight">\(\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span>. Sometimes it is not easy to explicitly characterise this function in the form</p>
+<div class="math notranslate nohighlight">
+\[
+y=f\left(x_{1}, x_{2}, \cdots, x_{n}\right) .
+\]</div>
+<p>In some cases, we might only be able to characterise the function implicitly, along the lines of a relationship of the form</p>
+<div class="math notranslate nohighlight">
+\[
+g\left(y, x_{1}, x_{2}, \cdots, x_{n}\right)=b
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(b \in \mathbb{R}\)</span> is some fixed constant.</p>
+<p>Suppose that we want to obtain the partial derivative of <span class="math notranslate nohighlight">\(y\)</span> with respect to <span class="math notranslate nohighlight">\(x_{k}\)</span> in such a case. How would we do this?
+Since <span class="math notranslate nohighlight">\(b \in \mathbb{R}\)</span> is some fixed constant, we must have <span class="math notranslate nohighlight">\(d g=0\)</span>.
+Note that the total differential for <span class="math notranslate nohighlight">\(g\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+d g=\left(\frac{\partial g}{\partial y}\right) d y+\sum_{i=1}^{n}\left(\frac{\partial g}{\partial x_{i}}\right) d x_{i}
+\]</div>
+<p>Thus we must have</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\partial g}{\partial y}\right) d y+\sum_{i=1}^{n}\left(\frac{\partial g}{\partial x_{i}}\right) d x_{i}=0
+\]</div>
+<p>Suppose that the only variables that are allowed to change are <span class="math notranslate nohighlight">\(x_{k}\)</span> and <span class="math notranslate nohighlight">\(y\)</span>. This means that <span class="math notranslate nohighlight">\(d x_{k} \neq 0\)</span> and <span class="math notranslate nohighlight">\(d y \neq 0\)</span>. It also means that <span class="math notranslate nohighlight">\(d x_{i}=0\)</span> for all <span class="math notranslate nohighlight">\(i \neq k\)</span>. Substituting these values into the above equation yields</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\partial g}{\partial y}\right) d y+\left(\frac{\partial g}{\partial x_{k}}\right) d x_{k}=0
+\]</div>
+<p>This can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\left.\frac{d y}{d x_{k}}\right|_{d x_{i}=0 \text { for all } i \neq k}=\frac{-\left(\frac{\partial g}{\partial x_{k}}\right)}{\left(\frac{\partial g}{\partial y}\right)}
+\]</div>
+<p>Since we are holding <span class="math notranslate nohighlight">\(d x_{i}=0\)</span> for all <span class="math notranslate nohighlight">\(i \neq k\)</span>, this is really a partial derivative. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial y}{\partial x_{k}}=\frac{-\left(\frac{\partial g}{\partial x_{k}}\right)}{\left(\frac{\partial g}{\partial y}\right)}
+\]</div>
+</section>
+<section id="some-applications-of-implicit-functions">
+<h3>Some applications of implicit functions<a class="headerlink" href="#some-applications-of-implicit-functions" title="Permalink to this heading">#</a></h3>
+<p>Some potential applications of the implicit function theorem include the following:</p>
+<ul class="simple">
+<li><p>The slope of an indifference curve</p></li>
+<li><p>The slope of an iso-expenditure (“budget”) line</p></li>
+<li><p>The slope of an isoquant</p></li>
+<li><p>The slope of an isocost</p></li>
+</ul>
+<p>Before discussing these examples, we will consider the related concepts of level sets, upper contour sets and lower contour sets.</p>
+</section>
+</section>
+<section id="level-sets-and-contour-sets">
+<h2>Level sets and contour sets<a class="headerlink" href="#level-sets-and-contour-sets" title="Permalink to this heading">#</a></h2>
+<p>Consider a function <span class="math notranslate nohighlight">\(f: X \rightarrow Y\)</span>, where <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}^{L}\)</span> and <span class="math notranslate nohighlight">\(Y \subseteq \mathbb{R}\)</span>.</p>
+<ul class="simple">
+<li><p>A <strong>level set</strong> for the function <span class="math notranslate nohighlight">\(f\)</span> defined with respect to a point in the domain <span class="math notranslate nohighlight">\(\widehat{x} \in X\)</span> is defined to be</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f_{\widehat{x}}^{0}=\{x \in X: f(x)=f(\widehat{x})\} .
+\]</div>
+<ul class="simple">
+<li><p>A <strong>weak upper contour</strong> set for the function <span class="math notranslate nohighlight">\(f\)</span> defined with respect to a point in the domain <span class="math notranslate nohighlight">\(\widehat{x} \in X\)</span> is defined to be</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f_{\widehat{x}}^{+}=\{x \in X: f(x) \geq f(\widehat{x})\} .
+\]</div>
+<ul class="simple">
+<li><p>A <strong>strong upper contour set</strong> for the function <span class="math notranslate nohighlight">\(f\)</span> defined with respect to a point in the domain <span class="math notranslate nohighlight">\(\widehat{X} \in X\)</span> is defined to be</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f_{\widehat{x}}^{++}=\{x \in X: f(x)&gt;f(\widehat{x})\} .
+\]</div>
+<ul class="simple">
+<li><p>A <strong>weak lower contour set</strong> for the function <span class="math notranslate nohighlight">\(f\)</span> defined with respect to a point in the domain <span class="math notranslate nohighlight">\(\widehat{X} \in X\)</span> is defined to be</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f_{\widehat{x}}^{-}=\{x \in X: f(x) \leq f(\widehat{x})\} .
+\]</div>
+<ul class="simple">
+<li><p>A <strong>strong lower contour set</strong> for the function <span class="math notranslate nohighlight">\(f\)</span> defined with respect to a point in the domain <span class="math notranslate nohighlight">\(\widehat{X} \in X\)</span> is defined to be</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f_{\widehat{x}}^{--}=\{x \in X: f(x)&lt;f(\widehat{x})\} .
+\]</div>
+<section id="the-slope-of-an-indifference-curve">
+<h3>The slope of an indifference curve<a class="headerlink" href="#the-slope-of-an-indifference-curve" title="Permalink to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(U: \mathbb{R}_{+}^{L} \rightarrow \mathbb{R}\)</span> is a utility function.</p>
+<p>The level sets for a utility function are known as indifference curves. The indifference curve that passes through consumption bundle <span class="math notranslate nohighlight">\(\widehat{x} \in \mathbb{R}_{+}^{L}\)</span> is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+U_{\widehat{x}}^{0}=\left\{x \in \mathbb{R}_{+}^{L}: U(x)=U(\widehat{x})\right\} .
+\]</div>
+<p>The (weak) upper contour sets for a utility function could be called consumption requirement sets. The consumption requirement set that is associated with the reference consumption bundle <span class="math notranslate nohighlight">\(\widehat{x} \in \mathbb{R}_{+}^{L}\)</span> is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+U_{\widehat{x}}^{+}=\left\{x \in \mathbb{R}_{+}^{L}: U(x) \geq U(\widehat{x})\right\}
+\]</div>
+<p>Note that we could also define the level set and the (weak) upper contour set for a utility function in terms of a reference utility level, <span class="math notranslate nohighlight">\(\bar{U}\)</span>. I will leave the modification of the definitions for the case in which a reference utility level is employed as an exercise for you to attempt.
+Note that any point <span class="math notranslate nohighlight">\(x \in \mathbb{R}_{+}^{L}\)</span> that belongs to an indifference curve must yield the same level of utility.
+This means that the change in utility around any indifference curve is zero.
+In other words, <span class="math notranslate nohighlight">\(d U=0\)</span> along an indifference curve.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(L=2\)</span>. We have</p>
+<div class="math notranslate nohighlight">
+\[
+d U=\left(\frac{\partial U}{\partial x_{1}}\right) d x_{1}+\left(\frac{\partial U}{\partial x_{2}}\right) d x_{2}
+\]</div>
+<p>Along any indifference curve, we must have</p>
+<div class="math notranslate nohighlight">
+\[
+d U=\left(\frac{\partial U}{\partial x_{1}}\right) d x_{1}+\left(\frac{\partial U}{\partial x_{2}}\right) d x_{2}=0
+\]</div>
+<p>This can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\left.\frac{d x_{2}}{d x_{1}}\right|_{d U=0}=\frac{-\left(\frac{\partial U}{\partial x_{1}}\right)}{\left(\frac{\partial U}{\partial x_{2}}\right)}= -MRS_{12}(x)
+\]</div>
+<p>which is the formula for the slope of an indifference curve when <span class="math notranslate nohighlight">\(U: \mathbb{R}_{+}^{2} \rightarrow \mathbb{R}\)</span>.</p>
+</section>
+<section id="the-slope-of-a-budget-line">
+<h3>The slope of a budget line<a class="headerlink" href="#the-slope-of-a-budget-line" title="Permalink to this heading">#</a></h3>
+<p>A consumer’s expenditure is given by the linear function <span class="math notranslate nohighlight">\(E: \mathbb{R}_{+}^{L} \rightarrow \mathbb{R}\)</span> that is defined by</p>
+<div class="math notranslate nohighlight">
+\[
+E(x)=p^{T} x=\sum_{l=1}^{L} p_{l} x_{l}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(p \in \mathbb{R}_{++}^{L}\)</span>, so that <span class="math notranslate nohighlight">\(p_{l}&gt;0\)</span> for all <span class="math notranslate nohighlight">\(l \in\{1,2, \cdots, L\}\)</span>.</p>
+<p>We will refer to this as the budget function, because the term “expenditure function” has a specific meaning in microeconomics that differs somewhat from this function.</p>
+<p>The level sets for a budget function are known budget lines (or, if you prefer, budget hyper-planes).</p>
+<p>The budget line that passes through consumption bundle <span class="math notranslate nohighlight">\(\omega \in \mathbb{R}_{+}^{L}\)</span> is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+B_{\omega}^{0}(p, \boldsymbol{\omega})=\left\{x \in \mathbb{R}_{+}^{L}: E(x)=E(\boldsymbol{\omega})\right\} .
+\]</div>
+<p>In this case, we might think of <span class="math notranslate nohighlight">\(\omega \in \mathbb{R}_{+}^{L}\)</span> as an endowment bundle.</p>
+<p>The budget line that is consistent with an exogenous money income equal to <span class="math notranslate nohighlight">\(M \in \mathbb{R}_{+}\)</span> is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+B_{M}^{0}(p, M)=\left\{x \in \mathbb{R}_{+}^{L}: E(x)=M\right\}
+\]</div>
+<p>The (weak) lower contour sets for a budget function are known budget sets. The budget set that is associated with the endowment bundle <span class="math notranslate nohighlight">\(\omega \in \mathbb{R}_{+}^{L}\)</span> is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+B_{\omega}^{-}(p, \mathfrak{\omega})=\left\{x \in \mathbb{R}_{+}^{L}: E(x) \leq E(\mathfrak{\omega})\right\}
+\]</div>
+<p>The (weak) lower contour sets for a budget function are known budget sets. The budget set that is associated with an exogenous money income equal to <span class="math notranslate nohighlight">\(M \in \mathbb{R}_{+}\)</span> is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+B_{M}^{-}(p, M)=\left\{x \in \mathbb{R}_{+}^{L}: E(x) \leq M\right\}
+\]</div>
+<p>Note that any point <span class="math notranslate nohighlight">\(x \in \mathbb{R}_{+}^{L}\)</span> that belongs to a budget line must require the same level of expenditure. This means that the change in expenditure along any budget line is zero. In other words, <span class="math notranslate nohighlight">\(d E=0\)</span> along a budget line.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(L=2\)</span>. We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d E &amp;= \left(\frac{\partial E}{\partial x_{1}}\right) d x_{1}+\left(\frac{\partial E}{\partial x_{2}}\right) d x_{2} \\
+&amp;= \left(\frac{\partial\left(p_{1} x_{1}+p_{2} x_{2}\right)}{\partial x_{1}}\right) d x_{1} 
+ +\left(\frac{\partial\left(p_{1} x_{1}+p_{2} x_{2}\right)}{\partial x_{2}}\right) d x_{2} \\
+&amp;= p_{1} d x_{1}+p_{2} d x_{2}
+\end{aligned}
+\end{split}\]</div>
+<p>Along any budget line, we must have</p>
+<div class="math notranslate nohighlight">
+\[
+d E=p_{1} d x_{1}+p_{2} d x_{2}=0
+\]</div>
+<p>This can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\left.\frac{d x_{2}}{d x_{1}}\right|_{d E=0}=\frac{-p_{1}}{p_{2}}
+\]</div>
+<p>which is the formula for the slope of a budget line when the consumption set is given by <span class="math notranslate nohighlight">\(\mathbb{R}_{+}^{2}\)</span>.</p>
+</section>
+<section id="the-slope-of-an-isoquant">
+<h3>The slope of an isoquant<a class="headerlink" href="#the-slope-of-an-isoquant" title="Permalink to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(F: \mathbb{R}_{+}^{K} \rightarrow \mathbb{R}_{+}\)</span> is a single-product production function.</p>
+<p>The level sets for a production function are known as isoquants. The isoquant that is consistent with <span class="math notranslate nohighlight">\(y \in \mathbb{R}_{+}\)</span> units of output being produced is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+F_{y}^{0}=\left\{x \in \mathbb{R}_{+}^{K}: F(x)=y\right\}
+\]</div>
+<p>The (weak) upper contour sets for a production function are known as input requirement sets. The input requirement set that is associated with <span class="math notranslate nohighlight">\(y \in \mathbb{R}_{+}\)</span> units of output being produced is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+F_{y}^{+}=\left\{x \in \mathbb{R}_{+}^{K}: F(x) \geq y\right\}
+\]</div>
+<p>Note that we could also define the level set and the (weak) upper contour set for a production function in terms of a reference input bundle, <span class="math notranslate nohighlight">\(\widehat{x}\)</span>. I will leave the modification of the definitions for the case in which a reference input bundle is employed as an exercise for you to attempt.
+Note that any point <span class="math notranslate nohighlight">\(x \in \mathbb{R}_{+}^{K}\)</span> that belongs to an isoquant must yield the same level of output.
+This means that the change in output around any isoquant is zero.
+In other words, <span class="math notranslate nohighlight">\(d F=0\)</span> along an isoquant.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(K=2\)</span>. We have</p>
+<div class="math notranslate nohighlight">
+\[
+d F=\left(\frac{\partial F}{\partial x_{1}}\right) d x_{1}+\left(\frac{\partial F}{\partial x_{2}}\right) d x_{2}
+\]</div>
+<p>Along any isoquant, we must have</p>
+<div class="math notranslate nohighlight">
+\[
+d F=\left(\frac{\partial F}{\partial x_{1}}\right) d x_{1}+\left(\frac{\partial F}{\partial x_{2}}\right) d x_{2}=0
+\]</div>
+<p>This can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\left.\frac{d x_{2}}{d x_{1}}\right|_{d F=0}=\frac{-\left(\frac{\partial F}{\partial x_{1}}\right)}{\left(\frac{\partial F}{\partial x_{2}}\right)}=-\operatorname{MRTS}_{12}(x)
+\]</div>
+<p>which is the formula for the slope of an isoquant when <span class="math notranslate nohighlight">\(F: \mathbb{R}_{+}^{2} \rightarrow \mathbb{R}_{+}\)</span>.</p>
+</section>
+<section id="the-slope-of-an-isocost">
+<h3>The slope of an isocost<a class="headerlink" href="#the-slope-of-an-isocost" title="Permalink to this heading">#</a></h3>
+<p>A firm’s expenditure on inputs is given by the linear function <span class="math notranslate nohighlight">\(E: \mathbb{R}_{+}^{K} \rightarrow \mathbb{R}\)</span> that is defined by</p>
+<div class="math notranslate nohighlight">
+\[
+E(x)=w^{T} x=\sum_{k=1}^{K} w_{k} x_{k}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(w \in \mathbb{R}_{++}^{K}\)</span> is the input price vector.</p>
+<p>Note that <span class="math notranslate nohighlight">\(w \in \mathbb{R}_{++}^{K}\)</span> means that <span class="math notranslate nohighlight">\(w_{k}&gt;0\)</span> for all <span class="math notranslate nohighlight">\(k \in\{1,2, \cdots, K\}\)</span>.</p>
+<p>We will refer to this as the budget function, because the term “cost function” has a specific meaning in microeconomics that differs somewhat from this function.</p>
+<p>The level sets for a firm’s budget function are known as isocosts.</p>
+<p>The isocost line that passes through input bundle <span class="math notranslate nohighlight">\(\widehat{x} \in \mathbb{R}_{+}^{K}\)</span> is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+B_{\widehat{x}}^{0}(w, \widehat{x})=\left\{x \in \mathbb{R}_{+}^{K}: E(x)=E(\widehat{x})\right\} .
+\]</div>
+<p>In this case, we might think of <span class="math notranslate nohighlight">\(\omega \in \mathbb{R}_{+}^{L}\)</span> as an endowment bundle.</p>
+<p>The isocost line that is consistent with a particular level of expenditure on inputs equal to <span class="math notranslate nohighlight">\(C \in \mathbb{R}_{+}\)</span> is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+B_{C}^{0}(p, M)=\left\{x \in \mathbb{R}_{+}^{K}: E(x)=C\right\} .
+\]</div>
+<p>Note that any point <span class="math notranslate nohighlight">\(x \in \mathbb{R}_{+}^{K}\)</span> that belongs to an isocost line must involve the same level of expenditure on inputs.
+This means that the change in expenditure on inputs along any isocost line is zero.
+In other words, <span class="math notranslate nohighlight">\(d E=0\)</span> along an isocost line.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(K=2\)</span>. We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d E &amp;= \left(\frac{\partial E}{\partial x_{1}}\right) d x_{1}+\left(\frac{\partial E}{\partial x_{2}}\right) d x_{2} \\
+&amp;= \left(\frac{\partial\left(w_{1} x_{1}+w_{2} x_{2}\right)}{\partial x_{1}}\right) d x_{1} 
+ +\left(\frac{\partial\left(w_{1} x_{1}+w_{2} x_{2}\right)}{\partial x_{2}}\right) d x_{2} \\
+&amp;= w_{1} d x_{1}+w_{2} d x_{2}
+\end{aligned}
+\end{split}\]</div>
+<p>Along any isocost line, we must have</p>
+<div class="math notranslate nohighlight">
+\[
+d E=w_{1} d x_{1}+w_{2} d x_{2}=0
+\]</div>
+<p>This can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\left.\frac{d x_{2}}{d x_{1}}\right|_{d E=0}=\frac{-w_{1}}{w_{2}}
+\]</div>
+<p>which is the formula for the slope of an isocost line for a firm with a production technology that involves two inputs.</p>
+</section>
+</section>
+<section id="the-inverse-function-theorem">
+<h2>The inverse function theorem<a class="headerlink" href="#the-inverse-function-theorem" title="Permalink to this heading">#</a></h2>
+<p>This is Theorem 15.9 in <span id="id75">[<a class="reference internal" href="#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">8SB94</a>]</span> (p. 367).</p>
+<p>Consider a function of the form <span class="math notranslate nohighlight">\(f: \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n}\)</span>.</p>
+<p>Suppose that:</p>
+<ul class="simple">
+<li><p>(a) <span class="math notranslate nohighlight">\(f: \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n}\)</span> is at least once continuously differentiable;</p></li>
+<li><p>(b) <span class="math notranslate nohighlight">\(f\left(x^{*}\right)=y^{*}\)</span>; and</p></li>
+<li><p>(c) The Jacobian matrix <span class="math notranslate nohighlight">\(D_{x} f\)</span> is non-singular at the point <span class="math notranslate nohighlight">\(x^{*}\)</span>.</p></li>
+</ul>
+<p>If this is the case, then:</p>
+<ul class="simple">
+<li><p>(i) There exists an open ball <span class="math notranslate nohighlight">\(B_{r}\left(x^{*}\right)\)</span> around the point <span class="math notranslate nohighlight">\(x^{*}\)</span>, and an open set <span class="math notranslate nohighlight">\(V\)</span> around the point <span class="math notranslate nohighlight">\(y^{*}\)</span>, such that <span class="math notranslate nohighlight">\(f: B_{r}\left(x^{*}\right) \longrightarrow V\)</span> is both one-to-one and onto;</p></li>
+<li><p>(ii) The inverse map <span class="math notranslate nohighlight">\(f^{-1}: V \longrightarrow B_{r}\left(x^{*}\right)\)</span> is at least once continuously differentiable; and</p></li>
+<li><p>(iii) The derivative of the inverse function at the point <span class="math notranslate nohighlight">\(x^{*}\)</span> is equal to the inverse of the derivative function at the point <span class="math notranslate nohighlight">\(x^{*}\)</span> (that is <span class="math notranslate nohighlight">\(\left(D_{x} f^{-1}\right)\left(f\left(x^{*}\right)=\left(D_{x} f\left(x^{*}\right)\right)^{-1}\right)\)</span>.</p></li>
+</ul>
+<section id="an-elasticity-application-of-the-inverse-function-theorem">
+<h3>An elasticity application of the inverse function theorem<a class="headerlink" href="#an-elasticity-application-of-the-inverse-function-theorem" title="Permalink to this heading">#</a></h3>
+<p>Consider a function of the form <span class="math notranslate nohighlight">\(f: S \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(S \subseteq \mathbb{R}^{n}\)</span> is an open set.
+Suppose that this function is at least once continuously differentiable in all of its arguments.</p>
+<p>The elasticity of <span class="math notranslate nohighlight">\(f\)</span> with respect to the variable <span class="math notranslate nohighlight">\(x_{i}\)</span> at the point <span class="math notranslate nohighlight">\((x, f(x))\)</span> is given by the formula</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_{i}^{f}=\left(\frac{x_{i}}{f(x)}\right)\left(\frac{\partial f}{\partial x_{i}}\right)
+\]</div>
+<p>Another formula for the elasticity of <span class="math notranslate nohighlight">\(f\)</span> with respect to the variable <span class="math notranslate nohighlight">\(x_{i}\)</span> at the point <span class="math notranslate nohighlight">\((x, f(x))\)</span> that is sometimes useful is</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_{i}^{f}=\frac{\partial \ln (f(x))}{\partial \ln \left(x_{i}\right)}
+\]</div>
+<p>We will use the chain rule of differentiation and the inverse function theorem to show that these two formulas are equivalent. Note that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \ln (f(x))}{\partial \ln \left(x_{i}\right)}=\left(\frac{\partial \ln (f(x))}{\partial f(x)}\right)\left(\frac{\partial f(x)}{\partial x_{i}}\right)\left(\frac{\partial x_{i}}{\partial \ln \left(x_{i}\right)}\right)
+\]</div>
+<p>from the chain rule of differentiation.</p>
+<p>We know from the inverse function theorem that</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\partial x_{i}}{\partial \ln \left(x_{i}\right)}\right)=\frac{1}{\left(\frac{\partial \ln \left(x_{i}\right)}{\partial x_{i}}\right)}
+\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \ln (f(x))}{\partial \ln \left(x_{i}\right)}=\left(\frac{\partial \ln (f(x))}{\partial f(x)}\right)\left(\frac{\partial f(x)}{\partial x_{i}}\right)\left(\frac{1}{\left(\frac{\partial \ln \left(x_{i}\right)}{\partial x_{i}}\right)}\right)
+\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(\frac{\partial \ln (f(x))}{\partial f(x)}=\frac{1}{f(x)}\)</span> and <span class="math notranslate nohighlight">\(\frac{\partial \ln \left(x_{i}\right)}{\partial x_{i}}=\frac{1}{x_{i}}\)</span>. This means that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \ln (f(x))}{\partial \ln \left(x_{i}\right)}=\left(\frac{1}{f(x)}\right)\left(\frac{\partial f(x)}{\partial x_{i}}\right)\left(\frac{1}{\frac{1}{x_{i}}}\right)=\left(\frac{1}{f(x)}\right)\left(\frac{\partial f(x)}{\partial x_{i}}\right)\left(x_{i}\right)
+\]</div>
+<p>This can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \ln (f(x))}{\partial \ln \left(x_{i}\right)}=\left(\frac{x_{i}}{f(x)}\right)\left(\frac{\partial f}{\partial x_{i}}\right) .
+\]</div>
+</section>
+</section>
+<section id="homogeneous-functions">
+<h2>Homogeneous functions<a class="headerlink" href="#homogeneous-functions" title="Permalink to this heading">#</a></h2>
+<p>Consider a function <span class="math notranslate nohighlight">\(f: S \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(S \subseteq \mathbb{R}^{n}\)</span>.</p>
+<p>This function can be written as <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(\lambda&gt;0\)</span> be a positive real number.</p>
+<p>The function <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span> is said to be <strong>homogeneous of degree <span class="math notranslate nohighlight">\(r\)</span></strong> if</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(\lambda x_{1}, \lambda x_{2}, \cdots, \lambda x_{n}\right)=\lambda^{r} f\left(x_{1}, x_{2}, \cdots, x_{n}\right)
+\]</div>
+<p>for all <span class="math notranslate nohighlight">\(\left(x_{1}, x_{2}, \cdots, x_{n}\right) \in S\)</span> and all <span class="math notranslate nohighlight">\(\lambda&gt;0\)</span>.</p>
+<p>A function that is homogeneous of degree one is said to be <strong>linearly homogeneous</strong>.</p>
+<p>Homogeneity is a cardinal property, not an ordinal one.
+This means that homogeneity will not necessarily be preserved under a strictly increasing transformation.
+An ordinal property that is somewhat similar to homogeneity is that of homotheticity.
+A discussion of homotheticity can be found in <span id="id76">[<a class="reference internal" href="#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">8SB94</a>]</span> (pp. 483 and 500-504).</p>
+</section>
+<section id="euler-s-theorem">
+<h2>Euler’s theorem<a class="headerlink" href="#euler-s-theorem" title="Permalink to this heading">#</a></h2>
+<p>Suppose that the function <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span> is homogeneous of degree <span class="math notranslate nohighlight">\(r\)</span>. In this case we have</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{i=1}^{n} x_{i}\left(\frac{\partial f}{\partial x_{i}}\right)=r f\left(x_{1}, x_{2}, \cdots, x_{n}\right) .
+\]</div>
+<p>This result is known as <strong>Euler’s theorem</strong>.</p>
+<p>It is straightforward to explicitly derive this result from the definition of homogeneity of degree <span class="math notranslate nohighlight">\(r\)</span>. The following proof is based on the one in <span id="id77">[<a class="reference internal" href="#id11" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">8HJP87</a>]</span> (p. 723).</p>
+<p>Since the function <span class="math notranslate nohighlight">\(f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span> is homogeneous of degree <span class="math notranslate nohighlight">\(r\)</span>, we know that</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(\lambda x_{1}, \lambda x_{2}, \cdots, \lambda x_{n}\right)=\lambda^{r} f\left(x_{1}, x_{2}, \cdots, x_{n}\right)
+\]</div>
+<p>for any choice of <span class="math notranslate nohighlight">\(\lambda&gt;0\)</span>.</p>
+<p>Consider the left-hand side of this definition first. Let <span class="math notranslate nohighlight">\(z_{i}=\lambda x_{i}\)</span> for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>. Totally differentiating</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(\lambda x_{1}, \lambda x_{2}, \cdots, \lambda x_{n}\right)=f\left(z_{1}, z_{2}, \cdots, z_{n}\right)
+\]</div>
+<p>yields</p>
+<div class="math notranslate nohighlight">
+\[
+d f=\sum_{i=1}^{n}\left(\frac{\partial f}{\partial z_{i}}\right) d z_{i}
+\]</div>
+<p>Dividing both sides of this total differential by <span class="math notranslate nohighlight">\(d \lambda \neq 0\)</span> yields</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d f}{d \lambda}=\sum_{i=1}^{n}\left(\frac{\partial f}{\partial z_{i}}\right)\left(\frac{d z_{i}}{d \lambda}\right)
+\]</div>
+<p>Suppose that we hold all of the <span class="math notranslate nohighlight">\(x_{i}\)</span> variables constant and only allow <span class="math notranslate nohighlight">\(\lambda\)</span> to vary. This means that <span class="math notranslate nohighlight">\(d x_{i}=0\)</span> for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span> and <span class="math notranslate nohighlight">\(d \lambda \neq 0\)</span>. This yields</p>
+<div class="math notranslate nohighlight">
+\[
+\left.\frac{d f}{d \lambda}\right|_{d x_{i}=0 \text { for all } i}=\sum_{i=1}^{n}\left(\frac{\partial f}{\partial z_{i}}\right)\left(\left.\frac{d z_{i}}{d \lambda}\right|_{d x_{i}=0 \text { for all } i}\right) .
+\]</div>
+<p>Note that</p>
+<div class="math notranslate nohighlight">
+\[
+\left.\frac{d f}{d \lambda}\right|_{d x_{i}=0 \text { for all } i}=\frac{\partial f}{\partial \lambda}
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+\left.\frac{d z_{i}}{d \lambda}\right|_{d x_{i}=0 \text { for all } i}=\frac{\partial z_{i}}{\partial \lambda}
+\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial f}{\partial \lambda}=\sum_{i=1}^{n}\left(\frac{\partial f}{\partial z_{i}}\right)\left(\frac{\partial z_{i}}{\partial \lambda}\right)
+\]</div>
+<p>Note that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial z_{i}}{\partial \lambda}=\frac{\partial\left(\lambda x_{i}\right)}{\partial \lambda}=x_{i}
+\]</div>
+<p>for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>.</p>
+<p>Thus we know that the partial derivative of</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(\lambda x_{1}, \lambda x_{2}, \cdots, \lambda x_{n}\right)
+\]</div>
+<p>with respect to <span class="math notranslate nohighlight">\(\lambda\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial f\left(\lambda x_{1}, \lambda x_{2}, \cdots, \lambda x_{n}\right)}{\partial \lambda}=\sum_{i=1}^{n}\left(\frac{\partial f}{\partial z_{i}}\right) x_{i}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(z_{i}=\lambda x_{i}\)</span> for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>.</p>
+<p>Now consider the right hand-side of the following definition for a function that is homogeneous of degree <span class="math notranslate nohighlight">\(r\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(\lambda x_{1}, \lambda x_{2}, \cdots, \lambda x_{n}\right)=\lambda^{r} f\left(x_{1}, x_{2}, \cdots, x_{n}\right)
+\]</div>
+<p>for any choice of <span class="math notranslate nohighlight">\(\lambda&gt;0\)</span>.</p>
+<p>Note that <span class="math notranslate nohighlight">\(\lambda\)</span> does not appear in the term <span class="math notranslate nohighlight">\(\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span>. As such, the partial derivative of <span class="math notranslate nohighlight">\(\lambda^{r} f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span> with respect to <span class="math notranslate nohighlight">\(\lambda\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \lambda^{r} f\left(x_{1}, x_{2}, \cdots, x_{n}\right)}{\partial \lambda}=r \lambda^{r-1} f\left(x_{1}, x_{2}, \cdots, x_{n}\right) .
+\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f\left(\lambda x_{1}, \lambda x_{2}, \cdots, \lambda x_{n}\right) &amp;= \lambda^{r} f\left(x_{1}, x_{2}, \cdots, x_{n}\right) \\[5pt]
+\Longleftrightarrow \\[5pt]
+\frac{\partial f\left(\lambda x_{1}, \lambda x_{2}, \cdots, \lambda x_{n}\right)}{\partial \lambda} &amp;=\frac{\partial \lambda^{r} f\left(x_{1}, x_{2}, \cdots, x_{n}\right)}{\partial \lambda} \\[5pt]
+\Longleftrightarrow \\[5pt]
+\sum_{i=1}^{n}\left(\frac{\partial f}{\partial z_{i}}\right) x_{i} &amp;= r \lambda^{r-1} f\left(x_{1}, x_{2}, \cdots, x_{n}\right) .
+\end{aligned}
+\end{split}\]</div>
+<p>Note that when <span class="math notranslate nohighlight">\(\lambda=1\)</span> we have <span class="math notranslate nohighlight">\(z_{i}=1 x_{i}=x_{i}\)</span> for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>. This means that</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\partial f}{\partial z_{i}}\right)=\left(\frac{\partial f}{\partial x_{i}}\right)
+\]</div>
+<p>for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span> when <span class="math notranslate nohighlight">\(\lambda=1\)</span>.</p>
+<p>Note also that when <span class="math notranslate nohighlight">\(\lambda=1\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda^{r-1}=1^{r-1}=1
+\]</div>
+<p>Now suppose that we evaluate both sides of this last equation at the point <span class="math notranslate nohighlight">\(\lambda=1\)</span>. This yields</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{i=1}^{n}\left(\frac{\partial f}{\partial x_{i}}\right) x_{i}=r f\left(x_{1}, x_{2}, \cdots, x_{n}\right)
+\]</div>
+<p>which is the result from Euler’s theorem.</p>
+<section id="applications-of-homogeneity">
+<h3>Applications of homogeneity<a class="headerlink" href="#applications-of-homogeneity" title="Permalink to this heading">#</a></h3>
+<p>Some applications of homogeneity include the following:</p>
+<ul class="simple">
+<li><p>Returns to scale for production technologies in general.</p></li>
+<li><p>Returns to scale for Cobb-Douglas production technologies.</p></li>
+<li><p>Euler aggregation for a Marshallian demand function.</p></li>
+<li><p>Product exhaustion under perfect competition and constant returns to scale.</p></li>
+</ul>
+</section>
+<section id="returns-to-scale">
+<h3>Returns to scale<a class="headerlink" href="#returns-to-scale" title="Permalink to this heading">#</a></h3>
+<p>Suppose that an <span class="math notranslate nohighlight">\(n\)</span> input and one output production technology can be represented by a production function of the form</p>
+<div class="math notranslate nohighlight">
+\[
+Q=f\left(L_{1}, L_{2}, \cdots, L_{n}\right) .
+\]</div>
+<p>What happens if we increase all of the inputs by the same proportion?</p>
+<p>Specifically, suppose that we move to an input bundle of the form <span class="math notranslate nohighlight">\(\left(\lambda L_{1}, \lambda L_{2}, \cdots, \lambda L_{n}\right)\)</span>, where <span class="math notranslate nohighlight">\(\lambda&gt;0\)</span>.</p>
+<section id="decreasing-returns-to-scale">
+<h4>Decreasing returns to scale<a class="headerlink" href="#decreasing-returns-to-scale" title="Permalink to this heading">#</a></h4>
+<p>The production technology is said to display <strong>decreasing returns to scale</strong> if this increase in all of the inputs induces a less than proportionate change in the amount of output that can be produced.</p>
+<p>In other words, production technology is said to display decreasing returns to scale if</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(\lambda L_{1}, \lambda L_{2}, \cdots, \lambda L_{n}\right)&lt;\lambda Q
+\]</div>
+<p>which is equivalent to</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(\lambda L_{1}, \lambda L_{2}, \cdots, \lambda L_{n}\right)&lt;\lambda f\left(L_{1}, L_{2}, \cdots, L_{n}\right) .
+\]</div>
+<p>Thus the production function for a production technology that displays decreasing returns to scale is either homogeneous of degree less than one or it is not homogeneous.</p>
+<div class="tip admonition">
+<p class="admonition-title">Note</p>
+<p>A simple replication argument would suggest that decreasing returns to scale do not make any sense.</p>
+<p>Studies that find decreasing returns to scale are probably really finding diminishing marginal products.</p>
+<p>There is probably some unobserved (or imprecisely observed) input that is implicitly being held fixed or, at least, not varying in the same proportion as all of the other inputs.</p>
+</div>
+</section>
+<section id="constant-returns-to-scale">
+<h4>Constant returns to scale<a class="headerlink" href="#constant-returns-to-scale" title="Permalink to this heading">#</a></h4>
+<p>The production technology is said to display <strong>constant returns to scale</strong> if this increase in all of the inputs induces a proportionate change in the amount of output that can be produced.</p>
+<p>In other words, production technology is said to display constant returns to scale if</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(\lambda L_{1}, \lambda L_{2}, \cdots, \lambda L_{n}\right)=\lambda Q
+\]</div>
+<p>which is equivalent to</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(\lambda L_{1}, \lambda L_{2}, \cdots, \lambda L_{n}\right)=\lambda f\left(L_{1}, L_{2}, \cdots, L_{n}\right) .
+\]</div>
+<p>Thus the production function for a production technology that displays constant returns to scale will be homogeneous of degree one. (Homogeneity of degree one is sometimes referred to as linear homogeneity.)</p>
+<div class="tip admonition">
+<p class="admonition-title">Note</p>
+<p>Constant returns to scale production technologies are employed in the standard versions of the neoclassical model of economic growth. This model is often referred to as the Solow-Swan model of economic growth, because one of the seminal papers on this model was written by Robert Solow and the other was written by Trevor Swan. Note that the late Trevor Swan was an Australian economist who worked at the Australian National University.</p>
+<p>The relevant references are:</p>
+<ul class="simple">
+<li><p>Solow, RM (1956), “A contribution to the theory of economic growth”, The Quarterly Journal of Economics 70(1), February, pp. 65-94; and</p></li>
+<li><p>Swan, TW (1956), “Economic growth and capital accumulation”, The Economic Record 32, November, pp. 334-361.</p></li>
+</ul>
+</div>
+</section>
+<section id="increasing-returns-to-scale">
+<h4>Increasing returns to scale<a class="headerlink" href="#increasing-returns-to-scale" title="Permalink to this heading">#</a></h4>
+<p>The production technology is said to display <strong>increasing returns to scale</strong> if this increase in all of the inputs induces a more than proportionate change in the amount of output that can be produced.</p>
+<p>In other words, production technology is said to display increasing returns to scale if</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(\lambda L_{1}, \lambda L_{2}, \cdots, \lambda L_{n}\right)&gt;\lambda Q
+\]</div>
+<p>which is equivalent to</p>
+<div class="math notranslate nohighlight">
+\[
+f\left(\lambda L_{1}, \lambda L_{2}, \cdots, \lambda L_{n}\right)&gt;\lambda f\left(L_{1}, L_{2}, \cdots, L_{n}\right) .
+\]</div>
+<p>Thus the production function for a production technology that displays increasing returns to scale is either homogeneous of degree more than one or it is not homogeneous.</p>
+<div class="tip admonition">
+<p class="admonition-title">Note</p>
+<p>The returns to scale displayed by some production technologies might vary with input vector.  In such cases, the production technology will not necessarily display either constant returns to scale or increasing returns to scale over the entire set of possible values for the input vector.</p>
+</div>
+</section>
+</section>
+<section id="cobb-douglas-production-functions">
+<h3>Cobb-Douglas production functions<a class="headerlink" href="#cobb-douglas-production-functions" title="Permalink to this heading">#</a></h3>
+<p>Suppose that an two input and one output production technology can be represented by a production function of the form</p>
+<div class="math notranslate nohighlight">
+\[
+Q=f(L, K)=A L^{\alpha} K^{\beta} .
+\]</div>
+<p>This type of production function is known as a Cobb-Douglas production function.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(\lambda&gt;0\)</span>. Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f(\lambda L, \lambda K) &amp; =A(\lambda L)^{\alpha}(\lambda K)^{\beta} \\
+&amp; =A \lambda^{\alpha} L^{\alpha} \lambda^{\beta} K^{\beta} \\
+&amp; =\lambda^{\alpha+\beta} A L^{\alpha} K^{\beta} \\
+&amp; =\lambda^{\alpha+\beta} f(L, K)
+\end{aligned}
+\end{split}\]</div>
+<p>Thus we know that the Cobb-Douglas production function is homogeneous of degree <span class="math notranslate nohighlight">\((\alpha+\beta)\)</span>.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\((\alpha+\beta)&lt;1\)</span>, then the Cobb-Douglas production function displays decreasing returns to scale;</p></li>
+<li><p>If <span class="math notranslate nohighlight">\((\alpha+\beta)=1\)</span>, then the Cobb-Douglas production function displays constant returns to scale; and</p></li>
+<li><p>If <span class="math notranslate nohighlight">\((\alpha+\beta)&gt;1\)</span>, then the Cobb-Douglas production function displays increasing returns to scale.</p></li>
+</ul>
+</section>
+<section id="euler-aggregation">
+<h3>Euler aggregation<a class="headerlink" href="#euler-aggregation" title="Permalink to this heading">#</a></h3>
+<p>Suppose that a consumer’s Marshallian demand for commodity <span class="math notranslate nohighlight">\(k\)</span> is given by the function</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Q_{k} &amp; =x_{k}\left(p_{1}, p_{2}, \cdots, p_{n}, y\right) \\
+&amp; =x_{k}(p, y) .
+\end{aligned}
+\end{split}\]</div>
+<p>It can be shown that under certain circumstance, Marshallian demand functions are homogeneous of degree zero.</p>
+<p>We will not provide a formal proof of this proposition here. However, the result is fairly intuitive. If all prices and income increase by the same proportion, then the budget constraint for the consumer does not change. If his or her preferences remain the same, then the fact that the budget constraint has not changed would suggest that the choice problem that faces the consumer has not changed in any real sense. As such, the consumer’s optimal consumption bundle should not have changed either.</p>
+<p>If Marshallian demand functions are homogeneous of degree zero, then the Marshallian demand for commodity <span class="math notranslate nohighlight">\(k\)</span> will be homogeneous of degree zero.
+In such circumstances, we know from Euler’s theorem that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; y\left(\frac{\partial x_{k}(p, y)}{\partial y}\right)+\sum_{i=1}^{n} p_{i}\left(\frac{\partial x_{k}(p, y)}{\partial p_{i}}\right) \\
+= &amp; (0) x_{k}\left(p_{1}, p_{2}, \cdots, p_{n}, y\right) .
+\end{aligned}
+\end{split}\]</div>
+<p>This can be simplified to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+y\left(\frac{\partial x_{k}(p, y)}{\partial y}\right)+\sum_{i=1}^{n} p_{i}\left(\frac{\partial x_{k}(p, y)}{\partial p_{i}}\right)=0
+\]</div>
+<p>This can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{i=1}^{n} p_{i}\left(\frac{\partial x_{k}(p, y)}{\partial p_{i}}\right)=-y\left(\frac{\partial x_{k}(p, y)}{\partial y}\right)
+\]</div>
+<p>Upon dividing both sides of this equation by <span class="math notranslate nohighlight">\(x_{k}(p, y)\)</span>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; \sum_{i=1}^{n}\left(\frac{p_{i}}{x_{k}(p, y)}\right)\left(\frac{\partial x_{k}(p, y)}{\partial p_{i}}\right) \\
+= &amp; -\left(\frac{y}{x_{k}(p, y)}\right)\left(\frac{\partial x_{k}(p, y)}{\partial y}\right) .
+\end{aligned}
+\end{split}\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{i=1}^{n} \varepsilon_{i}^{k}=-\varepsilon_{y}^{k}
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_{i}^{k}=\left(\frac{p_{i}}{x_{k}(p, y)}\right)\left(\frac{\partial x_{k}(p, y)}{\partial p_{i}}\right)
+\]</div>
+<p>is the elasticity of demand for commodity <span class="math notranslate nohighlight">\(k\)</span> with respect to the price of good <span class="math notranslate nohighlight">\(l\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_{y}^{k}=\left(\frac{y}{x_{k}(p, y)}\right)\left(\frac{\partial x_{k}(p, y)}{\partial y}\right)
+\]</div>
+<p>is the income elasticity of demand for commodity <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<p>As far as I am aware, this well known result does not have a name. But it could be referred to as Euler aggregation, because it makes use of Euler’s theorem.</p>
+</section>
+<section id="product-exhaustion">
+<h3>Product exhaustion<a class="headerlink" href="#product-exhaustion" title="Permalink to this heading">#</a></h3>
+<p>Consider a profit-maximising firm that has a single output <span class="math notranslate nohighlight">\((Q)\)</span> and two inputs <span class="math notranslate nohighlight">\((L\)</span> and <span class="math notranslate nohighlight">\(K\)</span> ) production technology that displayys constant returns to scale. This production technology can be represented by a production function of the form</p>
+<div class="math notranslate nohighlight">
+\[
+Q=f(L, K)
+\]</div>
+<p>Suppose that this firm is a price-taker in both the ouput market and all input markets.
+Constant returns to scale imply that the production function is homogeneous of degree one. Thus we know from Euler’s theorem that</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\partial f}{\partial L}\right) L+\left(\frac{\partial f}{\partial K}\right) K=f(L, K)
+\]</div>
+<p>Recall that the first-order conditions for profit maximisation by a firm with these characteristics are</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\partial f}{\partial L}\right)=\frac{w}{p}
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\partial f}{\partial K}\right)=\frac{r}{p}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(p\)</span> is the output price, <span class="math notranslate nohighlight">\(w\)</span> is the input price for labour <span class="math notranslate nohighlight">\((L)\)</span> and <span class="math notranslate nohighlight">\(r\)</span> is the input price for capital <span class="math notranslate nohighlight">\((K)\)</span>.</p>
+<p>Upon substituting these FOCs into Equation (1), we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{w}{p}\right) L+\left(\frac{r}{p}\right) K=f(L, K) .
+\]</div>
+<p>This can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+w L+r K=p f(L, K) .
+\]</div>
+<p>In other words, the firm’s revenue from sales of its output will be exactly equal to the firm’s expenditure on inputs. This result, which implies zero profits for a perfectly competitive firm with a constant returns to scale production technology, is known as product exhaustion.</p>
+<p>(Note that profit here means economic profit, not accounting profit.)</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="07.linear_algebra.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Linear algebra</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="09.intro_to_optimisation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction to optimisation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-reading-guide">References and reading guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introductory-level-references">Introductory level references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intermediate-mathematical-economics-textbooks">Intermediate mathematical economics textbooks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-textbooks">Mathematics textbooks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#our-objective">Our objective</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-real-valued-multivariate-functions">Single-real-valued multivariate functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-derivatives">Partial derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-economic-applications">Some economic applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-utilities">Marginal utilities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-products">Marginal products</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elasticities-of-demand">Elasticities of demand</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cournot-aggregation">Cournot aggregation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engel-aggregation">Engel aggregation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-order-derivatives">Higher order derivatives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-partial-derivatives">Second-order partial derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#young-s-theorem">Young’s theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-differentials">Total differentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-implicit-function-theorem">The implicit function theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-of-implicit-functions">Derivatives of implicit functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-applications-of-implicit-functions">Some applications of implicit functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#level-sets-and-contour-sets">Level sets and contour sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slope-of-an-indifference-curve">The slope of an indifference curve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slope-of-a-budget-line">The slope of a budget line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slope-of-an-isoquant">The slope of an isoquant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slope-of-an-isocost">The slope of an isocost</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-inverse-function-theorem">The inverse function theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-elasticity-application-of-the-inverse-function-theorem">An elasticity application of the inverse function theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneous-functions">Homogeneous functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-s-theorem">Euler’s theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-homogeneity">Applications of homogeneity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#returns-to-scale">Returns to scale</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#decreasing-returns-to-scale">Decreasing returns to scale</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-returns-to-scale">Constant returns to scale</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-returns-to-scale">Increasing returns to scale</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cobb-douglas-production-functions">Cobb-Douglas production functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-aggregation">Euler aggregation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product-exhaustion">Product exhaustion</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fedor Iskhakov, based on notes by D.S. Eldridge
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

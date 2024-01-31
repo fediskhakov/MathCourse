@@ -184,6 +184,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="04.equations_inequalities_binary_relations.html">Equations, inequalities, and binary relations</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Sequences, series and limits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06.univariate_differentiation.html">Univariate differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07.linear_algebra.html">Linear algebra</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="08.multivariate_differential_calculus.html">Multivariate differential calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09.intro_to_optimisation.html">Introduction to optimisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10.univariate_integration.html">Univariate integration</a></li>
+
+
 </ul>
 
     </div>
@@ -398,7 +407,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-and-limits">Convergence and limits</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id75">Example</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-examples">Convergence examples</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-application-euler-s-constant-e">Mathematical application: Euler’s constant (e)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-application-equilibria-in-games">Economic application: equilibria in games</a></li>
@@ -445,56 +454,56 @@ document.write(`
 <section id="introductory-level-references">
 <h3>Introductory level references<a class="headerlink" href="#introductory-level-references" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><span id="id1">[<a class="reference internal" href="06.univariate_differentiation.html#id34" title="F Ayres Jr and E Mendelson. Calculus (sixth edition). McGraw-Hill, 2013.">AJM13</a>]</span></p></li>
-<li><p><span id="id2">[<a class="reference internal" href="#id36" title="S Basov. Introduction to quantitative analysis. La Trobe University, 2011. Unpublished manuscript.">Bas11</a>]</span></p></li>
-<li><p><span id="id3">[<a class="reference internal" href="06.univariate_differentiation.html#id12" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">HJP87</a>]</span>: Chapters 6 and 10 (pp. 164–193 and 375–402).</p></li>
-<li><p><span id="id4">[<a class="reference internal" href="06.univariate_differentiation.html#id14" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">Sha95</a>]</span>: Chapters 1.6, 6.6, and 7 (pp. 19–25, 252–256, and 285–355).</p></li>
-<li><p><span id="id5">[<a class="reference internal" href="06.univariate_differentiation.html#id13" title="K Sydsæter, P Hammond, A Strøm, and A Carvajal. Essential mathematics for economic analysis (fifth edition). Pearson Education, 2016.">SHSC16</a>]</span>: Chapters 2.8, 2.9, 2.10, 2.11, 6.5, 7.9, 7.11, and 10 (pp. 52–62, 182–188, 257–266, 270–273, and 375–406).</p></li>
+<li><p><span id="id1">[<a class="reference internal" href="#id36" title="F Ayres Jr and E Mendelson. Calculus (sixth edition). McGraw-Hill, 2013.">5AJM13</a>]</span></p></li>
+<li><p><span id="id2">[<a class="reference internal" href="#id37" title="S Basov. Introduction to quantitative analysis. La Trobe University, 2011. Unpublished manuscript.">5Bas11</a>]</span></p></li>
+<li><p><span id="id3">[<a class="reference internal" href="#id13" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">5HJP87</a>]</span>: Chapters 6 and 10 (pp. 164–193 and 375–402).</p></li>
+<li><p><span id="id4">[<a class="reference internal" href="#id16" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">5Sha95</a>]</span>: Chapters 1.6, 6.6, and 7 (pp. 19–25, 252–256, and 285–355).</p></li>
+<li><p><span id="id5">[<a class="reference internal" href="#id14" title="K Sydsæter, P Hammond, A Strøm, and A Carvajal. Essential mathematics for economic analysis (fifth edition). Pearson Education, 2016.">5SHSC16</a>]</span>: Chapters 2.8, 2.9, 2.10, 2.11, 6.5, 7.9, 7.11, and 10 (pp. 52–62, 182–188, 257–266, 270–273, and 375–406).</p></li>
 </ul>
 </section>
 <section id="more-advanced-references">
 <h3>More advanced references<a class="headerlink" href="#more-advanced-references" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><span id="id6">[<a class="reference internal" href="#id23" title="J Banks, G Elton, and J Strantzen. Topology and analysis: Unit text for MAT3TA (2009 and 2010 edition). Department of Mathematics and Statistics, La Trobe University, 2009.">BES09</a>]</span></p></li>
-<li><p><span id="id7">[<a class="reference internal" href="#id24" title="D Corbae, MB Stinchcombe, and J Zeman. An introduction to mathematical analysis for economic theory and econometrics. Princeton University Press, 2009.">CSZ09</a>]</span>: Chapters 3, 4 and 6 (pp. 72-171 and 259-354).</p></li>
-<li><p><span id="id8">[<a class="reference internal" href="#id25" title="AN Kolmogorov and SV Fomin. Introductory real analysis. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).">KF70</a>]</span>: Chapters 2 and 3 (pp. 37-117).</p></li>
-<li><p><span id="id9">[<a class="reference internal" href="06.univariate_differentiation.html#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">SB94</a>]</span>: Chapters 12 and 29 (pp. 253-272 and 803-821).</p></li>
-<li><p><span id="id10">[<a class="reference internal" href="#id37" title="MR Spiegel. Schaum's outline of theory and problems of advanced calculus (SI metric edition). McGraw-Hill, 1981.">Spi81</a>]</span>: Chapters 2 and 3 (pp. 20-56).</p></li>
-<li><p><span id="id11">[<a class="reference internal" href="#id38" title="A Takayama. Analytical methods in economics. The University of Michigan Press, 1993.">Tak93</a>]</span>: Chapter 1 (pp. 3-71).</p></li>
+<li><p><span id="id6">[<a class="reference internal" href="#id24" title="J Banks, G Elton, and J Strantzen. Topology and analysis: Unit text for MAT3TA (2009 and 2010 edition). Department of Mathematics and Statistics, La Trobe University, 2009.">5BES09</a>]</span></p></li>
+<li><p><span id="id7">[<a class="reference internal" href="#id25" title="D Corbae, MB Stinchcombe, and J Zeman. An introduction to mathematical analysis for economic theory and econometrics. Princeton University Press, 2009.">5CSZ09</a>]</span>: Chapters 3, 4 and 6 (pp. 72-171 and 259-354).</p></li>
+<li><p><span id="id8">[<a class="reference internal" href="#id26" title="AN Kolmogorov and SV Fomin. Introductory real analysis. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).">5KF70</a>]</span>: Chapters 2 and 3 (pp. 37-117).</p></li>
+<li><p><span id="id9">[<a class="reference internal" href="#id27" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">5SB94</a>]</span>: Chapters 12 and 29 (pp. 253-272 and 803-821).</p></li>
+<li><p><span id="id10">[<a class="reference internal" href="#id38" title="MR Spiegel. Schaum's outline of theory and problems of advanced calculus (SI metric edition). McGraw-Hill, 1981.">5Spi81</a>]</span>: Chapters 2 and 3 (pp. 20-56).</p></li>
+<li><p><span id="id11">[<a class="reference internal" href="#id40" title="A Takayama. Analytical methods in economics. The University of Michigan Press, 1993.">5Tak93</a>]</span>: Chapter 1 (pp. 3-71).</p></li>
 </ul>
 <div class="docutils container" id="id12">
 <dl class="citation">
-<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id1">AJM13</a></span></dt>
+<dt class="label" id="id36"><span class="brackets"><a class="fn-backref" href="#id1">5AJM13</a></span></dt>
 <dd><p>F Ayres Jr and E Mendelson. <em>Calculus (sixth edition)</em>. McGraw-Hill, 2013.</p>
 </dd>
-<dt class="label" id="id23"><span class="brackets">BES09</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id42">2</a>)</span></dt>
+<dt class="label" id="id24"><span class="brackets">5BES09</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id76">2</a>)</span></dt>
 <dd><p>J Banks, G Elton, and J Strantzen. <em>Topology and analysis: Unit text for MAT3TA (2009 and 2010 edition)</em>. Department of Mathematics and Statistics, La Trobe University, 2009.</p>
 </dd>
-<dt class="label" id="id36"><span class="brackets">Bas11</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id48">2</a>)</span></dt>
+<dt class="label" id="id37"><span class="brackets">5Bas11</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id82">2</a>)</span></dt>
 <dd><p>S Basov. <em>Introduction to quantitative analysis</em>. La Trobe University, 2011. Unpublished manuscript.</p>
 </dd>
-<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id7">CSZ09</a></span></dt>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id7">5CSZ09</a></span></dt>
 <dd><p>D Corbae, MB Stinchcombe, and J Zeman. <em>An introduction to mathematical analysis for economic theory and econometrics</em>. Princeton University Press, 2009.</p>
 </dd>
-<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id3">HJP87</a></span></dt>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id3">5HJP87</a></span></dt>
 <dd><p>EF Haeussler Jr and RS Paul. <em>Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition)</em>. Prentice-Hall, 1987.</p>
 </dd>
-<dt class="label" id="id25"><span class="brackets">KF70</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id43">2</a>,<a href="#id44">3</a>)</span></dt>
+<dt class="label" id="id26"><span class="brackets">5KF70</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id77">2</a>,<a href="#id78">3</a>)</span></dt>
 <dd><p>AN Kolmogorov and SV Fomin. <em>Introductory real analysis</em>. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).</p>
 </dd>
-<dt class="label" id="id15"><span class="brackets">Sha95</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id47">2</a>,<a href="#id49">3</a>)</span></dt>
+<dt class="label" id="id16"><span class="brackets">5Sha95</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id81">2</a>,<a href="#id83">3</a>)</span></dt>
 <dd><p>J Shannon. <em>Mathematics for business, economics and finance</em>. John Wiley and Sons, 1995.</p>
 </dd>
-<dt class="label" id="id26"><span class="brackets">SB94</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id45">2</a>,<a href="#id46">3</a>)</span></dt>
+<dt class="label" id="id27"><span class="brackets">5SB94</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id79">2</a>,<a href="#id80">3</a>)</span></dt>
 <dd><p>C Simon and L Blume. <em>Mathematics for economists</em>. WW Norton and Co, 1994.</p>
 </dd>
-<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id10">Spi81</a></span></dt>
+<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id10">5Spi81</a></span></dt>
 <dd><p>MR Spiegel. <em>Schaum's outline of theory and problems of advanced calculus (SI metric edition)</em>. McGraw-Hill, 1981.</p>
 </dd>
-<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id5">SHSC16</a></span></dt>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id5">5SHSC16</a></span></dt>
 <dd><p>K Sydsæter, P Hammond, A Strøm, and A Carvajal. <em>Essential mathematics for economic analysis (fifth edition)</em>. Pearson Education, 2016.</p>
 </dd>
-<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id11">Tak93</a></span></dt>
+<dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id11">5Tak93</a></span></dt>
 <dd><p>A Takayama. <em>Analytical methods in economics</em>. The University of Michigan Press, 1993.</p>
 </dd>
 </dl>
@@ -626,8 +635,8 @@ space is a set of the form</p>
 <li><p>Such a sequence either converges to a unique limit or it does not converge.</p></li>
 <li><p>This is not true for sequences in some non-metrisable topological spaces. However, we will not encounter such spaces in this course.</p></li>
 </ul>
-<section id="id41">
-<h3>Example<a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h3>
+<section id="id75">
+<h3>Example<a class="headerlink" href="#id75" title="Permalink to this heading">#</a></h3>
 <p>Consider the sequence <span class="math notranslate nohighlight">\(\left\{  \frac{1}{n} \right\}_{n \in \mathbb{N}}\)</span> on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. Claim: This sequence converges to the point <span class="math notranslate nohighlight">\(0 \in \mathbb{R}\)</span>.</p>
 <p>Note that</p>
 <div class="math notranslate nohighlight">
@@ -767,7 +776,7 @@ If we have a sequence <span class="math notranslate nohighlight">\(\{ x_n \}_{n 
 <p>The principle of mathematical induction says that if <span class="math notranslate nohighlight">\(X \subseteq \mathbb{N}\)</span> has the following properties: (a) <span class="math notranslate nohighlight">\(1 \in X\)</span> and (b) <span class="math notranslate nohighlight">\(s(n) \in X\)</span> for all <span class="math notranslate nohighlight">\(n \in X\)</span>; then <span class="math notranslate nohighlight">\(X = \mathbb{N}\)</span>.</p>
 <section id="the-peano-axioms">
 <h3>The Peano axioms<a class="headerlink" href="#the-peano-axioms" title="Permalink to this heading">#</a></h3>
-<p>This material is drawn from <span id="id42">[<a class="reference internal" href="#id23" title="J Banks, G Elton, and J Strantzen. Topology and analysis: Unit text for MAT3TA (2009 and 2010 edition). Department of Mathematics and Statistics, La Trobe University, 2009.">BES09</a>]</span> (pp. 2-13).</p>
+<p>This material is drawn from <span id="id76">[<a class="reference internal" href="#id24" title="J Banks, G Elton, and J Strantzen. Topology and analysis: Unit text for MAT3TA (2009 and 2010 edition). Department of Mathematics and Statistics, La Trobe University, 2009.">5BES09</a>]</span> (pp. 2-13).</p>
 <p>The following three axioms are sometimes used to formally construct the set of natural numbers. They are known as the <em>Peano axioms</em> because they were developed by Guiseppe Peano.</p>
 <p>The Peano axioms are as follows:</p>
 <ul class="simple">
@@ -789,11 +798,11 @@ If we have a sequence <span class="math notranslate nohighlight">\(\{ x_n \}_{n 
 <li><p>Step 3: Apply the principle of mathematical induction to conclude that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p></li>
 </ul>
 <p>The logic underlying a proof by induction is very intuitive. It basically establishes that the claim is true for <span class="math notranslate nohighlight">\(n = 1\)</span>, and that if the claim is true for <span class="math notranslate nohighlight">\(n = 1\)</span>, then it must also be true for <span class="math notranslate nohighlight">\(n = 2\)</span>, which means it must also be true for <span class="math notranslate nohighlight">\(n = 3\)</span>, which means it must also be true for <span class="math notranslate nohighlight">\(n = 4\)</span>, and so on and so forth, <em>ad infinitum</em>.</p>
-<p>The validity of the method of proof by induction can actually be established through a proof by contradiction. See <span id="id43">[<a class="reference internal" href="#id25" title="AN Kolmogorov and SV Fomin. Introductory real analysis. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).">KF70</a>]</span> (p. 28) for details.</p>
-<p>The method of proof by induction can be extended beyond the set of natural numbers to any “well-ordered set”, where “well-ordered” has a very precise mathematical meaning. This extended version of proof by induction is known as “proof by transfinite induction”. See <span id="id44">[<a class="reference internal" href="#id25" title="AN Kolmogorov and SV Fomin. Introductory real analysis. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).">KF70</a>]</span> (pp. 28-29) for details.</p>
+<p>The validity of the method of proof by induction can actually be established through a proof by contradiction. See <span id="id77">[<a class="reference internal" href="#id26" title="AN Kolmogorov and SV Fomin. Introductory real analysis. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).">5KF70</a>]</span> (p. 28) for details.</p>
+<p>The method of proof by induction can be extended beyond the set of natural numbers to any “well-ordered set”, where “well-ordered” has a very precise mathematical meaning. This extended version of proof by induction is known as “proof by transfinite induction”. See <span id="id78">[<a class="reference internal" href="#id26" title="AN Kolmogorov and SV Fomin. Introductory real analysis. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).">5KF70</a>]</span> (pp. 28-29) for details.</p>
 <section id="examples">
 <h4>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h4>
-<p>This example comes from <span id="id45">[<a class="reference internal" href="06.univariate_differentiation.html#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">SB94</a>]</span> (pp. 856-857).</p>
+<p>This example comes from <span id="id79">[<a class="reference internal" href="#id27" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">5SB94</a>]</span> (pp. 856-857).</p>
 <p>We want to show that
 <span class="math notranslate nohighlight">\(\sum\limits_{i = 1}^n x = \frac{n(n+1)}{2}\)</span> for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
 <p>The proof proceeds as follows.</p>
@@ -928,7 +937,7 @@ Suppose that the claim is true when <span class="math notranslate nohighlight">\
 <p><strong>Step three: Conclusion</strong>
 We have shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span> if it is true for the case where <span class="math notranslate nohighlight">\(n = k\)</span>. We have also shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = 1\)</span>. Thus we know, from the principle of mathematical induction, that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
 <p>Example 5</p>
-<p>This example comes from Exercise A.1.7 in <span id="id46">[<a class="reference internal" href="06.univariate_differentiation.html#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">SB94</a>]</span> (p. 858).</p>
+<p>This example comes from Exercise A.1.7 in <span id="id80">[<a class="reference internal" href="#id27" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">5SB94</a>]</span> (p. 858).</p>
 <p>We want to show that <span class="math notranslate nohighlight">\(n &lt; 2^n\)</span> for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>. The proof proceeds as follows:</p>
 <ul class="simple">
 <li><p>Note that <span class="math notranslate nohighlight">\(1 &lt; 2^1 = 2\)</span>, so the claim is true when <span class="math notranslate nohighlight">\(n = 1\)</span>.</p></li>
@@ -968,9 +977,9 @@ S_{(N+1)} &amp;= \sum_{n=1}^{N + 1} (a + (n − 1) d ) \\
 <p>Note that the partial sum of the first <span class="math notranslate nohighlight">\(N\)</span> terms of an arithmetic progression is given by</p>
 <div class="math notranslate nohighlight">
 \[S_N = \frac{(2a + (N − 1)d ) N}{2} = (N) \left( \frac{\{ (a) + (a + (N − 1) d ) \}}{2} \right)\]</div>
-<p>As is noted in <span id="id47">[<a class="reference internal" href="06.univariate_differentiation.html#id14" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">Sha95</a>]</span> (p. 302), this formula has a very simple interpretation. It is simply the number of terms in the sequence that are being summed times the average of the first and last terms in that sequence.</p>
+<p>As is noted in <span id="id81">[<a class="reference internal" href="#id16" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">5Sha95</a>]</span> (p. 302), this formula has a very simple interpretation. It is simply the number of terms in the sequence that are being summed times the average of the first and last terms in that sequence.</p>
 <p><strong>Claim:</strong> <span class="math notranslate nohighlight">\(\sum\limits^{N+1}_{n=1} (a + (n − 1) d ) = \frac{(2a+Nd )(N+1)}{2}\)</span>.</p>
-<p><strong>Proof:</strong> (Note that the following proof is based on the one that is provided in <span id="id48">[<a class="reference internal" href="#id36" title="S Basov. Introduction to quantitative analysis. La Trobe University, 2011. Unpublished manuscript.">Bas11</a>]</span> (pp. 22-23). By mathematical induction on <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<p><strong>Proof:</strong> (Note that the following proof is based on the one that is provided in <span id="id82">[<a class="reference internal" href="#id37" title="S Basov. Introduction to quantitative analysis. La Trobe University, 2011. Unpublished manuscript.">5Bas11</a>]</span> (pp. 22-23). By mathematical induction on <span class="math notranslate nohighlight">\(N\)</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(N = 1\)</span>. We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1234,7 +1243,7 @@ S_0 &amp;= \sum_{t=0}^n \frac{P_t}{(1 + r )^t} \\
 </section>
 <section id="types-of-annuities">
 <h3>Types of Annuities<a class="headerlink" href="#types-of-annuities" title="Permalink to this heading">#</a></h3>
-<p>There are many types of annuities. Using the terminology that is employed by <span id="id49">[<a class="reference internal" href="06.univariate_differentiation.html#id14" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">Sha95</a>]</span>, these include the following:</p>
+<p>There are many types of annuities. Using the terminology that is employed by <span id="id83">[<a class="reference internal" href="#id16" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">5Sha95</a>]</span>, these include the following:</p>
 <ul class="simple">
 <li><p>Ordinary annuity: Payment periods and compounding periods coincide, payments begin in the next period (or, equivalently, at the “end” of this period).</p></li>
 <li><p>Ordinary annuity due: Payment periods and compounding periods coincide, payments begin in the current period (or, equivalently, at the “beginning” of this period).</p></li>
@@ -1327,7 +1336,7 @@ S_0 &amp;= \sum_{t=0}^n \frac{P_t}{(1 + r )^t} \\
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-and-limits">Convergence and limits</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id75">Example</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-examples">Convergence examples</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-application-euler-s-constant-e">Mathematical application: Euler’s constant (e)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-application-equilibria-in-games">Economic application: equilibria in games</a></li>
