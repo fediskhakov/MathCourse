@@ -401,7 +401,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity">Continuity</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id77">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id91">Examples</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives">Derivatives</a><ul class="nav section-nav flex-column">
@@ -441,7 +441,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-points-of-a-function">Critical points of a function</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id79">Examples</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id93">Examples</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-derivative-approach-to-optimisation">The first derivative approach to optimisation</a></li>
@@ -493,10 +493,10 @@ document.write(`
 </ul>
 <div class="docutils container" id="id11">
 <dl class="citation">
-<dt class="label" id="id35"><span class="brackets">6AJM13</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id78">2</a>)</span></dt>
+<dt class="label" id="id35"><span class="brackets">6AJM13</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id92">2</a>)</span></dt>
 <dd><p>F Ayres Jr and E Mendelson. <em>Calculus (sixth edition)</em>. McGraw-Hill, 2013.</p>
 </dd>
-<dt class="label" id="id41"><span class="brackets">6Bra08</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id80">2</a>)</span></dt>
+<dt class="label" id="id41"><span class="brackets">6Bra08</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id94">2</a>)</span></dt>
 <dd><p>T Bradley. <em>Essential mathematics for economics and business (third edition)</em>. John Wiley and Sons, 2008.</p>
 </dd>
 <dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id6">6CW05</a></span></dt>
@@ -517,7 +517,7 @@ document.write(`
 <dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id9">6SB94</a></span></dt>
 <dd><p>C Simon and L Blume. <em>Mathematics for economists</em>. WW Norton and Co, 1994.</p>
 </dd>
-<dt class="label" id="id21"><span class="brackets">6Spi06</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id74">2</a>,<a href="#id75">3</a>,<a href="#id76">4</a>)</span></dt>
+<dt class="label" id="id21"><span class="brackets">6Spi06</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id88">2</a>,<a href="#id89">3</a>,<a href="#id90">4</a>)</span></dt>
 <dd><p>M Spivak. <em>Calculus (third edition)</em>. Cambridge University Press, 2006.</p>
 </dd>
 <dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id4">6SHSC16</a></span></dt>
@@ -539,9 +539,9 @@ This space is denoted by <span class="math notranslate nohighlight">\((\mathbb{R
 <section id="what-is-a-limit">
 <h2>What is a limit?<a class="headerlink" href="#what-is-a-limit" title="Permalink to this heading">#</a></h2>
 <p>Consider a function, <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span>. This function can be written as <span class="math notranslate nohighlight">\(f(x)\)</span>. Note that <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> here. Furthermore, for each point <span class="math notranslate nohighlight">\(x_0 \in \mathbb{R}\)</span>, we have <span class="math notranslate nohighlight">\(f(x_0) \in \mathbb{R}\)</span> as well. In other words, the domain of <span class="math notranslate nohighlight">\(f\)</span> is <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, while the range of <span class="math notranslate nohighlight">\(f\)</span> is a (possibly improper) subset of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
-<p><span id="id74">[<a class="reference internal" href="#id21" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">6Spi06</a>]</span> (p. 90) provides the following informal definition of a limit: “The function <span class="math notranslate nohighlight">\(f\)</span> approaches the limit <span class="math notranslate nohighlight">\(l\)</span> near [the point <span class="math notranslate nohighlight">\(x =\)</span>] <span class="math notranslate nohighlight">\(a\)</span>,
+<p><span id="id88">[<a class="reference internal" href="#id21" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">6Spi06</a>]</span> (p. 90) provides the following informal definition of a limit: “The function <span class="math notranslate nohighlight">\(f\)</span> approaches the limit <span class="math notranslate nohighlight">\(l\)</span> near [the point <span class="math notranslate nohighlight">\(x =\)</span>] <span class="math notranslate nohighlight">\(a\)</span>,
 if we can make <span class="math notranslate nohighlight">\(f(x)\)</span> as close as we like to <span class="math notranslate nohighlight">\(l\)</span> by requiring that <span class="math notranslate nohighlight">\(x\)</span> be sufficiently close to, but unequal to, <span class="math notranslate nohighlight">\(a\)</span>.”</p>
-<p><span id="id75">[<a class="reference internal" href="#id21" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">6Spi06</a>]</span> (p. 96) provides the following formal definition of a limit: “The function <span class="math notranslate nohighlight">\(f\)</span> <strong>approaches the limit <span class="math notranslate nohighlight">\(l\)</span> near</strong> [the point <span class="math notranslate nohighlight">\(x =\)</span>] <span class="math notranslate nohighlight">\(a\)</span> means: for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is some <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that, for all <span class="math notranslate nohighlight">\(x\)</span>, if
+<p><span id="id89">[<a class="reference internal" href="#id21" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">6Spi06</a>]</span> (p. 96) provides the following formal definition of a limit: “The function <span class="math notranslate nohighlight">\(f\)</span> <strong>approaches the limit <span class="math notranslate nohighlight">\(l\)</span> near</strong> [the point <span class="math notranslate nohighlight">\(x =\)</span>] <span class="math notranslate nohighlight">\(a\)</span> means: for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is some <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that, for all <span class="math notranslate nohighlight">\(x\)</span>, if
 <span class="math notranslate nohighlight">\(0 &lt; |x − a| &lt; \delta\)</span>, then <span class="math notranslate nohighlight">\(|f (x ) − l | &lt; \epsilon\)</span>.”. (Bold in the original.)</p>
 <p>The formal definition provided by Spivak is known as an <strong>epsilon-delta</strong> (<span class="math notranslate nohighlight">\(\epsilon-\delta\)</span>) definition of the limit concept. It could also be written as follows:</p>
 <p>The limit of <span class="math notranslate nohighlight">\(f\)</span> as <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(a\)</span> is <span class="math notranslate nohighlight">\(l\)</span> if, for each <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists some <span class="math notranslate nohighlight">\(\delta_\epsilon &gt; 0\)</span> such that</p>
@@ -550,10 +550,10 @@ if we can make <span class="math notranslate nohighlight">\(f(x)\)</span> as clo
 <p>Suppose that the limit of <span class="math notranslate nohighlight">\(f\)</span> as <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(a\)</span> is <span class="math notranslate nohighlight">\(l\)</span>. We can write this as</p>
 <div class="math notranslate nohighlight">
 \[ \lim_{x  \rightarrow a} f (x ) = l \]</div>
-<figure class="align-center" id="id81">
+<figure class="align-center" id="id95">
 <a class="reference internal image-reference" href="_images/epsilon_delta.png"><img alt="_images/epsilon_delta.png" src="_images/epsilon_delta.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">An illustration of an epsilon-delta limit argument</span><a class="headerlink" href="#id81" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">An illustration of an epsilon-delta limit argument</span><a class="headerlink" href="#id95" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -684,7 +684,7 @@ This example is drawn from Willis Lauritz Peterson of the University of Utah.</p
 <li><p>We require <span class="math notranslate nohighlight">\(|f (x ) − (−1)| &lt; \epsilon\)</span>. One way to ensure this is to set <span class="math notranslate nohighlight">\(\delta_\epsilon = \min(1, \frac{\epsilon}{2} )\)</span>.</p></li>
 </ul>
 <p>Example 5</p>
-<p>Limits can sometimes exist even when the function being considered is not so well behaved. One such example is provided by <span id="id76">[<a class="reference internal" href="#id21" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">6Spi06</a>]</span> (pp. 91–92). It involves the use of a trigonometric function.</p>
+<p>Limits can sometimes exist even when the function being considered is not so well behaved. One such example is provided by <span id="id90">[<a class="reference internal" href="#id21" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">6Spi06</a>]</span> (pp. 91–92). It involves the use of a trigonometric function.</p>
 <p>As we will not be considering such functions elsewhere in this unit, this particular example will not assessed in this unit. However, the fact that a function might have a limit at a point where it is not defined is worth noting.</p>
 <p>The example involves the function <span class="math notranslate nohighlight">\(f: \mathbb{R} \setminus 0 \rightarrow \mathbb{R}\)</span> that is defined by <span class="math notranslate nohighlight">\(f (x ) = x sin ( \frac{1}{x})\)</span>.</p>
 <p>Clearly this function is not defined when <span class="math notranslate nohighlight">\(x = 0\)</span>. Furthermore, it can be shown that <span class="math notranslate nohighlight">\(\lim_{x  \rightarrow 0} sin ( \frac{1}{x})\)</span> does not exist. However, it can also be shown that <span class="math notranslate nohighlight">\(lim_{x  \rightarrow 0} f (x ) = 0\)</span>.</p>
@@ -729,20 +729,20 @@ for all <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>.  
 <p>Suppose that <span class="math notranslate nohighlight">\(f : X \rightarrow \mathbb{R}\)</span>.
 The mapping <span class="math notranslate nohighlight">\(f\)</span> is said to be <strong>continuous</strong> at the point <span class="math notranslate nohighlight">\(x_0 \in X\)</span> if, given any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(d(f (x ), f (x_0)) &lt; \epsilon\)</span> whenever <span class="math notranslate nohighlight">\(d^n(x, x_0) &lt; \delta\)</span>.</p>
 <p>This is a formal version of the statement that <span class="math notranslate nohighlight">\(\lim_{x \rightarrow x_0} f (x ) = f (x_0)\)</span>.</p>
-<figure class="align-center" id="id82">
+<figure class="align-center" id="id96">
 <a class="reference internal image-reference" href="_images/continuity.png"><img alt="_images/continuity.png" src="_images/continuity.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Epsilon-delta continuity diagram</span><a class="headerlink" href="#id82" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Epsilon-delta continuity diagram</span><a class="headerlink" href="#id96" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-center" id="id83">
+<figure class="align-center" id="id97">
 <a class="reference internal image-reference" href="_images/discontinuity.png"><img alt="_images/discontinuity.png" src="_images/discontinuity.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Epsilon-delta discontinuity diagram</span><a class="headerlink" href="#id83" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Epsilon-delta discontinuity diagram</span><a class="headerlink" href="#id97" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<section id="id77">
-<h3>Examples<a class="headerlink" href="#id77" title="Permalink to this heading">#</a></h3>
+<section id="id91">
+<h3>Examples<a class="headerlink" href="#id91" title="Permalink to this heading">#</a></h3>
 <p>Example 1</p>
 <p>Consider the mapping <span class="math notranslate nohighlight">\(f : \mathbb{R} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(f(x ) = x_2\)</span>. We want to show that <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous at the point <span class="math notranslate nohighlight">\(x = 2\)</span>.</p>
 <p>Recall that <span class="math notranslate nohighlight">\(d (x, y ) = \{ (y − x )2 \}^{\frac{1}{2}} = |y − x |\)</span>.</p>
@@ -1228,7 +1228,7 @@ Suppose that</p>
 \lim _{h \rightarrow 0}\left(\frac{f(a+h)-f(a)}{h}\right)
 \]</div>
 <p>exists.</p>
-<p>We want to show that this implies that <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous at the point <span class="math notranslate nohighlight">\(a \in X\)</span>.  The following proof of this proposition is drawn from <span id="id78">[<a class="reference internal" href="#id35" title="F Ayres Jr and E Mendelson. Calculus (sixth edition). McGraw-Hill, 2013.">6AJM13</a>]</span> (Chapter 8, Solved Problem 2).</p>
+<p>We want to show that this implies that <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous at the point <span class="math notranslate nohighlight">\(a \in X\)</span>.  The following proof of this proposition is drawn from <span id="id92">[<a class="reference internal" href="#id35" title="F Ayres Jr and E Mendelson. Calculus (sixth edition). McGraw-Hill, 2013.">6AJM13</a>]</span> (Chapter 8, Solved Problem 2).</p>
 <p>First, note that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1586,8 +1586,8 @@ f^{\prime}(x)=0 \text { when } x=x_{0}
 <div class="math notranslate nohighlight">
 \[f^{\prime}(x) \text{ is undefined when } x=x_{0}\]</div>
 <p>Critical points are important because they are sometimes a local extremum of a function. Note, however, that a critical point of a function will not necessarily yield a local extremum for that function. In other words, being a critical point is a necessary, but not a sufficient, condition for that point to yield an extremum of the function.</p>
-<section id="id79">
-<h4>Examples<a class="headerlink" href="#id79" title="Permalink to this heading">#</a></h4>
+<section id="id93">
+<h4>Examples<a class="headerlink" href="#id93" title="Permalink to this heading">#</a></h4>
 <p>Example 1</p>
 <ul class="simple">
 <li><p>Let <span class="math notranslate nohighlight">\(f(x)=x^{n}\)</span>, where <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(n&gt;1\)</span>. Then <span class="math notranslate nohighlight">\(f^{\prime}(x)=n x^{n-1}\)</span>. Clearly <span class="math notranslate nohighlight">\(n x^{n-1}\)</span> is defined for all <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>. Note that <span class="math notranslate nohighlight">\(n x^{n-1}=0\)</span> if and only if <span class="math notranslate nohighlight">\(x=0\)</span>. Thus the only critical point for this function occurs when <span class="math notranslate nohighlight">\(x=0\)</span>.</p></li>
@@ -1632,7 +1632,7 @@ f(x)=\left\{\begin{array}{cc}
 </section>
 <section id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
-<p>This is an extension of Worked Example 4.9 in <span id="id80">[<a class="reference internal" href="#id41" title="T Bradley. Essential mathematics for economics and business (third edition). John Wiley and Sons, 2008.">6Bra08</a>]</span> (pp. 162-163).
+<p>This is an extension of Worked Example 4.9 in <span id="id94">[<a class="reference internal" href="#id41" title="T Bradley. Essential mathematics for economics and business (third edition). John Wiley and Sons, 2008.">6Bra08</a>]</span> (pp. 162-163).
 Consider a monopolist that produces a single good. Suppose that the demand function for this good is <span class="math notranslate nohighlight">\(Q=65-5 P\)</span>. The monopolist has a fixed cost of <span class="math notranslate nohighlight">\(\$ 30\)</span> and a constant marginal cost of <span class="math notranslate nohighlight">\(\$ 2\)</span> per unit of the good that is produced.  We have previously shown that the profit function for this monopolist (assuming that it cannot price discriminate) is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1944,7 +1944,7 @@ d p \approx\left(\frac{d \ln (P)}{d P}\right) d P \Longleftrightarrow d p \appro
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity">Continuity</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id77">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id91">Examples</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives">Derivatives</a><ul class="nav section-nav flex-column">
@@ -1984,7 +1984,7 @@ d p \approx\left(\frac{d \ln (P)}{d P}\right) d P \Longleftrightarrow d p \appro
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-points-of-a-function">Critical points of a function</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id79">Examples</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id93">Examples</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-derivative-approach-to-optimisation">The first derivative approach to optimisation</a></li>
