@@ -1,0 +1,1851 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.12.21)  21 DEC 2023 19:19
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./econ7001.tex
+(econ7001.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-04-20> (jupyterBook.cls
+Document Class: jupyterBook 2020/11/06
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+)
+\Gin@req@height=\dimen140
+\Gin@req@width=\dimen141
+) (C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen142
+))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen143
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count181
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count182
+\leftroot@=\count183
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count184
+\DOTSCASE@=\count185
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen144
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count186
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count187
+\dotsspace@=\muskip16
+\c@parentequation=\count188
+\dspbrk@lvl=\count189
+\tag@help=\toks20
+\row@=\count190
+\column@=\count191
+\maxfields@=\count192
+\andhelp@=\toks21
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks22
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amscd.sty
+Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
+\athelp@=\toks24
+\minaw@=\dimen151
+\bigaw@=\dimen152
+\minCDarrowwidth=\dimen153
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-co
+mmon.tex
+\pgfutil@everybye=\toks25
+\pgfutil@tempdima=\dimen154
+\pgfutil@tempdimb=\dimen155
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-la
+tex.def
+\pgfutil@abb=\box53
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.cod
+e.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.c
+ode.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.co
+de.tex
+\pgfkeys@pathtoks=\toks26
+\pgfkeys@temptoks=\toks27
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslib
+raryfiltered.code.tex
+\pgfkeys@tmptoks=\toks28
+))
+\pgf@x=\dimen156
+\pgf@y=\dimen157
+\pgf@xa=\dimen158
+\pgf@ya=\dimen159
+\pgf@xb=\dimen160
+\pgf@yb=\dimen161
+\pgf@xc=\dimen162
+\pgf@yc=\dimen163
+\pgf@xd=\dimen164
+\pgf@yd=\dimen165
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count193
+\c@pgf@countb=\count194
+\c@pgf@countc=\count195
+\c@pgf@countd=\count196
+\t@pgf@toka=\toks29
+\t@pgf@tokb=\toks30
+\t@pgf@tokc=\toks31
+\pgf@sys@id@count=\count197
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-x
+etex.def
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-d
+vipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-c
+ommon-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count198
+)))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysso
+ftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count199
+\pgfsyssoftpath@bigbuffer@items=\count266
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyspr
+otocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.c
+ode.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.te
+x
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.cod
+e.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.c
+ode.tex
+\pgfmath@dimen=\dimen166
+\pgfmath@count=\count267
+\pgfmath@box=\box54
+\pgfmath@toks=\toks32
+\pgfmath@stack@operand=\toks33
+\pgfmath@stack@operation=\toks34
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunction
+s.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunction
+s.basic.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunction
+s.trigonometric.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunction
+s.random.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunction
+s.comparison.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunction
+s.base.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunction
+s.round.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunction
+s.misc.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunction
+s.integerarithmetics.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.cod
+e.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.co
+de.tex
+\c@pgfmathroundto@lastzeros=\count268
+))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepo
+ints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen167
+\pgf@picmaxx=\dimen168
+\pgf@picminy=\dimen169
+\pgf@picmaxy=\dimen170
+\pgf@pathminx=\dimen171
+\pgf@pathmaxx=\dimen172
+\pgf@pathminy=\dimen173
+\pgf@pathmaxy=\dimen174
+\pgf@xx=\dimen175
+\pgf@xy=\dimen176
+\pgf@yx=\dimen177
+\pgf@yy=\dimen178
+\pgf@zx=\dimen179
+\pgf@zy=\dimen180
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepa
+thconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen181
+\pgf@path@lasty=\dimen182
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepa
+thusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen183
+\pgf@shorten@start@additional=\dimen184
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoresc
+opes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count269
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregr
+aphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen185
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretr
+ansformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen186
+\pgf@pt@y=\dimen187
+\pgf@pt@temp=\dimen188
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequ
+ick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreob
+jects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepa
+thprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorear
+rows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen189
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoresh
+ade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen190
+\pgf@sys@shading@range@num=\count270
+\pgf@shadingcount=\count271
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreim
+age.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreex
+ternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box58
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorela
+yers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretr
+ansparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepa
+tterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerd
+f.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulesha
+pes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box59
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplo
+t.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-
+version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen191
+\pgf@nodesepend=\dimen192
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-
+version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.co
+de.tex))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.te
+x))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.cod
+e.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen193
+\pgffor@skip=\dimen194
+\pgffor@stack=\toks35
+\pgffor@toks=\toks36
+))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\t
+ikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrary
+plothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count272
+\pgfplotmarksize=\dimen195
+)
+\tikz@lastx=\dimen196
+\tikz@lasty=\dimen197
+\tikz@lastxsaved=\dimen198
+\tikz@lastysaved=\dimen199
+\tikz@lastmovetox=\dimen256
+\tikz@lastmovetoy=\dimen257
+\tikzleveldistance=\dimen258
+\tikzsiblingdistance=\dimen259
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
+\tikztreelevel=\count273
+\tikznumberofchildren=\count274
+\tikznumberofcurrentchild=\count275
+\tikz@fig@count=\count276
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulemat
+rix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count277
+\pgfmatrixcurrentcolumn=\count278
+\pgf@matrix@numberofcolumns=\count279
+)
+\tikz@expandcount=\count280
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/l
+ibraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/l
+ibraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrary
+arrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen260
+))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/l
+ibraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/l
+ibraries\tikzlibraryintersections.code.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrary
+intersections.code.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrary
+fpu.code.tex)
+\pgf@intersect@solutions=\count281
+))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/l
+ibraries\tikzlibrarydecorations.code.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledec
+orations.code.tex
+\pgfdecoratedcompleteddistance=\dimen261
+\pgfdecoratedremainingdistance=\dimen262
+\pgfdecoratedinputsegmentcompleteddistance=\dimen263
+\pgfdecoratedinputsegmentremainingdistance=\dimen264
+\pgf@decorate@distancetomove=\dimen265
+\pgf@decorate@repeatstate=\count282
+\pgfdecorationsegmentamplitude=\dimen266
+\pgfdecorationsegmentlength=\dimen267
+)
+\tikz@lib@dec@box=\box64
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revisi
+on.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.t
+ex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.co
+de.tex
+\t@pgfplots@toka=\toks37
+\t@pgfplots@tokb=\toks38
+\t@pgfplots@tokc=\toks39
+\pgfplots@tmpa=\dimen268
+\c@pgfplots@coordindex=\count283
+\c@pgfplots@scanlineindex=\count284
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotssys
+generic.code.tex))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplotsli
+brary.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\
+pgfplotsoldpgfsupp_loader.code.tex
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks40
+\t@pgf@tokb=\toks41
+\t@pgf@tokc=\toks42
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\
+pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsut
+il.code.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\p
+gfplotsliststructure.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\p
+gfplotsliststructureext.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\p
+gfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count285
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\p
+gfplotsmatrix.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfplo
+tstableshared.code.tex
+\c@pgfplotstable@counta=\count286
+\t@pgfplotstable@a=\toks43
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\p
+gfplotsdeque.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbi
+nary.code.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbi
+nary.data.code.tex))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsut
+il.verb.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibrary
+pgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count287
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibraryp
+gfplots.surfshading.pgfsys-xetex.def
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibraryp
+gfplots.surfshading.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count288
+))))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsco
+lormap.code.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsco
+lor.code.tex))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstacked
+plots.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplothan
+dlers.code.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplo
+thandler.code.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplo
+timage.code.tex)))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.scalin
+g.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoordpr
+ocessing.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.errorb
+ars.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.marker
+s.code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsticks.c
+ode.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.paths.
+code.tex)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/l
+ibraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decoration
+s\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/l
+ibraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decoration
+s\pgflibrarydecorations.pathreplacing.code.tex))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrar
+ypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count289
+\pgfplots@xmin@reg=\dimen269
+\pgfplots@xmax@reg=\dimen270
+\pgfplots@ymin@reg=\dimen271
+\pgfplots@ymax@reg=\dimen272
+\pgfplots@zmin@reg=\dimen273
+\pgfplots@zmax@reg=\dimen274
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/l
+ibraries\tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrary
+plotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/bbm\bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+(sphinxmanual.cls
+Document Class: sphinxmanual 2019/12/01 v2.3.0 Document class (Sphinx manual)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count290
+\c@chapter=\count291
+\c@section=\count292
+\c@subsection=\count293
+\c@subsubsection=\count294
+\c@paragraph=\count295
+\c@subparagraph=\count296
+\c@figure=\count297
+\c@table=\count298
+\abovecaptionskip=\skip51
+\belowcaptionskip=\skip52
+\bibindent=\dimen275
+)
+LaTeX Info: Redefining \and on input line 35.
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count299
+\cp@tempcnt=\count300
+))
+\sphinxpxdimen=\dimen276
+ (C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/cmap\cmap.sty
+Package: cmap 2021/02/06 v1.0j CMap support: searchable PDF
+
+
+Package cmap Warning: pdftex not detected - exiting.
+
+) (C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.s
+ty (C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-04-20 L3 programming layer (loader) 
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xetex.
+def
+File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
+\g__graphics_track_int=\count301
+\l__pdf_internal_box=\box65
+\g__pdf_backend_object_int=\count302
+\g__pdf_backend_annotation_int=\count303
+\g__pdf_backend_link_int=\count304
+))
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex.st
+y
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count305
+\l__fontspec_language_int=\count306
+\l__fontspec_strnum_int=\count307
+\l__fontspec_tmp_int=\count308
+\l__fontspec_tmpa_int=\count309
+\l__fontspec_tmpb_int=\count310
+\l__fontspec_tmpc_int=\count311
+\l__fontspec_em_int=\count312
+\l__fontspec_emdef_int=\count313
+\l__fontspec_strong_int=\count314
+\l__fontspec_strongdef_int=\count315
+\l__fontspec_tmpa_dim=\dimen277
+\l__fontspec_tmpb_dim=\dimen278
+\l__fontspec_tmpc_dim=\dimen279
+ (C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg)))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\polyglossia.st
+y
+Package: polyglossia 2023/12/11 vv1.66 Modern multilingual typesetting with XeL
+aTeX and LuaLaTeX
+ (C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count316
+)
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks44
+\XKV@tempa@toks=\toks45
+)
+\XKV@depth=\count317
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+\xpg@normalclass=\XeTeXcharclass1
+
+! Undefined control sequence.
+l.973 \cs_new_nopar:Ne
+                       \__xpg_saved_@pkgextension: {\@pkgextension}
+? 
+! Undefined control sequence.
+l.973 \cs_new_nopar:Ne \__xpg_saved_@pkgextension:
+                                                   {\@pkgextension}
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.973 ..._xpg_saved_@pkgextension: {\@pkgextension
+                                                  }
+? 
+! Undefined control sequence.
+\setmainlanguage code ...n {##2}}}}\seq_if_in:NeF 
+                                                  \__xpg_langs_loaded {#2}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+
+(C:\Users\AL\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-latex.ld
+e
+Package: gloss-latex 2023/12/11 vv1.66 polyglossia: module for default language
+
+
+! Undefined control sequence.
+<argument> ...{latex/script}{latin}\prop_gput:Nne 
+                                                  {\polyglossia@langsetup }{...
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Undefined control sequence.
+<argument> ...Nn {\l_tmpa_clist }{}\prop_gput:Nne 
+                                                  {\polyglossia@langsetup }{...
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Undefined control sequence.
+<argument> ...tmpa_clist }{english}\prop_gput:Nne 
+                                                  {\polyglossia@langsetup }{...
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Use of \??? doesn't match its definition.
+<argument> \???  
+                 ! LaTeX Error: A property list was misused.
+l.16 }
+      
+? 
+! Undefined control sequence.
+\polyglossia_setup_hyphen:n #1->\clist_set:Ne 
+                                              {\l_tmpa_clist }{\prop_item:Nn...
+l.16 }
+      
+? 
+! Undefined control sequence.
+\polyglossia_setup_hyphen:n ...{#1}}\clist_set:Ne 
+                                                  \l_tmpa_clist {\prop_item:...
+l.16 }
+      
+? 
+! Undefined control sequence.
+\xpg_language_alias code ...ariant}\prop_gput:Nee 
+                                                  \__xpg_alias {#6/target}{#...
+l.16 }
+      
+? 
+)
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {latex/target}
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\setmainlanguage code ...}{#2}}\seq_gput_right:Ne 
+                                                  \__xpg_langs_loaded {#2}}\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {latex/target}
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {latex/target}
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {latex/target}/target}
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {latex/target}/target}
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {latex/target}/tar...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {latex/target}/tar...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {latex/t...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {latex/t...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn ... {#1/#2}{\prop_item:Ne 
+                                                  \__xpg_alias {#1/#2}}{\pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn .../#2}}{\prop_if_in:NeTF 
+                                                  \__xpg_alias {#1/target}{\...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+<argument> \prop_item:Ne 
+                         \__xpg_alias {\s__prop {\s__prop {\s__prop {\s__pro...
+l.2571 \setmainlanguage{latex}
+                              
+? 
+! Undefined control sequence.
+\xpg_alias_prop_item:nn #1#2->\prop_if_in:NeTF 
+                                               \__xpg_alias {#1/#2}{\prop_it...
+l.2571 \setmainlanguage{latex}
+                              
+? ^^@^^@^^@^^@^^@^^@
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? x
+ 
+Here is how much of TeX's memory you used:
+ 27258 strings out of 411448
+ 725639 string characters out of 5818069
+ 1843698 words of memory out of 5000000
+ 47147 multiletter control sequences out of 15000+600000
+ 512303 words of font info for 34 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 99i,0n,94p,748b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+No pages of output.

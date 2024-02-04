@@ -1,0 +1,2093 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Univariate integration &#8212; ECON7001</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '10.univariate_integration';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Introduction to optimisation" href="09.intro_to_optimisation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Welcome to the course!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/placeholder_logo.png" class="logo__image only-light" alt="ECON7001 - Home"/>
+    <script>document.write(`<img src="_static/placeholder_logo.png" class="logo__image only-dark" alt="ECON7001 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    EMET7001
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00.intro.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01.intro_to_economics.html">An introduction to economics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02.sets_numbers_coordinates_distances.html">Sets, numbers, coordinates, and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03.mappings_functions_correspondences.html">Mappings: functions and correspondences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04.equations_inequalities_binary_relations.html">Equations, inequalities, and binary relations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05.sequences_series_limits.html">Sequences, series and limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06.univariate_differentiation.html">Univariate differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07.linear_algebra.html">Linear algebra</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="08.multivariate_differential_calculus.html">Multivariate differential calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09.intro_to_optimisation.html">Introduction to optimisation</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Univariate integration</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse/issues/new?title=Issue%20on%20page%20%2F10.univariate_integration.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/10.univariate_integration.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Univariate integration</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Univariate integration</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-reading-guide">References and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anti-derivatives-and-indefinite-integrals">Anti-derivatives and indefinite integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-anti-derivative">What is an anti-derivative?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anti-derivatives-are-not-unique">Anti-derivatives are NOT unique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-indefinite-integral">What is an indefinite integral?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-terminology">Some terminology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-formulae">Some useful formulae</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-overview-of-integration-techniques">An overview of integration techniques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-integration">Direct integration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-by-substitution">Integration by substitution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-by-parts">Integration by parts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-of-rational-functions">Integration of rational functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definite-integral-and-the-area-under-a-curve">The definite integral and the area under a curve</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#area-approximation-by-the-sum-of-box-areas">Area approximation by the sum of box areas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definite-integral-as-a-limit-of-riemann-sums">The definite integral as a limit of Riemann sums</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiating-definite-integrals">Differentiating definite integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leibniz-rule">Leibniz’ Rule</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improper-integrals">Improper integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-economic-and-econometric-applications">Some economic and econometric applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preferences-over-time-contingent-consumption">Preferences over time contingent consumption</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preferences-over-state-contingent-consumption">Preferences over state contingent consumption</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#consumer-demand-and-consumer-welfare">Consumer demand and consumer welfare</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-references-and-reading-guide">Sources, references and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-private-benefit-and-demand">Marginal private benefit and demand</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diminishing-marginal-benefits">Diminishing marginal benefits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-mb-schedule-example">Discrete MB schedule example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-mb-schedule-example">Linear MB schedule example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-mb-schedule-example">Non-Linear MB schedule example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-benefit-and-demand">Marginal benefit and demand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-marshallian-graphing-convention">The Marshallian graphing convention</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#obtaining-total-benefit-from-marginal-benefits">Obtaining total benefit from marginal benefits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-paradox-of-value">The paradox of value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consumer-surplus">Consumer surplus</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-consumer-surplus">Changes in consumer surplus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#producer-supply-and-producer-welfare">Producer supply and producer welfare</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-private-cost-and-supply">Marginal private cost and supply</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-marginal-costs">Increasing marginal costs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-cost-in-a-pure-exchange-economy">Marginal cost in a pure exchange economy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-run-marginal-cost-in-a-production-economy">Short-run marginal cost in a production economy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-marginal-cost-once-again">Increasing marginal cost once again</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-run-costs-and-long-run-costs">Short-run costs and long-run costs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-variable-costs-and-marginal-costs">Total variable costs and marginal costs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producer-revenue">Producer revenue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producer-s-surplus">Producer’s surplus</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#producer-s-surplus-and-profit">Producer’s surplus and profit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="univariate-integration">
+<h1>Univariate integration<a class="headerlink" href="#univariate-integration" title="Permalink to this heading">#</a></h1>
+<section id="references-and-reading-guide">
+<h2>References and reading guide<a class="headerlink" href="#references-and-reading-guide" title="Permalink to this heading">#</a></h2>
+<p>These are references that are suitable for an elementary course on mathematical economics.</p>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="#id28" title="T Bradley. Essential mathematics for economics and business (fourth edition). John Wiley and Sons, 2013.">10Bra13</a>]</span>: Chapter 8 (pp. 427-476).</p></li>
+<li><p><span id="id2">[<a class="reference internal" href="#id12" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">10HJP87</a>]</span>: Chapters 14 and 15 (pp. 533-645).</p></li>
+<li><p><span id="id3">[<a class="reference internal" href="#id15" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">10Sha95</a>]</span>: Chapter 9 (pp. 408-449).</p></li>
+<li><p><span id="id4">[<a class="reference internal" href="#id13" title="K Sydsæter, P Hammond, A Strøm, and A Carvajal. Essential mathematics for economic analysis (fifth edition). Pearson Education, 2016.">10SHSC16</a>]</span>: Chapter 9 (pp. 319-373).</p></li>
+</ul>
+<p>These are references that are suitable for a first-year undergraduate course for mathematics majors on calculus.</p>
+<ul class="simple">
+<li><p><span id="id5">[<a class="reference internal" href="#id19" title="M Kline. Calculus: An intuitive and physical approach (second edition). Dover Publications, 1967. The 1998 Dover republication of the original John Wiley and Sons second edition.">10Kli67</a>]</span>: Chapters 3, 5, 6, 9, 10, 11, 12, 14, 15, and 16.</p></li>
+<li><p><span id="id6">[<a class="reference internal" href="#id20" title="RA Silverman. Modern calculus and analytic geometry. Dover Publications, 1969. The 2002 Dover corrected republication of the original 1969 Macmillan Company edition.">10Sil69</a>]</span>: Chapters 7 and 14.</p></li>
+<li><p><span id="id7">[<a class="reference internal" href="#id21" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">10Spi06</a>]</span>: Chapters 13, 14, 18, and 19.</p></li>
+</ul>
+<p>These references are suitable for an intermediate course on mathematical economics.</p>
+<ul class="simple">
+<li><p><span id="id8">[<a class="reference internal" href="#id40" title="AC Chiang and K Wainwright. Fundamental methods of mathematical economics (fourth edition). McGraw-Hill, 2005.">10CW05</a>]</span>: Chapter 14.</p></li>
+<li><p><span id="id9">[<a class="reference internal" href="#id56" title="D Leonard and NV Long. Optimal control theory and static optimization in economics. Cambridge University Press, 1992.">10LL92</a>]</span>: The Appendix to Chapter 2 (pp. 111-113).</p></li>
+<li><p><span id="id10">[<a class="reference internal" href="#id26" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">10SB94</a>]</span>: Appendix A4.</p></li>
+</ul>
+<div class="docutils container" id="id11">
+<dl class="citation">
+<dt class="label" id="id64"><span class="brackets">10AA83</span><span class="fn-backref">(<a href="#id89">1</a>,<a href="#id102">2</a>,<a href="#id103">3</a>,<a href="#id105">4</a>)</span></dt>
+<dd><p>AA Alchian and WR Allen. <em>Exchange and production: Competition, coordination and control (third edition)</em>. Wadsworth Publishing Company, 1983.</p>
+</dd>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id1">10Bra13</a></span></dt>
+<dd><p>T Bradley. <em>Essential mathematics for economics and business (fourth edition)</em>. John Wiley and Sons, 2013.</p>
+</dd>
+<dt class="label" id="id65"><span class="brackets"><a class="fn-backref" href="#id90">10CF89</a></span></dt>
+<dd><p>KE Case and RC Fair. <em>Principles of Economics</em>. Prentice-Hall, 1989.</p>
+</dd>
+<dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id8">10CW05</a></span></dt>
+<dd><p>AC Chiang and K Wainwright. <em>Fundamental methods of mathematical economics (fourth edition)</em>. McGraw-Hill, 2005.</p>
+</dd>
+<dt class="label" id="id66"><span class="brackets"><a class="fn-backref" href="#id91">10GKM09</a></span></dt>
+<dd><p>J Gans, S King, and NG Mankiw. <em>Principles of microeconomics (fourth edition)</em>. Cengage Learning Australia, 2009.</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id98">10GR81</a></span></dt>
+<dd><p>H Gravelle and R Rees. <em>Microeconomics</em>. Longman Group, 1981.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id2">10HJP87</a></span></dt>
+<dd><p>EF Haeussler Jr and RS Paul. <em>Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition)</em>. Prentice-Hall, 1987.</p>
+</dd>
+<dt class="label" id="id67"><span class="brackets">10Ham06</span><span class="fn-backref">(<a href="#id92">1</a>,<a href="#id104">2</a>)</span></dt>
+<dd><p>DS Hamermesh. <em>Economics is everywhere (second edition)</em>. McGraw-Hill-Irwin, 2006.</p>
+</dd>
+<dt class="label" id="id68"><span class="brackets"><a class="fn-backref" href="#id93">10Hey91</a></span></dt>
+<dd><p>P Heyne. <em>The economic way of thinking (sixth edition)</em>. Macmillan Publishing Company, 1991.</p>
+</dd>
+<dt class="label" id="id69"><span class="brackets"><a class="fn-backref" href="#id94">10Hir88</a></span></dt>
+<dd><p>J Hirshleifer. <em>Price theory and applications (fourth edition)</em>. Prentice-Hall, 1988. With the assistance of M Sproul.</p>
+</dd>
+<dt class="label" id="id70"><span class="brackets"><a class="fn-backref" href="#id95">10HGH05</a></span></dt>
+<dd><p>J Hirshleifer, A Glazer, and D Hirshleifer. <em>Price theory and applications: Decisions, markets, and information (seventh edition)</em>. Cambridge University Press, 2005.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id5">10Kli67</a></span></dt>
+<dd><p>M Kline. <em>Calculus: An intuitive and physical approach (second edition)</em>. Dover Publications, 1967. The 1998 Dover republication of the original John Wiley and Sons second edition.</p>
+</dd>
+<dt class="label" id="id56"><span class="brackets"><a class="fn-backref" href="#id9">10LL92</a></span></dt>
+<dd><p>D Leonard and NV Long. <em>Optimal control theory and static optimization in economics</em>. Cambridge University Press, 1992.</p>
+</dd>
+<dt class="label" id="id71"><span class="brackets"><a class="fn-backref" href="#id96">10Nic87</a></span></dt>
+<dd><p>W Nicholson. <em>Intermediate microeconomics and its applications (fourth edition)</em>. The Dryden Press, 1987.</p>
+</dd>
+<dt class="label" id="id73"><span class="brackets"><a class="fn-backref" href="#id99">10Nic98</a></span></dt>
+<dd><p>W Nicholson. <em>Microeconomic theory: Basic principles and extensions (seventh edition)</em>. The Dryden Press, 1998.</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id3">10Sha95</a></span></dt>
+<dd><p>J Shannon. <em>Mathematics for business, economics and finance</em>. John Wiley and Sons, 1995.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets">10Sil69</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id88">2</a>)</span></dt>
+<dd><p>RA Silverman. <em>Modern calculus and analytic geometry</em>. Dover Publications, 1969. The 2002 Dover corrected republication of the original 1969 Macmillan Company edition.</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id10">10SB94</a></span></dt>
+<dd><p>C Simon and L Blume. <em>Mathematics for economists</em>. WW Norton and Co, 1994.</p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id7">10Spi06</a></span></dt>
+<dd><p>M Spivak. <em>Calculus (third edition)</em>. Cambridge University Press, 2006.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id4">10SHSC16</a></span></dt>
+<dd><p>K Sydsæter, P Hammond, A Strøm, and A Carvajal. <em>Essential mathematics for economic analysis (fifth edition)</em>. Pearson Education, 2016.</p>
+</dd>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id100">10Tak93</a></span></dt>
+<dd><p>A Takayama. <em>Analytical methods in economics</em>. The University of Michigan Press, 1993.</p>
+</dd>
+<dt class="label" id="id72"><span class="brackets"><a class="fn-backref" href="#id97">10Var87</a></span></dt>
+<dd><p>HR Varian. <em>Intermediate microeconomics: a modern approach</em>. WW Norton and Company, 1987.</p>
+</dd>
+<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id101">10Var92</a></span></dt>
+<dd><p>HR Varian. <em>Microeconomic analysis (third edition)</em>. WW Norton and Sons, 1992.</p>
+</dd>
+</dl>
+</div>
+<p>Note: this reference list combines the references for all sections of this lecture.</p>
+</section>
+<section id="anti-derivatives-and-indefinite-integrals">
+<h2>Anti-derivatives and indefinite integrals<a class="headerlink" href="#anti-derivatives-and-indefinite-integrals" title="Permalink to this heading">#</a></h2>
+<section id="what-is-an-anti-derivative">
+<h3>What is an anti-derivative?<a class="headerlink" href="#what-is-an-anti-derivative" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(I \in \mathbb{R}\)</span> be a non-empty open interval of real numbers that contains more than a single point. In otherwords,</p>
+<div class="math notranslate nohighlight">
+\[
+I=(a, b)=\{x \in \mathbb{R}: a&lt;x&lt;b\}
+\]</div>
+<p>wherea <span class="math notranslate nohighlight">\(\in \mathbb{R}, b \in \mathbb{R}\)</span>, and <span class="math notranslate nohighlight">\(a&lt;b\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(f: I \longrightarrow \mathbb{R}\)</span> be some given univariate real-valued function. Suppose that there exists some function <span class="math notranslate nohighlight">\(F: I \longrightarrow \mathbb{R}\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+F^{\prime}(x)=\frac{d F(x)}{d x}=f(x) \text { for all } x \in I
+\]</div>
+<p>In this case, the function <span class="math notranslate nohighlight">\(F(x)\)</span> is said to be an <strong>anti-derivative</strong> of the function <span class="math notranslate nohighlight">\(f(x)\)</span> on the interval <span class="math notranslate nohighlight">\(I\)</span>.</p>
+</section>
+<section id="anti-derivatives-are-not-unique">
+<h3>Anti-derivatives are NOT unique<a class="headerlink" href="#anti-derivatives-are-not-unique" title="Permalink to this heading">#</a></h3>
+<p>If the function <span class="math notranslate nohighlight">\(F(x)\)</span> is an anti-derivative of the function <span class="math notranslate nohighlight">\(f(x)\)</span> on the interval <span class="math notranslate nohighlight">\(I\)</span>, then so is the function <span class="math notranslate nohighlight">\(G(x)=F(x)+C\)</span>, where <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> is some fixed real number. This can be seen by differentiating <span class="math notranslate nohighlight">\(G(x)\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>. Upon doing this, we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d G(x)}{d x}=\frac{d[F(x)+C]}{d x}=\frac{d F(x)}{d x}+\frac{d C}{d x}=f(x)+0=f(x) .
+\]</div>
+<p>The constant <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> is known as an <em>arbitrary constant</em> because it can take the form of any given real number. In effect, if the function <span class="math notranslate nohighlight">\(F(x)\)</span> is an anti-derivative of the function <span class="math notranslate nohighlight">\(f(x)\)</span> on the interval <span class="math notranslate nohighlight">\(I\)</span>, then there is an entire family of such anti-derivatives of <span class="math notranslate nohighlight">\(f(x)\)</span> on the interval <span class="math notranslate nohighlight">\(I\)</span>. This family is given by the set</p>
+<div class="math notranslate nohighlight">
+\[
+\{F(x)+C: C \in \mathbb{R}\}
+\]</div>
+<p>When the domain of a univariate real-valued function <span class="math notranslate nohighlight">\(f(x)\)</span> takes the form of a connected open interval of real numbers <span class="math notranslate nohighlight">\(I=(a, b)\)</span>, and if <span class="math notranslate nohighlight">\(F(x)\)</span> is an anti-derivative of <span class="math notranslate nohighlight">\(f(x)\)</span>, then every anti-derivative of <span class="math notranslate nohighlight">\(f(x)\)</span> must belong to the set <span class="math notranslate nohighlight">\(\{F(x)+C: C \in \mathbb{R}\}\)</span>.</p>
+<p>However, this result is not true when the domain of the function <span class="math notranslate nohighlight">\(f(x)\)</span> is not a connected open interval of real numbers. This is established by the following counter-example that involves a non-connected (that is, dis-joint) domain for the function <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<p>Suppose that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{r}
+f(x)=2 x \text { for all } x \in(0,1) \cup(2,3), \\
+F(x)= \begin{cases}x^{2} &amp; \text { if } x \in(0,1), \\
+x^{2}+1 &amp; \text { if } x \in(2,3),\end{cases}
+\end{array}
+\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+G(x)= \begin{cases}x^{2}+1 &amp; \text { if } x \in(0,1) \\ x^{2} &amp; \text { if } x \in(2,3) .\end{cases}
+\end{split}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(F^{\prime}(x)=G^{\prime}(x)=f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in(0,1) \cup(2,3)\)</span>. Thus both <span class="math notranslate nohighlight">\(F(x)\)</span> and <span class="math notranslate nohighlight">\(G(x)\)</span> are anti-derivatives of <span class="math notranslate nohighlight">\(f(x)\)</span>.
+However, there is no single constant <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> such that <span class="math notranslate nohighlight">\(G(x)=F(x)+C\)</span> for all <span class="math notranslate nohighlight">\(x \in(0,1) \cup(2,3)\)</span>.</p>
+<p>The problem that occurs in this counter-example is as follows:</p>
+<ul class="simple">
+<li><p>The arbitrary constant that is required to ensure that <span class="math notranslate nohighlight">\(G(x)=F(x)+C\)</span> for all <span class="math notranslate nohighlight">\(x \in(0,1)\)</span> (namely <span class="math notranslate nohighlight">\(C_{1}=1\)</span> ) is different to the arbitrary constant that is required to ensure that <span class="math notranslate nohighlight">\(G(x)=F(x)+C\)</span> for all <span class="math notranslate nohighlight">\(x \in(2,3)\)</span> (namely <span class="math notranslate nohighlight">\(C_{2}=-1\)</span> ).</p></li>
+<li><p>While the result that the entire set of anti-derivatives of <span class="math notranslate nohighlight">\(f(x)\)</span> can be found by adding different single arbitrary constants to a particular anti-derivative of <span class="math notranslate nohighlight">\(f(x)\)</span> does not apply in this counter-example as a whole, it does apply to any case where we restrict the domain of the function to a subset of the entire domain that is a connected open interval.</p></li>
+<li><p>In particular, the result applies if we restrict the domain in the counter-example to be either <span class="math notranslate nohighlight">\((0,1)\)</span> or <span class="math notranslate nohighlight">\((2,3)\)</span>.</p></li>
+</ul>
+</section>
+<section id="what-is-an-indefinite-integral">
+<h3>What is an indefinite integral?<a class="headerlink" href="#what-is-an-indefinite-integral" title="Permalink to this heading">#</a></h3>
+<p>Suppose that the function <span class="math notranslate nohighlight">\(F(x)\)</span> is an anti-derivative of the function <span class="math notranslate nohighlight">\(f(x)\)</span> on the connected open interval <span class="math notranslate nohighlight">\(I\)</span>. The <strong>indefinite integral</strong> of <span class="math notranslate nohighlight">\(f(x)\)</span>, which is denoted by <span class="math notranslate nohighlight">\(\int f(x) d x\)</span>, is simply an arbitrary member of the set of all anti-derivatives of <span class="math notranslate nohighlight">\(f(x)\)</span> on the interval <span class="math notranslate nohighlight">\(I\)</span>. In other words, the indefinite integral of <span class="math notranslate nohighlight">\(f(x)\)</span> on the interval <span class="math notranslate nohighlight">\(I\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\int f(x) d x=F(x)+C
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> is an arbitrary constant. Note that here, the arbitrary constant <span class="math notranslate nohighlight">\(C\)</span> is interpreted as being truly arbitrary, rather than taking on a particular value.</p>
+</section>
+<section id="some-terminology">
+<h3>Some terminology<a class="headerlink" href="#some-terminology" title="Permalink to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(f: I \longrightarrow \mathbb{R}\)</span>, where <span class="math notranslate nohighlight">\(I \subseteq \mathbb{R}\)</span> is a connected open interval, and <span class="math notranslate nohighlight">\(F^{\prime}(x)=f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in I\)</span>.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\int f(x) d x=F(x)+C\)</span> is the indefinite integral of <span class="math notranslate nohighlight">\(f(x)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)\)</span> is the integrand.</p></li>
+<li><p><span class="math notranslate nohighlight">\(d x\)</span> means “with respect to <span class="math notranslate nohighlight">\(x\)</span> “. (In other words, <span class="math notranslate nohighlight">\(x\)</span> is the variable of integration.)</p></li>
+<li><p><span class="math notranslate nohighlight">\(F(x)\)</span> is an anti-derivative of <span class="math notranslate nohighlight">\(f(x)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(C\)</span> is an arbitrary constant.</p></li>
+</ul>
+</section>
+<section id="some-useful-formulae">
+<h3>Some useful formulae<a class="headerlink" href="#some-useful-formulae" title="Permalink to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(f: I \longrightarrow \mathbb{R}\)</span> is at least once continuously differentiable on <span class="math notranslate nohighlight">\(I\)</span>, where <span class="math notranslate nohighlight">\(I \subseteq \mathbb{R}\)</span> is a connected open interval, and <span class="math notranslate nohighlight">\(F^{\prime}(x)=f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in I\)</span>. The following formulae apply to <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{d x} \int f(x) d x=f(x)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(d \int f(x) d x=f(x) d x\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\int f^{\prime}(x) d x=f(x)+C\)</span>.</p></li>
+</ol>
+<p>We will now provide an informal justification for each of these results.</p>
+<p>Claim: <span class="math notranslate nohighlight">\(\frac{d}{d x} \int f(x) d x=f(x)\)</span>.</p>
+<ul class="simple">
+<li><p>Informal proof.</p></li>
+<li><p>Suppose that <span class="math notranslate nohighlight">\(F(x)\)</span> is an anti-derivative of <span class="math notranslate nohighlight">\(f(x)\)</span>.</p></li>
+<li><p>This means that <span class="math notranslate nohighlight">\(\int f(x)=F(x)+C\)</span>.</p></li>
+<li><p>Clearly, we must have <span class="math notranslate nohighlight">\(\frac{d}{d x} \int f(x)=\frac{d}{d x}(F(x)+C)\)</span>.</p></li>
+<li><p>But <span class="math notranslate nohighlight">\(\frac{d}{d x}(F(x)+C)=\frac{d}{d x} F(x)+0=\frac{d}{d x} F(x)=f(x)\)</span>, because <span class="math notranslate nohighlight">\(F(x)\)</span> is an anti-derivative of <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(C\)</span> is an (albeit arbitrary) constant.</p></li>
+<li><p>Thus we have <span class="math notranslate nohighlight">\(\frac{d}{d x} \int f(x) d x=f(x)\)</span>.</p></li>
+</ul>
+<p>Claim: <span class="math notranslate nohighlight">\(d \int f(x) d x=f(x) d x\)</span>.</p>
+<ul class="simple">
+<li><p>Informal proof.</p></li>
+<li><p>Suppose that <span class="math notranslate nohighlight">\(F(x)\)</span> is an anti-derivative of <span class="math notranslate nohighlight">\(f(x)\)</span>.</p></li>
+<li><p>This means that <span class="math notranslate nohighlight">\(\int f(x)=F(x)+C=G(x)\)</span>.</p></li>
+<li><p>Recall that <span class="math notranslate nohighlight">\(d G(x) \approx \frac{d G(x)}{d x} d x=f(x) d x\)</span>.</p></li>
+<li><p>This approximation is very accurate for really small values of <span class="math notranslate nohighlight">\(\delta x\)</span> when <span class="math notranslate nohighlight">\(G(x)\)</span> is well behaved. In such circumstances, we will have <span class="math notranslate nohighlight">\(\int d G(x)=\int f(x) d x\)</span>.</p></li>
+<li><p>Differentiating both sides of this equation with respect to <span class="math notranslate nohighlight">\(x\)</span> yields <span class="math notranslate nohighlight">\(d G(x)=f(x) d x\)</span>, so that we have <span class="math notranslate nohighlight">\(d \int f(x) d x=f(x) d x\)</span>.</p></li>
+</ul>
+<p>Claim: <span class="math notranslate nohighlight">\(\int f^{\prime}(x) d x=f(x)+C\)</span>.</p>
+<ul class="simple">
+<li><p>Informal proof.</p></li>
+<li><p>Suppose that <span class="math notranslate nohighlight">\(f(x)\)</span> is at least once continuously differentiable, and denote its derivative by <span class="math notranslate nohighlight">\(f^{\prime}(x)\)</span>.</p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(F(x)=f(x)+C\)</span>, where <span class="math notranslate nohighlight">\(C\)</span> is an arbitrary constant.</p></li>
+<li><p>Clearly we must have <span class="math notranslate nohighlight">\(\frac{d}{d x} F(x)=\frac{d}{d x} f(x)+0=\frac{d}{d x} f(x)=f^{\prime}(x)\)</span>.</p></li>
+<li><p>Furthermore, we have already shown that <span class="math notranslate nohighlight">\(\frac{d}{d x} \int g(x) d x=g(x)\)</span>. This means that we must have <span class="math notranslate nohighlight">\(\frac{d}{d x} \int f^{\prime}(x) d x=f^{\prime}(x)\)</span>.</p></li>
+<li><p>Thus we have <span class="math notranslate nohighlight">\(\frac{d}{d x} \int f^{\prime}(x) d x=\frac{d}{d x} F(x)\)</span>,</p></li>
+<li><p>Upon integrating both sides of this equation, we obtain <span class="math notranslate nohighlight">\(\int f^{\prime}(x) d x=F(x)\)</span>, so that we have <span class="math notranslate nohighlight">\(\int f^{\prime}(x) d x=f(x)+C\)</span>.</p></li>
+</ul>
+<p>Suppose that <span class="math notranslate nohighlight">\(f: I \longrightarrow \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(g: I \longrightarrow \mathbb{R}\)</span> are both at least once continuously differentiable on <span class="math notranslate nohighlight">\(I\)</span>, where <span class="math notranslate nohighlight">\(I \subseteq \mathbb{R}\)</span> is a connected open interval.
+Suppose also that <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span> is some given constant, <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> is an arbitrary constant, <span class="math notranslate nohighlight">\(F^{\prime}(x)=f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in I\)</span>, and <span class="math notranslate nohighlight">\(G^{\prime}(x)=g(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in I\)</span>.</p>
+<p>The following formulae apply to <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(g(x)\)</span>.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\int[f(x)+g(x)] d x=\int f(x) d x+\int g(x) d x=F(x)+G(X)+C\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\int k f(x) d x=k \int f(x) d x=k F(x)+C\)</span>.</p></li>
+</ol>
+<p>We will provide an informal justification for each of these two results shortly.
+But first, note that the above two results can be used to establish the following result.</p>
+<p>Suppose that the functions <span class="math notranslate nohighlight">\(f_{i}: I \longrightarrow \mathbb{R}, i \in\{1,2, \cdots, n\}\)</span>, are all at least once continuously differentiable on <span class="math notranslate nohighlight">\(I\)</span>, where <span class="math notranslate nohighlight">\(I \subseteq \mathbb{R}\)</span> is a connected open interval.
+Suppose also that <span class="math notranslate nohighlight">\(k_{i} \in \mathbb{R}, i \in\{1,2, \cdots, n\}\)</span>, are some given constants, and <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> is an arbitrary constant.
+Suppose as well that <span class="math notranslate nohighlight">\(F_{i}^{\prime}(x)=f_{i}(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in I\)</span> and for each <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>.
+The following formula applies to <span class="math notranslate nohighlight">\(\left\{f_{i}(x)\right\}_{i=1}^{n}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; \int\left[\sum_{i=1}^{n} k_{i} f_{i}(x)\right] d x=\sum_{i=1}^{n}\left[\int k_{i} f_{i}(x) d x\right] \\
+&amp; =\sum_{i=1}^{n}\left[k_{i} \int f_{i}(x) d x\right]=\sum_{i=1}^{n} k_{i} F_{i}(x)+C .
+\end{aligned}
+\end{split}\]</div>
+<p>Claim:  <span class="math notranslate nohighlight">\(\int[f(x)+g(x)] d x=\int f(x) d x+\int g(x) d x=F(x)+G(x)+C\)</span></p>
+<ul class="simple">
+<li><p>Informal proof.</p></li>
+<li><p>Note that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{d}{d x}(F(x)+G(x)+C) &amp; =\frac{d}{d x} F(x)+\frac{d}{d x} G(x)+\frac{d}{d x} C \\
+&amp; =F^{\prime}(x)+G^{\prime}(x)+0 \\
+&amp; =f(x)+g(x) .
+\end{aligned}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Note also that <span class="math notranslate nohighlight">\(\int f(x) d x=F(x)+C_{f}\)</span> and <span class="math notranslate nohighlight">\(\int g(x) d x=G(x)+C_{g}\)</span>, so that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\int f(x) d x+\int g(x) d x=F(x)+C_{f}+G(x)+C_{g}=F(x)+G(x)+C
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_{f}, C_{g}\)</span>, and <span class="math notranslate nohighlight">\(C=C_{f}+C_{g}\)</span> are arbitrary constants.</p>
+<p>Claim: <span class="math notranslate nohighlight">\(\int k f(x) d x=k \int f(x) d x=k F(x)+C\)</span>.</p>
+<ul class="simple">
+<li><p>Informal proof.</p></li>
+<li><p>Note that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+ \frac{d}{d x}(k F(x)+C)&amp;=\frac{d}{d x} k F(x)+\frac{d}{d x} C \\
+&amp; =k \frac{d}{d x} F(x)+0 \\
+&amp; =\quad k F^{\prime}(x) \\
+&amp; =\quad k f(x) .
+\end{aligned}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Note also that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+k \int f(x) d x=k\left(F(x)+C_{f}\right)=k F(x)+k C_{f}=k F(x)+C
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_{f}\)</span> and <span class="math notranslate nohighlight">\(C=k C_{f}\)</span> are arbitrary constants.</p>
+</section>
+</section>
+<section id="an-overview-of-integration-techniques">
+<h2>An overview of integration techniques<a class="headerlink" href="#an-overview-of-integration-techniques" title="Permalink to this heading">#</a></h2>
+<p>There are a number of techniques that can be used to find the indefinite integral of a function. These include the following:</p>
+<ol class="arabic simple">
+<li><p>Direct integration. (This involves recognising that the integrand is the derivative of a particular function, or, rather, class of functions. It is most useful when the integrand is an elementary function.)</p></li>
+<li><p>Integration by substitution. (This is the integration counterpart to the chain rule of differentiation.)</p></li>
+<li><p>Integration by parts. (This is the integration counterpart to the product rule of differentiation.)</p></li>
+<li><p>Integration by partial fractions. (This technique is sometimes useful when the integrand is the ratio of two polynomial functions.)</p></li>
+</ol>
+<section id="direct-integration">
+<h3>Direct integration<a class="headerlink" href="#direct-integration" title="Permalink to this heading">#</a></h3>
+<p><strong>Direct integration</strong> makes use of the fact that if <span class="math notranslate nohighlight">\(F^{\prime}(x)=f(x)\)</span>, then the indefinite integral of <span class="math notranslate nohighlight">\(f(x)\)</span> is given by <span class="math notranslate nohighlight">\(\int f(x) d x=F(x)+C\)</span>.</p>
+<p>If we reconise the integrand <span class="math notranslate nohighlight">\(f(x)\)</span> as being the derivative of some function <span class="math notranslate nohighlight">\(F(x)\)</span> with respect to the variable <span class="math notranslate nohighlight">\(x\)</span>, then we automatically know that the indefinite integral of <span class="math notranslate nohighlight">\(f(x)\)</span> is equal to <span class="math notranslate nohighlight">\(F(x)+C\)</span>.</p>
+<p>Some examples:</p>
+<ul class="simple">
+<li><p>Since <span class="math notranslate nohighlight">\(\frac{d}{d x} x^{\alpha}=\alpha x^{\alpha-1}\)</span>, we have <span class="math notranslate nohighlight">\(\int \alpha x^{\alpha-1} d x=x^{\alpha}+C\)</span>.</p></li>
+<li><p>Since <span class="math notranslate nohighlight">\(\frac{d}{d x} e^{a x}=a e^{a x}\)</span>, we have <span class="math notranslate nohighlight">\(\int a e^{a x} d x=e^{a x}+C\)</span>.</p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(x \in(0, \infty)\)</span>. Since <span class="math notranslate nohighlight">\(\frac{d}{d x} \ln (x)=\frac{1}{x}\)</span>, we have <span class="math notranslate nohighlight">\(\int \frac{1}{x} d x=\ln (x)+C\)</span>.</p></li>
+</ul>
+</section>
+<section id="integration-by-substitution">
+<h3>Integration by substitution<a class="headerlink" href="#integration-by-substitution" title="Permalink to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(G:(a, b) \longrightarrow \mathbb{R}\)</span> be a function that is differentiable on the interval <span class="math notranslate nohighlight">\((a, b) \subseteq \mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(g(t)=G^{\prime}(t)=\frac{d G(t)}{d t}\)</span> be its derivative when <span class="math notranslate nohighlight">\(t \in(a, b)\)</span>.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(t:(c, d) \longrightarrow(a, b)\)</span> be a function that is differentiable on the interval <span class="math notranslate nohighlight">\((c, d) \subseteq \mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(t^{\prime}(x)=\frac{d t(x)}{d x}\)</span> be its derivative when <span class="math notranslate nohighlight">\(x \in(c, d)\)</span>.</p>
+<p>Consider the composite function <span class="math notranslate nohighlight">\(F:(c, d) \longrightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(F(x)=G(t(x))\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(G(t)\)</span> is differentiable on <span class="math notranslate nohighlight">\((a, b), t:(c, d) \longrightarrow(a, b)\)</span>, and <span class="math notranslate nohighlight">\(t(x)\)</span> is differentiable on <span class="math notranslate nohighlight">\((c, d)\)</span>, we know that <span class="math notranslate nohighlight">\(F(x)\)</span> is differentiable on <span class="math notranslate nohighlight">\((c, d)\)</span>. Denote its derivative by <span class="math notranslate nohighlight">\(f(x)=F^{\prime}(x)=\frac{d F(x)}{d t}\)</span> when <span class="math notranslate nohighlight">\(x \in(c, d)\)</span>.</p>
+<p>We know from the chain rule of differentiation that <span class="math notranslate nohighlight">\(f(x)=F^{\prime}(x)=G^{\prime}(t(x)) t^{\prime}(x)=g(x) t^{\prime}(x)\)</span>.</p>
+<p>Recall that we have <span class="math notranslate nohighlight">\(F(x)=G(t(x))\)</span> and <span class="math notranslate nohighlight">\(f(x)=F^{\prime}(x)=g(t(x)) t^{\prime}(x)\)</span>, where <span class="math notranslate nohighlight">\(g(t)=G^{\prime}(t)\)</span>.
+Thus we know that <span class="math notranslate nohighlight">\(F(x)+C=\int F(x) d x=\int g(t(x)) t^{\prime}(x) d x\)</span>, where <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> is an arbitrary constant.</p>
+<p>Recall that <span class="math notranslate nohighlight">\(d t=\left(\frac{d t(x)}{d x}\right) d x=t^{\prime}(x) d x\)</span>. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+F(x)+C=\int F(x) d x=\int g(t(x)) t^{\prime}(x) d x \\
+=\int g(t) d t=G(t)+C=G(t(x))+C
+\end{gathered}
+\end{split}\]</div>
+<p>when <span class="math notranslate nohighlight">\(G(t)\)</span> is evaluated at the parameterised point <span class="math notranslate nohighlight">\(t=t(x)\)</span>.</p>
+<p>Note that we need to remember to substitute <span class="math notranslate nohighlight">\(t=t(x)\)</span> into <span class="math notranslate nohighlight">\(G(t)\)</span> to obtain the correct result here.</p>
+<p>We now have a framework for discussing the technique of <strong>integration by substitution</strong>.
+Clearly, this is the integral counterpart of the chain rule of differentiation.
+This techniques is useful in circumstances where each of the following properties is true.</p>
+<ol class="arabic simple">
+<li><p>You do not know how to calculate the indefinite integral of <span class="math notranslate nohighlight">\(f(x)\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>You can see a way to express <span class="math notranslate nohighlight">\(f(x)\)</span> as <span class="math notranslate nohighlight">\(f(x)=g(t(x)) t^{\prime}(x)\)</span> for which you know the functions <span class="math notranslate nohighlight">\(g(t)\)</span> and <span class="math notranslate nohighlight">\(t(x)\)</span>.</p></li>
+<li><p>You do know how to calculate the indefinite integral of <span class="math notranslate nohighlight">\(g(t)\)</span> with respect to <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Suppose that we want to find <span class="math notranslate nohighlight">\(\int f(x) d x=\int \frac{\ln (x)}{x} d x\)</span>.
+Let <span class="math notranslate nohighlight">\(g(t)=t\)</span> and <span class="math notranslate nohighlight">\(t(x)=\ln (x)\)</span>.
+This means that <span class="math notranslate nohighlight">\(g(t(x))=t(x)=\ln (x)\)</span> and <span class="math notranslate nohighlight">\(t^{\prime}(x)=\frac{1}{x}\)</span>.
+Note that <span class="math notranslate nohighlight">\(f(x)=\frac{\ln (x)}{x}=g(t(x)) t^{\prime}(x)\)</span> and
+<span class="math notranslate nohighlight">\(\int g(t) d t=\int t d t=\frac{t^{2}}{2}+C\)</span>.</p>
+<p class="sd-card-text">Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+F(x)+C=\frac{(t(x))^{2}}{2}+C=\frac{(\ln (x))^{2}}{2}+C=\frac{\ln ^{2}(x)}{2}+C .
+\]</div>
+<p class="sd-card-text">As a check on the accuracy of our proposed solution, note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\frac{d}{d x}\left(\frac{\ln ^{2}(x)}{2}\right)=\left(\frac{1}{2}\right)(2) \ln (x)\left(\frac{d \ln (x)}{d x}\right) \\
+\quad=(1) \ln (x)\left(\frac{1}{x}\right)=\frac{\ln (x)}{x}=f(x)
+\end{gathered}
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Suppose that we want to find <span class="math notranslate nohighlight">\(\int f(x) d x=\int e^{x^{2}} x d x\)</span>.
+Let <span class="math notranslate nohighlight">\(g(t)=\left(\frac{1}{2}\right) e^{t}\)</span> and <span class="math notranslate nohighlight">\(t(x)=x^{2}\)</span>.
+This means that <span class="math notranslate nohighlight">\(g(t(x))=\left(\frac{1}{2}\right) e^{t(x)}=e^{x^{2}}\)</span> and <span class="math notranslate nohighlight">\(t^{\prime}(x)=2 x\)</span>.
+Note that <span class="math notranslate nohighlight">\(f(x)=e^{x^{2}} x=g(t(x)) t^{\prime}(x)\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[
+\int g(t) d t=\int\left(\frac{1}{2}\right) e^{t} d t=\left(\frac{1}{2}\right) \int e^{t} d t=\left(\frac{1}{2}\right) e^{t}+C
+\]</div>
+<p class="sd-card-text">Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+F(x)+C=\left(\frac{1}{2}\right) e^{t(x)}+C=\left(\frac{1}{2}\right) e^{x^{2}}+C .
+\]</div>
+<p class="sd-card-text">As a check on the accuracy of our proposed solution, note that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{d x}\left(\left(\frac{1}{2}\right) e^{x^{2}}\right)=\left(\frac{1}{2}\right)(2 x) e^{x^{2}}=x e^{x^{2}}=e^{x^{2}} x
+\]</div>
+</div>
+</details></section>
+<section id="integration-by-parts">
+<h3>Integration by parts<a class="headerlink" href="#integration-by-parts" title="Permalink to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(u:(a, b) \longrightarrow \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(v:(a, b) \longrightarrow \mathbb{R}\)</span> are both functions that are differentiable on the interval <span class="math notranslate nohighlight">\((a, b) \subseteq \mathbb{R}\)</span>.
+Suppose also that there exist two other functions that are both differentiable on the interval <span class="math notranslate nohighlight">\((a, b) \subseteq \mathbb{R}, G:(a, b) \longrightarrow \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(G:(a, b) \longrightarrow \mathbb{R}\)</span>, such that <span class="math notranslate nohighlight">\(G^{\prime}(x)=u^{\prime}(x) v(x)\)</span> and <span class="math notranslate nohighlight">\(H^{\prime}(x)=v^{\prime}(x) u(x)\)</span>.</p>
+<p>Consider the function <span class="math notranslate nohighlight">\(J:(a, b) \longrightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(J(x)=u(x) v(x)\)</span>.
+We know from the product rule of differentiation that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{d x}(u(x) v(x))=\left(\frac{d u(x)}{d x}\right) v(x)+\left(\frac{d v(x)}{d x}\right) u(x)
+\]</div>
+<p>which can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{d x}(u(x) v(x))=u^{\prime}(x) v(x)+v^{\prime}(x) u(x)
+\]</div>
+<p>We have obtained the expression</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{d x}(u(x) v(x))=u^{\prime}(x) v(x)+v^{\prime}(x) u(x)
+\]</div>
+<p>This expression can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+u^{\prime}(x) v(x)=\frac{d}{d x}(u(x) v(x))-v^{\prime}(x) u(x)
+\]</div>
+<p>Thus we know that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\int u^{\prime}(x) v(x) d x=\int\left(\frac{d}{d x}(u(x) v(x))-v^{\prime}(x) u(x)\right) d x \\
+=\int \frac{d}{d x}(u(x) v(x)) d x-\int v^{\prime}(x) u(x) d x
+\end{gathered}
+\end{split}\]</div>
+<p>Note that</p>
+<div class="math notranslate nohighlight">
+\[
+\int \frac{d}{d x}(u(x) v(x)) d x=u(x) v(x)+C
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> is an arbitrary constant.</p>
+<p>This gives us</p>
+<div class="math notranslate nohighlight">
+\[
+\int u^{\prime}(x) v(x) d x=u(x) v(x)-\int v^{\prime}(x) u(x) d x+C .
+\]</div>
+<p>Note also that <span class="math notranslate nohighlight">\(\int u^{\prime} v d x\)</span> and <span class="math notranslate nohighlight">\(\int v^{\prime} u d x\)</span> both implicitly incorporate arbitrary constants.
+If we absorb the explicit arbitrary constant <span class="math notranslate nohighlight">\((C)\)</span> in the above expression into the implicity arbitrary constants in the <span class="math notranslate nohighlight">\(\int u^{\prime} v d x\)</span> and <span class="math notranslate nohighlight">\(\int v^{\prime} u d x\)</span> terms in some appropriate fashion, then we can rewrite that expression as</p>
+<div class="math notranslate nohighlight">
+\[
+\int u^{\prime}(x) v(x) d x=u(x) v(x)-\int v^{\prime}(x) u(x) d x
+\]</div>
+<p>We have obtained the expression</p>
+<div class="math notranslate nohighlight">
+\[
+\int u^{\prime}(x) v(x) d x=u(x) v(x)-\int v^{\prime}(x) u(x) d x
+\]</div>
+<p>This expression forms the foundation for the integration technique known as <strong>integration by parts</strong>. Clearly, integration by parts is the integral counterpart to the product rule of differentiation.</p>
+<p>Integration by parts is particularly useful when you want to find <span class="math notranslate nohighlight">\(\int f(x) d x=\int u^{\prime} v d x\)</span> and either of the following two situations occur.</p>
+<ol class="arabic simple">
+<li><p>The indefinite integral <span class="math notranslate nohighlight">\(\int v^{\prime} u d x\)</span> is easier to obtain than the indefinite integral <span class="math notranslate nohighlight">\(\int u^{\prime} v d x\)</span>.</p></li>
+<li><p>It turns out that <span class="math notranslate nohighlight">\(\int v^{\prime} u d x=\mathrm{k} \int u^{\prime} v d x\)</span> for some constant <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span>. (In this case, you get a functional equation in which the “variable” is the integrand <span class="math notranslate nohighlight">\(\int u^{\prime} v d x\)</span>. This equation can then be solved to obtain integrand <span class="math notranslate nohighlight">\(\int u^{\prime} v d x\)</span>.</p></li>
+</ol>
+<p>Sometimes, you might need to undertake multiple iterations of the technique of integration by parts.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We want to find <span class="math notranslate nohighlight">\(\int \ln (x) d x\)</span>.
+Let <span class="math notranslate nohighlight">\(u(x)=x\)</span> and <span class="math notranslate nohighlight">\(v(x)=\ln (x)\)</span>. This means that <span class="math notranslate nohighlight">\(u^{\prime}(x)=1\)</span> and <span class="math notranslate nohighlight">\(v^{\prime}(x)=\frac{1}{x}\)</span>.
+This allows us to express the required integral as</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\int \ln (x) d x=\int(1) \ln (x) d x=\int u^{\prime}(x) v(x) d x\)</span>.</p>
+<p class="sd-card-text">Integrating by parts, and ignoring any arbitrary constants, we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\int \ln (x) d x=x \ln (x)-\int\left(\frac{1}{x}\right) x d x=x \ln (x)-\int d x=x \ln (x)-x .
+\]</div>
+<p class="sd-card-text">Thus we can conclude that</p>
+<div class="math notranslate nohighlight">
+\[
+\int \ln (x) d x=x \ln (x)-x+C=x(\ln (x)-1)+C
+\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> is an arbitrary constant.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We want to find <span class="math notranslate nohighlight">\(\int \frac{\ln (x)}{x} d x\)</span>.
+Let <span class="math notranslate nohighlight">\(u(x)=\ln (x)\)</span> and <span class="math notranslate nohighlight">\(v(x)=\ln (x)\)</span>. This means that <span class="math notranslate nohighlight">\(u^{\prime}(x)=\frac{1}{x}\)</span> and <span class="math notranslate nohighlight">\(v^{\prime}(x)=\frac{1}{x}\)</span>.
+This allows us to express the required integral as <span class="math notranslate nohighlight">\(\int \frac{\ln (x)}{x} d x=\int u^{\prime}(x) v(x) d x\)</span>.</p>
+<p class="sd-card-text">Integrating by parts, and ignoring any arbitrary constants, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\int \frac{\ln (x)}{x} d x=\int u^{\prime}(x) v(x) d x=u(x) v(x)-\int v^{\prime}(x) u(x) d x \\
+=(\ln (x))(\ln (x))-\int \frac{\ln (x)}{x} d x=(\ln (x))^{2}-\int \frac{\ln (x)}{x} d x \\
+=\ln ^{2}(x)-\int \frac{\ln (x)}{x} d x
+\end{gathered}
+\end{split}\]</div>
+<p class="sd-card-text">Ignoring any arbitrary constants, we have shown that</p>
+<div class="math notranslate nohighlight">
+\[
+\int \frac{\ln (x)}{x} d x=\ln ^{2}(x)-\int \frac{\ln (x)}{x} d x
+\]</div>
+<p class="sd-card-text">This equation can be rearranged to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+2 \int \frac{\ln (x)}{x} d x=\ln ^{2}(x)
+\]</div>
+<p class="sd-card-text">so that, ignoring any arbitrary constants, we have</p>
+<div class="math notranslate nohighlight">
+\[
+\int \frac{\ln (x)}{x} d x=\left(\frac{1}{2}\right) \ln ^{2}(x)
+\]</div>
+<p class="sd-card-text">Thus we know that</p>
+<div class="math notranslate nohighlight">
+\[
+\int \frac{\ln (x)}{x} d x=\left(\frac{1}{2}\right) \ln ^{2}(x)+C
+\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> is an arbitrary constant.</p>
+</div>
+</details></section>
+<section id="integration-of-rational-functions">
+<h3>Integration of rational functions<a class="headerlink" href="#integration-of-rational-functions" title="Permalink to this heading">#</a></h3>
+<p>If the the integrand <span class="math notranslate nohighlight">\(f(x)\)</span> is a rational function, then decomposing that rational function into the sum of a number of more simple rational functions can sometimes help with finding the indefinite integral <span class="math notranslate nohighlight">\(\int f(x) d x\)</span>. This decomposition technique is known as the method of “partial fractions”.</p>
+<p>A rational function <span class="math notranslate nohighlight">\(R(x)\)</span> is simply the ratio of two polynomial functions, <span class="math notranslate nohighlight">\(P(x)\)</span> and <span class="math notranslate nohighlight">\(Q(x)\)</span>. It takes the form</p>
+<div class="math notranslate nohighlight">
+\[
+R(x)=\frac{P(x)}{Q(x)}=\frac{a_{m} x^{m}+a_{m-1} x^{m-1}+\cdots+a_{1} x+a_{0}}{b_{n} x^{n}+b_{n-1} x^{n-1}+\cdots+b_{1} x+b_{0}}
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[
+P(x)=a_{m} x^{m}+a_{m-1} x^{m-1}+\cdots+a_{1} x+a_{0}
+\]</div>
+<p>is an <span class="math notranslate nohighlight">\(m\)</span> th order polynomial (so that <span class="math notranslate nohighlight">\(a_{m} \neq 0\)</span> ), and</p>
+<div class="math notranslate nohighlight">
+\[
+Q(x)=b_{m} x^{m}+b_{m-1} x^{m-1}+\cdots+b_{1} x+b_{0}
+\]</div>
+<p>is an <span class="math notranslate nohighlight">\(n\)</span>th order polynomial (so that <span class="math notranslate nohighlight">\(b_{n} \neq 0\)</span> ).</p>
+<p>Note that there is no requirement that the polynomial functions <span class="math notranslate nohighlight">\(P(x)\)</span> and <span class="math notranslate nohighlight">\(Q(x)\)</span> be of the same order. (In other words, we do not require that <span class="math notranslate nohighlight">\(m=n\)</span>.)</p>
+<p>The most interesting case is when <span class="math notranslate nohighlight">\(m&lt;n\)</span>. In such cases, the rational function <span class="math notranslate nohighlight">\(R(x)\)</span> is called a “proper” rational function.</p>
+<p>When <span class="math notranslate nohighlight">\(m \geqslant n\)</span>, then we can always use the process of long division to write the original rational function <span class="math notranslate nohighlight">\(R(x)\)</span> as the sum of a polynomial function <span class="math notranslate nohighlight">\(Y(x)\)</span> and another proper rational function <span class="math notranslate nohighlight">\(R^{*}(x)\)</span>.</p>
+<p>This is nicely illustrated by the following example from Chapter 14 of <span id="id88">[<a class="reference internal" href="#id20" title="RA Silverman. Modern calculus and analytic geometry. Dover Publications, 1969. The 2002 Dover corrected republication of the original 1969 Macmillan Company edition.">10Sil69</a>]</span>. Consider the rational function <span class="math notranslate nohighlight">\(R(x)=\frac{x^{2}+x-1}{x-1}\)</span>. Note the following.</p>
+<img alt="_images/longdiv.png" class="align-center" src="_images/longdiv.png" />
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+R(x)=\frac{x^{2}+x-1}{x-1}=x+2+\left(\frac{1}{x-1}\right) .
+\]</div>
+<p>Since any non-proper rational function <span class="math notranslate nohighlight">\(R(x)\)</span> can be written as the sum of a polynomial function <span class="math notranslate nohighlight">\(Y(x)\)</span> and a proper rational function <span class="math notranslate nohighlight">\(R^{*}(x)\)</span>, we know that</p>
+<div class="math notranslate nohighlight">
+\[
+\int R(x) d x=\int Y(x) d x+\int R^{*}(x) d x
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\int Y(x) d x &amp;= \int\left(c_{y} x^{y}+c_{y-1} x^{y-1}+\cdots+c_{1} x+c_{0}\right) d x \\
+&amp;=\int\left(\sum_{i=0}^{y} c_{y-i} x^{y-i}\right) d x=\sum_{i=0}^{y}\left(\int c_{y-i} x^{y-i} d x\right) \\
+&amp;=\sum_{i=0}^{y}\left(c_{y-i} \int x^{y-i} d x\right)=\sum_{i=0}^{y}\left(\frac{c_{y-i}}{(y-i+1)} \int(y-i+1) x^{y-i} d x\right)\\
+&amp;=\int\left(c_{y} x^{y}+c_{y-1} x^{y-1}+\cdots+c_{1} x+c_{0}\right) d x \\
+&amp;=\int\left(\sum_{i=0}^{y} c_{y-i} x^{y-i}\right) d x=\sum_{i=0}^{y}\left(\int c_{y-i} x^{y-i} d x\right) \\
+&amp;=\sum_{i=0}^{y}\left(c_{y-i} \int x^{y-i} d x\right)=\sum_{i=0}^{y}\left(\frac{c_{y-i}}{(y-i+1)} \int(y-i+1) x^{y-i} d x\right) \\
+&amp;=\sum_{i=0}^{y}\left(\frac{c_{y-i}}{y-i+1}\right) x^{y-i+1} \\
+&amp;=\left(\frac{c_{y}}{y+1}\right) x^{y+1}+\left(\frac{c_{y-1}}{y}\right) x^{y}+\cdots+\left(\frac{c_{1}}{2}\right) x^{2}+c_{0} x .
+\end{aligned}
+\end{split}\]</div>
+<p>Thus when <span class="math notranslate nohighlight">\(R(x)\)</span> is a non-proper rational function, we can easily calculate the integral of the polynomial component of that function.
+Doing so yields:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\int R(x) d x=\int Y(x) d x+\int R^{*}(x) d x \\
+=\left(\sum_{i=0}^{y}\left(\frac{c_{y-i}}{y-i+1}\right) x^{y-i+1}\right)+\int R^{*}(x) d x .
+\end{gathered}
+\end{split}\]</div>
+<p>This leaves us with the task of finding the integral of the proper rational function that constitutes the remainder term (in other words, the task of finding <span class="math notranslate nohighlight">\(\left.\int R^{*}(x) d x\right)\)</span>.
+In cases where <span class="math notranslate nohighlight">\(R(x)\)</span> is a proper rational function to begin with, then this last step is the only task that we face.</p>
+<p>Sometimes you will be able to find <span class="math notranslate nohighlight">\(\int R^{*}(x) d x\)</span> through direct integration, or integration by substitution, or integration by parts.
+In other cases, the technique of partial fractions might help you to find <span class="math notranslate nohighlight">\(\int R^{*}(x) d x\)</span>.
+You might like to review the material on partial fractions that we covered earlier in the semester at this point in time.</p>
+</section>
+</section>
+<section id="the-definite-integral-and-the-area-under-a-curve">
+<h2>The definite integral and the area under a curve<a class="headerlink" href="#the-definite-integral-and-the-area-under-a-curve" title="Permalink to this heading">#</a></h2>
+<p>Informally, a definite integral of a function tells us the area under the curve that represents the graph of that function between two points.</p>
+<ul class="simple">
+<li><p><em>Illustrate this on the white-board.</em></p></li>
+</ul>
+<p>Slightly more precisely, it tells us the aggregate signed area between the curve that represents the graph of that function and the axis for the independent variable between two points.</p>
+<ul class="simple">
+<li><p>Some care is needed here. When the curve is above the axis, the area enters the aggregate sum positively. When the curve is below the axis, the area enters the aggregate sum negatively.</p></li>
+<li><p><em>Illustrate this on the white-board.</em></p></li>
+</ul>
+<p>This “aggregate signed area” is related to the indefinite integral of the function. This relationship is captured through the “Fundamental Theorem of Calculus”. More on this later.</p>
+<section id="area-approximation-by-the-sum-of-box-areas">
+<h3>Area approximation by the sum of box areas<a class="headerlink" href="#area-approximation-by-the-sum-of-box-areas" title="Permalink to this heading">#</a></h3>
+<p>How might we try and measure the area under a curve?
+One way might be to try and approximate it by adding up the area of boxes whose sum seems like it should be close to the area under the curve.
+The advantage of this approach is that calculating the area of boxes (or, rather rectangles) is easy. We know from high school (and perhaps even primary school) that it is just length times breadth (or height times width).</p>
+<p>But how do we form these boxes?</p>
+<ul class="simple">
+<li><p><em>Illustrate on the white-board.</em></p></li>
+<li><p>Suppose that we want to calculate the area under the graph of the function <span class="math notranslate nohighlight">\(f(x)\)</span> between the points <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, where <span class="math notranslate nohighlight">\(a&lt;b\)</span>. To keep life simple, suppose also that <span class="math notranslate nohighlight">\(f(x)&gt;0\)</span> for all <span class="math notranslate nohighlight">\(x \in[a, b]\)</span>.</p></li>
+<li><p>Choose a finite partition of the interval <span class="math notranslate nohighlight">\([a, b]\)</span>. This will take the form <span class="math notranslate nohighlight">\(\left\{a, t_{1}, t_{2}, t_{3}, \cdots, t_{n-1}, t_{n}, b\right\}\)</span>.</p></li>
+<li><p>Note that <span class="math notranslate nohighlight">\(\left[a, t_{1}\right] \cup\left(t_{1}, t_{2}\right] \cup\left(t_{2}, t_{3}\right] \cup \cdots \cup\left(t_{n-1}, t_{n}\right] \cup\left(t_{n}, b\right]=[a, b]\)</span> and <span class="math notranslate nohighlight">\(\left[a, t_{1}\right] \cap\left(t_{1}, t_{2}\right] \cap\left(t_{2}, t_{3}\right] \cap \cdots \cap\left(t_{n-1}, t_{n}\right] \cap\left(t_{n}, b\right]=\varnothing\)</span>.</p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(B_{1}=\left[a, t_{1}\right], B_{n+1}=\left(t_{n}, b\right]\)</span>, and <span class="math notranslate nohighlight">\(B_{k}=\left(t_{k-1}, t_{k}\right]\)</span> for <span class="math notranslate nohighlight">\(k \in\{2,3, \cdots, n\}\)</span>.</p></li>
+<li><p>This allows us to express our partition as <span class="math notranslate nohighlight">\(\left\{B_{1}, B_{2}, \cdots, B_{n+1}\right\}\)</span>.</p></li>
+<li><p>We can use this partition to form the bases of <span class="math notranslate nohighlight">\((n+1)\)</span> boxes.</p></li>
+<li><p>The distances for each of these bases, moving from left to right along the <span class="math notranslate nohighlight">\(x\)</span>-axis between the points <span class="math notranslate nohighlight">\(x=a\)</span> and <span class="math notranslate nohighlight">\(x=b\)</span>, are <span class="math notranslate nohighlight">\(\left(t_{1}-a\right)\)</span>, <span class="math notranslate nohighlight">\(\left(t_{2}-t_{1}\right),\left(t_{3}-t_{2}\right), \cdots,\left(t_{n}-t_{n-1}\right)\)</span>, and <span class="math notranslate nohighlight">\(\left(b-t_{n}\right)\)</span>.</p></li>
+<li><p>Note that <span class="math notranslate nohighlight">\(B_{1}\)</span> has a base distance of <span class="math notranslate nohighlight">\(\left(t_{1}-a\right)=w_{1}, B_{n+1}\)</span> has a base distance of <span class="math notranslate nohighlight">\(\left(b-t_{n}\right)=w_{n+1}\)</span>, and <span class="math notranslate nohighlight">\(B_{k}\)</span> has a base distance of <span class="math notranslate nohighlight">\(\left(t_{k}-t_{k-1}\right)=w_{k}\)</span> for <span class="math notranslate nohighlight">\(k \in\{2,3, \cdots, n\}\)</span>.</p></li>
+<li><p>But what about the height of these boxes?</p></li>
+<li><p>There are many possibilities. We will focus on two bounding possibilities. One of these will provide a lower bound for the area of each box. The other will provide an upper bound for the area of each box.</p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(h_{k}=\min \left\{f(x): x \in B_{k}\right\}\)</span> and <span class="math notranslate nohighlight">\(H_{k}=\max \left\{f(x): x \in B_{k}\right\}\)</span>.</p></li>
+<li><p>A lower bound for the area underneath the graph of the function on interval <span class="math notranslate nohighlight">\(B_{k}\)</span> is given by <span class="math notranslate nohighlight">\(L_{k}=h_{k} w_{k}\)</span>.</p></li>
+<li><p>An upper bound for the area underneath the graph of the function on interval <span class="math notranslate nohighlight">\(B_{k}\)</span> is given by <span class="math notranslate nohighlight">\(U_{k}=H_{k} w_{k}\)</span>.</p></li>
+<li><p>We can obtain a lower bound for the area underneath the graph of the function between the points <span class="math notranslate nohighlight">\(x=a\)</span> and <span class="math notranslate nohighlight">\(x=b\)</span> by summing all of the <span class="math notranslate nohighlight">\(L_{k}\)</span> terms for our partition. This lower bound will be given by <span class="math notranslate nohighlight">\(L(a, b)=\sum_{k=1}^{n+1} L_{k}\)</span>.</p></li>
+<li><p>We can obtain an upper bound for the area underneath the graph of the function between the points <span class="math notranslate nohighlight">\(x=a\)</span> and <span class="math notranslate nohighlight">\(x=b\)</span> by summing all of the <span class="math notranslate nohighlight">\(U_{k}\)</span> terms for our partition. This upper bound will be given by <span class="math notranslate nohighlight">\(U(a, b)=\sum_{k=1}^{n+1} U_{k}\)</span>.</p></li>
+<li><p>These types of upper bounds and lower bounds for the area underneath the graph of the function between the points <span class="math notranslate nohighlight">\(x=a\)</span> and <span class="math notranslate nohighlight">\(x=b\)</span> are known as upper Riemann sums and lower Riemann sums respectively.</p></li>
+</ul>
+</section>
+<section id="the-definite-integral-as-a-limit-of-riemann-sums">
+<h3>The definite integral as a limit of Riemann sums<a class="headerlink" href="#the-definite-integral-as-a-limit-of-riemann-sums" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(\hat{w}=\max \left\{w_{k}: k \in\{1,2, \cdots, n+1\}\right\}\)</span>.
+If</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\lim _{\hat{w} \rightarrow 0} L(a, b)\)</span> exists,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim _{\hat{w} \rightarrow 0} U(a, b)\)</span> exists, and</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim _{\hat{w} \rightarrow 0} L(a, b)=\lim _{\hat{w} \rightarrow 0} U(a, b)\)</span>,</p></li>
+</ol>
+<p>then the <strong>definite integral</strong> exists and is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{a}^{b} f(x) d x=I(a, b)=\lim _{\hat{w} \rightarrow 0} L(a, b)=\lim _{\hat{w} \rightarrow 0} U(a, b) .
+\]</div>
+<p>This type of definite integral is sometimes known as a <strong>Riemann integral</strong>.
+When this definite integral exists, it is equal to the aggregate signed area “underneath” the graph of a function between two points.</p>
+</section>
+</section>
+<section id="the-fundamental-theorem-of-calculus">
+<h2>The fundamental theorem of calculus<a class="headerlink" href="#the-fundamental-theorem-of-calculus" title="Permalink to this heading">#</a></h2>
+<p>The fundamental theorem of calculus says that, if <span class="math notranslate nohighlight">\(F^{\prime}(x)=f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in[a, b]\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{a}^{b} f(x) d x=F(b)-F(a)
+\]</div>
+</section>
+<section id="differentiating-definite-integrals">
+<h2>Differentiating definite integrals<a class="headerlink" href="#differentiating-definite-integrals" title="Permalink to this heading">#</a></h2>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h3>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[
+I(a, b)=\int_{a}^{b} f(x) d x
+\]</div>
+<p>Suppose that it is possible that <span class="math notranslate nohighlight">\(a, b\)</span>, and <span class="math notranslate nohighlight">\(f(x)\)</span> all depend on some parameter <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<p>We might be interested in calculating the impact of <span class="math notranslate nohighlight">\(s\)</span> on <span class="math notranslate nohighlight">\(I(a, b)\)</span>.</p>
+<p>This is actually a topic from multivariate calculus. However, we will present it here because it is an important result that gets used in economics. The result is known as “Leibniz’ rule”.</p>
+</section>
+<section id="leibniz-rule">
+<h3>Leibniz’ Rule<a class="headerlink" href="#leibniz-rule" title="Permalink to this heading">#</a></h3>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[
+I(a, b)=\int_{a}^{b} f(x) d x
+\]</div>
+<p>Suppose that it is possible that <span class="math notranslate nohighlight">\(a, b\)</span>, and <span class="math notranslate nohighlight">\(f(x)\)</span> all depend on some parameter <span class="math notranslate nohighlight">\(s\)</span>. The impact of a small change in <span class="math notranslate nohighlight">\(s\)</span> on <span class="math notranslate nohighlight">\(I(a, b)\)</span> is given by Leibniz’ rule. Leibniz’ rule says that</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d I(a, b, s)}{d s}=f(b, s) b^{\prime}(s)-f(a, s) a^{\prime}(s)+\int_{a}^{b} \frac{\partial f(x, s)}{\partial s} d x
+\]</div>
+<p>Here we will briefly consider four special sub-cases of Leibniz’ rule.
+Note that these four sub-cases are not the only possible sub-cases.</p>
+<ul class="simple">
+<li><p>Case 1: <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are functions of <span class="math notranslate nohighlight">\(s\)</span>, but <span class="math notranslate nohighlight">\(f(x)\)</span> is not a function of <span class="math notranslate nohighlight">\(s\)</span>. Here we have:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{d I(a, b ; s)}{d s}=f(b ; s) b^{\prime}(s)-f(a ; s) a^{\prime}(s)
+\]</div>
+<ul class="simple">
+<li><p>Case 2: <span class="math notranslate nohighlight">\(a\)</span> is a function of <span class="math notranslate nohighlight">\(s\)</span>, but <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(f(x)\)</span> are not functions of <span class="math notranslate nohighlight">\(s\)</span>. Here we have:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{d I(a, b ; s)}{d s}=-f(a ; s) a^{\prime}(s)
+\]</div>
+<ul class="simple">
+<li><p>Case 3: <span class="math notranslate nohighlight">\(b\)</span> is a function of <span class="math notranslate nohighlight">\(s\)</span>, but <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(f(x)\)</span> are not functions of <span class="math notranslate nohighlight">\(s\)</span>. Here we have:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{d I(a, b ; s)}{d s}=f(b ; s) b^{\prime}(s) .
+\]</div>
+<ul class="simple">
+<li><p>Case 4: <span class="math notranslate nohighlight">\(f(x)\)</span> is a function of <span class="math notranslate nohighlight">\(s\)</span>, but <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are not functions of <span class="math notranslate nohighlight">\(s\)</span>. Here we have:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{d I(a, b ; s)}{d s}=\int_{a}^{b} \frac{\partial f(x, s)}{\partial s} d x
+\]</div>
+</section>
+</section>
+<section id="improper-integrals">
+<h2>Improper integrals<a class="headerlink" href="#improper-integrals" title="Permalink to this heading">#</a></h2>
+<p>The definite integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f(x) d x\)</span> is said to be <strong>improper</strong> if either the distance between the bounds of integration is infinite (that is, if <span class="math notranslate nohighlight">\(d(a, b)=|b-a|=\infty)\)</span>, or if the integrand <span class="math notranslate nohighlight">\(f(x)\)</span> is discontinuous on the interval of integration <span class="math notranslate nohighlight">\([a, b]\)</span>, or both of these possibilities occur.
+A definite integral that is improper because the distance between the bounds of integration is infinite will take one of the following three forms:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\int_{a}^{\infty} f(x) d x\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_{-\infty}^{b} f(x) d x\)</span>, or</p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_{-\infty}^{\infty} f(x) d x\)</span>.</p></li>
+</ol>
+<p>A discontinuity of the integrand can take place at one of three location categories. These are:</p>
+<ol class="arabic simple">
+<li><p>The lower bound of integration (that is, <span class="math notranslate nohighlight">\(f(x)\)</span> is discontinuous at the point <span class="math notranslate nohighlight">\(x=a\)</span> );</p></li>
+<li><p>The upper bound of integration (that is, <span class="math notranslate nohighlight">\(f(x)\)</span> is discontinuous at the point <span class="math notranslate nohighlight">\(x=b\)</span> );</p></li>
+<li><p>An interior point of the interval of integration (that is, <span class="math notranslate nohighlight">\(f(x)\)</span> is discontinuous at the point <span class="math notranslate nohighlight">\(x=c \in(a, b))\)</span>.</p></li>
+</ol>
+<p>Of course, it is possible for the integrand to have muliple points of discontinuity on the interval of integration. Sometimes, improper integrals exist and sometimes they do not. Whether or not an improper integral exists will depend on whether or not a particular limit (or multiple particular limits) exist.</p>
+<ul class="simple">
+<li><p>The improper integral <span class="math notranslate nohighlight">\(\int_{a}^{\infty} f(x) d x\)</span> exists if the limit <span class="math notranslate nohighlight">\(\lim_ {b \uparrow \infty} \int_{a}^{b} f(x) d x\)</span> exists, in which case we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\int_{a}^{\infty} f(x) d x=\lim _{b \uparrow \infty} \int_{a}^{b} f(x) d x
+\]</div>
+<ul class="simple">
+<li><p>The improper integral <span class="math notranslate nohighlight">\(\int_{-\infty}^{b} f(x) d x\)</span> exists if the limit <span class="math notranslate nohighlight">\(\lim _{a \downarrow-\infty} \int_{a}^{b} f(x) d x\)</span> exists, in which case we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\int_{-\infty}^{b} f(x) d x=\lim _{a \downarrow-\infty} \int_{a}^{b} f(x) d x
+\]</div>
+<ul class="simple">
+<li><p>The improper integral <span class="math notranslate nohighlight">\(\int_{\infty}^{\infty} f(x) d x\)</span> exists if the limit <span class="math notranslate nohighlight">\(\lim _{a \downarrow-\infty, b \uparrow \infty} \int_{a}^{b} f(x) d x\)</span> exists, in which case we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\int_{-\infty}^{\infty} f(x) d x=\lim _{a \downarrow-\infty, b \uparrow \infty} \int_{a}^{b} f(x) d x
+\]</div>
+<ul class="simple">
+<li><p>If the integrand <span class="math notranslate nohighlight">\(f(x)\)</span> is discontinuous at the point <span class="math notranslate nohighlight">\(x=a\)</span>, the improper integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f(x) d x\)</span> exists if the limit <span class="math notranslate nohighlight">\(\lim_{\theta \downarrow a} \int_{\theta}^{b} f(x) d x\)</span> exists, in which case we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\int_{a}^{b} f(x) d x=\lim _{\theta \downarrow a} \int_{\theta}^{b} f(x) d x
+\]</div>
+<ul class="simple">
+<li><p>If the integrand <span class="math notranslate nohighlight">\(f(x)\)</span> is discontinuous at the point <span class="math notranslate nohighlight">\(x=b\)</span>, the improper integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f(x) d x\)</span> exists if the limit <span class="math notranslate nohighlight">\(\lim _{\psi \uparrow b} \int_{a}^{\psi} f(x) d x\)</span> exists, in which case we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\int_{a}^{b} f(x) d x=\lim _{\psi \uparrow b} \int_{a}^{\psi} f(x) d x .
+\]</div>
+<ul class="simple">
+<li><p>If the integrand <span class="math notranslate nohighlight">\(f(x)\)</span> is discontinuous at the point <span class="math notranslate nohighlight">\(x=c \in(a, b)\)</span>, the improper integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f(x) d x\)</span> exists if both the limit from below <span class="math notranslate nohighlight">\(\lim _{\lambda \uparrow c} \int_{a}^{\lambda} f(x) d x\)</span> exists and the limit from above <span class="math notranslate nohighlight">\(\lim _{\delta \downarrow c} \int_{\delta}^{b} f(x) d x\)</span> exists, in which case we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; \int_{a}^{b} f(x) d x=\int_{a}^{c} f(x) d x+\int_{c}^{b} f(x) d x \\
+= &amp; \lim _{\lambda \uparrow c} \int_{a}^{\lambda} f(x) d x+\lim _{\delta \downarrow c} \int_{\delta}^{b} f(x) d x .
+\end{aligned}
+\end{split}\]</div>
+<section id="some-economic-and-econometric-applications">
+<h3>Some economic and econometric applications<a class="headerlink" href="#some-economic-and-econometric-applications" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Consumer Welfare: Total Consumer Benefit, Consumer Surplus and Change in Consumer Surplus. (See separate section below.)</p></li>
+<li><p>Producer Welfare: Total Operating Costs, Producers Surplus, and Change in Producers Surplus. (See separate section below.)</p></li>
+<li><p>Choice over Time: Lifetime Utility.</p></li>
+<li><p>Choice under Uncertainty: Expected Utility.</p></li>
+<li><p>The Relationship between Probability Density Functions and Cumulative Distribution Functions.</p></li>
+<li><p>The Expected Value and Other Moments of a Probability Distribution.</p></li>
+<li><p>The Moment Generating Function and the Characteristic Function.</p></li>
+</ul>
+</section>
+<section id="preferences-over-time-contingent-consumption">
+<h3>Preferences over time contingent consumption<a class="headerlink" href="#preferences-over-time-contingent-consumption" title="Permalink to this heading">#</a></h3>
+<p>Consider a consumer that must choose how to allocate their lifetime wealth over consumption at various points in time.</p>
+<p>If time is continuous over some interval <span class="math notranslate nohighlight">\([0, T]\)</span> and the consumer can potentially consume at every point in time <span class="math notranslate nohighlight">\(t \in[0, T]\)</span>, then a time-stream of consumption is a function of the form <span class="math notranslate nohighlight">\(c:[0, T] \longrightarrow[0, \infty)\)</span>. This function specifies, for each point in time <span class="math notranslate nohighlight">\(t \in[0, T]\)</span>, the amount of consumption <span class="math notranslate nohighlight">\(c(t) \in[0, \infty)\)</span> that is chosen by the consumer (at time zero) for the point in time <span class="math notranslate nohighlight">\(t \in[0, T]\)</span>.</p>
+<p>In such cases, we sometimes assume (at least partly for tractability reasons) that such a consumer’s preferences over alternative consumption streams can be represented by a stationary “lifetime utility function” of the form</p>
+<div class="math notranslate nohighlight">
+\[
+U\left(\{c(t)\}_{t \in[0, T]}\right)=\int_{0}^{T} u(c(t)) e^{-\rho t} d t
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho \in(0,1)\)</span> is a fixed rate of time preference and <span class="math notranslate nohighlight">\(u(c)\)</span> is a stationary per-period (or point-in-time) utility function.</p>
+</section>
+<section id="preferences-over-state-contingent-consumption">
+<h3>Preferences over state contingent consumption<a class="headerlink" href="#preferences-over-state-contingent-consumption" title="Permalink to this heading">#</a></h3>
+<p>Suppose that there are an uncountably infinite number of potential states of the world, with each point in the interval non-empty closed interval <span class="math notranslate nohighlight">\((a, b)\)</span> corresponding to a particular state. Denote the state variable by <span class="math notranslate nohighlight">\(\omega \in[a, b]\)</span>.</p>
+<p>Nature chooses which state of nature will actually prevail by drawing one state from <span class="math notranslate nohighlight">\((a, b)\)</span> according to a commonly known probability distribution that has a probability density function of the form <span class="math notranslate nohighlight">\(f:(a, b) \longrightarrow[0,1]\)</span>.</p>
+<p>Suppose that a consumer’s consumption level varies with the random state of Nature, so that it is given by a function of the form <span class="math notranslate nohighlight">\(c:(a, b) \longrightarrow[0, \infty)\)</span>.</p>
+<p>If the consumer is a von Neumann-Morgenstern (vNM) expected utility maximiser with a Bernoulli utility function <span class="math notranslate nohighlight">\(u:[0, \infty] \longrightarrow \mathbb{R}\)</span> of the form <span class="math notranslate nohighlight">\(u(c)\)</span>, then the “vNM expected utility function” for this consumer is</p>
+<div class="math notranslate nohighlight">
+\[
+U\left(\{c(\omega)\}_{\omega \in[a, b]}\right)=\int_{a}^{b} u(c(\omega)) f(\omega) d \omega .
+\]</div>
+<p><br><br><br><br></p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="consumer-demand-and-consumer-welfare">
+<h1>Consumer demand and consumer welfare<a class="headerlink" href="#consumer-demand-and-consumer-welfare" title="Permalink to this heading">#</a></h1>
+<section id="sources-references-and-reading-guide">
+<h2>Sources, references and reading guide<a class="headerlink" href="#sources-references-and-reading-guide" title="Permalink to this heading">#</a></h2>
+<p>None of this material originates with me. It has been drawn from, or influenced by, a number of sources. Some of these might include some or all of the sources listed in the references below.</p>
+<p>These are references that are suitable for a first-year undergraduate economics course.</p>
+<ul class="simple">
+<li><p><span id="id89">[<a class="reference internal" href="#id64" title="AA Alchian and WR Allen. Exchange and production: Competition, coordination and control (third edition). Wadsworth Publishing Company, 1983.">10AA83</a>]</span>: Chapter 2 (pp. 13-44).</p></li>
+<li><p><span id="id90">[<a class="reference internal" href="#id65" title="KE Case and RC Fair. Principles of Economics. Prentice-Hall, 1989.">10CF89</a>]</span>: Chapters 4-6 (pp. 77-162).</p></li>
+<li><p><span id="id91">[<a class="reference internal" href="#id66" title="J Gans, S King, and NG Mankiw. Principles of microeconomics (fourth edition). Cengage Learning Australia, 2009.">10GKM09</a>]</span>: Chapters 4, 5, 7 and 22 (pp. 62-112, 134-154 and 486-515).</p></li>
+<li><p><span id="id92">[<a class="reference internal" href="#id67" title="DS Hamermesh. Economics is everywhere (second edition). McGraw-Hill-Irwin, 2006.">10Ham06</a>]</span>: Chapters 2, 5 and 6 (pp. 15-24 and 49-77).</p></li>
+<li><p><span id="id93">[<a class="reference internal" href="#id68" title="P Heyne. The economic way of thinking (sixth edition). Macmillan Publishing Company, 1991.">10Hey91</a>]</span>: Chapter 2 (pp. 15-45).</p></li>
+</ul>
+<p>These are references that are suitable for a second-year undergraduate economics course.</p>
+<ul class="simple">
+<li><p><span id="id94">[<a class="reference internal" href="#id69" title="J Hirshleifer. Price theory and applications (fourth edition). Prentice-Hall, 1988. With the assistance of M Sproul.">10Hir88</a>]</span>: Chapters 2 and 7E (pp. 23-54 and 204-212).</p></li>
+<li><p><span id="id95">[<a class="reference internal" href="#id70" title="J Hirshleifer, A Glazer, and D Hirshleifer. Price theory and applications: Decisions, markets, and information (seventh edition). Cambridge University Press, 2005.">10HGH05</a>]</span>: Chapters 2 and 7.3.</p></li>
+<li><p><span id="id96">[<a class="reference internal" href="#id71" title="W Nicholson. Intermediate microeconomics and its applications (fourth edition). The Dryden Press, 1987.">10Nic87</a>]</span>: Chapters 1 and 12 (Consumers Surplus) (pp. 5-21 and 334).</p></li>
+<li><p><span id="id97">[<a class="reference internal" href="#id72" title="HR Varian. Intermediate microeconomics: a modern approach. WW Norton and Company, 1987.">10Var87</a>]</span>: Chapters 1 and 15 (pp. 1-19 and 242-266).</p></li>
+</ul>
+<p>These are references that are suitable for a third-year undergraduate economics course.</p>
+<ul class="simple">
+<li><p><span id="id98">[<a class="reference internal" href="#id29" title="H Gravelle and R Rees. Microeconomics. Longman Group, 1981.">10GR81</a>]</span>: Section C of Chapter 4 (pp. 103-111).</p></li>
+<li><p><span id="id99">[<a class="reference internal" href="#id73" title="W Nicholson. Microeconomic theory: Basic principles and extensions (seventh edition). The Dryden Press, 1998.">10Nic98</a>]</span>: Chapters 1, 5 (Consumer Surplus), and 15 (pp. 3-22, 152-157, and 438-458).</p></li>
+<li><p><span id="id100">[<a class="reference internal" href="#id39" title="A Takayama. Analytical methods in economics. The University of Michigan Press, 1993.">10Tak93</a>]</span>: Appendix C (pp. 621-647).</p></li>
+<li><p><span id="id101">[<a class="reference internal" href="#id34" title="HR Varian. Microeconomic analysis (third edition). WW Norton and Sons, 1992.">10Var92</a>]</span>: Chapter 10 (pp. 160-171).</p></li>
+</ul>
+</section>
+<section id="marginal-private-benefit-and-demand">
+<h2>Marginal private benefit and demand<a class="headerlink" href="#marginal-private-benefit-and-demand" title="Permalink to this heading">#</a></h2>
+<p>The marginal benefit of an additional unit of a good to you is the maximum amount that you would pay for that additional unit, given your consumption level of the good without the additional unit.</p>
+<p>The marginal private benefit schedule for a good is a function of the form <span class="math notranslate nohighlight">\(M B(Q\)</span>; other <span class="math notranslate nohighlight">\()\)</span>, where <span class="math notranslate nohighlight">\(Q\)</span> is the quantity of the good that is consumed, other is the values that are taken by a set of other factors that affect the marginal benefit of the good in question and <span class="math notranslate nohighlight">\(M B\)</span> ( <span class="math notranslate nohighlight">\(Q\)</span>; other) is the benefit that the consumer receives from the last of the <span class="math notranslate nohighlight">\(Q\)</span> units of the good that he consumed.</p>
+<p>As a matter of convenience, we will often write <span class="math notranslate nohighlight">\(M B(Q ;\)</span> other <span class="math notranslate nohighlight">\()\)</span> as simply <span class="math notranslate nohighlight">\(M B(Q)\)</span>.</p>
+<section id="diminishing-marginal-benefits">
+<h3>Diminishing marginal benefits<a class="headerlink" href="#diminishing-marginal-benefits" title="Permalink to this heading">#</a></h3>
+<p>We will assume that the marginal private benefit schedule displays diminishing marginal returns. In other words, holding the values of the things that are in other fixed, the benefit from consuming a further unit of the good (that is, the marginal benefit) will decrease as <span class="math notranslate nohighlight">\(Q\)</span> increases. This means that the marginal private benefit schedule for a good will be downward sloping in <span class="math notranslate nohighlight">\((Q, P)\)</span>-space.</p>
+</section>
+<section id="discrete-mb-schedule-example">
+<h3>Discrete MB schedule example<a class="headerlink" href="#discrete-mb-schedule-example" title="Permalink to this heading">#</a></h3>
+<p>This example comes from <span id="id102">[<a class="reference internal" href="#id64" title="AA Alchian and WR Allen. Exchange and production: Competition, coordination and control (third edition). Wadsworth Publishing Company, 1983.">10AA83</a>]</span> (p. 43, Question 43).</p>
+<p>Suppose that only integer (whole number) amounts of a particular good (call it <span class="math notranslate nohighlight">\(X\)</span> ) may be consumed. The marginal benefit schedule for good <span class="math notranslate nohighlight">\(X\)</span> is given by the following table.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p><span class="math notranslate nohighlight">\(\mathbf{Q}\)</span></p></th>
+<th class="text-left head"><p>1</p></th>
+<th class="text-left head"><p>2</p></th>
+<th class="text-left head"><p>3</p></th>
+<th class="text-left head"><p>4</p></th>
+<th class="text-left head"><p>5</p></th>
+<th class="text-left head"><p>6</p></th>
+<th class="text-left head"><p>7</p></th>
+<th class="text-left head"><p>8</p></th>
+<th class="text-left head"><p>9</p></th>
+<th class="text-left head"><p>10</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\mathbf{M B}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\$ 10\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\$ 9\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\$ 8\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\$ 7\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\$ 6\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\$ 5\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\$ 4\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\$ 3\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\$ 2\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\$ 1\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>The following diagram is the graph of this marginal private benefit schedule.</p>
+<figure class="align-center" id="id106">
+<a class="reference internal image-reference" href="_images/discrete_mb.png"><img alt="_images/discrete_mb.png" src="_images/discrete_mb.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Marginal private benefit schedule (discrete)</span><a class="headerlink" href="#id106" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="linear-mb-schedule-example">
+<h3>Linear MB schedule example<a class="headerlink" href="#linear-mb-schedule-example" title="Permalink to this heading">#</a></h3>
+<p>Suppose that the marginal private benefit schedule is given by the equation <span class="math notranslate nohighlight">\(M P B=20-4 Q\)</span>.</p>
+<p>This is the equation of a straight line in <span class="math notranslate nohighlight">\((Q, M P B)\)</span>-space with a MPB intercept equal to <span class="math notranslate nohighlight">\(\$ 20\)</span> and a slope equal to <span class="math notranslate nohighlight">\(( -4 ) (\$/\text{Unit})\)</span>.
+The diagram below is a graph of this marginal private benefit schedule.</p>
+<figure class="align-center" id="id107">
+<a class="reference internal image-reference" href="_images/linear_mb.png"><img alt="_images/linear_mb.png" src="_images/linear_mb.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Marginal private benefit schedule (linear)</span><a class="headerlink" href="#id107" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="non-linear-mb-schedule-example">
+<h3>Non-Linear MB schedule example<a class="headerlink" href="#non-linear-mb-schedule-example" title="Permalink to this heading">#</a></h3>
+<p>Suppose that the marginal private benefit schedule is given by the equation</p>
+<div class="math notranslate nohighlight">
+\[
+M P B=\frac{100}{(Q+1)}
+\]</div>
+<p>This is the equation of a rectangular hyperbola in <span class="math notranslate nohighlight">\((Q, M P B)\)</span>-space (or, more accurately, in <span class="math notranslate nohighlight">\((Q+1, M P B)\)</span>-space).</p>
+<p>The diagram below is a graph of this marginal private benefit schedule.</p>
+<figure class="align-center" id="id108">
+<a class="reference internal image-reference" href="_images/nonlinear_mb.png"><img alt="_images/nonlinear_mb.png" src="_images/nonlinear_mb.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Marginal private benefit schedule (nonlinear)</span><a class="headerlink" href="#id108" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="marginal-benefit-and-demand">
+<h2>Marginal benefit and demand<a class="headerlink" href="#marginal-benefit-and-demand" title="Permalink to this heading">#</a></h2>
+<p>A MPB schedule tells us how much an individual benefits from an additional unit of a good or service. This is, effectively, the maximum amount that the individual would be willing to pay for that additional unit.</p>
+<p>A demand schedule tells us how many units of an item a consumer would be willing to purchase at a particular price. Clearly, a consumer will only choose to purchase an additional unit of a good if the MPB from that unit either matches or exceeds the price that must be paid for that unit.</p>
+<p>Since the MPB schedule is downward sloping in <span class="math notranslate nohighlight">\((Q, M P B)\)</span>-space, an individual will purchase all units up to the point where MPB is equal to the price.</p>
+<p>Let <span class="math notranslate nohighlight">\(P\)</span> denote the price of the good or service. Since the last unit that is purchased will be the one for which <span class="math notranslate nohighlight">\(M P B=P\)</span>, we know that for any given price <span class="math notranslate nohighlight">\(P\)</span>, the quantity demanded will be given by the point on the MPB schedule where <span class="math notranslate nohighlight">\(M P B=P\)</span>.</p>
+<p>Thus the inverse demand schedule can be found by replacing MPB (the LHS of the equation for the MPB schedule) with the price of the commodity, <span class="math notranslate nohighlight">\(P\)</span>. This yields an equation of the form <span class="math notranslate nohighlight">\(P=M B(Q)\)</span>. Since this is the inverse demand equation, we will sometimes write this as <span class="math notranslate nohighlight">\(P=D^{-1}(Q)\)</span>. If we invert this inverse demand equation (that is, rearrange it to make <span class="math notranslate nohighlight">\(Q\)</span> the subject), then we obtain the demand equation, <span class="math notranslate nohighlight">\(Q=D(P)\)</span>.</p>
+</section>
+<section id="the-marshallian-graphing-convention">
+<h2>The Marshallian graphing convention<a class="headerlink" href="#the-marshallian-graphing-convention" title="Permalink to this heading">#</a></h2>
+<p>In economics, we employ an unusual convention for graphing demand (and supply) functions. This convention is known as the Marshallian graphing convention.</p>
+<ul class="simple">
+<li><p>You might recall from high school mathematics that the usual convention for graphing functions of the form <span class="math notranslate nohighlight">\(y=f(x)\)</span> is that the independent variable <span class="math notranslate nohighlight">\((x)\)</span> is depicted on the horizontal axis and the dependent variable <span class="math notranslate nohighlight">\((y)\)</span> is depicted on the vertical axis.</p></li>
+</ul>
+<p>We typically view demand functions (and supply functions) as expressing quantity demanded (or supplied) as a function of price.</p>
+<ul class="simple">
+<li><p>As such, under the standard graphing convention, we would place price on the horizontal axis and quantity on the vertical axis.</p></li>
+<li><p>Instead of this standard convention, economists typically place quantity on the horizontal axis and price on the vertical axis.</p></li>
+<li><p>What might be referred to as a demand curve (or a supply curve) under the Marshallian graphing convention would really be an inverse demand curve (or inverse supply curve) under the standard graphing convention.</p></li>
+</ul>
+<p>The Marshallian convention means that, while we talk about demand curves (or supply curves), we actually draw <em>inverse</em> demand curves (or inverse supply curves). This means that you need to be careful when moving from the equation for a demand curve (or a supply curve) to the graph of that demand curve (or supply curve) if you are going to follow the Marshallian convention when graphing demand curves (or supply curves).</p>
+<p>Suppose that we have a linear demand curve of the form</p>
+<div class="math notranslate nohighlight">
+\[
+Q=a-b P,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(a&gt;0\)</span> and <span class="math notranslate nohighlight">\(b&gt;0\)</span>.</p>
+<p>The corresponding inverse-demand curve can be found as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rlcc}
+Q &amp; = &amp; a-b P \\
+\Longleftrightarrow \quad Q+b P &amp; = &amp; a \\
+\Longleftrightarrow \quad b P &amp; = &amp; a-Q \\
+\Longleftrightarrow \quad P &amp; = &amp; \frac{a}{b}-\left(\frac{1}{b}\right) Q .
+\end{array}
+\end{split}\]</div>
+<p>Note the inverse demand curve is also linear when the demand curve itself is linear.</p>
+<p>Recall that we have a linear demand curve: of the form</p>
+<div class="math notranslate nohighlight">
+\[
+Q=a-b P,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(a&gt;0\)</span> and <span class="math notranslate nohighlight">\(b&gt;0\)</span>.</p>
+<ul class="simple">
+<li><p>The slope of this demand curve is equal to <span class="math notranslate nohighlight">\((-b)\)</span> and the <span class="math notranslate nohighlight">\(Q\)</span>-intercept is the point <span class="math notranslate nohighlight">\((0, a)\)</span> in <span class="math notranslate nohighlight">\((P, Q)\)</span>-space.</p></li>
+<li><p>It can be shown that the <span class="math notranslate nohighlight">\(P\)</span>-intercept is the point <span class="math notranslate nohighlight">\(\left(\frac{a}{b}, 0\right)\)</span> in <span class="math notranslate nohighlight">\((P, Q)\)</span>-space.</p></li>
+<li><p>This is illustrated below using the standard mathematical convention for choice of axes.</p></li>
+</ul>
+<figure class="align-center" id="id109">
+<a class="reference internal image-reference" href="_images/not_marshallian.png"><img alt="_images/not_marshallian.png" src="_images/not_marshallian.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Drawing a linear demand curve (<strong>not</strong> the Marshallian convention)</span><a class="headerlink" href="#id109" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Recall that the corresponding inverse demand curve is</p>
+<div class="math notranslate nohighlight">
+\[
+P=\frac{a}{b}-\left(\frac{1}{b}\right) Q
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(a&gt;0\)</span> and <span class="math notranslate nohighlight">\(b&gt;0\)</span>.</p>
+<ul class="simple">
+<li><p>The slope of this demand curve is equal to <span class="math notranslate nohighlight">\(\left\{-\left(\frac{1}{b}\right)\right\}\)</span> and the <span class="math notranslate nohighlight">\(P\)</span>-intercept is the point <span class="math notranslate nohighlight">\(\left(0, \frac{a}{b}\right)\)</span> in <span class="math notranslate nohighlight">\((Q, P)\)</span>-space.</p></li>
+<li><p>It can be shown that the <span class="math notranslate nohighlight">\(P\)</span>-intercept is the point <span class="math notranslate nohighlight">\((a, 0)\)</span> in <span class="math notranslate nohighlight">\((Q, P)\)</span>-space.</p></li>
+<li><p>This is illustrated on the next page using the standard mathematical convention for choice of axes (which is equivalent to graphing the original demand curve using the Marshallian graphing convention).</p></li>
+</ul>
+<figure class="align-center" id="id110">
+<a class="reference internal image-reference" href="_images/marshallian.png"><img alt="_images/marshallian.png" src="_images/marshallian.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Drawing a linear demand curve (using the Marshallian convention)</span><a class="headerlink" href="#id110" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="obtaining-total-benefit-from-marginal-benefits">
+<h2>Obtaining total benefit from marginal benefits<a class="headerlink" href="#obtaining-total-benefit-from-marginal-benefits" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Suppose that an individual consumes <span class="math notranslate nohighlight">\(Q\)</span> units of a good or service. What is the the total benefit to the individual of this level of consumption?</p>
+<ul>
+<li><p>We will assume for the moment that the good or service in question can only be consumed in integer (that is, whole number) amounts.</p></li>
+<li><p>This is the type of situation that was depicted in the discrete MPB schedule example provided earlier in these notes.</p></li>
+</ul>
+</li>
+<li><p>We can find the marginal benefits for each of the units that are consumed from the individual’s MPB schedule for this good or service.</p>
+<ul>
+<li><p>The marginal benefit of the first unit is given by <span class="math notranslate nohighlight">\(M P B(1)\)</span>, the marginal benefit of the second unit is given by <span class="math notranslate nohighlight">\(\operatorname{MPB}(2), \cdots\)</span>, and the marginal benefit of the <span class="math notranslate nohighlight">\(Q\)</span> th unit is given by <span class="math notranslate nohighlight">\(\operatorname{MPB}(Q)\)</span>.</p></li>
+</ul>
+</li>
+<li><p>The total benefit that the individual obtains from consuming <span class="math notranslate nohighlight">\(Q\)</span> units of this good or service is simply the sum over all units that are consumed of the MPB from each of those units.</p></li>
+</ul>
+<p>In other words,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\operatorname{TPB}(Q) &amp; =\sum_{q=1}^{Q} \operatorname{MPB}(q) \\
+&amp; =M P B(1)+M P B(2)+\cdots+\operatorname{MPB}(Q) .
+\end{aligned}
+\end{split}\]</div>
+<p>Note that this is simply the area below the MPB schedule. Since the MPB schedule coincides with the inverse demand schedule, this is also the area under the inverse demand schedule.</p>
+<p>Graphically, the total benefit associated with consuming 10 units of a good or service for the case considered in the discrete MPB schedule example provided earlier is the shaded area under the MPB schedule in the diagram below.</p>
+<figure class="align-center" id="id111">
+<a class="reference internal image-reference" href="_images/discrete_mb.png"><img alt="_images/discrete_mb.png" src="_images/discrete_mb.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Total benefit (discrete MPB schedule)</span><a class="headerlink" href="#id111" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Numerically, the total benefit for this example can be calculated as follows.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\operatorname{TPB}(10) &amp; =\sum_{q=1}^{10} \operatorname{MPB}(q) \\
+&amp; =\operatorname{MPB}(1)+\operatorname{MPB}(2)+\cdots+\operatorname{MPB}(10) \\
+&amp; =\$ 10+\$ 9+\$ 8+\$ 7+\$ 6+\$ 5+\$ 4+\$ 3+\$ 2+\$ 1 \\
+&amp; =\$ 55 .
+\end{aligned}
+\end{split}\]</div>
+<p>Recall that when consumption must involve integer (that is, whole number) units, the relationship between total benefit and the relevant marginal private benefits is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{TPB}(Q)=\sum_{q=1}^{Q} \operatorname{MPB}(q)
+\]</div>
+<p>This relationship can be extended to the case where consumption does not have to be measured in integer (that is, whole number) units.
+In the case where consumption of infinitesimal amounts is possible, the relevant equation becomes</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{TPB}(Q)=\int_{q=0}^{Q} M P B(q) d q
+\]</div>
+<p>As before, this is simply the area under the relevant MPB (or inverse demand) schedule between the points <span class="math notranslate nohighlight">\(q=0\)</span> and <span class="math notranslate nohighlight">\(q=Q\)</span>.</p>
+<p>Graphically, the total benefits associated with consuming <span class="math notranslate nohighlight">\(Q\)</span> units of a good or service is the shaded area under the MPB schedule in the following diagram.</p>
+<ul class="simple">
+<li><p>While the diagram employs a linear inverse demand curve, it did not have to do so.</p></li>
+<li><p>The same basic idea applies to non-linear inverse demand curves.</p></li>
+<li><p>However, in non-linear cases, the area under the curve will not be equal to sum of the area of a rectangle and the area of a triangle.</p></li>
+<li><p>Hence the need for the definite integral in the TPB formula provided earlier.</p></li>
+</ul>
+<p>In the case where the MPB (or inverse demand) schedule is linear, the total private benefit can be calculated by using some simple geometry results from high school mathematics.</p>
+<p>Suppose that the inverse demand curve for an individual is given by</p>
+<div class="math notranslate nohighlight">
+\[
+P=a-b q
+\]</div>
+<p>and that the individual chooses to consume <span class="math notranslate nohighlight">\(Q\)</span> units of the good or service, where <span class="math notranslate nohighlight">\(0&lt;Q&lt;\frac{a}{b}\)</span>.</p>
+<p>Note that the marginal benefit from the <span class="math notranslate nohighlight">\(Q\)</span> th unit of this good or service is simply <span class="math notranslate nohighlight">\((a-b Q)\)</span>.
+The total benefit for this case is illustrated in the diagram on the following slide.</p>
+<figure class="align-center" id="id112">
+<a class="reference internal image-reference" href="_images/linear_tpb.png"><img alt="_images/linear_tpb.png" src="_images/linear_tpb.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Total benefit (linear inverse demand curve)</span><a class="headerlink" href="#id112" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In this particular example, the total private benefit from consumng <span class="math notranslate nohighlight">\(Q\)</span> units of the good or service is equal to the sum of the area of a rectangle and the area of a triangle.</p>
+<ul class="simple">
+<li><p>The base of the rectangle is <span class="math notranslate nohighlight">\(Q-0=Q\)</span> units and the height of the rectangle is <span class="math notranslate nohighlight">\((a-b Q)-0=(a-b Q) \$ /\)</span> unit.</p>
+<ul>
+<li><p>As such, the area of the rectangle is <span class="math notranslate nohighlight">\(Q(a-b Q)=\left(a Q-b Q^{2}\right)\)</span> (units)($/unit), which is simply <span class="math notranslate nohighlight">\(\$\left(a Q-b Q^{2}\right)\)</span>.</p></li>
+</ul>
+</li>
+<li><p>The base of the triangle is <span class="math notranslate nohighlight">\(Q-0=Q\)</span> units and the perpendicular height of the triangle is <span class="math notranslate nohighlight">\(a-(a-b Q)=b Q \$ /\)</span> unit.</p>
+<ul>
+<li><p>As such, the area of the triangle is <span class="math notranslate nohighlight">\(\left(\frac{1}{2}\right) Q(b Q)=\frac{b Q^{2}}{2}\)</span> (units)($/unit), which is simply <span class="math notranslate nohighlight">\(\$\left(\frac{b Q^{2}}{2}\right)\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<p>This means that, in this particular example, the total private benefit from consuming <span class="math notranslate nohighlight">\(Q\)</span> units of the good or service is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\operatorname{TPB}(Q) &amp; =\$\left(a Q-b Q^{2}\right)+\$\left(\frac{b Q^{2}}{2}\right) \\
+&amp; =\$\left(a Q-b Q^{2}+\frac{b Q^{2}}{2}\right) \\
+&amp; =\$\left(a Q-\frac{b Q^{2}}{2}\right) .
+\end{aligned}
+\end{split}\]</div>
+</section>
+<section id="the-paradox-of-value">
+<h2>The paradox of value<a class="headerlink" href="#the-paradox-of-value" title="Permalink to this heading">#</a></h2>
+<p>The “Paradox of Value” is a term used to describe a potential confusion between marginal benefit and total benefit. It is sometimes known as the “Water-Diamond Paradox” because an example of this potential confusion that is commonly proposed concerns the value of water and the value of diamonds.</p>
+<ul class="simple">
+<li><p>Water is needed to sustain life, while diamonds are not (or at least do not appear to be) essential for sustaining life. As such, some people might argue that water is much more valuable than diamonds.</p></li>
+<li><p>However, the price of diamonds is very high compared to the price of water in at least some parts of the world (although the price of water might well be higher than it used to be).</p></li>
+<li><p>A situation in which water is much more valuable than diamonds but the price of diamonds is much higher than the price of water might appear to be somewhat paradoxical.</p></li>
+<li><p>But this is only the case if you confuse marginal benefit with total benefit.</p></li>
+</ul>
+</section>
+<section id="consumer-surplus">
+<h2>Consumer surplus<a class="headerlink" href="#consumer-surplus" title="Permalink to this heading">#</a></h2>
+<p>We have seen how to calculate the total benefit to a consumer of <span class="math notranslate nohighlight">\(Q\)</span> units of some commodity.
+But in general, the consumer will need to purchase those <span class="math notranslate nohighlight">\(Q\)</span> units.
+This involves giving up resources that could have been used to purchase other commodities.
+As such, the “net gain” to the consumer from <span class="math notranslate nohighlight">\(Q\)</span> units of a commodity is usually smaller than the total benefit of those units to the consumer.
+How might we measure the “net gain” to the consumer from purchasing <span class="math notranslate nohighlight">\(Q\)</span> units of a commodity?</p>
+<p>Suppose that the consumer would optimally choose to purchase <span class="math notranslate nohighlight">\(Q\)</span> units of a commodity given its current price.
+We want to measure how much the consumer values being allowed to purchase those <span class="math notranslate nohighlight">\(Q\)</span> units of the commodity (given its current price).
+There are two common ways of answering this question. These are the “willingness to pay” approach and the “willingness to accept” approach.</p>
+<ul class="simple">
+<li><p>The “willingness to pay” approach attempts to identify the maximum amount that a consumer would be willing to pay in order to avoid having the right to purchase any amount of the commodity (given its current price) taken away.</p></li>
+<li><p>The “willingness to accept” approach attempts to identify the minimum amount that the consumer would need to be paid in order to agree to the removal of the right to purchase any amount of the commodity (given its current price).</p></li>
+</ul>
+<p>In general, the “willingness to pay” and “willingness to accept” measures of the net gain to the consumer will be different.</p>
+<ul class="simple">
+<li><p>However, under some circumstances they will be the same.</p></li>
+<li><p>In order to keep things relatively simple, we will assume that are the same for the moment.</p></li>
+<li><p>We will revisit this issue later on when we discuss the compensating variation and equivalent variation concepts.</p></li>
+</ul>
+<p>The net gain to the consumer is basically equal to the difference between the total benefit that the consumer receives from purchasing <span class="math notranslate nohighlight">\(Q\)</span> units of the commodity and the total cost to the consumer of purchasing those units.</p>
+<ul class="simple">
+<li><p>This difference is known as the “consumer surplus” from purchasing <span class="math notranslate nohighlight">\(Q\)</span> units of the commodity.</p></li>
+<li><p>We have already discussed how to find the total benefit of <span class="math notranslate nohighlight">\(Q\)</span> units of the commodity to the consumer.</p></li>
+<li><p>But what is the total cost of these units to the consumer?</p></li>
+</ul>
+<p>Clearly we want to find a measure of the opportunity cost of purchasing <span class="math notranslate nohighlight">\(Q\)</span> units of the commodity.
+Under some circumstances, this opportunity cost will simply be equal to the expenditure that the consumer must make to purchase those <span class="math notranslate nohighlight">\(Q\)</span> units at the current price of the commodity.
+Let’s assume that these circumstances apply for the remainder of this discussion.</p>
+<p>Suppose that the consumer is a price taker in the market for this commodity and that the price of the commodity is <span class="math notranslate nohighlight">\(P\)</span> per unit.
+Clearly the consumer’s expenditure on this commodity will be <span class="math notranslate nohighlight">\(P Q\)</span> under these circumstances.
+This means that the consumer surplus from purchasing <span class="math notranslate nohighlight">\(Q\)</span> units of this commodity is given by</p>
+<div class="math notranslate nohighlight">
+\[
+C S(Q)=T P B(Q)-P Q=\int_{q=0}^{Q} M P B(q) d q-P Q
+\]</div>
+<p>We have shown that the consumer surplus from purchasing <span class="math notranslate nohighlight">\(Q\)</span> units of this commodity is given by</p>
+<div class="math notranslate nohighlight">
+\[
+C S(Q)=T P B(Q)-P Q=\int_{q=0}^{Q} M P B(q) d q-P Q
+\]</div>
+<p>Note that</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{q=0}^{Q} P d q=[P q]_{q=0}^{Q}=P Q-0=P Q .
+\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+C S(Q)=\int_{q=0}^{Q} M P B(q) d q-\int_{q=0}^{Q} P d q
+\]</div>
+<p>This can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[
+C S(Q)=\int_{q=0}^{Q}(M P B(q)-P) d q
+\]</div>
+<p>In other words, if <span class="math notranslate nohighlight">\(0 \leqslant Q \leqslant Q^{D}(P)\)</span>, then under some circumstances, the consumer surplus from purchasing <span class="math notranslate nohighlight">\(Q\)</span> units of a commodity is equal to the area below the inverse demand (or marginal benefit) schedule and above the price line from <span class="math notranslate nohighlight">\(q=0\)</span> to <span class="math notranslate nohighlight">\(q=Q\)</span>.</p>
+<p>Recall our linear marginal benefit schedule example in which the marginal benefit schedule is given by</p>
+<div class="math notranslate nohighlight">
+\[
+M B(q)=a-b q
+\]</div>
+<p>The demand curve associated with this linear marginal benefit schedule is also linear. It is given by</p>
+<div class="math notranslate nohighlight">
+\[
+Q^{D}(P)=\frac{a}{b}-\frac{1}{b} P
+\]</div>
+<p>If the prevailing price is equal to <span class="math notranslate nohighlight">\(P_{0}\)</span>, then the consumer will choose to purchase <span class="math notranslate nohighlight">\(Q_{0}=Q^{D}\left(P_{0}\right)=\frac{a}{b}-\frac{1}{b} P_{0}\)</span> units of the commodity.</p>
+<p>The consumer surplus associated with this purchase is equal to the area of a triangle with a base length of <span class="math notranslate nohighlight">\(\left(Q_{0}-0\right)=Q_{0}\)</span> units and a perpendicular height length of <span class="math notranslate nohighlight">\(\left(a-P_{0}\right)=P_{0}\)</span> dollars-per-unit (assuming that prices are expressed in dollars).</p>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{CS}\left(Q_{0}\right)=\frac{1}{2}\left\{\left(a-P_{0}\right) Q_{0}\right\} \text { dollars. }
+\]</div>
+<p>If we substitute in the value for <span class="math notranslate nohighlight">\(Q_{0}\)</span>, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{CS}\left(Q_{0}\right)=\frac{1}{2}\left\{\left(a-P_{0}\right)\left(\frac{a}{b}-\frac{1}{b} P_{0}\right)\right\} \text { dollars. }
+\]</div>
+<p>This can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{CS}\left(Q_{0}\right)=\frac{1}{2}\left(\frac{a^{2}}{b}-2 \frac{a}{b} P_{0}+\frac{1}{b} P_{0}^{2}\right) \text { dollars. }
+\]</div>
+<p>This example is illustrated in the diagram below. The consumer surplus is equal to shaded region in that diagram.</p>
+<figure class="align-center" id="id113">
+<a class="reference internal image-reference" href="_images/linear_cs.png"><img alt="_images/linear_cs.png" src="_images/linear_cs.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Consumer surplus (linear inverse demand curve)</span><a class="headerlink" href="#id113" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Up until now, we have been calculating consumer surplus from the marginal benefit (or inverse demand) schedule by summing or integrating with respect to quantity.
+We can also calculate consumer surplus from the (direct) demand schedule by summing or integrating with respect to price.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(\bar{P}\)</span> is the lowest price at which the quantity demanded is zero. We will call this the consumer’s “reservation price” for the commodity in question. In some cases, this reservation price will be finite. In other cases, it will be infinite.</p>
+<p>Note that <span class="math notranslate nohighlight">\(q^{D}(p)=0\)</span> for all <span class="math notranslate nohighlight">\(p \geqslant \bar{P}\)</span>, while <span class="math notranslate nohighlight">\(q^{D}(p)&gt;0\)</span> for all <span class="math notranslate nohighlight">\(p&lt;\bar{P}\)</span>.
+The consumer surplus that results when the price of the commodity is <span class="math notranslate nohighlight">\(P\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{CS}(P)=\int_{p=P}^{\bar{P}} q^{D}(p) d p
+\]</div>
+<figure class="align-center" id="id114">
+<a class="reference internal image-reference" href="_images/nonlinear_cs.png"><img alt="_images/nonlinear_cs.png" src="_images/nonlinear_cs.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Consumer surplus (nonlinear inverse demand curve)</span><a class="headerlink" href="#id114" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="changes-in-consumer-surplus">
+<h3>Changes in consumer surplus<a class="headerlink" href="#changes-in-consumer-surplus" title="Permalink to this heading">#</a></h3>
+<p>We are sometimes interested in the impact of a change in the price of a commodity on the welfare of a consumer.
+This can be measured by the change in consumer surplus that results from the change in the price of the commodity.</p>
+<p>Suppose that the price of the commodity is initially <span class="math notranslate nohighlight">\(P_{0}\)</span>. At this price, the consumer demands <span class="math notranslate nohighlight">\(Q_{0}=q^{D}\left(P_{0}\right)\)</span> units of the commodity.
+The initial consumer surplus in terms of quantity is</p>
+<div class="math notranslate nohighlight">
+\[
+C S\left(Q_{0}\right)=\int_{q=0}^{Q_{0}}\left(\operatorname{MPB}(q)-P_{0}\right) d q
+\]</div>
+<p>The initial consumer surplus in terms of price is</p>
+<div class="math notranslate nohighlight">
+\[
+C S\left(P_{0}\right)=\int_{p=P_{0}}^{\bar{P}} q^{D}(p) d p
+\]</div>
+<p>Suppose that the price of the commodity increases from <span class="math notranslate nohighlight">\(P_{0}\)</span> to <span class="math notranslate nohighlight">\(P_{1}&gt;P_{0}\)</span>. At the new price, the consumer demands <span class="math notranslate nohighlight">\(Q_{1}=q^{D}\left(P_{1}\right)\)</span> units of the commodity.
+The new consumer surplus in terms of quantity is</p>
+<div class="math notranslate nohighlight">
+\[
+C S\left(Q_{1}\right)=\int_{q=0}^{Q_{1}}\left(\operatorname{MPB}(q)-P_{1}\right) d q
+\]</div>
+<p>The new consumer surplus in terms of price is</p>
+<div class="math notranslate nohighlight">
+\[
+C S\left(P_{1}\right)=\int_{p=P_{1}}^{\bar{P}} q^{D}(p) d p
+\]</div>
+<p>Using the price approach, the change in consumer surplus that results from the increase in price from <span class="math notranslate nohighlight">\(P_{0}\)</span> to <span class="math notranslate nohighlight">\(P_{1}&gt;P_{0}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta C S\left(P_{0}, P_{1}\right) &amp;=C S\left(P_{1}\right)-C S\left(P_{0}\right)=\int_{p=P_{1}}^{\bar{P}} q^{D}(p) d p-\int_{p=P_{0}}^{\bar{P}} q^{D}(p) d p \\
+&amp;=\int_{p=P_{1}} q^{D}(p) d p-\left\{\int_{p=P_{0}}^{P_{1}} q^{D}(p) d p+\int_{p=P_{1}}^{\bar{P}} q^{D}(p) d p\right\} \\
+&amp;=\int_{p=P_{1}}^{\bar{P}} q^{D}(p) d p-\int_{p=P_{0}}^{P_{1}} q^{D}(p) d p-\int_{p=P_{1}}^{\bar{P}} q^{D}(p) d p \\
+&amp;=-\int_{p=P_{0}}^{P_{1}} q^{D}(p) d p
+\end{aligned}
+\end{split}\]</div>
+<figure class="align-center" id="id115">
+<a class="reference internal image-reference" href="_images/change_cs_1.png"><img alt="_images/change_cs_1.png" src="_images/change_cs_1.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Total change in consumer surplus</span><a class="headerlink" href="#id115" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Using the quantity approach, the change in consumer surplus that results from the increase in price from <span class="math notranslate nohighlight">\(P_{0}\)</span> to <span class="math notranslate nohighlight">\(P_{1}&gt;P_{0}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\operatorname{\Delta CS}\left(Q_{0}, Q_{1}\right)&amp;= CS\left(Q_{1}\right)-C S\left(Q_{0}\right) \\
+&amp;=\int_{q=0}^{Q_{1}}\left(\operatorname{MPB}(q)-P_{1}\right) d q-\int_{q=0}^{Q_{0}}\left(\operatorname{MPB}(q)-P_{0}\right) d q \\
+&amp;=\int_{q=0}^{Q_{1}}\left(\operatorname{MPB}(q)-P_{1}\right) d q \\
+-\left\{\int_{q=0}^{Q_{1}}\left(\operatorname{MPB}(q)-P_{0}\right) d q+\int_{q=Q_{1}}^{Q_{0}}\left(\operatorname{MPB}(q)-P_{0}\right) d q\right\}\\ &amp;=\int_{q=0}^{Q_{1}}\left(M P B(q)-P_{1}\right) d q \\
+-\int_{q=0}^{Q_{1}}\left(M P B(q)-P_{0}\right) d q-\int_{q=Q_{1}}^{Q_{0}}\left(M P B(q)-P_{0}\right) d q \\
+&amp;=\int_{q=0}^{Q_{1}}\left[\left(M P B(q)-P_{1}\right)-\left(M P B(q)-P_{0}\right)\right] d q \\
+-\int_{q=Q_{1}}^{Q_{0}}\left(M P B(q)-P_{0}\right) d q \\
+&amp;=\int_{q=0}^{Q_{1}}\left[M P B(q)-P_{1}-\operatorname{MPB}(q)+P_{0}\right] d q-\int_{q=Q_{1}}^{Q_{0}}\left(M P B(q)-P_{0}\right) d q \\
+&amp; =\int_{q=0}^{Q_{1}}\left(P_{0}-P_{1}\right) d q-\int_{q=Q_{1}}^{Q_{0}}\left(\operatorname{MPB}(q)-P_{0}\right) d q \\
+&amp;= -\int_{q=0}^{Q_{1}}\left(P_{1}-P_{0}\right) d q-\int_{q=Q_{1}}^{Q_{0}}\left(\operatorname{MPB}(q)-P_{0}\right) d q \\
+&amp;= -\left\{\int_{q=0}^{Q_{1}}\left(P_{1}-P_{0}\right) d q+\int_{q=Q_{1}}^{Q_{0}}\left(\operatorname{MPB}(q)-P_{0}\right) d q\right\} .
+\end{aligned}
+\end{split}\]</div>
+<p>Thus we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\Delta C S\left(Q_{0}, Q_{1}\right)=C S\left(Q_{1}\right)-C S\left(Q_{0}\right) \\
+=-\left\{\int_{q=0}^{Q_{1}}\left(P_{1}-P_{0}\right) d q+\int_{q=Q_{1}}^{Q_{0}}\left(\operatorname{MPB}(q)-P_{0}\right) d q\right\} \\
+=-\{\text { Area A }+ \text { Area B }\} .
+\end{gathered}
+\end{split}\]</div>
+<figure class="align-center" id="id116">
+<a class="reference internal image-reference" href="_images/change_cs_2.png"><img alt="_images/change_cs_2.png" src="_images/change_cs_2.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Total change in consumer surplus</span><a class="headerlink" href="#id116" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><br><br><br><br></p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="producer-supply-and-producer-welfare">
+<h1>Producer supply and producer welfare<a class="headerlink" href="#producer-supply-and-producer-welfare" title="Permalink to this heading">#</a></h1>
+<section id="sources">
+<h2>Sources<a class="headerlink" href="#sources" title="Permalink to this heading">#</a></h2>
+<p>This material has been drawn from, or influenced by, a number of sources. Some of these include those listed below.</p>
+<ul class="simple">
+<li><p><span id="id103">[<a class="reference internal" href="#id64" title="AA Alchian and WR Allen. Exchange and production: Competition, coordination and control (third edition). Wadsworth Publishing Company, 1983.">10AA83</a>]</span>: pp. 63-64.</p></li>
+<li><p><span id="id104">[<a class="reference internal" href="#id67" title="DS Hamermesh. Economics is everywhere (second edition). McGraw-Hill-Irwin, 2006.">10Ham06</a>]</span>: Chapters 1, 2, and 7 (pp. 3-24 and 81-90).</p></li>
+</ul>
+</section>
+<section id="marginal-private-cost-and-supply">
+<h2>Marginal private cost and supply<a class="headerlink" href="#marginal-private-cost-and-supply" title="Permalink to this heading">#</a></h2>
+<p>The marginal cost of supplying an additional unit of a good is the minimum amount that a producer would need to be paid to supply that additional unit, given the current production level of the good without the additional unit.</p>
+<p>The marginal private cost schedule for a good is a function of the form <span class="math notranslate nohighlight">\(M C(Q\)</span>; <em>other</em> <span class="math notranslate nohighlight">\()\)</span>, where <span class="math notranslate nohighlight">\(Q\)</span> is the quantity of the good that is supplied, <em>other</em> is the values that are taken by a set of other factors that affect the marginal cost of the good in question and <span class="math notranslate nohighlight">\(M C(Q ;\)</span> <em>other</em> <span class="math notranslate nohighlight">\()\)</span> is the cost incurred by the producer from the production of the last of the <span class="math notranslate nohighlight">\(Q\)</span> units of the good.</p>
+<p>As a matter of convenience, we will often write <span class="math notranslate nohighlight">\(M C(Q ;\)</span> <em>other</em> <span class="math notranslate nohighlight">\()\)</span> as simply <span class="math notranslate nohighlight">\(M C(Q)\)</span>.</p>
+<section id="increasing-marginal-costs">
+<h3>Increasing marginal costs<a class="headerlink" href="#increasing-marginal-costs" title="Permalink to this heading">#</a></h3>
+<p>We will assume that the marginal private cost schedule displays increasing marginal costs.
+In other words, holding the values of the things that are in <em>other</em> fixed, the cost of producing a further unit of the good (that is, the marginal cost) will increase as <span class="math notranslate nohighlight">\(Q\)</span> increases.</p>
+<p>This means that the marginal private cost schedule for a good will be upward sloping in <span class="math notranslate nohighlight">\((Q, P)\)</span>-space.</p>
+<p>We will provide two justifications for this assumption, both of which make use of the concept of “diminishing marginal returns”. The first justification will be in the context of a pure exchange economy. The second justification will be in the context of a production economy.</p>
+</section>
+<section id="marginal-cost-in-a-pure-exchange-economy">
+<h3>Marginal cost in a pure exchange economy<a class="headerlink" href="#marginal-cost-in-a-pure-exchange-economy" title="Permalink to this heading">#</a></h3>
+<p>A <strong>pure exchange economy</strong> is one in which no production takes place. Each agent in the economy is endowed with some bundle of commodities. If an agent wants to consume some other bundle of commodities, then he or she must seek to conduct one or more trades with other agents in an attempt to obtain that bundle.</p>
+<p>Here we will consider a simple partial equilibrium version of a pure exchange economy. In other words, we will focus on the market for a single commodity. Indeed, we will focus on the behaviour of a single agent with respect to that commodity.</p>
+<p>As in our discussion of consumer demand, we will assume that this agent receives diminishing marginal benefits from the consumption of this commodity. This means that his or her marginal benefit schedule will be downward sloping.</p>
+<ul class="simple">
+<li><p>If this consumer desires more of the good than his or her endowment of it, then he or she will need to purchase the additional units. This constitutes a situation of “net demand”.</p></li>
+<li><p>If this consumer desires less of the good than his or her endowment of it, then he or she will be able to sell the additional units. This constitutes a situation of “net supply”.</p></li>
+<li><p>This situation is depicted in the diagram below.</p>
+<ul>
+<li><p>Notice that “supply” of the good is measured in the leftwards direction in this diagram. This is because “supply” of an additional unit involves giving up an additional unit of “demand”.</p></li>
+<li><p>If we want to obtain the supply schedule for this agent, we simply need to flip the diagram. This is done in the second diagram below.</p></li>
+<li><p>The marginal cost schedule in the second diagram slopes up precisely because the marginal benefit schedule in the first diagram slopes down. In other words, increasing marginal costs follows directly from the behavioural assumption of diminishing marginal benefits.</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id117">
+<a class="reference internal image-reference" href="_images/exchange_endowment.png"><img alt="_images/exchange_endowment.png" src="_images/exchange_endowment.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Initial endowment, ‘net supply’ and ‘net demand’</span><a class="headerlink" href="#id117" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id118">
+<a class="reference internal image-reference" href="_images/exchange_mc.png"><img alt="_images/exchange_mc.png" src="_images/exchange_mc.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Marginal cost in a pure exchange economy</span><a class="headerlink" href="#id118" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="short-run-marginal-cost-in-a-production-economy">
+<h3>Short-run marginal cost in a production economy<a class="headerlink" href="#short-run-marginal-cost-in-a-production-economy" title="Permalink to this heading">#</a></h3>
+<p>Suppose that the output of of good <span class="math notranslate nohighlight">\((Q)\)</span> can be produced using two inputs, capital <span class="math notranslate nohighlight">\((K)\)</span> and labour <span class="math notranslate nohighlight">\((L)\)</span> according to a production technology that can be represented by a profuction function <span class="math notranslate nohighlight">\(Q=F(L, K)\)</span>.
+In the short-run, the capital stock is fixed at <span class="math notranslate nohighlight">\(K=K_{0}\)</span>, so that the short-run production function is given by <span class="math notranslate nohighlight">\(Q=F\left(L ; K_{0}\right)=f(L)\)</span>.</p>
+<p>We will assume that this production technology displays a diminishing marginal product of labour. This means that the production of each additional unit of output in the short-run (when the capital stock is fixed) requires the use of more labour than the previous unit of output.
+If the producer is a price-taker in the labour market, so that every unit of labour costs <span class="math notranslate nohighlight">\(w\)</span> per unit, then the presence of a diminishing marginal product of labour results in an increasing marginal cost of output.</p>
+<p>This situation is depicted in the following two diagrams.</p>
+<figure class="align-center" id="id119">
+<a class="reference internal image-reference" href="_images/prodn_fn.png"><img alt="_images/prodn_fn.png" src="_images/prodn_fn.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Production function</span><a class="headerlink" href="#id119" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id120">
+<a class="reference internal image-reference" href="_images/mc_prodn_fn.png"><img alt="_images/mc_prodn_fn.png" src="_images/mc_prodn_fn.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Diminishing marginal product of labour implies increasing SR marginal cost</span><a class="headerlink" href="#id120" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="increasing-marginal-cost-once-again">
+<h3>Increasing marginal cost once again<a class="headerlink" href="#increasing-marginal-cost-once-again" title="Permalink to this heading">#</a></h3>
+<p>The idea that, in general, marginal costs are increasing, is nicely presented in the following quote from <span id="id105">[<a class="reference internal" href="#id64" title="AA Alchian and WR Allen. Exchange and production: Competition, coordination and control (third edition). Wadsworth Publishing Company, 1983.">10AA83</a>]</span> (p. 63).</p>
+<blockquote>
+<div><p>“Normally, at higher prices rates of production are higher and amounts supplied are larger. (Remember, when we say that a price is higher or lower, we mean the <em>relative</em> price - that one price, in dollars, relative to prices, in dollars, of other goods and services.) Higher rates of production of any good require more resources. And resources, like goods, remember, are scarce. For example, say we want to expand the national annual output of wheat. The amount of arable land having the best soil composition and located in the best climate is limited, and virtually all of it is already in use. Thus, land more valuable for corn or cattle must be diverted to wheat. Resources that are increasingly more valuable elsewhere must be attracted.”</p>
+</div></blockquote>
+</section>
+<section id="short-run-costs-and-long-run-costs">
+<h3>Short-run costs and long-run costs<a class="headerlink" href="#short-run-costs-and-long-run-costs" title="Permalink to this heading">#</a></h3>
+<p>In economics, the difference between short-run and long-run depends on whether or not it is possible to vary all of the factors of production.</p>
+<ul class="simple">
+<li><p>In the short-run, at least some factors of production are fixed. The quantity of these fixed factors that is employed cannot be varied in the short-run. These fixed factors of production must be paid for their services. Fixed costs are simply payments for the services of these fixed factors of production. Short-run variable costs relate to payments made to factors of production that can be varied in the short-run. Short-run total cost is equal to the sum of short-run fixed cost and short-run variable cost.</p></li>
+<li><p>In the long-run, all factors of production can be varied. As such, there are no fixed costs in the long-run. All long-run costs are variable costs. Long-run total cost is equal to long-run variable cost.</p></li>
+</ul>
+</section>
+<section id="total-variable-costs-and-marginal-costs">
+<h3>Total variable costs and marginal costs<a class="headerlink" href="#total-variable-costs-and-marginal-costs" title="Permalink to this heading">#</a></h3>
+<p>The total variable cost of producing <span class="math notranslate nohighlight">\(Q\)</span> units of output is simply the sum of the marginal cost of producing each of those units of output.</p>
+<ul class="simple">
+<li><p>If output must be produced in discrete units, this means that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+TVC(Q)=M C(1)+M C(2)+\cdots+M C(Q)=\sum_{q=1}^{Q} M C(Q)
+\]</div>
+<ul class="simple">
+<li><p>If output is infinitely divisible, this means that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+TVC(Q)=\int_{q=0}^{Q} M C(q) d q
+\]</div>
+<p>In both of these cases, the total variable cost of producing <span class="math notranslate nohighlight">\(Q\)</span> units of output is simply the area under the marginal cost schedule and above the quantity axis between <span class="math notranslate nohighlight">\(q=0\)</span> and <span class="math notranslate nohighlight">\(q=Q\)</span>.
+This is illustrated for the case in which output is infinitely divisible below.</p>
+<figure class="align-center" id="id121">
+<a class="reference internal image-reference" href="_images/tvc.png"><img alt="_images/tvc.png" src="_images/tvc.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Total variable costs</span><a class="headerlink" href="#id121" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="producer-revenue">
+<h3>Producer revenue<a class="headerlink" href="#producer-revenue" title="Permalink to this heading">#</a></h3>
+<p>Consider a producer of some commodity who is a price-taker in the market for that commodity. Suppose that the price of the commodity is <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p>Recall that the producer’s marginal cost schedule can be interpreted as his or her inverse supply schedule. Thus we can find the maximum quantity of the commodity that the producer is willing to supply by determining the quantity at which the price line intersects the marginal cost schedule. Suppose that this quantity is given <span class="math notranslate nohighlight">\(Q=q^{S}(P)\)</span>.</p>
+<p>The total revenue that the producer receives from sales of <span class="math notranslate nohighlight">\(Q\)</span> units of the commodity at a price of <span class="math notranslate nohighlight">\(P\)</span> per unit is simply <span class="math notranslate nohighlight">\(R=P Q\)</span>.
+This area is equal to the area of the shaded region in the diagram below.</p>
+<figure class="align-center" id="id122">
+<a class="reference internal image-reference" href="_images/revenue.png"><img alt="_images/revenue.png" src="_images/revenue.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Producer revenue</span><a class="headerlink" href="#id122" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="producer-s-surplus">
+<h3>Producer’s surplus<a class="headerlink" href="#producer-s-surplus" title="Permalink to this heading">#</a></h3>
+<p>The revenue that a producer receives from sales of the commodity is, in a sense, the total benefit to the producer from producing that quantity of the commodity.
+However, the production of the commodity costs the producer some resources.
+Thus the net benefit to the producer from the sale of <span class="math notranslate nohighlight">\(Q\)</span> units of a commodity is less than the total revenue from those sales.</p>
+<p>In order to obtain the welfare gain (or net benefit) to the producer from sales of the commodity, we need to subtract the opportunity costs of production from revenue.
+As a first step in this process, let us ignore any fixed costs of production that might exist.
+If we subtract total variable costs from revenue, we obtain what is known as producer’s surplus.</p>
+<ul class="simple">
+<li><p>If output must be produced in discrete units and <span class="math notranslate nohighlight">\(Q=q^{S}(P)\)</span>, then producer’s surplus is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P S(Q)=P Q-\left(\sum_{q=1}^{Q} M C(q)\right)
+\]</div>
+<ul class="simple">
+<li><p>If output is infinitely divisible and <span class="math notranslate nohighlight">\(Q=q^{S}(P)\)</span>, then producer’s surplus is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P S(Q)=P Q-\left(\int_{q=0}^{Q} M C(q) d q\right)
+\]</div>
+<p>Producer’s surplus is equal to the area of the shaded region in the diagram below (for the case in which output is infinitely divisible).</p>
+<figure class="align-center" id="id123">
+<a class="reference internal image-reference" href="_images/ps.png"><img alt="_images/ps.png" src="_images/ps.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">Producer surplus</span><a class="headerlink" href="#id123" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="producer-s-surplus-and-profit">
+<h4>Producer’s surplus and profit<a class="headerlink" href="#producer-s-surplus-and-profit" title="Permalink to this heading">#</a></h4>
+<p>One possible measure of producer welfare in this setting is given by the profit received by a producer. Another possible measure is that of producer’s surplus. What is the relationship between these measures?</p>
+<p>The profit from selling <span class="math notranslate nohighlight">\(Q\)</span> units of a commodity is equal to the revenue received from those sales minus the total cost of producing those <span class="math notranslate nohighlight">\(Q\)</span> units of the commodity being sold: <span class="math notranslate nohighlight">\(\Pi(Q)=P Q-T C(Q)\)</span>.</p>
+<p>Recall that total cost is equal to the sum of fixed cost and total variable cost: <span class="math notranslate nohighlight">\(T C(Q)=F+T V C(Q)\)</span>.</p>
+<ul class="simple">
+<li><p>Thus we have: <span class="math notranslate nohighlight">\(\Pi(Q)=P Q-T V C(Q)-F\)</span>.</p></li>
+</ul>
+<p>Recall that the producer’s surplus from selling <span class="math notranslate nohighlight">\(Q\)</span> units of a commodity is equal to the revenue received from those sales minus the total variable cost of producing those <span class="math notranslate nohighlight">\(Q\)</span> units of the commodity being sold: <span class="math notranslate nohighlight">\(P S(Q)=P Q-T V C(Q)\)</span>.</p>
+<ul class="simple">
+<li><p>Thus we have <span class="math notranslate nohighlight">\(\Pi(Q)=P S(Q)-F\)</span>, which can be rearranged to obtain <span class="math notranslate nohighlight">\(P S(Q)=\Pi(Q)+F\)</span>.</p></li>
+</ul>
+<p>In the long-run, there are no fixed factors of production and hence no fixed costs.
+As such, we know that in a long-run competitive equilibrium, we have <span class="math notranslate nohighlight">\(P S(Q)=\Pi(Q)\)</span>.
+Thus there is no ambiguity about which welfare measure to use for producers in the long-run.</p>
+<p>But what about the short-run? Should we use <span class="math notranslate nohighlight">\(P S(Q)\)</span> or <span class="math notranslate nohighlight">\(\Pi(Q)\)</span> as the measure of producer welfare?
+Recall that the fixed cost does not vary with the chosen output level. It must be paid (in the short-run) even if the producer shuts down the production plant and produces nothing. As such, the fixed cost is a “sunk cost”.</p>
+<p>Sunk costs are not part of the true short-run opportunity cost of producing any chosen level of output because they cannot be avoided. This means that they should not be included in the calculation of short-run producer welfare.
+In other words, the appropriate measure of short-run producer welfare (and long-run producer welfare for that matter) is given by producer’s surplus.</p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="09.intro_to_optimisation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction to optimisation</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Univariate integration</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-reading-guide">References and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anti-derivatives-and-indefinite-integrals">Anti-derivatives and indefinite integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-anti-derivative">What is an anti-derivative?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anti-derivatives-are-not-unique">Anti-derivatives are NOT unique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-indefinite-integral">What is an indefinite integral?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-terminology">Some terminology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-useful-formulae">Some useful formulae</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-overview-of-integration-techniques">An overview of integration techniques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-integration">Direct integration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-by-substitution">Integration by substitution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-by-parts">Integration by parts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-of-rational-functions">Integration of rational functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definite-integral-and-the-area-under-a-curve">The definite integral and the area under a curve</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#area-approximation-by-the-sum-of-box-areas">Area approximation by the sum of box areas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definite-integral-as-a-limit-of-riemann-sums">The definite integral as a limit of Riemann sums</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiating-definite-integrals">Differentiating definite integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leibniz-rule">Leibniz’ Rule</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improper-integrals">Improper integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-economic-and-econometric-applications">Some economic and econometric applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preferences-over-time-contingent-consumption">Preferences over time contingent consumption</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preferences-over-state-contingent-consumption">Preferences over state contingent consumption</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#consumer-demand-and-consumer-welfare">Consumer demand and consumer welfare</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-references-and-reading-guide">Sources, references and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-private-benefit-and-demand">Marginal private benefit and demand</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diminishing-marginal-benefits">Diminishing marginal benefits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-mb-schedule-example">Discrete MB schedule example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-mb-schedule-example">Linear MB schedule example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-mb-schedule-example">Non-Linear MB schedule example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-benefit-and-demand">Marginal benefit and demand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-marshallian-graphing-convention">The Marshallian graphing convention</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#obtaining-total-benefit-from-marginal-benefits">Obtaining total benefit from marginal benefits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-paradox-of-value">The paradox of value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consumer-surplus">Consumer surplus</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-consumer-surplus">Changes in consumer surplus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#producer-supply-and-producer-welfare">Producer supply and producer welfare</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-private-cost-and-supply">Marginal private cost and supply</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-marginal-costs">Increasing marginal costs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-cost-in-a-pure-exchange-economy">Marginal cost in a pure exchange economy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-run-marginal-cost-in-a-production-economy">Short-run marginal cost in a production economy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-marginal-cost-once-again">Increasing marginal cost once again</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-run-costs-and-long-run-costs">Short-run costs and long-run costs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-variable-costs-and-marginal-costs">Total variable costs and marginal costs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producer-revenue">Producer revenue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producer-s-surplus">Producer’s surplus</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#producer-s-surplus-and-profit">Producer’s surplus and profit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fedor Iskhakov, based on notes by D.S. Eldridge
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

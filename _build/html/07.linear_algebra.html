@@ -1,0 +1,2939 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Linear algebra &#8212; ECON7001</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '07.linear_algebra';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Multivariate differential calculus" href="08.multivariate_differential_calculus.html" />
+    <link rel="prev" title="Univariate differentiation" href="06.univariate_differentiation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Welcome to the course!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/placeholder_logo.png" class="logo__image only-light" alt="ECON7001 - Home"/>
+    <script>document.write(`<img src="_static/placeholder_logo.png" class="logo__image only-dark" alt="ECON7001 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    EMET7001
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00.intro.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01.intro_to_economics.html">An introduction to economics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02.sets_numbers_coordinates_distances.html">Sets, numbers, coordinates, and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03.mappings_functions_correspondences.html">Mappings: functions and correspondences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04.equations_inequalities_binary_relations.html">Equations, inequalities, and binary relations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05.sequences_series_limits.html">Sequences, series and limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06.univariate_differentiation.html">Univariate differentiation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Linear algebra</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="08.multivariate_differential_calculus.html">Multivariate differential calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09.intro_to_optimisation.html">Introduction to optimisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10.univariate_integration.html">Univariate integration</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fediskhakov/MathCourse/issues/new?title=Issue%20on%20page%20%2F07.linear_algebra.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/07.linear_algebra.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Linear algebra</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Linear algebra</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-and-matrix-arithmetic">Vector and matrix arithmetic</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-reading-guide">References and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-matrix">What is a matrix?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scalars-and-vectors">Scalars and vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-examples-of-matrices-and-vectors">Economic examples of matrices and vectors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-overview-of-matrix-arithmetic">An overview of matrix arithmetic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-multiplication">Scalar multiplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-examples-of-scalar-multiplication-of-a-matrix">Some examples of scalar multiplication of a matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-addition">Matrix addition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-examples-of-matrix-addition">Some examples of matrix addition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-economic-example-of-matrix-addition">An economic example of matrix addition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-subtraction">Matrix subtraction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">Matrix multiplication</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-economic-example-of-matrix-multiplication">An economic example of matrix multiplication</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transposition">Matrix transposition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-matrices">Symmetric matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#null-matrices">Null matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additive-inverses">Additive inverses</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-of-an-additive-inverse-matrix">An example of an additive inverse matrix</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-matrices">Identity matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplicative-inverses">Multiplicative inverses</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-of-a-multiplicative-inverse-matrix">An example of a multiplicative inverse matrix</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#idempotent-matrices">Idempotent matrices</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#some-examples-of-idempotent-matrices">Some examples of idempotent matrices</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#econometric-example-the-classical-linear-regression-model">Econometric example: the classical linear regression model</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-associated-with-the-clrm">Matrices associated with the CLRM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hat-matrix-is-symmetric">The hat matrix is symmetric</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hat-matrix-is-idempotent">The hat matrix is idempotent</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-residual-making-matrix-is-symmetric">The residual-making matrix is symmetric</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-residual-making-matrix-is-idempotent">The residual-making matrix is idempotent</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-inequalities-in-euclidean-n-space">Vector inequalities in Euclidean <span class="math notranslate nohighlight">\(n\)</span>-space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-examples-of-the-vector-inequalities">Some examples of the vector inequalities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-application-consumers-who-prefer-more-to-less">Economic application: consumers who “prefer more to less”</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-forms">Quadratic Forms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id95">References and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-quadratic-form">What is a quadratic form?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-and-non-symmetric-matrices">Symmetric and non-symmetric matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definiteness-of-a-matrix">The definiteness of a matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalues-and-definiteness">Eigenvalues and definiteness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principal-minors-and-definiteness">Principal minors and definiteness</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-forms-on-sets-of-linear-constraints">Quadratic forms on sets of linear constraints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="linear-algebra">
+<h1>Linear algebra<a class="headerlink" href="#linear-algebra" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="vector-and-matrix-arithmetic">
+<h1>Vector and matrix arithmetic<a class="headerlink" href="#vector-and-matrix-arithmetic" title="Permalink to this heading">#</a></h1>
+<section id="references-and-reading-guide">
+<h2>References and reading guide<a class="headerlink" href="#references-and-reading-guide" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span id="id1">[<a class="reference internal" href="#id41" title="H Anton. Elementary linear algebra (fifth edition). John Wiley and Sons, 1987.">7Ant87</a>]</span>: Chapters 1-3 (pp. 1-142).</p></li>
+<li><p><span id="id2">[<a class="reference internal" href="#id42" title="A Asano. Mathematics for economics. Cambridge University Press, 2013.">7Asa13</a>]</span>: Appendix A (pp. 218-242).</p></li>
+<li><p><span id="id3">[<a class="reference internal" href="#id43" title="A Basilevsky. Applied matrix algebra in the statistical sciences. Dover Publications, 1983. The 2005 Dover Unabridged Republication of the Original 1983 North-Holland Edition.">7Bas83</a>]</span>: Chapters 1-4 (pp. 1-187).</p></li>
+<li><p><span id="id4">[<a class="reference internal" href="#id40" title="T Bradley. Essential mathematics for economics and business (third edition). John Wiley and Sons, 2008.">7Bra08</a>]</span>: Chapter 9 (pp. 475-536).</p></li>
+<li><p><span id="id5">[<a class="reference internal" href="#id39" title="AC Chiang and K Wainwright. Fundamental methods of mathematical economics (fourth edition). McGraw-Hill, 2005.">7CW05</a>]</span>: Chapters 4 and 5.</p></li>
+<li><p><span id="id6">[<a class="reference internal" href="#id11" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">7HJP87</a>]</span>: Chapter 8 (pp. 238-309).</p></li>
+<li><p><span id="id7">[<a class="reference internal" href="#id14" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">7Sha95</a>]</span>: Chapters 4 and 5 (pp. 121-230).</p></li>
+<li><p><span id="id8">[<a class="reference internal" href="#id13" title="K Sydsæter and P Hammond. Essential mathematics for economic analysis (second edition). Prentice-Hall, 2006.">7SH06</a>]</span>: Chapter 15 (pp. 549-590).</p></li>
+<li><p><span id="id9">[<a class="reference internal" href="#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">7SB94</a>]</span>: Chapters 6-11 and 26-28 (pp. 107-250 and 719-799).</p></li>
+</ul>
+<div class="docutils container" id="id10">
+<dl class="citation">
+<dt class="label" id="id41"><span class="brackets">7Ant87</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id96">2</a>)</span></dt>
+<dd><p>H Anton. <em>Elementary linear algebra (fifth edition)</em>. John Wiley and Sons, 1987.</p>
+</dd>
+<dt class="label" id="id42"><span class="brackets">7Asa13</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id87">2</a>,<a href="#id89">3</a>,<a href="#id91">4</a>)</span></dt>
+<dd><p>A Asano. <em>Mathematics for economics</em>. Cambridge University Press, 2013.</p>
+</dd>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id3">7Bas83</a></span></dt>
+<dd><p>A Basilevsky. <em>Applied matrix algebra in the statistical sciences</em>. Dover Publications, 1983. The 2005 Dover Unabridged Republication of the Original 1983 North-Holland Edition.</p>
+</dd>
+<dt class="label" id="id40"><span class="brackets">7Bra08</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id92">2</a>)</span></dt>
+<dd><p>T Bradley. <em>Essential mathematics for economics and business (third edition)</em>. John Wiley and Sons, 2008.</p>
+</dd>
+<dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id97">7Chi84</a></span></dt>
+<dd><p>AC Chiang. <em>Fundamental methods of mathematical economics (third edition)</em>. McGraw-Hill, 1984.</p>
+</dd>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id5">7CW05</a></span></dt>
+<dd><p>AC Chiang and K Wainwright. <em>Fundamental methods of mathematical economics (fourth edition)</em>. McGraw-Hill, 2005.</p>
+</dd>
+<dt class="label" id="id45"><span class="brackets"><a class="fn-backref" href="#id98">7Deb52</a></span></dt>
+<dd><p>G Debreu. Definite and semidefinite quadratic forms. <em>Econometrica</em>, 20(2):295–300, 1952.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets">7HJP87</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id94">2</a>)</span></dt>
+<dd><p>EF Haeussler Jr and RS Paul. <em>Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition)</em>. Prentice-Hall, 1987.</p>
+</dd>
+<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id99">7Hic39</a></span></dt>
+<dd><p>JR Hicks. <em>Value and capital: an inquiry into some fundamental principles of economic theory</em>. Oxford University Press, 1939.</p>
+</dd>
+<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id100">7Hic46</a></span></dt>
+<dd><p>JR Hicks. <em>Value and capital: an inquiry into some fundamental principles of economic theory (second edition)</em>. Oxford University Press, 1946.</p>
+</dd>
+<dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id103">7Man43</a></span></dt>
+<dd><p>DM Mandy. Quadratic forms with linear constraintss. <em>The American Mathematical Monthly</em>, 50(7):430–433, 1943.</p>
+</dd>
+<dt class="label" id="id48"><span class="brackets"><a class="fn-backref" href="#id101">7Man13</a></span></dt>
+<dd><p>DM Mandy. On second order conditions for equality constrained extremum problems. <em>Economics Letters</em>, 121(3):440–443, 2013.</p>
+</dd>
+<dt class="label" id="id49"><span class="brackets">7Man18</span><span class="fn-backref">(<a href="#id102">1</a>,<a href="#id111">2</a>)</span></dt>
+<dd><p>DM Mandy. Leading principal minors and semidefiniteness. <em>Economic Inquiry</em>, 56(2):1396–1398, 2018.</p>
+</dd>
+<dt class="label" id="id51"><span class="brackets"><a class="fn-backref" href="#id104">7Sam47</a></span></dt>
+<dd><p>PA Samuelson. <em>Foundations of Economic Analysis</em>. Harvard University Press, 1947.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets">7Sha95</span><span class="fn-backref">(<a href="#id7">1</a>,<a href="#id93">2</a>)</span></dt>
+<dd><p>J Shannon. <em>Mathematics for business, economics and finance</em>. John Wiley and Sons, 1995.</p>
+</dd>
+<dt class="label" id="id52"><span class="brackets"><a class="fn-backref" href="#id105">7SS01</a></span></dt>
+<dd><p>E Silberberg and W Suen. <em>The structure of economics: A mathematical analysis (third edition)</em>. Irwin McGraw-Hill, 2001.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets">7SB94</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id106">2</a>,<a href="#id109">3</a>,<a href="#id112">4</a>,<a href="#id113">5</a>,<a href="#id114">6</a>)</span></dt>
+<dd><p>C Simon and L Blume. <em>Mathematics for economists</em>. WW Norton and Co, 1994.</p>
+</dd>
+<dt class="label" id="id53"><span class="brackets">7Sun96</span><span class="fn-backref">(<a href="#id107">1</a>,<a href="#id110">2</a>)</span></dt>
+<dd><p>RK Sundaram. <em>A first course in optimization theory</em>. Cambridge University Press, 1996.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets">7SH06</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id88">2</a>,<a href="#id90">3</a>)</span></dt>
+<dd><p>K Sydsæter and P Hammond. <em>Essential mathematics for economic analysis (second edition)</em>. Prentice-Hall, 2006.</p>
+</dd>
+<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id108">7Tak93</a></span></dt>
+<dd><p>A Takayama. <em>Analytical methods in economics</em>. The University of Michigan Press, 1993.</p>
+</dd>
+</dl>
+</div>
+<p>Note: this reference list combines the references for both the ‘Vector and matrix arithmetic’ and ‘Quadratic forms’ sections of this lecture.</p>
+</section>
+<section id="what-is-a-matrix">
+<h2>What is a matrix?<a class="headerlink" href="#what-is-a-matrix" title="Permalink to this heading">#</a></h2>
+<p>A <strong>matrix</strong> is an array of numbers or variables. It is organised into rows and columns. These form its <strong>dimensions</strong>.</p>
+<p>An <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix has <span class="math notranslate nohighlight">\(n\)</span> rows and <span class="math notranslate nohighlight">\(m\)</span> columns. Note that, while it is possible that <span class="math notranslate nohighlight">\(n=m\)</span>, it is also possible that <span class="math notranslate nohighlight">\(n \neq m\)</span>. When <span class="math notranslate nohighlight">\(n=m\)</span>, we say that the matrix is a <strong>square matrix</strong>.</p>
+<p>An <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix takes the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{ccccc}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; a_{23} &amp; \cdots &amp; a_{2 m} \\
+a_{31} &amp; a_{32} &amp; a_{33} &amp; \cdots &amp; a_{3 m} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; a_{n 3} &amp; \cdots &amp; a_{n m}
+\end{array}\right)
+\end{split}\]</div>
+<section id="scalars-and-vectors">
+<h3>Scalars and vectors<a class="headerlink" href="#scalars-and-vectors" title="Permalink to this heading">#</a></h3>
+<p>A <strong>scalar</strong> is a real number <span class="math notranslate nohighlight">\((a \in \mathbb{R})\)</span>.</p>
+<p>A <strong>column vector</strong> is an <span class="math notranslate nohighlight">\((n \times 1)\)</span> matrix of the form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{c}
+a_{11} \\
+a_{21} \\
+a_{31} \\
+\vdots \\
+a_{n 1}
+\end{array}\right)
+\end{split}\]</div>
+<p>A <strong>row vector</strong> is a <span class="math notranslate nohighlight">\((1 \times m)\)</span> matrix of the form</p>
+<div class="math notranslate nohighlight">
+\[
+A=\left(\begin{array}{lllll}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1 m}
+\end{array}\right) .
+\]</div>
+</section>
+<section id="economic-examples-of-matrices-and-vectors">
+<h3>Economic examples of matrices and vectors<a class="headerlink" href="#economic-examples-of-matrices-and-vectors" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\((L \times 1)\)</span> price vector for an economy there are <span class="math notranslate nohighlight">\(L\)</span> commodities:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+p=\left(\begin{array}{c}
+p_{1} \\
+p_{2} \\
+p_{3} \\
+\vdots \\
+p_{L}
+\end{array}\right)
+\end{split}\]</div>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\((L \times 1)\)</span> Marshallian demand vector for a consumer whose preferences are defined over bundles of <span class="math notranslate nohighlight">\(L\)</span> commodities:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x(p, y)=\left(\begin{array}{c}
+x_{1}(p, y) \\
+x_{2}(p, y) \\
+x_{3}(p, y) \\
+\vdots \\
+x_{L}(p, y)
+\end{array}\right)
+\end{split}\]</div>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\((n \times k)\)</span> “design matrix” (that is, matrix of independent variables) in a multivariate linear regression model of the form</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+y_{i}=\beta_{0}+\sum_{j=1}^{k-1} \beta_{j} x_{i, j}+\epsilon_{i}
+\]</div>
+<p>where there are observations of all of the observable variables for each of <span class="math notranslate nohighlight">\(n\)</span> sample points.</p>
+<ul class="simple">
+<li><p>This matrix takes the form</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X=\left(\begin{array}{ccccc}
+1 &amp; x_{1,2} &amp; x_{1,3} &amp; \cdots &amp; x_{1,(k-1)} \\
+1 &amp; x_{2,2} &amp; x_{2,3} &amp; \cdots &amp; x_{2,(k-1)} \\
+1 &amp; x_{3,2} &amp; x_{3,3} &amp; \cdots &amp; x_{3,(k-1)} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+1 &amp; x_{n, 2} &amp; x_{n, 3} &amp; \cdots &amp; x_{n,(k-1)}
+\end{array}\right)
+\end{split}\]</div>
+</section>
+</section>
+<section id="an-overview-of-matrix-arithmetic">
+<h2>An overview of matrix arithmetic<a class="headerlink" href="#an-overview-of-matrix-arithmetic" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Scalar multiplication of a matrix</p></li>
+<li><p>Matrix addition</p></li>
+<li><p>Matrix subtraction</p></li>
+<li><p>Matrix multiplication: The inner, or dot, product</p></li>
+<li><p>The transpose of a matrix and matrix symmetry</p></li>
+<li><p>The additive inverse of a matrix and the null matrix</p></li>
+<li><p>The multiplicative inverse of a matrix and the identity matrix</p></li>
+<li><p>Idempotent matrices</p></li>
+<li><p>Vector inequalities</p></li>
+</ul>
+<section id="scalar-multiplication">
+<h3>Scalar multiplication<a class="headerlink" href="#scalar-multiplication" title="Permalink to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix takes the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{ccccc}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; a_{23} &amp; \cdots &amp; a_{2 m} \\
+a_{31} &amp; a_{32} &amp; a_{33} &amp; \cdots &amp; a_{3 m} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; a_{n 3} &amp; \cdots &amp; a_{n m}
+\end{array}\right)
+\end{split}\]</div>
+<p>We will assume that <span class="math notranslate nohighlight">\(a_{i j} \in \mathbb{R}\)</span> for all</p>
+<div class="math notranslate nohighlight">
+\[
+(i, j) \in\{1,2, \cdots, n\} \times\{1,2, \cdots, m\} .
+\]</div>
+<p>The scalar pre-product of this constant with this matrix is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+c A &amp; =c\left(\begin{array}{ccccc}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; a_{23} &amp; \cdots &amp; a_{2 m} \\
+a_{31} &amp; a_{32} &amp; a_{33} &amp; \cdots &amp; a_{3 m} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; a_{n 3} &amp; \cdots &amp; a_{n m}
+\end{array}\right) \\[20pt]
+&amp; =\left(\begin{array}{ccccc}
+c a_{11} &amp; c a_{12} &amp; c a_{13} &amp; \cdots &amp; c a_{1 m} \\
+c a_{21} &amp; c a_{22} &amp; c a_{23} &amp; \cdots &amp; c a_{2 m} \\
+c a_{31} &amp; c a_{32} &amp; c a_{33} &amp; \cdots &amp; c a_{3 m} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+c a_{n 1} &amp; c a_{n 2} &amp; c a_{n 3} &amp; \cdots &amp; c a_{n m}
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+<p>The scalar post-product of the matrix with constant is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A c &amp; =\left(\begin{array}{ccccc}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; a_{23} &amp; \cdots &amp; a_{2 m} \\
+a_{31} &amp; a_{32} &amp; a_{33} &amp; \cdots &amp; a_{3 m} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; a_{n 3} &amp; \cdots &amp; a_{n m}
+\end{array}\right) c \\[20pt]
+&amp; =\left(\begin{array}{ccccc}
+c a_{11} &amp; c a_{12} &amp; c a_{13} &amp; \cdots &amp; c a_{1 m} \\
+c a_{21} &amp; c a_{22} &amp; c a_{23} &amp; \cdots &amp; c a_{2 m} \\
+c a_{31} &amp; c a_{32} &amp; c a_{33} &amp; \cdots &amp; c a_{3 m} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+c a_{n 1} &amp; c a_{n 2} &amp; c a_{n 3} &amp; \cdots &amp; c a_{n m}
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(c A=A c\)</span>. As such, we can just talk about the <strong>scalar product</strong> of a constant with a matrix, without specifying the order in which the multiplication takes place.</p>
+</section>
+<section id="some-examples-of-scalar-multiplication-of-a-matrix">
+<h3>Some examples of scalar multiplication of a matrix<a class="headerlink" href="#some-examples-of-scalar-multiplication-of-a-matrix" title="Permalink to this heading">#</a></h3>
+<p>The following examples come from <span id="id87">[<a class="reference internal" href="#id42" title="A Asano. Mathematics for economics. Cambridge University Press, 2013.">7Asa13</a>]</span> (pp. 222-224).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 1<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+2 X=2\left(\begin{array}{ll}
+1 &amp; 1 \\
+1 &amp; 2
+\end{array}\right)=\left(\begin{array}{ll}
+2(1) &amp; 2(1) \\
+2(1) &amp; 2(2)
+\end{array}\right)=\left(\begin{array}{ll}
+2 &amp; 2 \\
+2 &amp; 4
+\end{array}\right)
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 2<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+3 Y=3\left(\begin{array}{ll}
+2 &amp; 1 \\
+2 &amp; 4
+\end{array}\right)=\left(\begin{array}{ll}
+3(2) &amp; 3(1) \\
+3(2) &amp; 3(4)
+\end{array}\right)=\left(\begin{array}{cc}
+6 &amp; 3 \\
+6 &amp; 12
+\end{array}\right)
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 3<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+2 Z=2\left(\begin{array}{cc}
+-1 &amp; -2 \\
+3 &amp; 1
+\end{array}\right)=\left(\begin{array}{cc}
+2(-1) &amp; 2(-2) \\
+2(3) &amp; 2(1)
+\end{array}\right)=\left(\begin{array}{cc}
+-2 &amp; -4 \\
+6 &amp; 2
+\end{array}\right)
+\end{split}\]</div>
+</div>
+</details><p>The following examples come from <span id="id88">[<a class="reference internal" href="#id13" title="K Sydsæter and P Hammond. Essential mathematics for economic analysis (second edition). Prentice-Hall, 2006.">7SH06</a>]</span> (pp. 555-556).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 4<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+3 A=2\left(\begin{array}{ccc}
+1 &amp; 2 &amp; 0 \\
+4 &amp; -3 &amp; 1
+\end{array}\right)=\left(\begin{array}{ccc}
+3(1) &amp; 3(2) &amp; 3(0) \\
+3(4) &amp; 3-(3) &amp; 3(1)
+\end{array}\right) \\
+=\left(\begin{array}{ccc}
+3 &amp; 6 &amp; 0 \\
+12 &amp; -9 &amp; 3
+\end{array}\right)
+\end{gathered}
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 5<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; \left(\frac{-1}{2}\right) B=2\left(\begin{array}{lll}
+0 &amp; 1 &amp; 2 \\
+1 &amp; 0 &amp; 2
+\end{array}\right)=\left(\begin{array}{ccc}
+\left(\frac{-1}{2}\right)(0) &amp; \left(\frac{-1}{2}\right)(1) &amp; \left(\frac{-1}{2}\right)(2) \\
+\left(\frac{-1}{2}\right)(1) &amp; \left(\frac{-1}{2}\right)(0) &amp; \left(\frac{-1}{2}\right)(2)
+\end{array}\right) \\
+&amp; =\left(\begin{array}{ccc}
+0 &amp; \frac{-1}{2} &amp; -1 \\
+\frac{-1}{2} &amp; 0 &amp; -1
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details></section>
+<section id="matrix-addition">
+<h3>Matrix addition<a class="headerlink" href="#matrix-addition" title="Permalink to this heading">#</a></h3>
+<p>The sum of two matrices is only defined if the two matrices have exactly the same dimensions.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix that takes the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{ccccc}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; a_{23} &amp; \cdots &amp; a_{2 m} \\
+a_{31} &amp; a_{32} &amp; a_{33} &amp; \cdots &amp; a_{3 m} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; a_{n 3} &amp; \cdots &amp; a_{n m}
+\end{array}\right)
+\end{split}\]</div>
+<p>Suppose that <span class="math notranslate nohighlight">\(B\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix that takes the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B=\left(\begin{array}{ccccc}
+b_{11} &amp; b_{12} &amp; b_{13} &amp; \cdots &amp; b_{1 m} \\
+b_{21} &amp; b_{22} &amp; b_{23} &amp; \cdots &amp; b_{2 m} \\
+b_{31} &amp; b_{32} &amp; b_{33} &amp; \cdots &amp; b_{3 m} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+b_{n 1} &amp; b_{n 2} &amp; b_{n 3} &amp; \cdots &amp; b_{n m}
+\end{array}\right)
+\end{split}\]</div>
+<p>The <strong>matrix sum</strong> <span class="math notranslate nohighlight">\((A+B)\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix that takes the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A+B
+&amp;=\left(\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2 m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; \cdots &amp; a_{n m}
+\end{array}\right)+\left(\begin{array}{cccc}
+b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1 m} \\
+b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2 m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+b_{n 1} &amp; b_{n 2} &amp; \cdots &amp; b_{n m}
+\end{array}\right) \\[20pt]
+&amp;=\left(\begin{array}{cccc}
+a_{11}+b_{11} &amp; a_{12}+b_{12} &amp; \cdots &amp; a_{1 m}+b_{1 m} \\
+a_{21}+b_{21} &amp; a_{22}+b_{22} &amp; \cdots &amp; a_{2 m}+b_{2 m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1}+b_{n 1} &amp; a_{n 2}+b_{n 2} &amp; \cdots &amp; a_{n m}+b_{n m}
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(A+B=B+A\)</span>. (Exercise: Convince yourself of the validity of this claim.)</p>
+</section>
+<section id="some-examples-of-matrix-addition">
+<h3>Some examples of matrix addition<a class="headerlink" href="#some-examples-of-matrix-addition" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Suppose that <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix, <span class="math notranslate nohighlight">\(B\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix and <span class="math notranslate nohighlight">\(C\)</span> is an <span class="math notranslate nohighlight">\((n \times p)\)</span> matrix, where <span class="math notranslate nohighlight">\(m \neq n, m \neq p\)</span> and <span class="math notranslate nohighlight">\(n \neq p\)</span>.</p></li>
+<li><p>Example 1: Neither the matrix sum <span class="math notranslate nohighlight">\(A+B\)</span> nor the matrix sum <span class="math notranslate nohighlight">\(B+A\)</span> are defined.</p></li>
+<li><p>Example 2: Neither the matrix sum <span class="math notranslate nohighlight">\(A+C\)</span> nor the matrix sum <span class="math notranslate nohighlight">\(C+A\)</span> are defined.</p></li>
+<li><p>Example 3: Neither the matrix sum <span class="math notranslate nohighlight">\(B+C\)</span> nor the matrix sum <span class="math notranslate nohighlight">\(C+B\)</span> are defined.</p></li>
+</ul>
+<p>The following examples come from <span id="id89">[<a class="reference internal" href="#id42" title="A Asano. Mathematics for economics. Cambridge University Press, 2013.">7Asa13</a>]</span> (pp. 222-224).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 4<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X+Y=\left(\begin{array}{ll}
+1 &amp; 1 \\
+1 &amp; 2
+\end{array}\right)+\left(\begin{array}{ll}
+1 &amp; 0 \\
+1 &amp; 2
+\end{array}\right)=\left(\begin{array}{ll}
+1+1 &amp; 1+0 \\
+1+1 &amp; 2+2
+\end{array}\right)=\left(\begin{array}{ll}
+2 &amp; 1 \\
+2 &amp; 4
+\end{array}\right)
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 5<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; X+Z=\left(\begin{array}{ll}
+1 &amp; 1 \\
+1 &amp; 2
+\end{array}\right)+\left(\begin{array}{ll}
+-1 &amp; 3 \\
+-2 &amp; 1
+\end{array}\right)=\left(\begin{array}{ll}
+1+(-1) &amp; 1+3 \\
+1+(-2) &amp; 2+1
+\end{array}\right) 
+ =\left(\begin{array}{cc}
+0 &amp; 4 \\
+-1 &amp; 3
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details><p>The following example comes from <span id="id90">[<a class="reference internal" href="#id13" title="K Sydsæter and P Hammond. Essential mathematics for economic analysis (second edition). Prentice-Hall, 2006.">7SH06</a>]</span> (pp. 555-556).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 6<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+M+N=\left(\begin{array}{ccc}
+1 &amp; 2 &amp; 0 \\
+4 &amp; -3 &amp; -1
+\end{array}\right)+\left(\begin{array}{lll}
+0 &amp; 1 &amp; 2 \\
+1 &amp; 0 &amp; 2
+\end{array}\right) 
+=\left(\begin{array}{ccc}
+1+0 &amp; 2+1 &amp; 0+2 \\
+4+1 &amp; -3+0 &amp; -1+2
+\end{array}\right) 
+=\left(\begin{array}{ccc}
+1 &amp; 3 &amp; 2 \\
+5 &amp; -3 &amp; 1
+\end{array}\right)
+\end{gathered}
+\end{split}\]</div>
+</div>
+</details></section>
+<section id="an-economic-example-of-matrix-addition">
+<h3>An economic example of matrix addition<a class="headerlink" href="#an-economic-example-of-matrix-addition" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Suppose that there are <span class="math notranslate nohighlight">\(I\)</span> consumers in an economy, each of whom has preferences defined over bundles of the same <span class="math notranslate nohighlight">\(L\)</span> commodities.</p></li>
+<li><p>Suppose that consumer <span class="math notranslate nohighlight">\(i\)</span>’s Marshallian demand vector is given by the column vector</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x^{i}\left(p, y^{i}\right)=\left(\begin{array}{c}
+x_{1}^{i}\left(p, y^{i}\right) \\
+x_{2}^{i}\left(p, y^{i}\right) \\
+x_{3}^{i}\left(p, y^{i}\right) \\
+\vdots \\
+x_{L}^{i}\left(p, y^{i}\right)
+\end{array}\right)
+\end{split}\]</div>
+<ul class="simple">
+<li><p>The aggegate vector of Marshallian demands (or, if you prefer, the vector of market demands) for this economy is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x\left(p, y^{1}, y^{2}, \cdots, y^{\prime}\right)
+&amp;=\sum_{i=1}^{I} x^{i}\left(p, y^{i}\right) \\[20pt]
+&amp;=\sum_{i=1}^{I}\left(\begin{array}{c}
+x_{1}^{i}\left(p, y^{i}\right) \\
+x_{2}^{i}\left(p, y^{i}\right) \\
+x_{3}^{i}\left(p, y^{i}\right) \\
+\vdots \\
+x_{L}^{i}\left(p, y^{i}\right)
+\end{array}\right) \\[20pt]
+&amp;= \left(\begin{array}{c}
+\sum_{i=1}^{I} x_{1}^{i}\left(p, y^{i}\right) \\
+\sum_{i=1}^{I} x_{2}^{i}\left(p, y^{i}\right) \\
+\sum_{i=1}^{I} x_{3}^{i}\left(p, y^{i}\right) \\
+\vdots \\
+\sum_{i=1}^{I} x_{L}^{i}\left(p, y^{i}\right)
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+</section>
+<section id="matrix-subtraction">
+<h3>Matrix subtraction<a class="headerlink" href="#matrix-subtraction" title="Permalink to this heading">#</a></h3>
+<p>Matrix subtraction involves a combination of (i) scalar multiplication of a matrix, and (ii) matrix addition.</p>
+<p>As with matrix addition, the difference of two matrices is only defined if the two matrices have exactly the same dimensions.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are both <span class="math notranslate nohighlight">\((n \times m)\)</span> matrices. The difference between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> is defined to be</p>
+<div class="math notranslate nohighlight">
+\[
+A-B=A+(-1) B
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are both <span class="math notranslate nohighlight">\((n \times m)\)</span> matrices, the matrix difference <span class="math notranslate nohighlight">\((A-B)\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix that takes the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A-B &amp;= A+(-1) B \\[20pt]
+&amp;= \left(\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2 m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; \cdots &amp; a_{n m}
+\end{array}\right)+(-1)\left(\begin{array}{cccc}
+b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1 m} \\
+b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2 m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+b_{n 1} &amp; b_{n 2} &amp; \cdots &amp; b_{n m}
+\end{array}\right) \\[20pt]
+&amp;= \left(\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2 m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; \cdots &amp; a_{n m}
+\end{array}\right)+\left(\begin{array}{cccc}
+-b_{11} &amp; -b_{12} &amp; \cdots &amp; -b_{1 m} \\
+-b_{21} &amp; -b_{22} &amp; \cdots &amp; -b_{2 m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+-b_{n 1} &amp; -b_{n 2} &amp; \cdots &amp; -b_{n m}
+\end{array}\right) \\[20pt]
+&amp;= \left(\begin{array}{cccc}
+a_{11}-b_{11} &amp; a_{12}-b_{12} &amp; \cdots &amp; a_{1 m}-b_{1 m} \\
+a_{21}-b_{21} &amp; a_{22}-b_{22} &amp; \cdots &amp; a_{2 m}-b_{2 m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1}-b_{n 1} &amp; a_{n 2}-b_{n 2} &amp; \cdots &amp; a_{n m}-b_{n m}
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+<p>In general, <span class="math notranslate nohighlight">\(A-B \neq B-A\)</span>. Thus matrix subtraction does not share all of the properties of matrix addition.</p>
+<p>Exercise: Under what circumstances will <span class="math notranslate nohighlight">\(A-B=B-A\)</span> ?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The following example comes from <span id="id91">[<a class="reference internal" href="#id42" title="A Asano. Mathematics for economics. Cambridge University Press, 2013.">7Asa13</a>]</span> (pp. 222-224).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+X-Y &amp;=\left(\begin{array}{cc}
+6 &amp; 3 \\
+6 &amp; 12
+\end{array}\right)-\left(\begin{array}{cc}
+-2 &amp; -4 \\
+6 &amp; 2
+\end{array}\right) \\
+&amp; =\left(\begin{array}{cc}
+6 &amp; 3 \\
+6 &amp; 12
+\end{array}\right)+(-1)\left(\begin{array}{cc}
+-2 &amp; -4 \\
+6 &amp; 2
+\end{array}\right) \\
+&amp; =\left(\begin{array}{cc}
+6 &amp; 3 \\
+6 &amp; 12
+\end{array}\right)+\left(\begin{array}{cc}
+(-1)(-2) &amp; (-1)(-4) \\
+(-1)(6) &amp; (-1)(2)
+\end{array}\right) \\
+&amp; =\left(\begin{array}{cc}
+6 &amp; 3 \\
+6 &amp; 12
+\end{array}\right)+\left(\begin{array}{cc}
+2 &amp; 4 \\
+-6 &amp; -2
+\end{array}\right) \\
+&amp; =\left(\begin{array}{cc}
+6+2 &amp; 3+4 \\
+6+(-6) &amp; 12+(-2)
+\end{array}\right) \\
+&amp; =\left(\begin{array}{cc}
+8 &amp; 7 \\
+0 &amp; 10
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details></section>
+<section id="matrix-multiplication">
+<h3>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The standard matrix product is the dot, or inner, product of two matrices.</p></li>
+<li><p>The dot product of two matrices is only defined for cases in which the number of columns of the first listed matrix is identical to the number of rows of the second listed matrix.</p></li>
+<li><p>If the dot product is defined, the solution matrix will have the same number of rows as the first listed matrix and the same number of columns as the second listed matrix.</p></li>
+</ul>
+<p>Suppose that <span class="math notranslate nohighlight">\(X\)</span> is an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix, <span class="math notranslate nohighlight">\(Y\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix and <span class="math notranslate nohighlight">\(Z\)</span> is an <span class="math notranslate nohighlight">\((n \times p)\)</span> matrix, where <span class="math notranslate nohighlight">\(m \neq n, m \neq p\)</span> and <span class="math notranslate nohighlight">\(n \neq p\)</span>.</p>
+<ul class="simple">
+<li><p>The matrix product <span class="math notranslate nohighlight">\(X Y\)</span> is defined and will be an <span class="math notranslate nohighlight">\((m \times m)\)</span> matrix.</p></li>
+<li><p>The matrix product <span class="math notranslate nohighlight">\(Y X\)</span> is defined and will be an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix.</p></li>
+<li><p>The matrix product <span class="math notranslate nohighlight">\(X Z\)</span> is defined and will be an <span class="math notranslate nohighlight">\((m \times p)\)</span> matrix.</p></li>
+<li><p>The matrix products <span class="math notranslate nohighlight">\(Z X, Y Z\)</span> and <span class="math notranslate nohighlight">\(Z Y\)</span> are not defined.</p></li>
+</ul>
+<p>Suppose that <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix that takes the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{ccccc}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; a_{23} &amp; \cdots &amp; a_{2 m} \\
+a_{31} &amp; a_{32} &amp; a_{33} &amp; \cdots &amp; a_{3 m} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; a_{n 3} &amp; \cdots &amp; a_{n m}
+\end{array}\right)
+\end{split}\]</div>
+<p>Suppose that <span class="math notranslate nohighlight">\(B\)</span> is an <span class="math notranslate nohighlight">\((m \times p)\)</span> matrix that takes the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B=\left(\begin{array}{ccccc}
+b_{11} &amp; b_{12} &amp; b_{13} &amp; \cdots &amp; b_{1 p} \\
+b_{21} &amp; b_{22} &amp; b_{23} &amp; \cdots &amp; b_{2 p} \\
+b_{31} &amp; b_{32} &amp; b_{33} &amp; \cdots &amp; b_{3 p} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+b_{m 1} &amp; b_{m 2} &amp; b_{m 3} &amp; \cdots &amp; b_{m p}
+\end{array}\right)
+\end{split}\]</div>
+<p>The <strong>matrix product</strong> <span class="math notranslate nohighlight">\(A B\)</span> is defined and will be an <span class="math notranslate nohighlight">\((n \times p)\)</span> matrix. The solution matrix is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+AB
+&amp;=\left(\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2 m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; \cdots &amp; a_{n m}
+\end{array}\right) \cdot\left(\begin{array}{cccc}
+b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1 p} \\
+b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2 p} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+b_{m 1} &amp; b_{m 2} &amp; \cdots &amp; b_{m p}
+\end{array}\right) \\[20pt]
+&amp;=\left(\begin{array}{ccccc}
+\sum_{k=1}^{m} a_{1 k} b_{k 1} &amp; \sum_{k=1}^{m} a_{1 k} b_{k 2} &amp; \cdots &amp; \sum_{k=1}^{m} a_{1 k} b_{k p} \\
+\vdots &amp; a_{2 k} b_{k 1} &amp; \sum_{k=1}^{m} a_{2 k} b_{k 2} &amp; \cdots &amp; \sum_{k=1}^{m} a_{2 k} b_{k p} \\
+\sum_{k=1}^{m} a_{n k} b_{k 1} &amp; \sum_{k=1}^{m} a_{n k} b_{k 2} &amp; \cdots &amp; \sum_{k=1}^{m} a_{n k} b_{k p}
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+<p>Note that, while it is possible for <span class="math notranslate nohighlight">\(A B=B A\)</span> in some cases, in general we will have <span class="math notranslate nohighlight">\(A B \neq B A\)</span>. There are three reasons for this:</p>
+<ul class="simple">
+<li><p>First, <span class="math notranslate nohighlight">\(B A\)</span> will not necessarily be defined even if <span class="math notranslate nohighlight">\(A B\)</span> is defined.</p></li>
+<li><p>Second, even when both <span class="math notranslate nohighlight">\(A B\)</span> and <span class="math notranslate nohighlight">\(B A\)</span> are defined, they might have different dimensions.</p></li>
+<li><p>Third, even when both <span class="math notranslate nohighlight">\(A B\)</span> and <span class="math notranslate nohighlight">\(B A\)</span> are defined and have the same dimensions, they might have one or more different entries.</p></li>
+</ul>
+<p>These examples come from <span id="id92">[<a class="reference internal" href="#id40" title="T Bradley. Essential mathematics for economics and business (third edition). John Wiley and Sons, 2008.">7Bra08</a>]</span> (pp. 490-492).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 1<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+AB &amp; =\left(\begin{array}{cc}
+1 &amp; 2 \\
+-2 &amp; 4
+\end{array}\right) \cdot\left(\begin{array}{lll}
+0 &amp; 2 &amp; 2 \\
+1 &amp; 0 &amp; 5
+\end{array}\right) \\
+&amp;=\left(\begin{array}{ccc}
+(1)(0)+(2)(1) &amp; (1)(2)+(2)(0) &amp; (1)(2)+(2)(5) \\
+(-2)(0)+(4)(1) &amp; (-2)(2)+(4)(0) &amp; (-2)(2)+(4)(5)
+\end{array}\right) \\
+&amp;=\left(\begin{array}{ccc}
+0+2 &amp; 2+0 &amp; 2+10 \\
+0+4 &amp; -4+0 &amp; -4+20
+\end{array}\right) \\
+&amp;=\left(\begin{array}{ccc}
+2 &amp; 2 &amp; 12 \\
+4 &amp; -4 &amp; 16
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 2<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The matrix product <span class="math notranslate nohighlight">\(B A\)</span> is undefined because the number of columns in <span class="math notranslate nohighlight">\(B\)</span> (which is three) does not equal the number of rows in <span class="math notranslate nohighlight">\(A\)</span> (which is two).</p>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(A B \neq B A\)</span>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 3<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A C &amp;=\left(\begin{array}{cc}
+1 &amp; 2 \\
+-2 &amp; 4
+\end{array}\right) \cdot\left(\begin{array}{cc}
+3 &amp; -2 \\
+5 &amp; 0
+\end{array}\right) \\
+&amp;=\left(\begin{array}{cc}
+(1)(3)+(2)(5) &amp; (1)(-2)+(2)(0) \\
+(-2)(3)+(4)(5) &amp; (-2)(-2)+(4)(0)
+\end{array}\right) \\
+&amp;=\left(\begin{array}{cc}
+3+10 &amp; -2+0 \\
+-6+20 &amp; 4+0
+\end{array}\right) \\
+&amp;=\left(\begin{array}{cc}
+13 &amp; -2 \\
+14 &amp; 4
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 4<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+C A &amp;=\left(\begin{array}{cc}
+3 &amp; -2 \\
+5 &amp; 0
+\end{array}\right) \cdot\left(\begin{array}{cc}
+1 &amp; 2 \\
+-2 &amp; 4
+\end{array}\right) \\
+&amp;=\left(\begin{array}{cc}
+(3)(1)+(-2)(-2) &amp; (3)(2)+(-2)(4) \\
+(5)(1)+(0)(-2) &amp; (5)(2)+(0)(4)
+\end{array}\right) \\
+&amp;=\left(\begin{array}{cc}
+3+4 &amp; 6+(-8) \\
+5+0 &amp; 10+0
+\end{array}\right) \\
+&amp;=\left(\begin{array}{cc}
+7 &amp; -2 \\
+5 &amp; 10
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(A C \neq C A\)</span>.</p>
+</div>
+</details><section id="an-economic-example-of-matrix-multiplication">
+<h4>An economic example of matrix multiplication<a class="headerlink" href="#an-economic-example-of-matrix-multiplication" title="Permalink to this heading">#</a></h4>
+<p>Suppose that a consumer whose preferences are defined over bundles of <span class="math notranslate nohighlight">\(L\)</span> commodities faces a price vector given by the row vector <span class="math notranslate nohighlight">\(p=\left(p_{1}, p_{2}, \cdots, p_{L}\right)\)</span> and chooses to purchase the quantities of each commodity that are given by the column vector</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+q=\left(\begin{array}{c}
+q_{1} \\
+q_{2} \\
+q_{3} \\
+\vdots \\
+q_{L}
+\end{array}\right)
+\end{split}\]</div>
+<p>The consumer’s total expenditure will be equal to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+p q=\left(p_{1}, p_{2}, \cdots, p_{L}\right)\left(\begin{array}{c}
+q_{1} \\
+q_{2} \\
+q_{3} \\
+\vdots \\
+q_{L}
+\end{array}\right) \\
+=p_{1} q_{1}+p_{2} q_{2}+\cdots+p_{L} q_{L} \\
+=\sum_{I=1}^{L} p_{I} q_{I} .
+\end{gathered}
+\end{split}\]</div>
+</section>
+</section>
+<section id="matrix-transposition">
+<h3>Matrix transposition<a class="headerlink" href="#matrix-transposition" title="Permalink to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix. The <strong>transpose</strong> of the matrix <span class="math notranslate nohighlight">\(A\)</span>, which is denoted by <span class="math notranslate nohighlight">\(A^{T}\)</span>, is the <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix that is formed by taking the rows of <span class="math notranslate nohighlight">\(A\)</span> and turning them into columns, without changing their order. In other words, the <span class="math notranslate nohighlight">\(i\)</span> th column of <span class="math notranslate nohighlight">\(A^{T}\)</span> is the ith row of <span class="math notranslate nohighlight">\(A\)</span>. This also means that the jth row of <span class="math notranslate nohighlight">\(A^{T}\)</span> is the <span class="math notranslate nohighlight">\(j\)</span> th column of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(A\)</span> is the <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix that takes the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{ccccc}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; a_{23} &amp; \cdots &amp; a_{2 m} \\
+a_{31} &amp; a_{32} &amp; a_{33} &amp; \cdots &amp; a_{3 m} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; a_{n 3} &amp; \cdots &amp; a_{n m}
+\end{array}\right)
+\end{split}\]</div>
+<p>The <strong>transpose</strong> of the matrix <span class="math notranslate nohighlight">\(A\)</span> is the <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix that takes the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{T}=\left(\begin{array}{ccccc}
+a_{11} &amp; a_{21} &amp; a_{31} &amp; \cdots &amp; a_{n 1} \\
+a_{12} &amp; a_{22} &amp; a_{32} &amp; \cdots &amp; a_{n 2} \\
+a_{13} &amp; a_{23} &amp; a_{33} &amp; \cdots &amp; a_{n 3} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{1 m} &amp; a_{2 m} &amp; a_{3 m} &amp; \cdots &amp; a_{n m}
+\end{array}\right)
+\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Examples<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">These examples come from <span id="id93">[<a class="reference internal" href="#id14" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">7Sha95</a>]</span> (p. 139, Example 8).</p>
+<ul class="simple">
+<li><p class="sd-card-text">Example 1: If <span class="math notranslate nohighlight">\(
+x=\left(\begin{array}{l}
+1 \\
+3 \\
+5
+\end{array}\right)
+\)</span> then <span class="math notranslate nohighlight">\(X^{T}=(1,3,5)\)</span>.<br />
+<br></br></p></li>
+<li><p class="sd-card-text">Example 2: If <span class="math notranslate nohighlight">\(
+Y=\left(\begin{array}{ll}
+2 &amp; 3 \\
+5 &amp; 9 \\
+7 &amp; 6
+\end{array}\right)
+\)</span> then <span class="math notranslate nohighlight">\(
+Y^{T}=\left(\begin{array}{lll}
+2 &amp; 5 &amp; 7 \\
+3 &amp; 9 &amp; 6
+\end{array}\right)
+\)</span>.<br />
+<br></br></p></li>
+<li><p class="sd-card-text">Example 3: If <span class="math notranslate nohighlight">\(
+Z=\left(\begin{array}{ccc}
+1 &amp; 3 &amp; 7 \\
+4 &amp; 5 &amp; 11 \\
+6 &amp; 8 &amp; 10
+\end{array}\right)
+\)</span> then <span class="math notranslate nohighlight">\(
+Z^{T}=\left(\begin{array}{ccc}
+1 &amp; 4 &amp; 6 \\
+3 &amp; 5 &amp; 8 \\
+7 &amp; 11 &amp; 10
+\end{array}\right)
+\)</span>.</p></li>
+</ul>
+</div>
+</details></section>
+<section id="symmetric-matrices">
+<h3>Symmetric matrices<a class="headerlink" href="#symmetric-matrices" title="Permalink to this heading">#</a></h3>
+<p>In general, <span class="math notranslate nohighlight">\(A^{T} \neq A\)</span>. There are two reasons for this:</p>
+<ul class="simple">
+<li><p>First, unless <span class="math notranslate nohighlight">\(A\)</span> is a square matrix (that is, unless it has the same number of rows and columns), the dimensions of the matrix <span class="math notranslate nohighlight">\(A^{T}\)</span> will be different to the dimensions of the matrix <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>Second, even if <span class="math notranslate nohighlight">\(A\)</span> is a square matrix, in general the <span class="math notranslate nohighlight">\(i\)</span>th row of <span class="math notranslate nohighlight">\(A\)</span> will not be identical to the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span>. As such, in general we will have <span class="math notranslate nohighlight">\(A^{T} \neq A\)</span> even for square matrices.</p></li>
+</ul>
+<p>If it is the case that <span class="math notranslate nohighlight">\(A^{T}=A\)</span>, then we say that <span class="math notranslate nohighlight">\(A\)</span> is a <strong>symmetric matrix</strong>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Examples<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Example 1:
+<span class="math notranslate nohighlight">\(
+A=\left(\begin{array}{ll}
+0 &amp; 0 \\
+0 &amp; 0
+\end{array}\right)=A^{T}
+\)</span>
+<br></br></p></li>
+<li><p class="sd-card-text">Example 2:
+<span class="math notranslate nohighlight">\(
+B=\left(\begin{array}{ll}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right)=B^{T} 
+\)</span>
+<br></br></p></li>
+<li><p class="sd-card-text">Example 3:
+<span class="math notranslate nohighlight">\(
+C=\left(\begin{array}{ll}
+0 &amp; 1 \\
+1 &amp; 0
+\end{array}\right)=C^{T} 
+\)</span>
+<br></br></p></li>
+<li><p class="sd-card-text">Example 4:
+<span class="math notranslate nohighlight">\(
+D=\left(\begin{array}{ll}
+1 &amp; 0 \\
+0 &amp; 0
+\end{array}\right)=D^{T} 
+\)</span></p></li>
+</ul>
+</div>
+</details></section>
+<section id="null-matrices">
+<h3>Null matrices<a class="headerlink" href="#null-matrices" title="Permalink to this heading">#</a></h3>
+<p>A <strong>null matrix</strong> (or vector) is a matrix that consists solely of zeroes. For example, the <span class="math notranslate nohighlight">\((2 \times 2)\)</span> null matrix is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+0=\left(\begin{array}{ll}
+0 &amp; 0 \\
+0 &amp; 0
+\end{array}\right)
+\end{split}\]</div>
+<p>The <span class="math notranslate nohighlight">\((n \times m)\)</span> null matrix is the ADDITIVE identity matrix for the space of all <span class="math notranslate nohighlight">\((n \times m)\)</span> null matrices. This means that if <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix, then <span class="math notranslate nohighlight">\(A+0=0+A=A\)</span>.</p>
+</section>
+<section id="additive-inverses">
+<h3>Additive inverses<a class="headerlink" href="#additive-inverses" title="Permalink to this heading">#</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix and 0 is the <span class="math notranslate nohighlight">\((n \times m)\)</span> null matrix.
+The <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is the <strong>additive inverse</strong> of <span class="math notranslate nohighlight">\(A\)</span> if and only if <span class="math notranslate nohighlight">\(A+B=B+A=0\)</span>.
+Suppose that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 m} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2 m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; \cdots &amp; a_{n m}
+\end{array}\right)
+\end{split}\]</div>
+<p>The additive inverse of <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B=-A=\left(\begin{array}{cccc}
+-a_{11} &amp; -a_{12} &amp; \cdots &amp; -a_{1 m} \\
+-a_{21} &amp; -a_{22} &amp; \cdots &amp; -a_{2 m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+-a_{n 1} &amp; -a_{n 2} &amp; \cdots &amp; -a_{n m}
+\end{array}\right)
+\end{split}\]</div>
+<section id="an-example-of-an-additive-inverse-matrix">
+<h4>An example of an additive inverse matrix<a class="headerlink" href="#an-example-of-an-additive-inverse-matrix" title="Permalink to this heading">#</a></h4>
+<p>Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A+B &amp;=\left(\begin{array}{ll}
+1 &amp; 2 \\
+4 &amp; 3
+\end{array}\right)+\left(\begin{array}{ll}
+-1 &amp; -2 \\
+-4 &amp; -3
+\end{array}\right) \\[20pt]
+&amp;=\left(\begin{array}{ll}
+1+(-1) &amp; 2+(-2) \\
+4+(-4) &amp; 3+(-3)
+\end{array}\right) \\[20pt]
+&amp;=\left(\begin{array}{ll}
+0 &amp; 0 \\
+0 &amp; 0
+\end{array}\right)
+=0_{(2 \times 2)}
+\end{aligned}
+\end{split}\]</div>
+<p>Note also that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+B+A &amp;=\left(\begin{array}{ll}
+-1 &amp; -2 \\
+-4 &amp; -3
+\end{array}\right)+\left(\begin{array}{ll}
+1 &amp; 2 \\
+4 &amp; 3
+\end{array}\right) \\[20pt]
+&amp;=\left(\begin{array}{ll}
+-1+1 &amp; -2+2 \\
+-4+4 &amp; -3+3
+\end{array}\right)\\[20pt]
+&amp;=\left(\begin{array}{ll}
+0 &amp; 0 \\
+0 &amp; 0
+\end{array}\right)=0_{(2 \times 2)}
+\end{aligned}
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(A+B=B+A=0_{(2 \times 2)}\)</span>, we can conclude that <span class="math notranslate nohighlight">\(B\)</span> is the additive inverse for <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</section>
+</section>
+<section id="identity-matrices">
+<h3>Identity matrices<a class="headerlink" href="#identity-matrices" title="Permalink to this heading">#</a></h3>
+<p>An <strong>identity matrix</strong> is a square matrix that has ones on the main (north-west to south-east) diagonal and zeros everywhere else. For example, the <span class="math notranslate nohighlight">\((2 \times 2)\)</span> identity matrix is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+I=\left(\begin{array}{ll}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right)
+\end{split}\]</div>
+<p>The <span class="math notranslate nohighlight">\((n \times n)\)</span> identity matrix is the MULTIPLICATIVE identity matrix for any relevant space of matrices:</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix, then <span class="math notranslate nohighlight">\(A I=I A=A\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix, then <span class="math notranslate nohighlight">\(A I=A\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix, then <span class="math notranslate nohighlight">\(I A=A\)</span>.</p></li>
+</ul>
+</section>
+<section id="multiplicative-inverses">
+<h3>Multiplicative inverses<a class="headerlink" href="#multiplicative-inverses" title="Permalink to this heading">#</a></h3>
+<p>Only square matrices have any chance of having a multiplicative inverse. Some, but not all, square matrices will have a multiplicative inverse. Suppose that <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix and <span class="math notranslate nohighlight">\(I\)</span> is the <span class="math notranslate nohighlight">\((n \times n)\)</span> identity matrix.</p>
+<p>The <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is the <strong>multiplicative inverse</strong> (usually just referred to as the inverse) of <span class="math notranslate nohighlight">\(A\)</span> if and only if <span class="math notranslate nohighlight">\(A B=B A=I\)</span>.</p>
+<ul class="simple">
+<li><p>A square matrix that has an inverse is said to be <strong>non-singular</strong>.</p></li>
+<li><p>A square matrix that does not have an inverse is said to be <strong>singular</strong>.</p></li>
+<li><p>We will talk about methods for determining whether or not a matrix is non-singular later in this unit.</p></li>
+<li><p>We will talk about methods for finding an inverse matrix, if it exists, later in this unit.</p></li>
+<li><p>Useful fact: “The transpose of the inverse is equal to the inverse of the transpose”.</p>
+<ul>
+<li><p>If <span class="math notranslate nohighlight">\(A\)</span> is a non-singular square matrix whose multiplicative inverse is <span class="math notranslate nohighlight">\(A^{-1}\)</span>, then we have <span class="math notranslate nohighlight">\(\left(A^{-1}\right)^{T}=\left(A^{T}\right)^{-1}\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<section id="an-example-of-a-multiplicative-inverse-matrix">
+<h4>An example of a multiplicative inverse matrix<a class="headerlink" href="#an-example-of-a-multiplicative-inverse-matrix" title="Permalink to this heading">#</a></h4>
+<p>This example comes from <span id="id94">[<a class="reference internal" href="#id11" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">7HJP87</a>]</span> (p. 278, Example 1).</p>
+<ul class="simple">
+<li><p>Note that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A B &amp;=\left(\begin{array}{ll}
+1 &amp; 2 \\
+3 &amp; 7
+\end{array}\right) \cdot\left(\begin{array}{cc}
+7 &amp; -2 \\
+-3 &amp; 1
+\end{array}\right) \\[10pt]
+&amp;=\left(\begin{array}{cc}
+(1)(7)+(2)(-3) &amp; (1)(-2)+(2)(1) \\
+(3)(7)+(7)(-3) &amp; (3)(-2)+(7)(1)
+\end{array}\right) \\[10pt]
+&amp;=\left(\begin{array}{cc}
+7+(-6) &amp; -2+2 \\
+21+(-21) &amp; -6+7
+\end{array}\right) \\[10pt]
+&amp;=\left(\begin{array}{ll}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right) \\[10pt]
+&amp;= I
+\end{aligned}
+\end{split}\]</div>
+<p>Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+B A &amp;=\left(\begin{array}{cc}
+7 &amp; -2 \\
+-3 &amp; 1
+\end{array}\right) \cdot\left(\begin{array}{cc}
+1 &amp; 2 \\
+3 &amp; 7
+\end{array}\right) \\[10pt]
+&amp;=\left(\begin{array}{cc}
+(7)(1)+(-2)(3) &amp; (7)(2)+(-2)(7) \\
+(-3)(1)+(1)(3) &amp; (-3)(2)+(1)(7)
+\end{array}\right) \\[10pt]
+&amp;=\left(\begin{array}{cc}
+7+(-6) &amp; 14+(-14) \\
+-3+3 &amp; -6+7
+\end{array}\right) \\[10pt]
+&amp;=\left(\begin{array}{cc}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right) \\[10pt]
+&amp;= I
+\end{aligned}
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(A B=B A=I\)</span>, we can conclude that <span class="math notranslate nohighlight">\(A^{-1}=B\)</span>.</p>
+</section>
+</section>
+<section id="idempotent-matrices">
+<h3>Idempotent matrices<a class="headerlink" href="#idempotent-matrices" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>A matrix <span class="math notranslate nohighlight">\(A\)</span> is said to be <strong>idempotent</strong> if and only if <span class="math notranslate nohighlight">\(A A=A\)</span>.</p></li>
+<li><p>Clearly a NECESSARY condition for matrix to be idempotent is that <span class="math notranslate nohighlight">\(A\)</span> be a square matrix. (Exercise: Explain why this is the case.)</p></li>
+<li><p>However, this is NOT a SUFFICIENT condition for a matrix to be idempotent. In general, <span class="math notranslate nohighlight">\(A A \neq A\)</span>, even for square matrices.</p></li>
+<li><p>Two examples of idempotent matrices that you have already encountered are square null matrices and identity matrices.</p></li>
+<li><p>We will shortly encounter two more examples. These are the Hat matrix <span class="math notranslate nohighlight">\((P)\)</span> and the residual-making matrix <span class="math notranslate nohighlight">\((M=I-P)\)</span> from statistics and econometrics.</p></li>
+</ul>
+<section id="some-examples-of-idempotent-matrices">
+<h4>Some examples of idempotent matrices<a class="headerlink" href="#some-examples-of-idempotent-matrices" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\((2 \times 2)\)</span> identity matrix:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+l_{2} \cdot I_{2}
+&amp;=\left(\begin{array}{ll}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right) \cdot\left(\begin{array}{ll}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right) \\
+&amp;=\left(\begin{array}{ll}
+(1)(1)+(0)(0) &amp; (1)(0)+(0)(1) \\
+(0)(1)+(1)(0) &amp; (0)(0)+(1)(1)
+\end{array}\right) \\
+&amp;=\left(\begin{array}{ll}
+1+0 &amp; 0+0 \\
+0+0 &amp; 0+1
+\end{array}\right) \\
+&amp;=\left(\begin{array}{ll}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right) \\
+&amp;=I_{2}
+\end{aligned}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\((2 \times 2)\)</span> null matrix:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+0_{(2 \times 2)} \cdot 0_{(2 \times 2)}
+&amp;=\left(\begin{array}{ll}
+0 &amp; 0 \\
+0 &amp; 0
+\end{array}\right) \cdot\left(\begin{array}{ll}
+0 &amp; 0 \\
+0 &amp; 0
+\end{array}\right) \\
+&amp;=\left(\begin{array}{cc}
+(0)(0)+(0)(0) &amp; (0)(0)+(0)(0) \\
+(0)(0)+(0)(0) &amp; (0)(0)+(0)(0)
+\end{array}\right) \\
+&amp;=\left(\begin{array}{ll}
+0+0 &amp; 0+0 \\
+0+0 &amp; 0+0
+\end{array}\right) \\
+&amp;=\left(\begin{array}{ll}
+0 &amp; 0 \\
+0 &amp; 0
+\end{array}\right) \\
+&amp;=0_{(2 \times 2)}
+\end{aligned}
+\end{split}\]</div>
+</section>
+</section>
+<section id="econometric-example-the-classical-linear-regression-model">
+<h3>Econometric example: the classical linear regression model<a class="headerlink" href="#econometric-example-the-classical-linear-regression-model" title="Permalink to this heading">#</a></h3>
+<p>One of simplest models that you will encounter in statistics and econometrics is the classical linear regression model (CLRM). This model takes the form</p>
+<div class="math notranslate nohighlight">
+\[
+Y=X \beta+\epsilon
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(Y\)</span> is an <span class="math notranslate nohighlight">\((n \times 1)\)</span> vector of <span class="math notranslate nohighlight">\(n\)</span> observations on a single dependent variable, <span class="math notranslate nohighlight">\(X\)</span> is an <span class="math notranslate nohighlight">\((n \times k)\)</span> matrix of <span class="math notranslate nohighlight">\(n\)</span> observations on <span class="math notranslate nohighlight">\(k\)</span> independent variables, <span class="math notranslate nohighlight">\(\beta\)</span> is a <span class="math notranslate nohighlight">\((k \times 1)\)</span> vector of unknown parameters and <span class="math notranslate nohighlight">\(\epsilon\)</span> is an <span class="math notranslate nohighlight">\((n \times 1)\)</span> vector of random disturbances.</p>
+<p>In the CLRM, the joint distribution of the random disturbances, conditional on <span class="math notranslate nohighlight">\(X\)</span>, is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\epsilon \mid X \sim N\left(0, \sigma^{2} I\right)
+\]</div>
+<p>where 0 is an <span class="math notranslate nohighlight">\((n \times 1)\)</span> null vector, <span class="math notranslate nohighlight">\(l\)</span> is an <span class="math notranslate nohighlight">\((n \times n)\)</span> identity matrix and <span class="math notranslate nohighlight">\(\sigma^{2}\)</span> is an unknown parameter.</p>
+<section id="matrices-associated-with-the-clrm">
+<h4>Matrices associated with the CLRM<a class="headerlink" href="#matrices-associated-with-the-clrm" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>The ordinary least squares estimator (and, in the case of the CLRM, maximum likelihood estimator) of the parameter vector <span class="math notranslate nohighlight">\(\beta\)</span> in the CLRM is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+b=\left(X^{T} X\right)^{-1} X^{T} Y
+\]</div>
+<ul class="simple">
+<li><p>The hat matrix for the CLRM is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P=X\left(X^{T} X\right)^{-1} X^{T}
+\]</div>
+<ul class="simple">
+<li><p>The residual-making matrix for the CLRM is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M &amp; =I-P \\
+&amp; =I-X\left(X^{T} X\right)^{-1} X^{T}
+\end{aligned}
+\end{split}\]</div>
+</section>
+<section id="the-hat-matrix-is-symmetric">
+<h4>The hat matrix is symmetric<a class="headerlink" href="#the-hat-matrix-is-symmetric" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P^{T} &amp; =\left(X\left(X^{T} X\right)^{-1} X^{T}\right)^{T} \\
+&amp; =\left(X^{T}\right)^{T}\left(\left(X^{T} X\right)^{-1}\right)^{T}(X)^{T} \\
+&amp; =X\left(\left(X^{T} X\right)^{T}\right)^{-1} X^{T} \\
+&amp; =X\left((X)^{T}\left(X^{T}\right)^{T}\right)^{-1} X^{T} \\
+&amp; =X\left(X^{T} X\right)^{-1} X^{T} \\
+&amp; =P
+\end{aligned}
+\end{split}\]</div>
+</section>
+<section id="the-hat-matrix-is-idempotent">
+<h4>The hat matrix is idempotent<a class="headerlink" href="#the-hat-matrix-is-idempotent" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P P &amp; =\left(x\left(x^{T} x\right)^{-1} x^{T}\right)\left(x\left(x^{T} x\right)^{-1} x^{T}\right) \\
+&amp; =x\left(x^{T} x\right)^{-1} x^{T} x\left(x^{T} x\right)^{-1} x^{T} \\
+&amp; =x\left(x^{T} x\right)^{-1} I X^{T} \\
+&amp; =x\left(x^{T} x\right)^{-1} x^{T} \\
+&amp; =P
+\end{aligned}
+\end{split}\]</div>
+</section>
+<section id="the-residual-making-matrix-is-symmetric">
+<h4>The residual-making matrix is symmetric<a class="headerlink" href="#the-residual-making-matrix-is-symmetric" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M^{T} &amp; =(I-P)^{T} \\
+&amp; =I^{T}-P^{T} \\
+&amp; =I-P \\
+&amp; =M
+\end{aligned}
+\end{split}\]</div>
+</section>
+<section id="the-residual-making-matrix-is-idempotent">
+<h4>The residual-making matrix is idempotent<a class="headerlink" href="#the-residual-making-matrix-is-idempotent" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+M M &amp; =(I-P)(I-P) \\
+&amp; =I I-I P-P I+P P \\
+&amp; =I-P-P+P \\
+&amp; =I-P \\
+&amp; =M
+\end{aligned}
+\end{split}\]</div>
+</section>
+</section>
+</section>
+<section id="vector-inequalities-in-euclidean-n-space">
+<h2>Vector inequalities in Euclidean <span class="math notranslate nohighlight">\(n\)</span>-space<a class="headerlink" href="#vector-inequalities-in-euclidean-n-space" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Suppose that <span class="math notranslate nohighlight">\(x \in \mathbb{R}^{n}\)</span> and <span class="math notranslate nohighlight">\(y \in \mathbb{R}^{n}\)</span>.</p>
+<ul>
+<li><p>This means that <span class="math notranslate nohighlight">\(x=\left(x_{1}, x_{2}, \cdots, x_{n}\right)\)</span> where <span class="math notranslate nohighlight">\(x_{i} \in \mathbb{R}\)</span> for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>.</p></li>
+<li><p>It also means that means that <span class="math notranslate nohighlight">\(y=\left(y_{1}, y_{2}, \cdots, y_{n}\right)\)</span> where <span class="math notranslate nohighlight">\(y_{i} \in \mathbb{R}\)</span> for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>.</p></li>
+</ul>
+</li>
+<li><p>We say that <span class="math notranslate nohighlight">\(x \geqslant y\)</span> if <span class="math notranslate nohighlight">\(x_{i} \geqslant y_{i}\)</span> for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>.</p></li>
+<li><p>We say that <span class="math notranslate nohighlight">\(x&gt;y\)</span> if <span class="math notranslate nohighlight">\(x \geqslant y\)</span> and <span class="math notranslate nohighlight">\(x_{k}&gt;y_{k}\)</span> for at least one <span class="math notranslate nohighlight">\(k \in\{1,2, \cdots, n\}\)</span>.</p></li>
+<li><p>We say that <span class="math notranslate nohighlight">\(x \gg y\)</span> if <span class="math notranslate nohighlight">\(x_{i}&gt;y_{i}\)</span> for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>.</p></li>
+<li><p>Note that there are some pairs of vectors that cannot be ranked using these vector inequalities.</p></li>
+<li><p>These vector inequalities are illustrated for the case of <span class="math notranslate nohighlight">\(\mathbb{R}^{2}\)</span> in the following diagrams.</p></li>
+</ul>
+<figure class="align-center" id="id115">
+<a class="reference internal image-reference" href="_images/vector_inequality_ge.png"><img alt="_images/vector_inequality_ge.png" src="_images/vector_inequality_ge.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Vector inequality diagram 1 (<span class="math notranslate nohighlight">\(\geqslant\)</span>)</span><a class="headerlink" href="#id115" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id116">
+<a class="reference internal image-reference" href="_images/vector_inequality_gt.png"><img alt="_images/vector_inequality_gt.png" src="_images/vector_inequality_gt.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Vector inequality diagram 2 (<span class="math notranslate nohighlight">\(&gt;\)</span>)</span><a class="headerlink" href="#id116" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id117">
+<a class="reference internal image-reference" href="_images/vector_inequality_gg.png"><img alt="_images/vector_inequality_gg.png" src="_images/vector_inequality_gg.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Vector inequality diagram 3 (<span class="math notranslate nohighlight">\(\gg\)</span>)</span><a class="headerlink" href="#id117" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="some-examples-of-the-vector-inequalities">
+<h3>Some examples of the vector inequalities<a class="headerlink" href="#some-examples-of-the-vector-inequalities" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Example 1: <span class="math notranslate nohighlight">\((5,5) \gg(4,4),(5,5)&gt;(4,4)\)</span>, and <span class="math notranslate nohighlight">\((5,5) \geqslant(4,4)\)</span>.</p></li>
+<li><p>Example 2: <span class="math notranslate nohighlight">\((5,4) \gg(4,3),(5,4)&gt;(4,3)\)</span>, and <span class="math notranslate nohighlight">\((5,4) \geqslant(4,3)\)</span>.</p></li>
+<li><p>Example 3: <span class="math notranslate nohighlight">\((5,5&gt;(5,4)\)</span>, and <span class="math notranslate nohighlight">\((5,5) \geqslant(5,4)\)</span>.</p></li>
+<li><p>Example 4: <span class="math notranslate nohighlight">\((5,5) \geqslant(5,5)\)</span>.</p></li>
+<li><p>Example 5: <span class="math notranslate nohighlight">\((5,4)\)</span> and <span class="math notranslate nohighlight">\((4,5)\)</span> cannot be compared using any of the three vector inequalities.</p></li>
+</ul>
+</section>
+<section id="economic-application-consumers-who-prefer-more-to-less">
+<h3>Economic application: consumers who “prefer more to less”<a class="headerlink" href="#economic-application-consumers-who-prefer-more-to-less" title="Permalink to this heading">#</a></h3>
+<p>We sometimes want to consider the behaviour of consumers who prefer “more to less”.</p>
+<p>Suppose that a consumer’s preferences are defined over bundles of <span class="math notranslate nohighlight">\(L\)</span> commodities. There are two common versions of “more is preferred to less” for such a consumer:</p>
+<ul class="simple">
+<li><p>Monotone preferences: The consumer will strictly prefer bundle <span class="math notranslate nohighlight">\(x\)</span> to bundle <span class="math notranslate nohighlight">\(y\)</span> if <span class="math notranslate nohighlight">\(x \gg y\)</span> (that is, if <span class="math notranslate nohighlight">\(x_{l}&gt;y_{l}\)</span> for all <span class="math notranslate nohighlight">\(l \in\{1,2, \cdots, L\}\)</span> ).</p></li>
+<li><p>Stongly monotone preferences: The consumer will strictly prefer bundle <span class="math notranslate nohighlight">\(x\)</span> to bundle <span class="math notranslate nohighlight">\(y\)</span> if <span class="math notranslate nohighlight">\(x&gt;y\)</span> (that is, if <span class="math notranslate nohighlight">\(x_{I} \geqslant y_{l}\)</span> for all <span class="math notranslate nohighlight">\(l \in\{1,2, \cdots, L\}\)</span>, and <span class="math notranslate nohighlight">\(x_{k}&gt;y_{k}\)</span> for at least one <span class="math notranslate nohighlight">\(\left.k \in\{1,2, \cdots, L\}\right)\)</span>.</p></li>
+</ul>
+<p><br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br></p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="quadratic-forms">
+<h1>Quadratic Forms<a class="headerlink" href="#quadratic-forms" title="Permalink to this heading">#</a></h1>
+<section id="id95">
+<h2>References and reading guide<a class="headerlink" href="#id95" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span id="id96">[<a class="reference internal" href="#id41" title="H Anton. Elementary linear algebra (fifth edition). John Wiley and Sons, 1987.">7Ant87</a>]</span>: Chapter 6 and Chapter 7 (Section 3).</p></li>
+<li><p><span id="id97">[<a class="reference internal" href="#id44" title="AC Chiang. Fundamental methods of mathematical economics (third edition). McGraw-Hill, 1984.">7Chi84</a>]</span>: Chapter 11 (Section 3).</p></li>
+<li><p><span id="id98">[<a class="reference internal" href="#id45" title="G Debreu. Definite and semidefinite quadratic forms. Econometrica, 20(2):295-300, 1952.">7Deb52</a>]</span></p></li>
+<li><p><span id="id99">[<a class="reference internal" href="#id46" title="JR Hicks. Value and capital: an inquiry into some fundamental principles of economic theory. Oxford University Press, 1939.">7Hic39</a>]</span>: Mathematical Appendix (pp. 303-328).</p></li>
+<li><p><span id="id100">[<a class="reference internal" href="#id47" title="JR Hicks. Value and capital: an inquiry into some fundamental principles of economic theory (second edition). Oxford University Press, 1946.">7Hic46</a>]</span>: Mathematical Appendix (pp. 303-328).</p></li>
+<li><p><span id="id101">[<a class="reference internal" href="#id48" title="DM Mandy. On second order conditions for equality constrained extremum problems. Economics Letters, 121(3):440-443, 2013.">7Man13</a>]</span></p></li>
+<li><p><span id="id102">[<a class="reference internal" href="#id49" title="DM Mandy. Leading principal minors and semidefiniteness. Economic Inquiry, 56(2):1396-1398, 2018.">7Man18</a>]</span></p></li>
+<li><p><span id="id103">[<a class="reference internal" href="#id50" title="DM Mandy. Quadratic forms with linear constraintss. The American Mathematical Monthly, 50(7):430-433, 1943.">7Man43</a>]</span></p></li>
+<li><p><span id="id104">[<a class="reference internal" href="#id51" title="PA Samuelson. Foundations of Economic Analysis. Harvard University Press, 1947.">7Sam47</a>]</span>: Mathematical Appendix A (pp. 357-379).</p></li>
+<li><p><span id="id105">[<a class="reference internal" href="#id52" title="E Silberberg and W Suen. The structure of economics: A mathematical analysis (third edition). Irwin McGraw-Hill, 2001.">7SS01</a>]</span>: Chapter 6.</p></li>
+<li><p><span id="id106">[<a class="reference internal" href="#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">7SB94</a>]</span>: Chapter 13 (Section 3), Chapter 16, Chapter 17, Chapter 19, Chapter 21, and Chapter 23.</p></li>
+<li><p><span id="id107">[<a class="reference internal" href="#id53" title="RK Sundaram. A first course in optimization theory. Cambridge University Press, 1996.">7Sun96</a>]</span>: Chapter 1 (Section 5).</p></li>
+<li><p><span id="id108">[<a class="reference internal" href="#id38" title="A Takayama. Analytical methods in economics. The University of Michigan Press, 1993.">7Tak93</a>]</span>: Chapter 1 (Section 4).</p></li>
+</ul>
+<p>See the top of the page for the detailed reference list in full (combined for both the ‘Vector and matrix arithmetic’ and ‘Quadratic forms’ sections of this lecture).</p>
+</section>
+<section id="what-is-a-quadratic-form">
+<h2>What is a quadratic form?<a class="headerlink" href="#what-is-a-quadratic-form" title="Permalink to this heading">#</a></h2>
+<p>Suppose that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2 n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; \cdots &amp; a_{n n}
+\end{array}\right)
+\end{split}\]</div>
+<p>is an <span class="math notranslate nohighlight">\((n \times n)\)</span> square matrix whose elements are all fixed parameters (constants) and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x=\left(\begin{array}{c}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{n}
+\end{array}\right)
+\end{split}\]</div>
+<p>is an <span class="math notranslate nohighlight">\((n \times 1)\)</span> column vector whose elements are all variables.</p>
+<p>Consider the function <span class="math notranslate nohighlight">\(f(x)=x^{T} A x\)</span>.</p>
+<p>Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x^{T} A x &amp; =\left(\begin{array}{llll}
+x_{1} &amp; x_{2} &amp; \cdots &amp; x_{n}
+\end{array}\right)\left(\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2 n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; \cdots &amp; a_{n n}
+\end{array}\right)\left(\begin{array}{c}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{n}
+\end{array}\right) \\[10pt]
+&amp; =\left(\begin{array}{llll}
+x_{1} &amp; x_{2} &amp; \cdots &amp; x_{n}
+\end{array}\right)\left(\begin{array}{c}
+\sum_{i=1}^{n} a_{1 i} x_{i} \\
+\vdots \\
+\sum_{i=1}^{n} a_{n i}^{n} x_{i} x_{i}
+\end{array}\right) \\[10pt]
+&amp; =\sum_{j=1}^{n}\left(x_{j}\left(\sum_{i=1}^{n} a_{j i} x_{i}\right)\right) \\
+&amp; =\sum_{j=1}^{n}\left(\sum_{i=1}^{n} a_{j i} x_{i} x_{j}\right) \\
+&amp; =\sum_{j=1}^{n} \sum_{i=1}^{n} a_{j i} x_{i} x_{j} \\
+&amp; =\left(\sum_{j=1}^{n} a_{j j} x_{j}^{2}\right)+\left(\sum_{j \neq i} \sum_{i=1}^{n} a_{j i} x_{i} x_{j}\right) 
+\end{aligned}
+\end{split}\]</div>
+<p>Clearly <span class="math notranslate nohighlight">\(f(x)=x^{T} A x\)</span> is a quadratic function of the variables in the <span class="math notranslate nohighlight">\(x\)</span> vector. It is for this reason that <span class="math notranslate nohighlight">\(x^{T} A x\)</span> is known as a <strong>quadratic form</strong>.</p>
+</section>
+<section id="symmetric-and-non-symmetric-matrices">
+<h2>Symmetric and non-symmetric matrices<a class="headerlink" href="#symmetric-and-non-symmetric-matrices" title="Permalink to this heading">#</a></h2>
+<p>Suppose that a square matrix <span class="math notranslate nohighlight">\(A\)</span> is not symmetric, so that <span class="math notranslate nohighlight">\(a_{i j} \neq a_{j i}\)</span> for at least one <span class="math notranslate nohighlight">\((i, j)\)</span> pair for which <span class="math notranslate nohighlight">\(i \neq j\)</span>. We have already shown that</p>
+<div class="math notranslate nohighlight">
+\[
+x^{T} A x=\left(\sum_{j=1}^{n} a_{j j} x_{j}^{2}\right)+\left(\sum_{j \neq i} \sum_{i=1}^{n} a_{j i} x_{i} x_{j}\right)
+\]</div>
+<p>Note that the second component of the right hand side of this expression includes only terms for which either <span class="math notranslate nohighlight">\(j&lt;i\)</span> or <span class="math notranslate nohighlight">\(j&gt;i\)</span>. If we collect like terms, we can rewrite this component as</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{j \neq i} \sum_{i=1}^{n} a_{j i} x_{i} x_{j}=\sum_{j&lt;i} \sum_{i=1}^{n}\left(a_{j i}+a_{i j}\right) x_{i} x_{j}
+\]</div>
+<p>Suppose that we let <span class="math notranslate nohighlight">\(b_{i i}=a_{i i}\)</span> and <span class="math notranslate nohighlight">\(b_{i j}=\frac{\left(a_{j i}+a_{i j}\right)}{2}=b_{j i}\)</span>.  This yields</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x^{T} A x &amp; =\left(\sum_{j=1}^{n} a_{j j} x_{j}^{2}\right)+\left(\sum_{j \neq i} \sum_{i=1}^{n} a_{j i} x_{i} x_{j}\right) \\
+&amp; =\left(\sum_{j=1}^{n} a_{j j} x_{j}^{2}\right)+\left(\sum_{j&lt;i} \sum_{i=1}^{n}\left(a_{j i}+a_{i j}\right) x_{i} x_{j}\right) \\
+&amp; =\left(\sum_{j=1}^{n} b_{j j} x_{j}^{2}\right)+\left(\sum_{j&lt;i} \sum_{i=1}^{n}\left(\frac{\left(a_{j i}+a_{i j}\right)}{2}+\frac{\left(a_{j i}+a_{i j}\right)}{2}\right) x_{i} x_{j}\right) \\
+&amp; =\left(\sum_{j=1}^{n} b_{j j} x_{j}^{2}\right)+\left(\sum_{j&lt;i} \sum_{i=1}^{n}\left(b_{j i}+b_{j i}\right) x_{i} x_{j}\right)\\
+&amp; =\left(\sum_{j=1}^{n} b_{j j} x_{j}^{2}\right)+\left(\sum_{j \neq i} \sum_{i=1}^{n} b_{j i} x_{i} x_{j}\right) \\
+&amp; =x^{T} B x
+\end{aligned}
+\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B=\left(\begin{array}{cccc}
+b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1 n} \\
+b_{12} &amp; b_{22} &amp; \cdots &amp; b_{2 n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+b_{1 n} &amp; b_{2 n} &amp; \cdots &amp; b_{n n}
+\end{array}\right)
+\end{split}\]</div>
+<p>is a symmetric matrix.</p>
+<p>Thus any quadratic form <span class="math notranslate nohighlight">\(x^{T} A x\)</span> in which the matrix <span class="math notranslate nohighlight">\(A\)</span> is not symmetric can also be expressed as a quadratic form <span class="math notranslate nohighlight">\(x^{T} B x\)</span> in which the matrix <span class="math notranslate nohighlight">\(B\)</span> is symmetric.</p>
+</section>
+<section id="the-definiteness-of-a-matrix">
+<h2>The definiteness of a matrix<a class="headerlink" href="#the-definiteness-of-a-matrix" title="Permalink to this heading">#</a></h2>
+<p>The “definiteness” of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is related to the sign of the quadratic form <span class="math notranslate nohighlight">\(x^{T} A x\)</span> when the <span class="math notranslate nohighlight">\(x\)</span> vector is not a null vector.</p>
+<p>(Trivially, when <span class="math notranslate nohighlight">\(x\)</span> is a null vector (that is, a vector of zeros), the quadratic form <span class="math notranslate nohighlight">\(x^{T} A x\)</span> must be equal to zero.)</p>
+<ul class="simple">
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> is said to be <strong>positive definite</strong> if <span class="math notranslate nohighlight">\(x^{T} A x&gt;0\)</span> for all <span class="math notranslate nohighlight">\(x \neq 0\)</span>.</p></li>
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> is said to be <strong>positive semi-definite</strong> if <span class="math notranslate nohighlight">\(x^{T} A x \geqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \neq 0\)</span>.</p></li>
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> is said to be <strong>negative semi-definite</strong> if <span class="math notranslate nohighlight">\(x^{T} A x \leqslant 0\)</span> for all <span class="math notranslate nohighlight">\(x \neq 0\)</span>.</p></li>
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> is said to be <strong>negative definite</strong> if <span class="math notranslate nohighlight">\(x^{T} A x&lt;0\)</span> for all <span class="math notranslate nohighlight">\(x \neq 0\)</span>.</p></li>
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> is said to be <strong>indefinite</strong> if <span class="math notranslate nohighlight">\(x^{T} A x&gt;0\)</span> for at least one <span class="math notranslate nohighlight">\(x \neq 0\)</span> and <span class="math notranslate nohighlight">\(x^{T} A x&lt;0\)</span> for at least one <span class="math notranslate nohighlight">\(x \neq 0\)</span>.</p></li>
+</ul>
+<p>Sometimes the definition of the various types of matrix definiteness can be used to establish the definiteness of a particular square matrix. But often this is not a particularly convenient method for doing this.</p>
+<p>When a square matrix is symmetric, there are two indirect approaches to determining its definiteness that are often much more convenient than attempting to directly employ the definition itself.</p>
+<ul class="simple">
+<li><p>One of these indirect methods involves an examination of the “eigenvalues” of the matrix.</p></li>
+<li><p>The other of these indirect methods involves an examination of the “leading principal minors” of the matrix.</p></li>
+</ul>
+<p>But what if a square matrix is not symmetric?</p>
+<ul class="simple">
+<li><p>We can always use the technique discussed above to construct a symmetric square matrix that will have an identical definiteness to the original non-symmetric square matrix.</p></li>
+</ul>
+</section>
+<section id="eigenvalues-and-definiteness">
+<h2>Eigenvalues and definiteness<a class="headerlink" href="#eigenvalues-and-definiteness" title="Permalink to this heading">#</a></h2>
+<p>Suppose that, in addition to being a square matrix, the matrix <span class="math notranslate nohighlight">\(A\)</span> is a symmetric matrix, so that <span class="math notranslate nohighlight">\(A^{T}=A\)</span>.</p>
+<ul class="simple">
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> will be positive definite if and only if all of its eigenvalues are strictly positive <span class="math notranslate nohighlight">\((&gt;0)\)</span>.</p></li>
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> will be positive semi-definite if and only if all of its eigenvalues are non-negative <span class="math notranslate nohighlight">\((\geqslant 0)\)</span>.</p></li>
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> will be negative semi-definite if and only if all of its eigenvalues are non-positive <span class="math notranslate nohighlight">\((\leqslant 0)\)</span>.</p></li>
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> will be negative definite if and only if all of its eigenvalues are strictly negative <span class="math notranslate nohighlight">\((&lt;0)\)</span>.</p></li>
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> will be indefinite if and only if it has both at least one strictly positive eigenvalue and at least one strictly negative eigenvalue.</p></li>
+</ul>
+<p>But what are the eigenvalues of a matrix and how do we find them?</p>
+<p>The <strong>characteristic matrix</strong> associated with a square matrix <span class="math notranslate nohighlight">\(A\)</span> is defined to be the square matrix <span class="math notranslate nohighlight">\((\lambda I-A)\)</span>, where <span class="math notranslate nohighlight">\(\lambda\)</span> is a scalar variable and <span class="math notranslate nohighlight">\(I\)</span> is the identity matrix that has the same dimensions as <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<ul class="simple">
+<li><p>Sometimes the characteristic matrix is defined to be <span class="math notranslate nohighlight">\((A-\lambda I)\)</span>.</p></li>
+<li><p>The <strong>characteristic polynomial</strong> associated with the matrix <span class="math notranslate nohighlight">\(A\)</span> is defined to be <span class="math notranslate nohighlight">\(\operatorname{det}(\lambda I-A)\)</span>.</p>
+<ul>
+<li><p>Sometimes the characteristic polynomial associated with the matrix <span class="math notranslate nohighlight">\(A\)</span> is defined to be <span class="math notranslate nohighlight">\(\operatorname{det}(A-\lambda I)\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix for some <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, then the characteristic polynomial will be an <span class="math notranslate nohighlight">\(n\)</span>th degree polynomial function of the scalar variable <span class="math notranslate nohighlight">\(\lambda\)</span>.</p></li>
+</ul>
+</li>
+<li><p>The <strong>characteristic equation</strong> associated with the matrix <span class="math notranslate nohighlight">\(A\)</span> is defined to be <span class="math notranslate nohighlight">\(\operatorname{det}(\lambda I-A)=0\)</span>.</p>
+<ul>
+<li><p>Sometimes the characteristic equation associated with the matrix <span class="math notranslate nohighlight">\(A\)</span> is defined to be <span class="math notranslate nohighlight">\(\operatorname{det}(A-\lambda I)=0\)</span>.</p></li>
+</ul>
+</li>
+<li><p>The <strong>eigenvalues</strong> <span class="math notranslate nohighlight">\((\lambda)\)</span> of a square matrix <span class="math notranslate nohighlight">\((A)\)</span> are the solutions to the characteristic equation.</p>
+<ul>
+<li><p>Both versions of the characteristic equation will yield the same set of solution values for <span class="math notranslate nohighlight">\(\lambda\)</span>.</p></li>
+</ul>
+</li>
+<li><p>If <span class="math notranslate nohighlight">\(A\)</span> is a symmetric matrix, then all of its eigenvalues will be real numbers.</p>
+<ul>
+<li><p>This is Part (a) of Theorem 23.16 in <span id="id109">[<a class="reference internal" href="#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">7SB94</a>]</span> (p. 621).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="principal-minors-and-definiteness">
+<h2>Principal minors and definiteness<a class="headerlink" href="#principal-minors-and-definiteness" title="Permalink to this heading">#</a></h2>
+<p>Once again, suppose that <span class="math notranslate nohighlight">\(A\)</span> is a symmetric square matrix. Symmetry requires that <span class="math notranslate nohighlight">\(a_{i j}=a_{j i}\)</span> for all <span class="math notranslate nohighlight">\(i \neq j\)</span>. In other words, if <span class="math notranslate nohighlight">\(A\)</span> is an an <span class="math notranslate nohighlight">\((n \times n)\)</span> square matrix, then it takes the form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 n} \\
+a_{12} &amp; a_{22} &amp; \cdots &amp; a_{2 n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{1 n} &amp; a_{2 n} &amp; \cdots &amp; a_{n n}
+\end{array}\right)
+\end{split}\]</div>
+<p>The <strong>leading principal sub-matrices</strong> for <span class="math notranslate nohighlight">\(A\)</span> are given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+A_{1}=\left(a_{11}\right) \\[10pt]
+A_{2}=\left(\begin{array}{ll}
+a_{11} &amp; a_{12} \\
+a_{12} &amp; a_{22}
+\end{array}\right)\\
+A_{3}=\left(\begin{array}{lll}
+a_{11} &amp; a_{12} &amp; a_{13} \\
+a_{12} &amp; a_{22} &amp; a_{23} \\
+a_{13} &amp; a_{23} &amp; a_{33}
+\end{array}\right)
+\end{gathered}
+\end{split}\]</div>
+<p>and so on and so forth up until</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A_{n}=A=\left(\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 n} \\
+a_{12} &amp; a_{22} &amp; \cdots &amp; a_{2 n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{1 n} &amp; a_{2 n} &amp; \cdots &amp; a_{n n}
+\end{array}\right)
+\end{split}\]</div>
+<p>The <strong>leading principal minors</strong> for <span class="math notranslate nohighlight">\(A\)</span> are given by <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{1}\right)\)</span>, <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{2}\right)\)</span>, <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{3}\right)\)</span>, and so on and so forth up until <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{n}\right)=\operatorname{det}(A)\)</span>.</p>
+<ul class="simple">
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> will be <strong>positive definite</strong> if and only if <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{i}\right)&gt;0\)</span> for all <span class="math notranslate nohighlight">\(i \in\{1,2, \cdots, n\}\)</span>.</p></li>
+<li><p>The matrix <span class="math notranslate nohighlight">\(A\)</span> will be <strong>negative definite</strong> if and only if both <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{i}\right)&lt;0\)</span> for all odd <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{i}\right)&gt;0\)</span> for all even <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
+<li><p>Using the leading principal minors of a matrix to determine whether or not it is either positive semi-definite or negative semi-definite is slightly more complicated.</p>
+<ul>
+<li><p>Unfortunately, we cannot just directly modify the strict inequalities in the positive definite and negative definite tests to incorporate weak inequalities.</p></li>
+<li><p>Instead, we need the pattern implied by doing just that to hold for all possible permutations of the entries in the matrix.</p></li>
+<li><p>This makes this approach to determining positive semi-definiteness or negative semi-definiteness somewhat cumbersome.</p></li>
+<li><p>Further details can be found in <span id="id110">[<a class="reference internal" href="#id53" title="RK Sundaram. A first course in optimization theory. Cambridge University Press, 1996.">7Sun96</a>]</span> (pp. 50-55) and <span id="id111">[<a class="reference internal" href="#id49" title="DM Mandy. Leading principal minors and semidefiniteness. Economic Inquiry, 56(2):1396-1398, 2018.">7Man18</a>]</span> (pp. 1396-1398).</p></li>
+</ul>
+</li>
+<li><p>In any other circumstance, the matrix <span class="math notranslate nohighlight">\(A\)</span> is indefinite.</p></li>
+</ul>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 1<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H=\left(\begin{array}{ccc}
+\frac{\alpha}{x} &amp; 0 &amp; 0 \\
+0 &amp; \frac{\beta}{y} &amp; 0 \\
+0 &amp; 0 &amp; \frac{\gamma}{z}
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(x&gt;0, y&gt;0, z&gt;0, \alpha&gt;0, \beta&gt;0, \gamma&gt;0\)</span> and <span class="math notranslate nohighlight">\((\alpha+\beta+\gamma)=1\)</span>. Note that <span class="math notranslate nohighlight">\(H\)</span> is a symmetric matrix.</p>
+<p class="sd-card-text">First, let us see if we can determine the definiteness of the matrix <span class="math notranslate nohighlight">\(H\)</span> by using the leading principal minors approach. Note that the first leading principal minor of <span class="math notranslate nohighlight">\(H\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(H_{1}\right)=\operatorname{det}\left(\left(\frac{\alpha}{x}\right)\right)=\frac{\alpha}{x}&gt;0
+\]</div>
+<p class="sd-card-text">because <span class="math notranslate nohighlight">\(x&gt;0\)</span> and <span class="math notranslate nohighlight">\(\alpha&gt;0\)</span>.</p>
+<p class="sd-card-text">Note that the second leading principal minor of <span class="math notranslate nohighlight">\(H\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\operatorname{det}\left(H_{2}\right) &amp; =\operatorname{det}\left(\left(\begin{array}{cc}
+\frac{\alpha}{x} &amp; 0 \\
+0 &amp; \frac{\beta}{y}
+\end{array}\right)\right) \\
+&amp; =\left(\frac{\alpha}{x}\right)\left(\frac{\beta}{y}\right)-(0)(0) \\
+&amp; =\frac{\alpha \beta}{x y}-0 \\
+&amp; =\frac{\alpha \beta}{x y} \\
+&amp; &gt;0 \quad \text { (because } x&gt;0, y&gt;0, \alpha&gt;0 \text { and } \beta&gt;0) .
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Note that the third (and final) leading principal minor of <span class="math notranslate nohighlight">\(H\)</span> is simply the determinant of the matrix <span class="math notranslate nohighlight">\(H\)</span> itself. Upon employing a cofactor expansion along the first row of matrix <span class="math notranslate nohighlight">\(H\)</span>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\operatorname{det}\left(H_{3}\right) &amp; =\operatorname{det}(H) \\
+&amp; =\left(\frac{\alpha}{x}\right)(-1)^{1+1} \operatorname{det}\left(\left(\begin{array}{cc}
+\frac{\beta}{y} &amp; 0 \\
+0 &amp; \frac{\gamma}{z}
+\end{array}\right)\right)+0+0 \\
+&amp; =\left(\frac{\alpha}{x}\right)(-1)^{2}\left[\left(\frac{\beta}{y}\right)\left(\frac{\gamma}{z}\right)-(0)(0)\right] \\
+&amp; =\left(\frac{\alpha}{x}\right)(1)\left[\frac{\beta \gamma}{y z}-0\right] \\
+&amp; =\left(\frac{\alpha}{x}\right)\left(\frac{\beta \gamma}{y z}\right) \\
+&amp; =\frac{\alpha \beta \gamma}{x y z} \\
+&amp; &gt;0
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">because <span class="math notranslate nohighlight">\(x&gt;0, y&gt;0, z&gt;0, \alpha&gt;0, \beta&gt;0\)</span>, and <span class="math notranslate nohighlight">\(\gamma&gt;0\)</span>.</p>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\operatorname{det}\left(H_{1}\right)&gt;0\)</span>, <span class="math notranslate nohighlight">\(\operatorname{det}\left(H_{2}\right)&gt;0\)</span> and <span class="math notranslate nohighlight">\(\operatorname{det}\left(H_{3}\right)&gt;0\)</span>, we can conclude that the matrix <span class="math notranslate nohighlight">\(H\)</span> is positive definite.</p>
+<p class="sd-card-text">Now let us now establish that <span class="math notranslate nohighlight">\(H\)</span> is positive definite by using the eigenvalue approach. The characteristic matrix associated with <span class="math notranslate nohighlight">\(H\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\lambda I-H &amp; =\lambda\left(\begin{array}{ccc}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}\right)-\left(\begin{array}{ccc}
+\frac{\alpha}{x} &amp; 0 &amp; 0 \\
+0 &amp; \frac{\beta}{y} &amp; 0 \\
+0 &amp; 0 &amp; \frac{\gamma}{z}
+\end{array}\right) \\
+&amp; =\left(\begin{array}{ccc}
+\lambda &amp; 0 &amp; 0 \\
+0 &amp; \lambda &amp; 0 \\
+0 &amp; 0 &amp; \lambda
+\end{array}\right)-\left(\begin{array}{ccc}
+\frac{\alpha}{x} &amp; 0 &amp; 0 \\
+0 &amp; \frac{\beta}{y} &amp; 0 \\
+0 &amp; 0 &amp; \frac{\gamma}{z}
+\end{array}\right) \\
+&amp; =\left(\begin{array}{ccc}
+\lambda-\frac{\alpha}{x} &amp; 0 &amp; 0 \\
+0 &amp; \lambda-\frac{\beta}{y} &amp; 0 \\
+0 &amp; 0 &amp; \lambda-\frac{\gamma}{z}
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">It is straight-forward to establish that the characteristic polynomial for <span class="math notranslate nohighlight">\(H\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}(\lambda I-H)=\left(\lambda-\frac{\alpha}{x}\right)\left(\lambda-\frac{\beta}{y}\right)\left(\lambda-\frac{\gamma}{z}\right)
+\]</div>
+<p class="sd-card-text">You should establish the validity of this claim as a form of revision of the calculation of determinants. Thus the characteristic equation associated with <span class="math notranslate nohighlight">\(H\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}(\lambda I-H)=\left(\lambda-\frac{\alpha}{x}\right)\left(\lambda-\frac{\beta}{y}\right)\left(\lambda-\frac{\gamma}{z}\right)=0
+\]</div>
+<p class="sd-card-text">Clearly the eigenvalues for <span class="math notranslate nohighlight">\(H\)</span> are <span class="math notranslate nohighlight">\(\lambda_{1}=\frac{\alpha}{x}, \lambda_{2}=\frac{\beta}{y}\)</span>, and <span class="math notranslate nohighlight">\(\lambda_{3}=\frac{\gamma}{z}\)</span>.</p>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(x&gt;0, y&gt;0, z&gt;0, \alpha&gt;0, \beta&gt;0\)</span>, and <span class="math notranslate nohighlight">\(\gamma&gt;0\)</span>, we know that <span class="math notranslate nohighlight">\(\lambda_{1}&gt;0, \lambda_{2}&gt;0\)</span>, and <span class="math notranslate nohighlight">\(\lambda_{3}&gt;0\)</span>.</p>
+<p class="sd-card-text">Thus we can conclude that <span class="math notranslate nohighlight">\(H\)</span> is a positive definite matrix.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 2<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{ll}
+2 &amp; 3 \\
+3 &amp; 7
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(A\)</span> is a symmetric matrix.
+The leading principal sub-matrices for this matrix are <span class="math notranslate nohighlight">\(A_{1}=(2)\)</span> and <span class="math notranslate nohighlight">\(A_{2}=A\)</span>. As such, the leading principal minors for this matrix are</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(A_{1}\right)=2&gt;0
+\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(A_{2}\right)=\operatorname{det}(A)=(2)(7)-(3)(3)=14-9=5&gt;0
+\]</div>
+<p class="sd-card-text">Thus we can conclude that <span class="math notranslate nohighlight">\(A\)</span> is a positive definite matrix.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 3 <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{ll}
+2 &amp; 4 \\
+4 &amp; 7
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(A\)</span> is a symmetric matrix. The leading principal sub-matrices for this matrix are <span class="math notranslate nohighlight">\(A_{1}=(2)\)</span> and <span class="math notranslate nohighlight">\(A_{2}=A\)</span>. As such, the leading principal minors for this matrix are</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(A_{1}\right)=2&gt;0
+\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(A_{2}\right)=\operatorname{det}(A)=(2)(7)-(4)(4)=14-16=-2&lt;0
+\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{1}\right)&gt;0\)</span> and <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{2}\right)=\operatorname{det}(A)&lt;0\)</span>, we know that <span class="math notranslate nohighlight">\(A\)</span> is neither negative definite nor positive definite. But is it negative semi-definite, positive semi-definite, or indefinite? Let us find the eigenvalues of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p class="sd-card-text">The characteristic matrix for <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\lambda I-A &amp; =\lambda\left(\begin{array}{ll}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right)-\left(\begin{array}{ll}
+2 &amp; 4 \\
+4 &amp; 7
+\end{array}\right) \\
+&amp; =\left(\begin{array}{ll}
+\lambda &amp; 0 \\
+0 &amp; \lambda
+\end{array}\right)-\left(\begin{array}{ll}
+2 &amp; 4 \\
+4 &amp; 7
+\end{array}\right) \\
+&amp; =\left(\begin{array}{cc}
+\lambda-2 &amp; -4 \\
+-4 &amp; \lambda-7
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">This means that the characteristic polynomial for <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\operatorname{det}(\lambda I-A) &amp; =(\lambda-2)(\lambda-7)-(-4)(-4) \\
+&amp; =\lambda^{2}-7 \lambda-2 \lambda+14-16 \\
+&amp; =\quad \lambda^{2}-9 \lambda-2
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Thus the characteristic equation for <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}(\lambda I-A)=\lambda^{2}-9 \lambda-2=0
+\]</div>
+<p class="sd-card-text">Note that the characteristic equation for <span class="math notranslate nohighlight">\(A\)</span> is a quadratic equation in the variable <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
+<p class="sd-card-text">Upon applying the quadratic formula to the characteristic equation for <span class="math notranslate nohighlight">\(A\)</span>, we find that the eigenvalues for the matrix <span class="math notranslate nohighlight">\(A\)</span> are <span class="math notranslate nohighlight">\(\lambda_{1}=\frac{9+\sqrt{89}}{2}\)</span> and <span class="math notranslate nohighlight">\(\lambda_{2}=\frac{9-\sqrt{89}}{2}\)</span>.</p>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(9^{2}=81&lt;89&lt;100=10^{2}\)</span>, we know that <span class="math notranslate nohighlight">\(9&lt;\sqrt{89}&lt;10\)</span>.</p>
+<p class="sd-card-text">This means that <span class="math notranslate nohighlight">\(\lambda_{1}=\frac{9+\sqrt{89}}{2}&gt;0\)</span> and <span class="math notranslate nohighlight">\(\lambda_{2}=\frac{9-\sqrt{89}}{2}&lt;0\)</span>.</p>
+<p class="sd-card-text">Thus we can conclude that the <span class="math notranslate nohighlight">\(A\)</span> is an indefinite matrix.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 4<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{ll}
+0 &amp; 0 \\
+0 &amp; 7
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(x^{T} A x=7 x_{2}^{2} \geqslant 0\)</span> for all <span class="math notranslate nohighlight">\(\left(x_{1}, x_{2}\right)^{T} \neq(0,0)^{T}\)</span>. Thus this matrix is positive semi-definite.</p>
+<p class="sd-card-text">This follows directly from the definition of positive semi-definiteness of a matrix. It is not positive definite because <span class="math notranslate nohighlight">\(x^{T} A x=7 x_{2}^{2}=0\)</span> when <span class="math notranslate nohighlight">\(\left(x_{1}, x_{2}\right)^{T}=(1,0)\)</span> and <span class="math notranslate nohighlight">\((1,0) \neq(0,0)\)</span>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 5<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{cc}
+0 &amp; 0 \\
+0 &amp; -7
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(x^{T} A x=-7 x_{2}^{2} \leqslant 0\)</span> for all <span class="math notranslate nohighlight">\(\left(x_{1}, x_{2}\right)^{T} \neq(0,0)^{T}\)</span>.  Thus this matrix is negative semi-definite.</p>
+<p class="sd-card-text">This follows directly from the definition of negative semi-definiteness of a matrix. It is not negative definite because <span class="math notranslate nohighlight">\(x^{T} A x=7 x_{2}^{2}=0\)</span> when <span class="math notranslate nohighlight">\(\left(x_{1}, x_{2}\right)^{T}=(1,0)\)</span> and <span class="math notranslate nohighlight">\((1,0) \neq(0,0)\)</span>.)</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 6<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{cc}
+2 &amp; 2 \\
+2 &amp; -1
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(A\)</span> is a symmetric matrix. The leading principal sub-matrices for this matrix are <span class="math notranslate nohighlight">\(A_{1}=(2)\)</span> and <span class="math notranslate nohighlight">\(A_{2}=A\)</span>. As such, the leading principal minors for this matrix are</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(A_{1}\right)=2&gt;0
+\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(A_{2}\right)=\operatorname{det}(A)=(2)(-1)-(2)(2)=-2-4=-6&lt;0
+\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{1}\right)&gt;0\)</span> and <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{2}\right)=\operatorname{det}(A)&lt;0\)</span>, we know that <span class="math notranslate nohighlight">\(A\)</span> is neither negative definite nor positive definite. But is it negative semi-definite, positive semi-definite, or indefinite? Let us find the eigenvalues of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p class="sd-card-text">The characteristic matrix for <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\lambda I-A &amp; =\lambda\left(\begin{array}{ll}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right)-\left(\begin{array}{cc}
+2 &amp; 2 \\
+2 &amp; -1
+\end{array}\right) \\
+&amp; =\left(\begin{array}{ll}
+\lambda &amp; 0 \\
+0 &amp; \lambda
+\end{array}\right)-\left(\begin{array}{cc}
+2 &amp; 2 \\
+2 &amp; -1
+\end{array}\right) \\
+&amp; =\left(\begin{array}{cc}
+\lambda-2 &amp; -2 \\
+-2 &amp; \lambda+1
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">This means that the characteristic polynomial for <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rlr}
+\operatorname{det}(\lambda I-A) &amp; = &amp; (\lambda-2)(\lambda+1)-(-2)(-2) \\
+&amp; = &amp; \lambda^{2}+\lambda-2 \lambda-2-4 \\
+&amp; = &amp; \lambda^{2}-\lambda-6 \\
+&amp; = &amp; (\lambda+2)(\lambda-3) .
+\end{array}
+\end{split}\]</div>
+<p class="sd-card-text">Thus the characteristic equation for <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}(\lambda I-A)=(\lambda+2)(\lambda-3)=0 \text {. }
+\]</div>
+<p class="sd-card-text">This means that the eigenvalues for the matrix <span class="math notranslate nohighlight">\(A\)</span> are <span class="math notranslate nohighlight">\(\lambda_{1}=-2\)</span> and <span class="math notranslate nohighlight">\(\lambda_{2}=3\)</span>. Since <span class="math notranslate nohighlight">\(\lambda_{1}&lt;0\)</span> and <span class="math notranslate nohighlight">\(\lambda_{2}&gt;0\)</span>, we can conclude that <span class="math notranslate nohighlight">\(A\)</span> is an indefinite matrix.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 7<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{lll}
+1 &amp; 2 &amp; 0 \\
+2 &amp; 4 &amp; 5 \\
+0 &amp; 5 &amp; 6
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(A\)</span> is a symmetric matrix. The leading principal sub-matrices for this matrix are <span class="math notranslate nohighlight">\(A_{1}=(1)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A_{2}=\left(\begin{array}{ll}
+1 &amp; 2 \\
+2 &amp; 4
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">and <span class="math notranslate nohighlight">\(A_{3}=A\)</span>.</p>
+<p class="sd-card-text">As such, the leading principal minors for this matrix are <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{1}\right)=1\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(A_{2}\right)=(1)(4)-(2)(2)=4-4=0
+\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\operatorname{det}\left(A_{3}\right)= &amp; \operatorname{det}(A) \\[5pt]
+= &amp; (1)(-1)^{1+1} \operatorname{det}\left(\left(\begin{array}{ll}
+4 &amp; 5 \\
+5 &amp; 6
+\end{array}\right)\right) \\[5pt]
+&amp; +(2)(-1)^{1+2} \operatorname{det}\left(\left(\begin{array}{ll}
+2 &amp; 5 \\
+0 &amp; 6
+\end{array}\right)\right) \\[5pt]
+&amp; +(0)(-1)^{1+3} \operatorname{det}\left(\left(\begin{array}{ll}
+2 &amp; 4 \\
+0 &amp; 5
+\end{array}\right)\right) \\[5pt]
+= &amp; (1)(-1)^{2}\{(4)(6)-(5)(5)\} \\
+&amp; +(2)(-1)^{3}\{(2)(6)-(5)(0)\}+0 \\[5pt]
+= &amp; (1)(-1)^{2}\{(4)(6)-(5)(5)\} \\
+&amp; +(2)(-1)^{3}\{(2)(6)-(5)(0)\}+0 \\[5pt]
+= &amp; (1)(1)\{24-25\}+(2)(-1)\{12-0\} \\[5pt]
+= &amp; (1)(1)(-1)+(2)(-1)(12) \\[5pt]
+= &amp; -1+(-24) \\[5pt]
+= &amp; -1-24 \\[5pt]
+= &amp; -25
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{1}\right)&gt;0\)</span>, <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{2}\right)=0\)</span>, and <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{3}\right)=\operatorname{det}(A)&lt;0\)</span>, we know that <span class="math notranslate nohighlight">\(A\)</span> is neither negative definite nor positive definite. But is it negative semi-definite, positive semi-definite, or indefinite?  Let us find the eigenvalues of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p class="sd-card-text">The characteristic matrix for <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\lambda I-A &amp; =\lambda\left(\begin{array}{lll}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}\right)-\left(\begin{array}{lll}
+1 &amp; 2 &amp; 0 \\
+2 &amp; 4 &amp; 5 \\
+0 &amp; 5 &amp; 6
+\end{array}\right) \\
+&amp; =\left(\begin{array}{lll}
+\lambda &amp; 0 &amp; 0 \\
+0 &amp; \lambda &amp; 0 \\
+0 &amp; 0 &amp; \lambda
+\end{array}\right)-\left(\begin{array}{lll}
+1 &amp; 2 &amp; 0 \\
+2 &amp; 4 &amp; 5 \\
+0 &amp; 5 &amp; 6
+\end{array}\right) \\
+&amp; =\left(\begin{array}{ccc}
+\lambda-1 &amp; -2 &amp; 0 \\
+-2 &amp; \lambda-4 &amp; -5 \\
+0 &amp; -5 &amp; \lambda-6
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">The characteristic polynomial for <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\operatorname{det}(\lambda I-A)= &amp; (\lambda-1)(-1)^{1+1} \operatorname{det}\left(\left(\begin{array}{cc}
+\lambda-4 &amp; -5 \\
+-5 &amp; \lambda-6
+\end{array}\right)\right) \\
+&amp; +(-2)(-1)^{1+2} \operatorname{det}\left(\left(\begin{array}{cc}
+-2 &amp; -5 \\
+0 &amp; \lambda-6
+\end{array}\right)\right)+0 \\
+= &amp; (\lambda-1)(-1)^{2}[(\lambda-4)(\lambda-4)-25] \\
+&amp; +(-2)(-1)^{3}[-2(\lambda-6)-0] \\
+= &amp; (\lambda-1)(1)\left[\lambda^{2}-10 \lambda+24-25\right] \\
+&amp; -2(-1)[-2 \lambda+12] \\
+= &amp; (\lambda-1)\left[\lambda^{2}-10 \lambda-1\right]+2[-2 \lambda+12] \\
+= &amp; \lambda^{3}-10 \lambda^{2}-\lambda-\left[\lambda^{2}-10 \lambda-1\right]-4 \lambda+24 \\
+= &amp; \lambda^{3}-10 \lambda^{2}-\lambda-\lambda^{2}+10 \lambda+1-4 \lambda+24 \\
+= &amp; \lambda^{3}-11 \lambda^{2}+5 \lambda+25
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">The characteristic equation for the matrix <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}(\lambda I-A)=\lambda^{3}-11 \lambda^{2}+5 \lambda+25=0
+\]</div>
+<p class="sd-card-text">Note that this is a cubic equation in the variable <span class="math notranslate nohighlight">\(\lambda\)</span>.
+While there do not appear to be any “obvious” factorisations of this characteristic polynomial, it is possible to obtain numerical approximations to the eigenvalues of <span class="math notranslate nohighlight">\(A\)</span> (that is, the solutions to the characteristic equation) by using Microsoft Excel.
+Upon doing this we find that <span class="math notranslate nohighlight">\(\lambda_{1} \approx-1.2395, \lambda_{2} \approx 1.9627\)</span>, and <span class="math notranslate nohighlight">\(\lambda_{3} \approx 10.277\)</span>.
+A graph of the characteristic polynomial can be found on the next slide.
+Since the matrix <span class="math notranslate nohighlight">\(A\)</span> has both positive and negative eigenvalues, we can conclude that it is indefinite.</p>
+<figure class="align-center" id="id118">
+<a class="reference internal image-reference" href="_images/example7.png"><img alt="_images/example7.png" src="_images/example7.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Graph of the characteristic polynomial</span><a class="headerlink" href="#id118" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 8<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{ccc}
+-1 &amp; 1 &amp; 0 \\
+1 &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; -2
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(A\)</span> is a symmetric matrix. The characteristic matrix for <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+(\lambda I-A)=\left(\begin{array}{ccc}
+\lambda+1 &amp; -1 &amp; 0 \\
+-1 &amp; \lambda+1 &amp; 0 \\
+0 &amp; 0 &amp; \lambda+2
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">The characteristic polynomial for <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\operatorname{det}(\lambda I-A) &amp; =0+0+(\lambda+2)(-1)^{3+3} \operatorname{det}\left(\left(\begin{array}{cc}
+\lambda+1 &amp; -1 \\
+-1 &amp; \lambda+1
+\end{array}\right)\right) \\
+&amp; =0+0+(\lambda+2)(-1)^{6}\left[(\lambda+1)^{2}-1\right] \\
+&amp; =(\lambda+2)(1)((\lambda+1)+1)((\lambda+1)-1) \\
+&amp; =(\lambda+2)(1)(\lambda+2)(\lambda) \\
+&amp; =(\lambda+2)^{2} \lambda
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">The characteristic equation for the matrix <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}(\lambda I-A)=(\lambda+2)^{2} \lambda=0
+\]</div>
+<p class="sd-card-text">Clearly the eigenvalues for the matrix <span class="math notranslate nohighlight">\(A\)</span> are <span class="math notranslate nohighlight">\(\lambda_{1}=-2, \lambda_{2}=-2\)</span>, and <span class="math notranslate nohighlight">\(\lambda_{3}=0\)</span>.</p>
+<p class="sd-card-text">Since the matrix <span class="math notranslate nohighlight">\(A\)</span> has both negative eigenvalues and a zero eigenvalue, we can conclude that it is negative semi-definite.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 9<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{cc}
+-1 &amp; -2 \\
+4 &amp; 3
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">Note that the matrix <span class="math notranslate nohighlight">\(A\)</span> is <em>not</em> symmetric.</p>
+<p class="sd-card-text">Before proceeding, let us construct a symmetric matrix <span class="math notranslate nohighlight">\(B\)</span> such that <span class="math notranslate nohighlight">\(x^{T} A x=x^{T} B x\)</span> for all <span class="math notranslate nohighlight">\(x \in \mathbb{R}^{2}\)</span>.</p>
+<p class="sd-card-text">We will do this by setting <span class="math notranslate nohighlight">\(b_{11}=a_{11}=-1, b_{22}=a_{22}=3\)</span>, and <span class="math notranslate nohighlight">\(b_{12}=b_{21}=\left(\frac{1}{2}\right)\left(a_{12}+a_{21}\right)=\frac{(-2+4)}{2}=\frac{2}{2}=1\)</span>.</p>
+<p class="sd-card-text">The resulting matrix <span class="math notranslate nohighlight">\(B\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B=\left(\begin{array}{cc}
+-1 &amp; 1 \\
+1 &amp; 3
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">Note that the matrix <span class="math notranslate nohighlight">\(B\)</span> is symmetric.</p>
+<p class="sd-card-text">The leading principal sub-matrices for this matrix are <span class="math notranslate nohighlight">\(B_{1}=(-1)\)</span> and <span class="math notranslate nohighlight">\(B_{2}=B\)</span>. As such, the leading principal minors for this matrix are</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(B_{1}\right)=-1&lt;0
+\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(B_{2}\right)=\operatorname{det}(B)=(-1)(3)-(1)(1)=-3-1=-4&lt;0
+\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\operatorname{det}\left(B_{1}\right)&lt;0\)</span> and <span class="math notranslate nohighlight">\(\operatorname{det}\left(B_{2}\right)=\operatorname{det}(B)&lt;0\)</span>, we know that <span class="math notranslate nohighlight">\(B\)</span> (and hence <span class="math notranslate nohighlight">\(A\)</span> ) is neither negative definite nor positive definite.  But is it negative semi-definite, positive semi-definite, or indefinite? Let us find the eigenvalues of <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p class="sd-card-text">The characteristic matrix for <span class="math notranslate nohighlight">\(B\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\lambda I-B &amp; =\lambda\left(\begin{array}{ll}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right)-\left(\begin{array}{cc}
+-1 &amp; 1 \\
+1 &amp; 3
+\end{array}\right) \\
+&amp; =\left(\begin{array}{ll}
+\lambda &amp; 0 \\
+0 &amp; \lambda
+\end{array}\right)-\left(\begin{array}{cc}
+-1 &amp; 1 \\
+1 &amp; 3
+\end{array}\right) \\
+&amp; =\left(\begin{array}{cc}
+\lambda+1 &amp; -1 \\
+-1 &amp; \lambda-3
+\end{array}\right)
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">This means that the characteristic polynomial for <span class="math notranslate nohighlight">\(B\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rlr}
+\operatorname{det}(\lambda I-B) &amp; = &amp; (\lambda+1)(\lambda-3)-(-1)(-1) \\
+&amp; = &amp; \lambda^{2}-3 \lambda+\lambda-3-1 \\
+&amp; = &amp; \lambda^{2}-2 \lambda-4
+\end{array}
+\end{split}\]</div>
+<p class="sd-card-text">Thus the characteristic equation for <span class="math notranslate nohighlight">\(B\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}(\lambda /-B)=\lambda^{2}-2 \lambda-4=0
+\]</div>
+<p class="sd-card-text">Note that the characteristic equation for <span class="math notranslate nohighlight">\(B\)</span> is a quadratic equation in the variable <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
+<p class="sd-card-text">Upon applying the quadratic formula to the characteristic equation for <span class="math notranslate nohighlight">\(B\)</span>, we find that the eigenvalues for the matrix <span class="math notranslate nohighlight">\(B\)</span> are <span class="math notranslate nohighlight">\(\lambda_{1}=\frac{2+\sqrt{20}}{2}\)</span> and <span class="math notranslate nohighlight">\(\lambda_{2}=\frac{2-\sqrt{20}}{2}\)</span>.</p>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(4^{2}=16&lt;20&lt;25=5^{2}\)</span>, we know that <span class="math notranslate nohighlight">\(4&lt;\sqrt{20}&lt;5\)</span>.</p>
+<p class="sd-card-text">This means that <span class="math notranslate nohighlight">\(\lambda_{1}=\frac{2+\sqrt{20}}{2}&gt;0\)</span> and <span class="math notranslate nohighlight">\(\lambda_{2}=\frac{2-\sqrt{20}}{2}&lt;0\)</span>.</p>
+<p class="sd-card-text">Thus we can conclude that the <span class="math notranslate nohighlight">\(B\)</span> (and hence <span class="math notranslate nohighlight">\(A\)</span> ) is an indefinite matrix.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 10<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Consider the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{cc}
+\frac{-\alpha}{x^{2}} &amp; 0 \\
+0 &amp; \frac{-(1-\alpha)}{y^{2}}
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(x&gt;0, y&gt;0\)</span>, and <span class="math notranslate nohighlight">\(0&lt;\alpha&lt;1\)</span>.</p>
+<p class="sd-card-text">The leading principal sub-matrices for this matrix are <span class="math notranslate nohighlight">\(A_{1}=\left(\frac{-\alpha}{x^{2}}\right)\)</span> and <span class="math notranslate nohighlight">\(A_{2}=A\)</span>. As such, the leading principal minors for this matrix are</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(A_{1}\right)=\frac{-\alpha}{x^{2}}&lt;0
+\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{det}\left(A_{2}\right)=\operatorname{det}(A)
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\operatorname{det}\left(A_{2}\right) &amp; =\operatorname{det}(A) \\
+&amp; =\left(\frac{-\alpha}{x^{2}}\right)\left(\frac{-(1-\alpha)}{y^{2}}\right)-(0)(0) \\
+&amp; =\frac{\alpha(1-\alpha)}{x^{2} y^{2}}-0 \\
+&amp; =\frac{\alpha(1-\alpha)}{x^{2} y^{2}} \\
+&amp; &gt;0 
+\end{aligned}
+\end{split}\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{1}\right)&lt;0\)</span> and <span class="math notranslate nohighlight">\(\operatorname{det}\left(A_{2}\right)=\operatorname{det}(A)&gt;0\)</span>, we can conclude that <span class="math notranslate nohighlight">\(A\)</span> is a negative definite matrix.</p>
+</div>
+</details></section>
+<section id="quadratic-forms-on-sets-of-linear-constraints">
+<h3>Quadratic forms on sets of linear constraints<a class="headerlink" href="#quadratic-forms-on-sets-of-linear-constraints" title="Permalink to this heading">#</a></h3>
+<p>Up until now, we have been allowing the <span class="math notranslate nohighlight">\(x\)</span> vector to vary over all of <span class="math notranslate nohighlight">\(\mathbb{R}^{n}\)</span> (for some <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> ) and examining the sign of the quadratic form <span class="math notranslate nohighlight">\(x^{T} A x\)</span> for all such <span class="math notranslate nohighlight">\(x \neq 0\)</span>. In other words, we have been examining the sign of an “unconstrained” quadratic form in <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>In economics, however, we are often faced with situations in which the <span class="math notranslate nohighlight">\(x\)</span> vector will be subject to one or more constraints. Is it possible to determine the sign of a quadratic form for all <span class="math notranslate nohighlight">\(x\)</span> vectors that satisfy one or more constraints in addition to the standard constraint that <span class="math notranslate nohighlight">\(x \neq 0\)</span>? If so, how can this be done?</p>
+<p>In the remainder of these notes, we (at least partially) address these questions for the case in which the <span class="math notranslate nohighlight">\(x\)</span> vector is subject to one or more linear constraints (in addition to the standard constraint that <span class="math notranslate nohighlight">\(x \neq 0\)</span> ).</p>
+<p>Let <span class="math notranslate nohighlight">\(x \in \mathbb{R}^{n}\)</span> be a vector of <span class="math notranslate nohighlight">\(n\)</span> real-valued variables, <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix of constant real-valued coefficients, <span class="math notranslate nohighlight">\(C\)</span> be an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix of constant real-valued coefficients, <span class="math notranslate nohighlight">\(m \in \mathbb{N}, n \in \mathbb{N}\)</span>, and <span class="math notranslate nohighlight">\(m&lt;n\)</span>.</p>
+<p>Note that <span class="math notranslate nohighlight">\(x^{T} A x\)</span> is a quadratic form in the <span class="math notranslate nohighlight">\(x\)</span> vector and <span class="math notranslate nohighlight">\(C x\)</span> is a linear form in the <span class="math notranslate nohighlight">\(x\)</span> vector.</p>
+<p>We have already seen that if <span class="math notranslate nohighlight">\(A\)</span> is not a symmetric matrix, then there exists some other matrix <span class="math notranslate nohighlight">\(B\)</span> such that <span class="math notranslate nohighlight">\(x^{T} A x=x^{T} B x\)</span> for all <span class="math notranslate nohighlight">\(x \in \mathbb{R}^{n}\)</span>. As such, we can assume, without loss of generality, that <span class="math notranslate nohighlight">\(A\)</span> is a symmetric <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix. We will make this assumption for the remainder of these notes.</p>
+<p>The linear form <span class="math notranslate nohighlight">\(C_{x}\)</span> will represent the linear constraints that we are imposing on the <span class="math notranslate nohighlight">\(x\)</span> vector in addition to the standard restriction that <span class="math notranslate nohighlight">\(x \neq 0\)</span>.</p>
+<p>To be precise, the set of linear constraints that are being imposed are given by the matrix equation <span class="math notranslate nohighlight">\(C_{X}=0\)</span>, where 0 is an <span class="math notranslate nohighlight">\((m \times 1)\)</span> null vector (that is, a vector consisting entirely of entries that are zeros). It is important that <span class="math notranslate nohighlight">\(m&lt;n\)</span> because we do not want the <span class="math notranslate nohighlight">\(x\)</span> vector to be completely determined by the additional constraints that are being imposed.</p>
+<p>We can use the matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(C\)</span> to form a “bordered matrix” <span class="math notranslate nohighlight">\(D\)</span> that takes the partitioned form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+D=\left(\begin{array}{cc}
+0 &amp; C \\
+C^{T} &amp; A
+\end{array}\right),
+\end{split}\]</div>
+<p>where 0 is an <span class="math notranslate nohighlight">\((m \times m)\)</span> null matrix (that is, a matrix consisting entirely of entries that are zeros).</p>
+<p>Note that <span class="math notranslate nohighlight">\(D\)</span> is a symmetric square matrix.</p>
+<ul class="simple">
+<li><p>It is an <span class="math notranslate nohighlight">\(((m+n) \times(m+n))\)</span> matrix.</p></li>
+<li><p>It is symmetric because we have assumed that <span class="math notranslate nohighlight">\(A\)</span> is a symmetric matrix.</p></li>
+</ul>
+<p>The theorem on the following two slides is contained within (that is, is part of) Theorem 16.4 in <span id="id112">[<a class="reference internal" href="#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">7SB94</a>]</span> (p. 389).</p>
+<div class="caution admonition">
+<p class="admonition-title">Theorem</p>
+<p><strong>Theorem</strong>: Consider the quadratic form <span class="math notranslate nohighlight">\(Q(x)=x^{T} A x\)</span> subject to the set of linear constraints <span class="math notranslate nohighlight">\(C x=0_{(m \times 1)}\)</span> and <span class="math notranslate nohighlight">\(x \neq 0_{(n \times 1)}\)</span>, where <span class="math notranslate nohighlight">\(x \in \mathbb{R}^{n}\)</span> is an <span class="math notranslate nohighlight">\((m \times 1)\)</span> vector of real-valued variables, <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((n \times n)\)</span> symmetric matrix of constant real-valued coefficients, <span class="math notranslate nohighlight">\(C\)</span> is an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix of constant real-valued coefficients, <span class="math notranslate nohighlight">\(m \in \mathbb{N}, n \in \mathbb{N}\)</span>, and <span class="math notranslate nohighlight">\(m&lt;n\)</span>. Form the <span class="math notranslate nohighlight">\(((m+n) \times(m+n))\)</span> symmetric “bordered matrix” (in partitioned form)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+D=\left(\begin{array}{cc}
+0_{(m \times m)} &amp; C \\
+C^{T} &amp; A
+\end{array}\right)
+\end{split}\]</div>
+<ol class="arabic simple">
+<li><p>The quadratic form <span class="math notranslate nohighlight">\(Q(x)\)</span> is negative definite on the constraint set if <span class="math notranslate nohighlight">\(\operatorname{det}(D)\)</span> has the same sign as <span class="math notranslate nohighlight">\((-1)^{n}\)</span> <strong>and</strong> if the <strong>last</strong> <span class="math notranslate nohighlight">\((n-m)\)</span> leading principal minors alternate in sign.</p></li>
+<li><p>The quadratic form <span class="math notranslate nohighlight">\(Q(x)\)</span> is positive definite on the constraint set if the last <span class="math notranslate nohighlight">\((n-m)\)</span> leading principal minors all have the same sign as <span class="math notranslate nohighlight">\((-1)^{m}\)</span>.</p></li>
+<li><p>The quadratic form <span class="math notranslate nohighlight">\(Q(x)\)</span> is indefinite on the constraint set if both condition (1) and condition (2) are violated by <strong>non-zero</strong> leading principal minors.</p></li>
+</ol>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 11<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is Example 16.7 from <span id="id113">[<a class="reference internal" href="#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">7SB94</a>]</span> (pp. 389-390).</p>
+<p class="sd-card-text">Consider the case where <span class="math notranslate nohighlight">\(A\)</span> is the symmetric <span class="math notranslate nohighlight">\((4 \times 4)\)</span> matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left(\begin{array}{cccc}
+1 &amp; 0 &amp; 0 &amp; -1 \\
+0 &amp; -1 &amp; 2 &amp; 0 \\
+0 &amp; 2 &amp; 1 &amp; 0 \\
+-1 &amp; 0 &amp; 0 &amp; 1
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">and <span class="math notranslate nohighlight">\(C\)</span> is the <span class="math notranslate nohighlight">\((2 \times 4)\)</span> matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C=\left(\begin{array}{cccc}
+0 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; -9 &amp; 0 &amp; 1
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">Note that in this case there are four variables (that is, <span class="math notranslate nohighlight">\(n=4\)</span> ) and two linear constraints other than the constraint that <span class="math notranslate nohighlight">\(x \neq 0\)</span> (that is, <span class="math notranslate nohighlight">\(m=2)\)</span>.</p>
+<p class="sd-card-text">The symmetric bordered matrix for this example is the <span class="math notranslate nohighlight">\((6 \times 6)\)</span> matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+D=\left(\begin{array}{cc}
+0_{(2 \times 2)} &amp; \\
+&amp; \\
+C^{T} &amp; A
+\end{array}\right)=\left(\begin{array}{cccccc}
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; -9 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; -1 \\
+1 &amp; -9 &amp; 0 &amp; -1 &amp; 2 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 2 &amp; 1 &amp; 0 \\
+1 &amp; 1 &amp; -1 &amp; 0 &amp; 0 &amp; 1
+\end{array}\right)
+\end{split}\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(n=4\)</span> and <span class="math notranslate nohighlight">\(m=2\)</span> in this example, we need to check the signs of the last <span class="math notranslate nohighlight">\((n-m)=(4-2)=2\)</span> leading principal minors.</p>
+<ul class="simple">
+<li><p class="sd-card-text">The last leading principal minor is <span class="math notranslate nohighlight">\(\operatorname{det}\left(D_{6}\right)=\operatorname{det}(D)\)</span>.</p></li>
+<li><p class="sd-card-text">The second-last leading principal minor is <span class="math notranslate nohighlight">\(\operatorname{det}\left(D_{5}\right)\)</span>.</p></li>
+</ul>
+<p class="sd-card-text">According to <span id="id114">[<a class="reference internal" href="#id25" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">7SB94</a>]</span> (p. 390), <span class="math notranslate nohighlight">\(\operatorname{det}\left(D_{6}\right)=\operatorname{det}(D)=24&gt;0\)</span> and <span class="math notranslate nohighlight">\(\operatorname{det}\left(D_{5}\right)=77&gt;0\)</span>.</p>
+<p class="sd-card-text">You should confirm these values for the last two leading principle minors of <span class="math notranslate nohighlight">\(D\)</span> for yourself.</p>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\((-1)^{m}=(-1)^{2}=1&gt;0\)</span>. Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{sign}\left(\operatorname{det}\left(D_{6}\right)\right)=\operatorname{sign}\left(\operatorname{det}\left(D_{5}\right)\right)=\operatorname{sign}\left((-1)^{m}\right)=\operatorname{sign}\left((-1)^{2}\right) .
+\]</div>
+<p class="sd-card-text">This means that the matrix <span class="math notranslate nohighlight">\(A\)</span> is positive definite on the set of constraints given by both <span class="math notranslate nohighlight">\(C_{x}=0\)</span> and <span class="math notranslate nohighlight">\(x \neq 0\)</span>.</p>
+</div>
+</details></section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="06.univariate_differentiation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Univariate differentiation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="08.multivariate_differential_calculus.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Multivariate differential calculus</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Linear algebra</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-and-matrix-arithmetic">Vector and matrix arithmetic</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-reading-guide">References and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-matrix">What is a matrix?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scalars-and-vectors">Scalars and vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-examples-of-matrices-and-vectors">Economic examples of matrices and vectors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-overview-of-matrix-arithmetic">An overview of matrix arithmetic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-multiplication">Scalar multiplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-examples-of-scalar-multiplication-of-a-matrix">Some examples of scalar multiplication of a matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-addition">Matrix addition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-examples-of-matrix-addition">Some examples of matrix addition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-economic-example-of-matrix-addition">An economic example of matrix addition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-subtraction">Matrix subtraction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">Matrix multiplication</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-economic-example-of-matrix-multiplication">An economic example of matrix multiplication</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transposition">Matrix transposition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-matrices">Symmetric matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#null-matrices">Null matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additive-inverses">Additive inverses</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-of-an-additive-inverse-matrix">An example of an additive inverse matrix</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-matrices">Identity matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplicative-inverses">Multiplicative inverses</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-of-a-multiplicative-inverse-matrix">An example of a multiplicative inverse matrix</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#idempotent-matrices">Idempotent matrices</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#some-examples-of-idempotent-matrices">Some examples of idempotent matrices</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#econometric-example-the-classical-linear-regression-model">Econometric example: the classical linear regression model</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-associated-with-the-clrm">Matrices associated with the CLRM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hat-matrix-is-symmetric">The hat matrix is symmetric</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hat-matrix-is-idempotent">The hat matrix is idempotent</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-residual-making-matrix-is-symmetric">The residual-making matrix is symmetric</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-residual-making-matrix-is-idempotent">The residual-making matrix is idempotent</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-inequalities-in-euclidean-n-space">Vector inequalities in Euclidean <span class="math notranslate nohighlight">\(n\)</span>-space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-examples-of-the-vector-inequalities">Some examples of the vector inequalities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-application-consumers-who-prefer-more-to-less">Economic application: consumers who “prefer more to less”</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-forms">Quadratic Forms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id95">References and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-quadratic-form">What is a quadratic form?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-and-non-symmetric-matrices">Symmetric and non-symmetric matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definiteness-of-a-matrix">The definiteness of a matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalues-and-definiteness">Eigenvalues and definiteness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principal-minors-and-definiteness">Principal minors and definiteness</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-forms-on-sets-of-linear-constraints">Quadratic forms on sets of linear constraints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fedor Iskhakov, based on notes by D.S. Eldridge
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
