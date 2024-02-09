@@ -766,27 +766,41 @@ If we have a sequence <span class="math notranslate nohighlight">\(\{ x_n \}_{n 
 <p>The method of proof by induction can be extended beyond the set of natural numbers to any “well-ordered set”, where “well-ordered” has a very precise mathematical meaning. This extended version of proof by induction is known as “proof by transfinite induction”. See <span id="id15">[<a class="reference internal" href="bibliography.html#id15" title="AN Kolmogorov and SV Fomin. Introductory real analysis. Dover Publications, 1970. Translated and Edited by RA Silverman, The 1975 Dover Edition (an unabridged, slightly corrected republication of the original 1970 Prentice-Hall edition).">Kolmogorov and Fomin, 1970</a>]</span> (pp. 28-29) for details.</p>
 <section id="examples">
 <h4>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h4>
-<p>This example comes from <span id="id16">[<a class="reference internal" href="bibliography.html#id16" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">Simon and Blume, 1994</a>]</span> (pp. 856-857).</p>
-<p>We want to show that
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 1<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This example comes from <span id="id16">[<a class="reference internal" href="bibliography.html#id16" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">Simon and Blume, 1994</a>]</span> (pp. 856-857).</p>
+<p class="sd-card-text">We want to show that
 <span class="math notranslate nohighlight">\(\sum\limits_{i = 1}^n x = \frac{n(n+1)}{2}\)</span> for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
-<p>The proof proceeds as follows.</p>
-<p>Note that <span class="math notranslate nohighlight">\(\sum\limits_{i = 1}^{n} x = 1\)</span> and <span class="math notranslate nohighlight">\(\frac{1(1+1)}{2} = \frac{2}{2} = 1\)</span>. Thus the claim is true for <span class="math notranslate nohighlight">\(n = 1\)</span>.</p>
-<p>Assume that the claim is true for <span class="math notranslate nohighlight">\(n = k\)</span>. In other words, assume that
+<p class="sd-card-text">The proof proceeds as follows.</p>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(\sum\limits_{i = 1}^{n} x = 1\)</span> and <span class="math notranslate nohighlight">\(\frac{1(1+1)}{2} = \frac{2}{2} = 1\)</span>. Thus the claim is true for <span class="math notranslate nohighlight">\(n = 1\)</span>.</p>
+<p class="sd-card-text">Assume that the claim is true for <span class="math notranslate nohighlight">\(n = k\)</span>. In other words, assume that
 <span class="math notranslate nohighlight">\(\sum\limits_{i = 1}^k x = \frac{k(k+1)}{2}\)</span>.</p>
-<p>Consider the case of <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>.</p>
+<p class="sd-card-text">Consider the case of <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>.</p>
 <ul class="simple">
-<li><p>Note that <span class="math notranslate nohighlight">\(\sum\limits^{k+1}_{i =1} x = (\sum\limits^{k}_{i = 1} x ) + (k + 1) = \frac{k(k+1)}{2} + (k + 1)\)</span> by our inductive assumption.</p></li>
-<li><p>Note that <span class="math notranslate nohighlight">\(\frac{k(k+1)}{2} + (k + 1) = \frac{k(k+1)}{2} + \frac{2(k+1)}{2} = \frac{(k+2)(k+1)}{2}\)</span>.</p></li>
-<li><p>Note that <span class="math notranslate nohighlight">\(\frac{(k+2)(k+1)}{2} = \frac{((k+1)+1)(k+1)}{2} = \frac{(k+1)((k+1)+1)}{2}\)</span>.</p></li>
+<li><p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(\sum\limits^{k+1}_{i =1} x = (\sum\limits^{k}_{i = 1} x ) + (k + 1) = \frac{k(k+1)}{2} + (k + 1)\)</span> by our inductive assumption.</p></li>
+<li><p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(\frac{k(k+1)}{2} + (k + 1) = \frac{k(k+1)}{2} + \frac{2(k+1)}{2} = \frac{(k+2)(k+1)}{2}\)</span>.</p></li>
+<li><p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(\frac{(k+2)(k+1)}{2} = \frac{((k+1)+1)(k+1)}{2} = \frac{(k+1)((k+1)+1)}{2}\)</span>.</p></li>
 </ul>
-<p>Thus we have shown that, if the claim is true for <span class="math notranslate nohighlight">\(n = k\)</span>, then it must also be true for <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>.</p>
-<p>Since (a) the claim is true for <span class="math notranslate nohighlight">\(n = 1\)</span>, and (b) if the claim is true for <span class="math notranslate nohighlight">\(n = k\)</span>, then it is also true for <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>, we can conclude by the principle of mathematical induction that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
-<p>Example 2</p>
-<p>Claim: <span class="math notranslate nohighlight">\(\sum\limits^{n}_{x = 1} x^2 = \frac{n(n+1)(2n+1)}{6}\)</span>.</p>
-<p>We will prove this claim by induction.</p>
-<p><strong>Step one: <span class="math notranslate nohighlight">\(P(1)\)</span> is true</strong>.</p>
-<p>Consider the case where <span class="math notranslate nohighlight">\(n = 1\)</span>. Note that <span class="math notranslate nohighlight">\(\sum\limits_{x = 1}^1 x^2 = 1^2 = 1\)</span>.</p>
-<p>Note also that</p>
+<p class="sd-card-text">Thus we have shown that, if the claim is true for <span class="math notranslate nohighlight">\(n = k\)</span>, then it must also be true for <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>.</p>
+<p class="sd-card-text">Since (a) the claim is true for <span class="math notranslate nohighlight">\(n = 1\)</span>, and (b) if the claim is true for <span class="math notranslate nohighlight">\(n = k\)</span>, then it is also true for <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>, we can conclude by the principle of mathematical induction that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 2<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Claim: <span class="math notranslate nohighlight">\(\sum\limits^{n}_{x = 1} x^2 = \frac{n(n+1)(2n+1)}{6}\)</span>.</p>
+<p class="sd-card-text">We will prove this claim by induction.</p>
+<p class="sd-card-text"><strong>Step one: <span class="math notranslate nohighlight">\(P(1)\)</span> is true</strong>.</p>
+<p class="sd-card-text">Consider the case where <span class="math notranslate nohighlight">\(n = 1\)</span>. Note that <span class="math notranslate nohighlight">\(\sum\limits_{x = 1}^1 x^2 = 1^2 = 1\)</span>.</p>
+<p class="sd-card-text">Note also that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
@@ -797,12 +811,12 @@ If we have a sequence <span class="math notranslate nohighlight">\(\{ x_n \}_{n 
 &amp;= 1
 \end{align*}
 \end{split}\]</div>
-<p>Thus the claim is true when <span class="math notranslate nohighlight">\(n = 1\)</span>.</p>
-<p><strong>Step two: <span class="math notranslate nohighlight">\(P(k)\)</span> true implies <span class="math notranslate nohighlight">\(P(k+1)\)</span> true.</strong>
+<p class="sd-card-text">Thus the claim is true when <span class="math notranslate nohighlight">\(n = 1\)</span>.</p>
+<p class="sd-card-text"><strong>Step two: <span class="math notranslate nohighlight">\(P(k)\)</span> true implies <span class="math notranslate nohighlight">\(P(k+1)\)</span> true.</strong>
 Suppose that the claim is true when <span class="math notranslate nohighlight">\(n = k\)</span>, so that</p>
 <div class="math notranslate nohighlight">
 \[\sum_{x = 1}^k x^2 = \frac{k (k + 1) (2k + 1)}{6}\]</div>
-<p>Consider the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>. We have</p>
+<p class="sd-card-text">Consider the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>. We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
@@ -819,21 +833,28 @@ Suppose that the claim is true when <span class="math notranslate nohighlight">\
 &amp;= \frac{(k + 1) ((k + 1) + 1) (2 (k + 1) + 1)}{6}
 \end{align*}
 \end{split}\]</div>
-<p>Thus we have</p>
+<p class="sd-card-text">Thus we have</p>
 <div class="math notranslate nohighlight">
 \[
 \sum_{x = 1}^{k + 1} x^2 = \frac{(k + 1) ((k + 1) + 1) (2 (k + 1) + 1)}{6}
 \]</div>
-<p>As such, we know that <span class="math notranslate nohighlight">\(P(k)\)</span> implies <span class="math notranslate nohighlight">\(P(k + 1)\)</span>.</p>
-<p><strong>Step three: Conclusion</strong>
-We have shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span> if it is true for the case where <span class="math notranslate nohighlight">\(n = k\)</span>. We have also shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = 1\)</span>. Thus we know, from the principle of mathematical induction, that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
-<p>Example 3</p>
-<p>Claim: <span class="math notranslate nohighlight">\(\sum\limits^{n}_{x = 1} x^3 = \frac{n^2(n+1)^2}{4}\)</span>. We will prove this claim by induction.</p>
-<p><strong>Step one: P(1) is true.</strong>
+<p class="sd-card-text">As such, we know that <span class="math notranslate nohighlight">\(P(k)\)</span> implies <span class="math notranslate nohighlight">\(P(k + 1)\)</span>.</p>
+<p class="sd-card-text"><strong>Step three: Conclusion</strong></p>
+<p class="sd-card-text">We have shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span> if it is true for the case where <span class="math notranslate nohighlight">\(n = k\)</span>. We have also shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = 1\)</span>. Thus we know, from the principle of mathematical induction, that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 3<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Claim: <span class="math notranslate nohighlight">\(\sum\limits^{n}_{x = 1} x^3 = \frac{n^2(n+1)^2}{4}\)</span>. We will prove this claim by induction.</p>
+<p class="sd-card-text"><strong>Step one: P(1) is true.</strong>
 Consider the case where <span class="math notranslate nohighlight">\(n = 1\)</span>.</p>
 <ul class="simple">
-<li><p>Note that <span class="math notranslate nohighlight">\(\sum\limits_{x = 1}^1 x^3 = 1^3 = 1\)</span>.</p></li>
-<li><p>Note also that</p></li>
+<li><p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(\sum\limits_{x = 1}^1 x^3 = 1^3 = 1\)</span>.</p></li>
+<li><p class="sd-card-text">Note also that</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -845,12 +866,12 @@ Consider the case where <span class="math notranslate nohighlight">\(n = 1\)</sp
 &amp;= 1
 \end{align*}
 \end{split}\]</div>
-<p>Thus the claim is true when <span class="math notranslate nohighlight">\(n = 1\)</span>.</p>
-<p><strong>Step two: <span class="math notranslate nohighlight">\(P(k)\)</span> true implies <span class="math notranslate nohighlight">\(P(k+1)\)</span> true.</strong>
+<p class="sd-card-text">Thus the claim is true when <span class="math notranslate nohighlight">\(n = 1\)</span>.</p>
+<p class="sd-card-text"><strong>Step two: <span class="math notranslate nohighlight">\(P(k)\)</span> true implies <span class="math notranslate nohighlight">\(P(k+1)\)</span> true.</strong>
 Suppose that the claim is true when <span class="math notranslate nohighlight">\(n = k\)</span>, so that</p>
 <div class="math notranslate nohighlight">
 \[\sum_{x = 1}^k x^3 = \frac{k^2 (k + 1)^2}{4}\]</div>
-<p>Consider the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>. We have</p>
+<p class="sd-card-text">Consider the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>. We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
@@ -864,24 +885,31 @@ Suppose that the claim is true when <span class="math notranslate nohighlight">\
 &amp;= \frac{(k + 1)^2 ((k + 1) + 1)^2}{4}
 \end{align*}
 \end{split}\]</div>
-<p>Thus we have</p>
+<p class="sd-card-text">Thus we have</p>
 <div class="math notranslate nohighlight">
 \[\sum_{ x = 1}^n x^3 = \frac{n^2 (n + 1)^2}{4}\]</div>
-<p>As such, we know that <span class="math notranslate nohighlight">\(P(k)\)</span> implies <span class="math notranslate nohighlight">\(P(k + 1)\)</span>.</p>
-<p><strong>Step three: Conclusion</strong>
-We have shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span> if it is true for the case where <span class="math notranslate nohighlight">\(n = k\)</span>. We have also shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = 1\)</span>. Thus we know, from the principle of mathematical induction, that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
-<p>Example 4</p>
-<p>Claim: <span class="math notranslate nohighlight">\(\sum^n_{x = 1} (2x − 1) = n^2\)</span></p>
-<p>We will prove this claim by induction.</p>
-<p><strong>Step one: P(1) is true.</strong>
+<p class="sd-card-text">As such, we know that <span class="math notranslate nohighlight">\(P(k)\)</span> implies <span class="math notranslate nohighlight">\(P(k + 1)\)</span>.</p>
+<p class="sd-card-text"><strong>Step three: Conclusion</strong></p>
+<p class="sd-card-text">We have shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span> if it is true for the case where <span class="math notranslate nohighlight">\(n = k\)</span>. We have also shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = 1\)</span>. Thus we know, from the principle of mathematical induction, that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 4<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Claim: <span class="math notranslate nohighlight">\(\sum^n_{x = 1} (2x − 1) = n^2\)</span></p>
+<p class="sd-card-text">We will prove this claim by induction.</p>
+<p class="sd-card-text"><strong>Step one: P(1) is true.</strong>
 Consider the case where <span class="math notranslate nohighlight">\(n = 1\)</span>.</p>
-<p>Note that <span class="math notranslate nohighlight">\(\sum_{x = 1}^{1} (2x − 1) = 2 (1) − 1 = 2 − 1 = 1\)</span></p>
-<p>and <span class="math notranslate nohighlight">\(1^2 = 1\)</span>. Thus the claim is true when <span class="math notranslate nohighlight">\(n = 1\)</span>.</p>
-<p><strong>Step two: <span class="math notranslate nohighlight">\(P(k)\)</span> true implies <span class="math notranslate nohighlight">\(P(k+1)\)</span> true.</strong>
+<p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(\sum_{x = 1}^{1} (2x − 1) = 2 (1) − 1 = 2 − 1 = 1\)</span></p>
+<p class="sd-card-text">and <span class="math notranslate nohighlight">\(1^2 = 1\)</span>. Thus the claim is true when <span class="math notranslate nohighlight">\(n = 1\)</span>.</p>
+<p class="sd-card-text"><strong>Step two: <span class="math notranslate nohighlight">\(P(k)\)</span> true implies <span class="math notranslate nohighlight">\(P(k+1)\)</span> true.</strong>
 Suppose that the claim is true when <span class="math notranslate nohighlight">\(n = k\)</span>, so that</p>
 <div class="math notranslate nohighlight">
 \[\sum^k_{x = 1} (2x − 1) = k^2\]</div>
-<p>Consider the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>. We have</p>
+<p class="sd-card-text">Consider the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>. We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
@@ -894,30 +922,38 @@ Suppose that the claim is true when <span class="math notranslate nohighlight">\
 &amp;= (k + 1)^2
 \end{align*}
 \end{split}\]</div>
-<p>Thus we have</p>
+<p class="sd-card-text">Thus we have</p>
 <div class="math notranslate nohighlight">
 \[\sum_{x = 1}^{k + 1} (2x − 1) = (k + 1)^2\]</div>
-<p>As such, we know that <span class="math notranslate nohighlight">\(P(k)\)</span> implies <span class="math notranslate nohighlight">\(P(k + 1)\)</span>.</p>
-<p><strong>Step three: Conclusion</strong>
-We have shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span> if it is true for the case where <span class="math notranslate nohighlight">\(n = k\)</span>. We have also shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = 1\)</span>. Thus we know, from the principle of mathematical induction, that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
-<p>Example 5</p>
-<p>This example comes from Exercise A.1.7 in <span id="id17">[<a class="reference internal" href="bibliography.html#id16" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">Simon and Blume, 1994</a>]</span> (p. 858).</p>
-<p>We want to show that <span class="math notranslate nohighlight">\(n &lt; 2^n\)</span> for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>. The proof proceeds as follows:</p>
+<p class="sd-card-text">As such, we know that <span class="math notranslate nohighlight">\(P(k)\)</span> implies <span class="math notranslate nohighlight">\(P(k + 1)\)</span>.</p>
+<p class="sd-card-text"><strong>Step three: Conclusion</strong></p>
+<p class="sd-card-text">We have shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = (k + 1)\)</span> if it is true for the case where <span class="math notranslate nohighlight">\(n = k\)</span>. We have also shown that the claim is true for the case where <span class="math notranslate nohighlight">\(n = 1\)</span>. Thus we know, from the principle of mathematical induction, that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example 5<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This example comes from Exercise A.1.7 in <span id="id17">[<a class="reference internal" href="bibliography.html#id16" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">Simon and Blume, 1994</a>]</span> (p. 858).</p>
+<p class="sd-card-text">We want to show that <span class="math notranslate nohighlight">\(n &lt; 2^n\)</span> for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>. The proof proceeds as follows:</p>
 <ul class="simple">
-<li><p>Note that <span class="math notranslate nohighlight">\(1 &lt; 2^1 = 2\)</span>, so the claim is true when <span class="math notranslate nohighlight">\(n = 1\)</span>.</p></li>
-<li><p>Assume that the claim is true when <span class="math notranslate nohighlight">\(n = k\)</span>. This means that <span class="math notranslate nohighlight">\(k &lt; 2^k\)</span>.</p></li>
-<li><p>Consider the case of <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>.</p></li>
-<li><p>If we add <span class="math notranslate nohighlight">\(1\)</span> to both sides of the inequality in our inductive assumption, we obtain <span class="math notranslate nohighlight">\(k + 1 &lt; 2^k + 1\)</span>.</p></li>
-<li><p>Since <span class="math notranslate nohighlight">\(k \geqslant 1\)</span>, we know that <span class="math notranslate nohighlight">\(1 &lt; 2 = 2^1 \leqslant 2^k\)</span>.</p></li>
-<li><p>This means that <span class="math notranslate nohighlight">\(1 \leqslant 2^k\)</span>.</p></li>
-<li><p>This means that <span class="math notranslate nohighlight">\(2^k + 1 &lt; 2^k + 2^k\)</span>.</p></li>
-<li><p>Note that <span class="math notranslate nohighlight">\(2^k + 2^k = 2(2^k ) = 2^{k+1}\)</span>.</p></li>
-<li><p>This means that <span class="math notranslate nohighlight">\(2^k + 1 &lt; 2^{k+1}\)</span>.</p></li>
-<li><p>Since <span class="math notranslate nohighlight">\(k + 1 &lt; 2^k + 1\)</span> and <span class="math notranslate nohighlight">\(2^k + 1 &lt; 2^{k+1}\)</span>, we know that <span class="math notranslate nohighlight">\((k + 1) &lt; 2^{k+1}\)</span>.</p></li>
-<li><p>Thus, if the proposition is true when <span class="math notranslate nohighlight">\(n = k\)</span>, then it must also be true when <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>.</p></li>
-<li><p>Since (a) the claim is true for <span class="math notranslate nohighlight">\(n = 1\)</span>, and (b) the claim is true for <span class="math notranslate nohighlight">\(n = k\)</span>, then it is also true for <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>, we can conclude, by the principle of mathematical induction, that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p></li>
+<li><p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(1 &lt; 2^1 = 2\)</span>, so the claim is true when <span class="math notranslate nohighlight">\(n = 1\)</span>.</p></li>
+<li><p class="sd-card-text">Assume that the claim is true when <span class="math notranslate nohighlight">\(n = k\)</span>. This means that <span class="math notranslate nohighlight">\(k &lt; 2^k\)</span>.</p></li>
+<li><p class="sd-card-text">Consider the case of <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>.</p></li>
+<li><p class="sd-card-text">If we add <span class="math notranslate nohighlight">\(1\)</span> to both sides of the inequality in our inductive assumption, we obtain <span class="math notranslate nohighlight">\(k + 1 &lt; 2^k + 1\)</span>.</p></li>
+<li><p class="sd-card-text">Since <span class="math notranslate nohighlight">\(k \geqslant 1\)</span>, we know that <span class="math notranslate nohighlight">\(1 &lt; 2 = 2^1 \leqslant 2^k\)</span>.</p></li>
+<li><p class="sd-card-text">This means that <span class="math notranslate nohighlight">\(1 \leqslant 2^k\)</span>.</p></li>
+<li><p class="sd-card-text">This means that <span class="math notranslate nohighlight">\(2^k + 1 &lt; 2^k + 2^k\)</span>.</p></li>
+<li><p class="sd-card-text">Note that <span class="math notranslate nohighlight">\(2^k + 2^k = 2(2^k ) = 2^{k+1}\)</span>.</p></li>
+<li><p class="sd-card-text">This means that <span class="math notranslate nohighlight">\(2^k + 1 &lt; 2^{k+1}\)</span>.</p></li>
+<li><p class="sd-card-text">Since <span class="math notranslate nohighlight">\(k + 1 &lt; 2^k + 1\)</span> and <span class="math notranslate nohighlight">\(2^k + 1 &lt; 2^{k+1}\)</span>, we know that <span class="math notranslate nohighlight">\((k + 1) &lt; 2^{k+1}\)</span>.</p></li>
+<li><p class="sd-card-text">Thus, if the proposition is true when <span class="math notranslate nohighlight">\(n = k\)</span>, then it must also be true when <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>.</p></li>
+<li><p class="sd-card-text">Since (a) the claim is true for <span class="math notranslate nohighlight">\(n = 1\)</span>, and (b) the claim is true for <span class="math notranslate nohighlight">\(n = k\)</span>, then it is also true for <span class="math notranslate nohighlight">\(n = (k + 1)\)</span>, we can conclude, by the principle of mathematical induction, that the claim is true for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p></li>
 </ul>
-</section>
+</div>
+</details></section>
 </section>
 </section>
 <section id="arithmetic-progressions">
