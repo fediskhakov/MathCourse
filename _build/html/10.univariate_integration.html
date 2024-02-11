@@ -390,7 +390,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Univariate integration</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-reading-guide">References and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-and-reading-guide">Sources and reading guide</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anti-derivatives-and-indefinite-integrals">Anti-derivatives and indefinite integrals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-anti-derivative">What is an anti-derivative?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anti-derivatives-are-not-unique">Anti-derivatives are NOT unique</a></li>
@@ -426,7 +426,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#consumer-demand-and-consumer-welfare">Consumer demand and consumer welfare</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-references-and-reading-guide">Sources, references and reading guide</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-private-benefit-and-demand">Marginal private benefit and demand</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diminishing-marginal-benefits">Diminishing marginal benefits</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-mb-schedule-example">Discrete MB schedule example</a></li>
@@ -445,7 +444,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#producer-supply-and-producer-welfare">Producer supply and producer welfare</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-private-cost-and-supply">Marginal private cost and supply</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-marginal-costs">Increasing marginal costs</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-cost-in-a-pure-exchange-economy">Marginal cost in a pure exchange economy</a></li>
@@ -476,28 +474,67 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="univariate-integration">
 <h1>Univariate integration<a class="headerlink" href="#univariate-integration" title="Permalink to this heading">#</a></h1>
-<section id="references-and-reading-guide">
-<h2>References and reading guide<a class="headerlink" href="#references-and-reading-guide" title="Permalink to this heading">#</a></h2>
-<p>These are references that are suitable for an elementary course on mathematical economics.</p>
+<section id="sources-and-reading-guide">
+<h2>Sources and reading guide<a class="headerlink" href="#sources-and-reading-guide" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Sources and reading guide<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Univariate integration section</strong></p>
+<p class="sd-card-text">Primary readings:</p>
+<p class="sd-card-text"><span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="K Sydsæter, P Hammond, A Strøm, and A Carvajal. Essential mathematics for economic analysis (fifth edition). Pearson Education, 2016.">Sydsæter, Hammond, Strøm, and Carvajal, 2016</a>]</span>: Chapter 9 (pp. 319-373).</p>
+<p class="sd-card-text">Other sources/readings are below.</p>
+<p class="sd-card-text">These are references that are suitable for an elementary course on mathematical economics:</p>
 <ul class="simple">
-<li><p><span id="id1">[<a class="reference internal" href="bibliography.html#id18" title="T Bradley. Essential mathematics for economics and business (fourth edition). John Wiley and Sons, 2013.">Bradley, 2013</a>]</span>: Chapter 8 (pp. 427-476).</p></li>
-<li><p><span id="id2">[<a class="reference internal" href="bibliography.html#id2" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">Haeussler Jr and Paul, 1987</a>]</span>: Chapters 14 and 15 (pp. 533-645).</p></li>
-<li><p><span id="id3">[<a class="reference internal" href="bibliography.html#id5" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">Shannon, 1995</a>]</span>: Chapter 9 (pp. 408-449).</p></li>
-<li><p><span id="id4">[<a class="reference internal" href="bibliography.html#id3" title="K Sydsæter, P Hammond, A Strøm, and A Carvajal. Essential mathematics for economic analysis (fifth edition). Pearson Education, 2016.">Sydsæter, Hammond, Strøm, and Carvajal, 2016</a>]</span>: Chapter 9 (pp. 319-373).</p></li>
+<li><p class="sd-card-text"><span id="id2">[<a class="reference internal" href="bibliography.html#id18" title="T Bradley. Essential mathematics for economics and business (fourth edition). John Wiley and Sons, 2013.">Bradley, 2013</a>]</span>: Chapter 8 (pp. 427-476).</p></li>
+<li><p class="sd-card-text"><span id="id3">[<a class="reference internal" href="bibliography.html#id2" title="EF Haeussler Jr and RS Paul. Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition). Prentice-Hall, 1987.">Haeussler Jr and Paul, 1987</a>]</span>: Chapters 14 and 15 (pp. 533-645).</p></li>
+<li><p class="sd-card-text"><span id="id4">[<a class="reference internal" href="bibliography.html#id5" title="J Shannon. Mathematics for business, economics and finance. John Wiley and Sons, 1995.">Shannon, 1995</a>]</span>: Chapter 9 (pp. 408-449).</p></li>
 </ul>
-<p>These are references that are suitable for a first-year undergraduate course for mathematics majors on calculus.</p>
+<p class="sd-card-text">These are references that are suitable for a first-year undergraduate course for mathematics majors on calculus:</p>
 <ul class="simple">
-<li><p><span id="id5">[<a class="reference internal" href="bibliography.html#id9" title="M Kline. Calculus: An intuitive and physical approach (second edition). Dover Publications, 1967. The 1998 Dover republication of the original John Wiley and Sons second edition.">Kline, 1967</a>]</span>: Chapters 3, 5, 6, 9, 10, 11, 12, 14, 15, and 16.</p></li>
-<li><p><span id="id6">[<a class="reference internal" href="bibliography.html#id10" title="RA Silverman. Modern calculus and analytic geometry. Dover Publications, 1969. The 2002 Dover corrected republication of the original 1969 Macmillan Company edition.">Silverman, 1969</a>]</span>: Chapters 7 and 14.</p></li>
-<li><p><span id="id7">[<a class="reference internal" href="bibliography.html#id11" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">Spivak, 2006</a>]</span>: Chapters 13, 14, 18, and 19.</p></li>
+<li><p class="sd-card-text"><span id="id5">[<a class="reference internal" href="bibliography.html#id9" title="M Kline. Calculus: An intuitive and physical approach (second edition). Dover Publications, 1967. The 1998 Dover republication of the original John Wiley and Sons second edition.">Kline, 1967</a>]</span>: Chapters 3, 5, 6, 9, 10, 11, 12, 14, 15, and 16.</p></li>
+<li><p class="sd-card-text"><span id="id6">[<a class="reference internal" href="bibliography.html#id10" title="RA Silverman. Modern calculus and analytic geometry. Dover Publications, 1969. The 2002 Dover corrected republication of the original 1969 Macmillan Company edition.">Silverman, 1969</a>]</span>: Chapters 7 and 14.</p></li>
+<li><p class="sd-card-text"><span id="id7">[<a class="reference internal" href="bibliography.html#id11" title="M Spivak. Calculus (third edition). Cambridge University Press, 2006.">Spivak, 2006</a>]</span>: Chapters 13, 14, 18, and 19.</p></li>
 </ul>
-<p>These references are suitable for an intermediate course on mathematical economics.</p>
+<p class="sd-card-text">These references are suitable for an intermediate course on mathematical economics:</p>
 <ul class="simple">
-<li><p><span id="id8">[<a class="reference internal" href="bibliography.html#id30" title="AC Chiang and K Wainwright. Fundamental methods of mathematical economics (fourth edition). McGraw-Hill, 2005.">Chiang and Wainwright, 2005</a>]</span>: Chapter 14.</p></li>
-<li><p><span id="id9">[<a class="reference internal" href="bibliography.html#id46" title="D Leonard and NV Long. Optimal control theory and static optimization in economics. Cambridge University Press, 1992.">Leonard and Long, 1992</a>]</span>: The Appendix to Chapter 2 (pp. 111-113).</p></li>
-<li><p><span id="id10">[<a class="reference internal" href="bibliography.html#id16" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">Simon and Blume, 1994</a>]</span>: Appendix A4.</p></li>
+<li><p class="sd-card-text"><span id="id8">[<a class="reference internal" href="bibliography.html#id30" title="AC Chiang and K Wainwright. Fundamental methods of mathematical economics (fourth edition). McGraw-Hill, 2005.">Chiang and Wainwright, 2005</a>]</span>: Chapter 14.</p></li>
+<li><p class="sd-card-text"><span id="id9">[<a class="reference internal" href="bibliography.html#id46" title="D Leonard and NV Long. Optimal control theory and static optimization in economics. Cambridge University Press, 1992.">Leonard and Long, 1992</a>]</span>: The Appendix to Chapter 2 (pp. 111-113).</p></li>
+<li><p class="sd-card-text"><span id="id10">[<a class="reference internal" href="bibliography.html#id16" title="C Simon and L Blume. Mathematics for economists. WW Norton and Co, 1994.">Simon and Blume, 1994</a>]</span>: Appendix A4.</p></li>
 </ul>
-</section>
+<p class="sd-card-text"><strong>Consumer demand and consumer welfare section</strong></p>
+<p class="sd-card-text">These are references that are suitable for a first-year undergraduate economics course:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span id="id11">[<a class="reference internal" href="bibliography.html#id54" title="AA Alchian and WR Allen. Exchange and production: Competition, coordination and control (third edition). Wadsworth Publishing Company, 1983.">Alchian and Allen, 1983</a>]</span>: Chapter 2 (pp. 13-44).</p></li>
+<li><p class="sd-card-text"><span id="id12">[<a class="reference internal" href="bibliography.html#id55" title="KE Case and RC Fair. Principles of Economics. Prentice-Hall, 1989.">Case and Fair, 1989</a>]</span>: Chapters 4-6 (pp. 77-162).</p></li>
+<li><p class="sd-card-text"><span id="id13">[<a class="reference internal" href="bibliography.html#id56" title="J Gans, S King, and NG Mankiw. Principles of microeconomics (fourth edition). Cengage Learning Australia, 2009.">Gans, King, and Mankiw, 2009</a>]</span>: Chapters 4, 5, 7 and 22 (pp. 62-112, 134-154 and 486-515).</p></li>
+<li><p class="sd-card-text"><span id="id14">[<a class="reference internal" href="bibliography.html#id57" title="DS Hamermesh. Economics is everywhere (second edition). McGraw-Hill-Irwin, 2006.">Hamermesh, 2006</a>]</span>: Chapters 2, 5 and 6 (pp. 15-24 and 49-77).</p></li>
+<li><p class="sd-card-text"><span id="id15">[<a class="reference internal" href="bibliography.html#id58" title="P Heyne. The economic way of thinking (sixth edition). Macmillan Publishing Company, 1991.">Heyne, 1991</a>]</span>: Chapter 2 (pp. 15-45).</p></li>
+</ul>
+<p class="sd-card-text">These are references that are suitable for a second-year undergraduate economics course:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span id="id16">[<a class="reference internal" href="bibliography.html#id59" title="J Hirshleifer. Price theory and applications (fourth edition). Prentice-Hall, 1988. With the assistance of M Sproul.">Hirshleifer, 1988</a>]</span>: Chapters 2 and 7E (pp. 23-54 and 204-212).</p></li>
+<li><p class="sd-card-text"><span id="id17">[<a class="reference internal" href="bibliography.html#id60" title="J Hirshleifer, A Glazer, and D Hirshleifer. Price theory and applications: Decisions, markets, and information (seventh edition). Cambridge University Press, 2005.">Hirshleifer, Glazer, and Hirshleifer, 2005</a>]</span>: Chapters 2 and 7.3.</p></li>
+<li><p class="sd-card-text"><span id="id18">[<a class="reference internal" href="bibliography.html#id61" title="W Nicholson. Intermediate microeconomics and its applications (fourth edition). The Dryden Press, 1987.">Nicholson, 1987</a>]</span>: Chapters 1 and 12 (Consumers Surplus) (pp. 5-21 and 334).</p></li>
+<li><p class="sd-card-text"><span id="id19">[<a class="reference internal" href="bibliography.html#id62" title="HR Varian. Intermediate microeconomics: a modern approach. WW Norton and Company, 1987.">Varian, 1987</a>]</span>: Chapters 1 and 15 (pp. 1-19 and 242-266).</p></li>
+</ul>
+<p class="sd-card-text">These are references that are suitable for a third-year undergraduate economics course:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span id="id20">[<a class="reference internal" href="bibliography.html#id19" title="H Gravelle and R Rees. Microeconomics. Longman Group, 1981.">Gravelle and Rees, 1981</a>]</span>: Section C of Chapter 4 (pp. 103-111).</p></li>
+<li><p class="sd-card-text"><span id="id21">[<a class="reference internal" href="bibliography.html#id63" title="W Nicholson. Microeconomic theory: Basic principles and extensions (seventh edition). The Dryden Press, 1998.">Nicholson, 1998</a>]</span>: Chapters 1, 5 (Consumer Surplus), and 15 (pp. 3-22, 152-157, and 438-458).</p></li>
+<li><p class="sd-card-text"><span id="id22">[<a class="reference internal" href="bibliography.html#id29" title="A Takayama. Analytical methods in economics. The University of Michigan Press, 1993.">Takayama, 1993</a>]</span>: Appendix C (pp. 621-647).</p></li>
+<li><p class="sd-card-text"><span id="id23">[<a class="reference internal" href="bibliography.html#id24" title="HR Varian. Microeconomic analysis (third edition). WW Norton and Sons, 1992.">Varian, 1992</a>]</span>: Chapter 10 (pp. 160-171).</p></li>
+</ul>
+<p class="sd-card-text"><strong>Producer supply and producer welfare section</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text"><span id="id24">[<a class="reference internal" href="bibliography.html#id54" title="AA Alchian and WR Allen. Exchange and production: Competition, coordination and control (third edition). Wadsworth Publishing Company, 1983.">Alchian and Allen, 1983</a>]</span>: pp. 63-64.</p></li>
+<li><p class="sd-card-text"><span id="id25">[<a class="reference internal" href="bibliography.html#id57" title="DS Hamermesh. Economics is everywhere (second edition). McGraw-Hill-Irwin, 2006.">Hamermesh, 2006</a>]</span>: Chapters 1, 2, and 7 (pp. 3-24 and 81-90).</p></li>
+</ul>
+</div>
+</details></section>
 <section id="anti-derivatives-and-indefinite-integrals">
 <h2>Anti-derivatives and indefinite integrals<a class="headerlink" href="#anti-derivatives-and-indefinite-integrals" title="Permalink to this heading">#</a></h2>
 <section id="what-is-an-anti-derivative">
@@ -923,7 +960,7 @@ Q(x)=b_{m} x^{m}+b_{m-1} x^{m-1}+\cdots+b_{1} x+b_{0}
 <p>Note that there is no requirement that the polynomial functions <span class="math notranslate nohighlight">\(P(x)\)</span> and <span class="math notranslate nohighlight">\(Q(x)\)</span> be of the same order. (In other words, we do not require that <span class="math notranslate nohighlight">\(m=n\)</span>.)</p>
 <p>The most interesting case is when <span class="math notranslate nohighlight">\(m&lt;n\)</span>. In such cases, the rational function <span class="math notranslate nohighlight">\(R(x)\)</span> is called a “proper” rational function.</p>
 <p>When <span class="math notranslate nohighlight">\(m \geqslant n\)</span>, then we can always use the process of long division to write the original rational function <span class="math notranslate nohighlight">\(R(x)\)</span> as the sum of a polynomial function <span class="math notranslate nohighlight">\(Y(x)\)</span> and another proper rational function <span class="math notranslate nohighlight">\(R^{*}(x)\)</span>.</p>
-<p>This is nicely illustrated by the following example from Chapter 14 of <span id="id11">[<a class="reference internal" href="bibliography.html#id10" title="RA Silverman. Modern calculus and analytic geometry. Dover Publications, 1969. The 2002 Dover corrected republication of the original 1969 Macmillan Company edition.">Silverman, 1969</a>]</span>. Consider the rational function <span class="math notranslate nohighlight">\(R(x)=\frac{x^{2}+x-1}{x-1}\)</span>. Note the following.</p>
+<p>This is nicely illustrated by the following example from Chapter 14 of <span id="id26">[<a class="reference internal" href="bibliography.html#id10" title="RA Silverman. Modern calculus and analytic geometry. Dover Publications, 1969. The 2002 Dover corrected republication of the original 1969 Macmillan Company edition.">Silverman, 1969</a>]</span>. Consider the rational function <span class="math notranslate nohighlight">\(R(x)=\frac{x^{2}+x-1}{x-1}\)</span>. Note the following.</p>
 <img alt="_images/longdiv.png" class="align-center" src="_images/longdiv.png" />
 <p>Thus we have</p>
 <div class="math notranslate nohighlight">
@@ -1186,32 +1223,6 @@ U\left(\{c(\omega)\}_{\omega \in[a, b]}\right)=\int_{a}^{b} u(c(\omega)) f(\omeg
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="consumer-demand-and-consumer-welfare">
 <h1>Consumer demand and consumer welfare<a class="headerlink" href="#consumer-demand-and-consumer-welfare" title="Permalink to this heading">#</a></h1>
-<section id="sources-references-and-reading-guide">
-<h2>Sources, references and reading guide<a class="headerlink" href="#sources-references-and-reading-guide" title="Permalink to this heading">#</a></h2>
-<p>None of this material originates with me. It has been drawn from, or influenced by, a number of sources. Some of these might include some or all of the sources listed in the references below.</p>
-<p>These are references that are suitable for a first-year undergraduate economics course.</p>
-<ul class="simple">
-<li><p><span id="id12">[<a class="reference internal" href="bibliography.html#id54" title="AA Alchian and WR Allen. Exchange and production: Competition, coordination and control (third edition). Wadsworth Publishing Company, 1983.">Alchian and Allen, 1983</a>]</span>: Chapter 2 (pp. 13-44).</p></li>
-<li><p><span id="id13">[<a class="reference internal" href="bibliography.html#id55" title="KE Case and RC Fair. Principles of Economics. Prentice-Hall, 1989.">Case and Fair, 1989</a>]</span>: Chapters 4-6 (pp. 77-162).</p></li>
-<li><p><span id="id14">[<a class="reference internal" href="bibliography.html#id56" title="J Gans, S King, and NG Mankiw. Principles of microeconomics (fourth edition). Cengage Learning Australia, 2009.">Gans, King, and Mankiw, 2009</a>]</span>: Chapters 4, 5, 7 and 22 (pp. 62-112, 134-154 and 486-515).</p></li>
-<li><p><span id="id15">[<a class="reference internal" href="bibliography.html#id57" title="DS Hamermesh. Economics is everywhere (second edition). McGraw-Hill-Irwin, 2006.">Hamermesh, 2006</a>]</span>: Chapters 2, 5 and 6 (pp. 15-24 and 49-77).</p></li>
-<li><p><span id="id16">[<a class="reference internal" href="bibliography.html#id58" title="P Heyne. The economic way of thinking (sixth edition). Macmillan Publishing Company, 1991.">Heyne, 1991</a>]</span>: Chapter 2 (pp. 15-45).</p></li>
-</ul>
-<p>These are references that are suitable for a second-year undergraduate economics course.</p>
-<ul class="simple">
-<li><p><span id="id17">[<a class="reference internal" href="bibliography.html#id59" title="J Hirshleifer. Price theory and applications (fourth edition). Prentice-Hall, 1988. With the assistance of M Sproul.">Hirshleifer, 1988</a>]</span>: Chapters 2 and 7E (pp. 23-54 and 204-212).</p></li>
-<li><p><span id="id18">[<a class="reference internal" href="bibliography.html#id60" title="J Hirshleifer, A Glazer, and D Hirshleifer. Price theory and applications: Decisions, markets, and information (seventh edition). Cambridge University Press, 2005.">Hirshleifer, Glazer, and Hirshleifer, 2005</a>]</span>: Chapters 2 and 7.3.</p></li>
-<li><p><span id="id19">[<a class="reference internal" href="bibliography.html#id61" title="W Nicholson. Intermediate microeconomics and its applications (fourth edition). The Dryden Press, 1987.">Nicholson, 1987</a>]</span>: Chapters 1 and 12 (Consumers Surplus) (pp. 5-21 and 334).</p></li>
-<li><p><span id="id20">[<a class="reference internal" href="bibliography.html#id62" title="HR Varian. Intermediate microeconomics: a modern approach. WW Norton and Company, 1987.">Varian, 1987</a>]</span>: Chapters 1 and 15 (pp. 1-19 and 242-266).</p></li>
-</ul>
-<p>These are references that are suitable for a third-year undergraduate economics course.</p>
-<ul class="simple">
-<li><p><span id="id21">[<a class="reference internal" href="bibliography.html#id19" title="H Gravelle and R Rees. Microeconomics. Longman Group, 1981.">Gravelle and Rees, 1981</a>]</span>: Section C of Chapter 4 (pp. 103-111).</p></li>
-<li><p><span id="id22">[<a class="reference internal" href="bibliography.html#id63" title="W Nicholson. Microeconomic theory: Basic principles and extensions (seventh edition). The Dryden Press, 1998.">Nicholson, 1998</a>]</span>: Chapters 1, 5 (Consumer Surplus), and 15 (pp. 3-22, 152-157, and 438-458).</p></li>
-<li><p><span id="id23">[<a class="reference internal" href="bibliography.html#id29" title="A Takayama. Analytical methods in economics. The University of Michigan Press, 1993.">Takayama, 1993</a>]</span>: Appendix C (pp. 621-647).</p></li>
-<li><p><span id="id24">[<a class="reference internal" href="bibliography.html#id24" title="HR Varian. Microeconomic analysis (third edition). WW Norton and Sons, 1992.">Varian, 1992</a>]</span>: Chapter 10 (pp. 160-171).</p></li>
-</ul>
-</section>
 <section id="marginal-private-benefit-and-demand">
 <h2>Marginal private benefit and demand<a class="headerlink" href="#marginal-private-benefit-and-demand" title="Permalink to this heading">#</a></h2>
 <p>The marginal benefit of an additional unit of a good to you is the maximum amount that you would pay for that additional unit, given your consumption level of the good without the additional unit.</p>
@@ -1223,7 +1234,7 @@ U\left(\{c(\omega)\}_{\omega \in[a, b]}\right)=\int_{a}^{b} u(c(\omega)) f(\omeg
 </section>
 <section id="discrete-mb-schedule-example">
 <h3>Discrete MB schedule example<a class="headerlink" href="#discrete-mb-schedule-example" title="Permalink to this heading">#</a></h3>
-<p>This example comes from <span id="id25">[<a class="reference internal" href="bibliography.html#id54" title="AA Alchian and WR Allen. Exchange and production: Competition, coordination and control (third edition). Wadsworth Publishing Company, 1983.">Alchian and Allen, 1983</a>]</span> (p. 43, Question 43).</p>
+<p>This example comes from <span id="id27">[<a class="reference internal" href="bibliography.html#id54" title="AA Alchian and WR Allen. Exchange and production: Competition, coordination and control (third edition). Wadsworth Publishing Company, 1983.">Alchian and Allen, 1983</a>]</span> (p. 43, Question 43).</p>
 <p>Suppose that only integer (whole number) amounts of a particular good (call it <span class="math notranslate nohighlight">\(X\)</span> ) may be consumed. The marginal benefit schedule for good <span class="math notranslate nohighlight">\(X\)</span> is given by the following table.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1660,14 +1671,6 @@ C S\left(P_{1}\right)=\int_{p=P_{1}}^{\bar{P}} q^{D}(p) d p
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="producer-supply-and-producer-welfare">
 <h1>Producer supply and producer welfare<a class="headerlink" href="#producer-supply-and-producer-welfare" title="Permalink to this heading">#</a></h1>
-<section id="sources">
-<h2>Sources<a class="headerlink" href="#sources" title="Permalink to this heading">#</a></h2>
-<p>This material has been drawn from, or influenced by, a number of sources. Some of these include those listed below.</p>
-<ul class="simple">
-<li><p><span id="id26">[<a class="reference internal" href="bibliography.html#id54" title="AA Alchian and WR Allen. Exchange and production: Competition, coordination and control (third edition). Wadsworth Publishing Company, 1983.">Alchian and Allen, 1983</a>]</span>: pp. 63-64.</p></li>
-<li><p><span id="id27">[<a class="reference internal" href="bibliography.html#id57" title="DS Hamermesh. Economics is everywhere (second edition). McGraw-Hill-Irwin, 2006.">Hamermesh, 2006</a>]</span>: Chapters 1, 2, and 7 (pp. 3-24 and 81-90).</p></li>
-</ul>
-</section>
 <section id="marginal-private-cost-and-supply">
 <h2>Marginal private cost and supply<a class="headerlink" href="#marginal-private-cost-and-supply" title="Permalink to this heading">#</a></h2>
 <p>The marginal cost of supplying an additional unit of a good is the minimum amount that a producer would need to be paid to supply that additional unit, given the current production level of the good without the additional unit.</p>
@@ -1900,7 +1903,7 @@ In other words, the appropriate measure of short-run producer welfare (and long-
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Univariate integration</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-reading-guide">References and reading guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-and-reading-guide">Sources and reading guide</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anti-derivatives-and-indefinite-integrals">Anti-derivatives and indefinite integrals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-anti-derivative">What is an anti-derivative?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anti-derivatives-are-not-unique">Anti-derivatives are NOT unique</a></li>
@@ -1936,7 +1939,6 @@ In other words, the appropriate measure of short-run producer welfare (and long-
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#consumer-demand-and-consumer-welfare">Consumer demand and consumer welfare</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-references-and-reading-guide">Sources, references and reading guide</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-private-benefit-and-demand">Marginal private benefit and demand</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diminishing-marginal-benefits">Diminishing marginal benefits</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-mb-schedule-example">Discrete MB schedule example</a></li>
@@ -1955,7 +1957,6 @@ In other words, the appropriate measure of short-run producer welfare (and long-
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#producer-supply-and-producer-welfare">Producer supply and producer welfare</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-private-cost-and-supply">Marginal private cost and supply</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-marginal-costs">Increasing marginal costs</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-cost-in-a-pure-exchange-economy">Marginal cost in a pure exchange economy</a></li>
