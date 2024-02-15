@@ -14,6 +14,8 @@ only_build_toc_files        : false
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - references.bib
+  
+
 
 #######################################################################################
 # Execution settings
@@ -110,3 +112,4 @@ sphinx:
   recursive_update          : false # A boolean indicating whether to overwrite the Sphinx config (true) or recursively update (false)
   config                    :   # key-value pairs to directly over-ride the Sphinx configuration
     language: en
+    bibtex_reference_style: author_year
