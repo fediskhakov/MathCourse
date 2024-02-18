@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Sets, numbers, coordinates, and distances &#8212; ECON7001</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,8 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -65,9 +64,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '02.sets_numbers_coordinates_distances';</script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Mappings: functions and correspondences" href="03.mappings_functions_correspondences.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
     <link rel="prev" title="An introduction to economics" href="01.intro_to_economics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -79,15 +79,6 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -124,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
   <div class="bd-header-announcement container-fluid bd-header-announcement">
-    <div class="bd-header-announcement__content">Welcome to the course!</div>
+    <div class="bd-header-announcement__content">Welcome to EMET7001 in semester 1, 2024</div>
   </div>
 
   
@@ -147,11 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
   
 
 <a class="navbar-brand logo" href="index.html">
-  
   
   
   
@@ -161,8 +150,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/placeholder_logo.png" class="logo__image only-light" alt="ECON7001 - Home"/>
-    <script>document.write(`<img src="_static/placeholder_logo.png" class="logo__image only-dark" alt="ECON7001 - Home"/>`);</script>
+    <img src="_static/math_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/math_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -177,22 +166,8 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="00.intro.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01.intro_to_economics.html">An introduction to economics</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Sets, numbers, coordinates, and distances</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03.mappings_functions_correspondences.html">Mappings: functions and correspondences</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04.equations_inequalities_binary_relations.html">Equations, inequalities, and binary relations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05.sequences_series_limits.html">Sequences, series and limits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06.univariate_differentiation.html">Univariate differentiation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07.linear_algebra.html">Linear algebra</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="08.multivariate_differential_calculus.html">Multivariate differential calculus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09.intro_to_optimisation.html">Introduction to optimisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="10.univariate_integration.html">Univariate integration</a></li>
-
-
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
@@ -347,22 +322,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -586,7 +559,7 @@ interval. There are four types of interval. Let <span class="math notranslate no
 <h2>The real number system<a class="headerlink" href="#the-real-number-system" title="Permalink to this heading">#</a></h2>
 <p>The system of real numbers is an algebraic structure known as a <strong>complete ordered field</strong>. Indeed, in a sense, it is the only complete ordered field in existence. Any other complete ordered field turns out to be “isomoporhic” to the real number system. (The term “isomorphic” is a mathematical version of “essentially the same”).</p>
 <p>The system of real numbers is formally denoted by <span class="math notranslate nohighlight">\((\mathbb{R}, \mathbb{R}_{++}, +, \times)\)</span>, where <span class="math notranslate nohighlight">\(+\)</span> and <span class="math notranslate nohighlight">\(\times\)</span> are the familiar addition and multiplication operations for real numbers.</p>
-<p>The set of real numbers <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> can be viewed as the completion of the the set of rational numbers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> because it involves filling in the “holes” that exist in the set of rational numbers. These holes take the form of irrational numbers like <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(\pi\)</span> and <span class="math notranslate nohighlight">\(e\)</span>.</p>
+<p>The set of real numbers <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> can be viewed as the completion of the set of rational numbers <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> because it involves filling in the “holes” that exist in the set of rational numbers. These holes take the form of irrational numbers like <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(\pi\)</span> and <span class="math notranslate nohighlight">\(e\)</span>.</p>
 <section id="why-aren-t-the-rationals-enough">
 <h3>Why aren’t the rationals enough?<a class="headerlink" href="#why-aren-t-the-rationals-enough" title="Permalink to this heading">#</a></h3>
 <p>Why aren’t the rational numbers enough? What makes us think that they contain “holes”? This is a very good question. Especially when you realise that any numerical calculation on a computer will only generate a rational number.</p>
@@ -1033,10 +1006,11 @@ production, if you prefer). An isocost for this situation takes the form</p>
 
               
               
-              
-              
-                <footer class="prev-next-footer">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="01.intro_to_economics.html"
@@ -1048,15 +1022,18 @@ production, if you prefer). An isocost for this situation takes the form</p>
       </div>
     </a>
     <a class="right-next"
-       href="03.mappings_functions_correspondences.html"
+       href="bibliography.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Mappings: functions and correspondences</p>
+        <p class="prev-next-title">Bibliography</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -1149,7 +1126,6 @@ By Fedor Iskhakov, based on notes by D.S. Eldridge
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
       © Copyright 2024.
@@ -1176,8 +1152,8 @@ By Fedor Iskhakov, based on notes by D.S. Eldridge
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
