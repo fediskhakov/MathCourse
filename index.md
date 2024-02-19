@@ -229,7 +229,7 @@ You will make your life much easier this way
 But not mandatory
 
 
-## Action points for the administrative part
+## Summary/Action points
 
 - Tutorials start next week, **please register before the next lecture**
 - Course content = what’s in lecture notes/slides
