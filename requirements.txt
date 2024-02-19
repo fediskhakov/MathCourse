@@ -1,5 +1,6 @@
 jupyter-book
 matplotlib
+matplotlib_venn
 numpy
 # layout is brocken on the bibliography page, work-around
 # https://github.com/executablebooks/jupyter-book/issues/1997
