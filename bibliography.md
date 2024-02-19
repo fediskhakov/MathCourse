@@ -32,47 +32,47 @@ The references in the class summary and within each lecture will be to the relev
 
 ## Additional books
 
-{cite:ps}`asano2013`
 ```{image} _static/img/bibliography/asano2013.png
 :alt: Asano, A (2013), An introduction to mathematics for economics
 :width: 160px
 ```
+{cite:ps}`asano2013`
 
-{cite:ps}`bradley2013`
 ```{image} _static/img/bibliography/bradley2013.png
 :alt: Bradley, T (2013), Essential mathematics for economics and business (fourth edition)
 :width: 160px
 ```
+{cite:ps}`bradley2013`
 
-{cite:ps}`chiang2005`
 ```{image} _static/img/bibliography/chiang2005.png
 :alt: Chiang, AC, and K Wainwright (2005), Fundamental methods of mathematical economics (fourth edition)
 :width: 160px
 ```
+{cite:ps}`chiang2005`
 
-{cite:ps}`haeussler1987`
 ```{image} _static/img/bibliography/haeussler1987.png
 :alt: Haeussler, EF Jr, and RS Paul (1987), Introductory mathematical analysis for business, economics, and the life and social sciences (fifth edition)
 :width: 160px
 ```
+{cite:ps}`haeussler1987`
 
-{cite:ps}`shannon1995`
 ```{image} _static/img/bibliography/shannon1995.png
 :alt: Shannon, J (1995), Mathematics for business, economics and finance
 :width: 160px
 ```
+{cite:ps}`shannon1995`
 
-{cite:ps}`simon1994`
 ```{image} _static/img/bibliography/simon1994.png
 :alt: Simon, CP, and L Blume (1994), Mathematics for economists
 :width: 160px
 ```
+{cite:ps}`simon1994`
 
-{cite:ps}`sydsaeter2005`
 ```{image} _static/img/bibliography/sydsaeter2005.png
 :alt: Sydsæter, K, P Hammond, A Seierstad, and A Strøm (2005), Further mathematics for economic analysis
 :width: 160px
 ```
+{cite:ps}`sydsaeter2005`
 
 
 
