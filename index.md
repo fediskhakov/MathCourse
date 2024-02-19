@@ -60,7 +60,7 @@ Course title: **Mathematical Techniques for Economic Analysis**
 - **Latest version of the notes a day before the lecture**
 - check for the updates in the morning
 
-## Instructor
+## Course convener and lecturer
 
 Professor **Fedor Iskhakov**
 
@@ -174,7 +174,7 @@ If a concept in not in the lecture notes, it is not assessable
 
 1. **Primary reference:** lecture slides
 
-2. ***Essential mathematics for economic analysis (fifth edition)***<br\>
+2. ***Essential mathematics for economic analysis (fifth edition)***  
 by Sydsæter, Hammond, Strøm and Carvajal
 
 {cite:ps}`sydsaeter2016`:
@@ -184,7 +184,7 @@ by Sydsæter, Hammond, Strøm and Carvajal
 :align: center
 ```
 
-- each lecture will reference book chapters in **SHSC2016**
+- each lecture will reference book chapters in **Sydsæter et.al., 2016**
 - each lecture will give additional references for self-study
 
 ## How tutorials will be conducted?
@@ -203,19 +203,18 @@ by Sydsæter, Hammond, Strøm and Carvajal
 
 1. Administrative questions: RSE admin
 
-  - **Bronwyn Cammack** Senior School Administrator
-  - Email: enquiries.rse@anu.edu.au
-
-  - *"I can not register for the tutorial group"*
+    - **Bronwyn Cammack** Senior School Administrator
+    - Email: enquiries.rse@anu.edu.au
+    - *"I can not register for the tutorial group"*
 
 2. Content related questions: please, refer to the tutors
 
-  - *"I don't understand why this function is convex"*
+    - *"I don't understand why this function is convex"*
 
 3. Other questions: to Fedor
 
-  - *"I'm working hard but still can not keep up"*
-  - *"Can I please have extra exercises for more practice"*
+    - *"I'm working hard but still can not keep up"*
+    - *"Can I please have extra exercises for more practice"*
 
 ## Attendance
 
@@ -229,7 +228,7 @@ You will make your life much easier this way
 But not mandatory
 
 
-## Summary/Action points
+## Summary
 
 - Tutorials start next week, **please register before the next lecture**
 - Course content = what’s in lecture notes/slides
