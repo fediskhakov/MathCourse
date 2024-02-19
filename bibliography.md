@@ -68,6 +68,13 @@ The references in the class summary and within each lecture will be to the relev
 ```
 {cite:ps}`simon1994`
 
+```{image} _static/img/bibliography/sundaram1996.png
+:alt: RK Sundaram (1996), A first course in optimization theory
+:width: 160px
+```
+{cite:ps}`sundaram1996`
+
+
 ```{image} _static/img/bibliography/sydsaeter2005.png
 :alt: Sydsæter, K, P Hammond, A Seierstad, and A Strøm (2005), Further mathematics for economic analysis
 :width: 160px
