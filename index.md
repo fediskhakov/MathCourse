@@ -19,24 +19,35 @@ Course title: **Mathematical Techniques for Economic Analysis**
 
 | Week | Date | Topic | Notes |
 | ---- | ---- | ----- | ----- |
-| 1 | Feb 20 | [Introduction to mathematical economics](01.intro_to_economics) | |
-| 2 | Feb 27 | [Sets, numbers, coordinates, and distances](02.sets_numbers_coordinates_distances.md) | Tutorials start |
-| 3 | March 5 | [Mappings: functions and correspondences](03.mappings_functions_correspondences.md) | |
+| 1 | Feb 20 | 📖 [Introduction to mathematical economics](01.intro_to_economics) <br/> ☕️ [Wason selection paradox](01.intro_wason) | |
+| 2 | Feb 27 | 📖 [Sets, numbers, coordinates, and distances](02.sets_numbers_coordinates_distances.md) | Tutorials start |
+| | | 🔬 Tutorial problems (alpha) | |
+| 3 | March 5 | 📖 Mappings: functions and correspondences | |
+| | | 🔬 Tutorial problems (beta) | |
 | | March 11 | Online test 10% | 30min, open book |
-| 4 | March 12 | [Equations, inequalities, and binary relations](04.equations_inequalities_binary_relations.md) | |
-| 5 | March 19 | [Sequences, series and limits](05.sequences_series_limits.md) | |
+| 4 | March 12 | 📖 Equations, inequalities, and binary relations | |
+| | | 🔬 Tutorial problems (gamma) | |
+| 5 | March 19 | 📖 Sequences, series and limits | |
+| | | 🔬 Tutorial problems (delta) | |
 | | March 25 | Online test 10% | 30min, open book |
-| 6 | March 26 | [Univariate differentiation](06.univariate_differentiation.md) | |
+| 6 | March 26 | 📖 Univariate differentiation | |
+| | | 🔬 Tutorial problems (epsilon) | |
 | | | Teaching break | 2 weeks |
-| 7 | April 16 | [Linear algebra](07.linear_algebra.md) | |
+| 7 | April 16 | 📖 Linear algebra | |
+| | | 🔬 Tutorial problems (zeta) | |
 | | April 22 | Online test 10% | 30min, open book |
-| 8 | April 23 | [Linear algebra](07.linear_algebra.md) | |
-| 9 | April 30 | [Multivariate differential calculus](08.multivariate_differential_calculus.md) | TBA |
+| 8 | April 23 | 📖 Linear algebra | |
+| | | 🔬 Tutorial problems (eta) | |
+| 9 | April 30 | 📖 Multivariate differential calculus | |
+| | | 🔬 Tutorial problems (theta) | |
 | | May 6 | Online test 10% | 30min, open book |
-| 10 | May 7 | [Multivariate differential calculus](08.multivariate_differential_calculus.md) | |
-| 11 | May 14 | [Introduction to optimisation](09.intro_to_optimisation.md) | |
+| 10 | May 7 | 📖 Multivariate differential calculus | |
+|0 | | 🔬 Tutorial problems (iota) | |
+| 11 | May 14 | 📖 Introduction to optimisation | |
+|1 | | 🔬 Tutorial problems (kappa) | |
 | | May 20 | Online test 10% | 30min, open book |
-| 12 | May 21 | [Univariate integration](10.univariate_integration.md) | |
+| 12 | May 21 | 📖 Univariate integration <br/> 📖 Revision | |
+| 12 | | Consultation hours | |
 | | | Final exam 50% | 3h, invigilated |
 
 
@@ -158,7 +169,7 @@ Computerized quizzes are located at the course Wattle page
 - Will be held during the examination period May 30 to June 16
 
 
-## Comments for lectures notes/slides
+## Note on lectures notes/slides
 
 - Cover exactly what you are required to know
 - Code inserts are the exception, they are not assessable
