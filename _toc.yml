@@ -6,13 +6,15 @@ root: index
 title: EMET7001
 chapters:
 - file: 01.intro_to_economics
+- file: 01.intro_wason
 - file: 02.sets_numbers_coordinates_distances
-- file: 03.mappings_functions_correspondences
-- file: 04.equations_inequalities_binary_relations
-- file: 05.sequences_series_limits
-- file: 06.univariate_differentiation
-- file: 07.linear_algebra
-- file: 08.multivariate_differential_calculus
-- file: 09.intro_to_optimisation
-- file: 10.univariate_integration
+- file: ps01.alpha
+# - file: 03.mappings_functions_correspondences
+# - file: 04.equations_inequalities_binary_relations
+# - file: 05.sequences_series_limits
+# - file: 06.univariate_differentiation
+# - file: 07.linear_algebra
+# - file: 08.multivariate_differential_calculus
+# - file: 09.intro_to_optimisation
+# - file: 10.univariate_integration
 - file: bibliography
