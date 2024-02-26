@@ -21,7 +21,7 @@ Course title: **Mathematical Techniques for Economic Analysis**
 | ---- | ---- | ----- | ----- |
 | 1 | Feb 20 | 📖 [Introduction to mathematical economics](01.intro_to_economics) <br/> ☕️ [Wason selection paradox](01.intro_wason) | |
 | 2 | Feb 27 | 📖 [Sets, numbers, coordinates, and distances](02.sets_numbers_coordinates_distances.md) | Tutorials start |
-| | | 🔬 Tutorial problems (alpha) | |
+| | | 🔬 [Tutorial problems (alpha)](ps01.alpha) | |
 | 3 | March 5 | 📖 Mappings: functions and correspondences | |
 | | | 🔬 Tutorial problems (beta) | |
 | | March 11 | Online test 10% | 30min, open book |
@@ -169,7 +169,7 @@ Computerized quizzes are located at the course Wattle page
 - Will be held during the examination period May 30 to June 16
 
 
-## Note on lectures notes/slides
+## Note on lectures notes
 
 - Cover exactly what you are required to know
 - Code inserts are the exception, they are not assessable
@@ -183,7 +183,7 @@ If a concept in not in the lecture notes, it is not assessable
 
 ## Reading materials
 
-1. **Primary reference:** lecture slides
+1. **Primary reference:** lecture notes
 
 2. ***Essential mathematics for economic analysis (fifth edition)***  
 by Sydsæter, Hammond, Strøm and Carvajal
@@ -242,8 +242,8 @@ But not mandatory
 ## Summary
 
 - Tutorials start next week, **please register before the next lecture**
-- Course content = what’s in lecture notes/slides
-- Lecture slides are available online and will be updated throughout the semester
+- Course content = what’s in lecture notes
+- Lecture notes are available online and will be updated throughout the semester
 
 
 ## Reference
