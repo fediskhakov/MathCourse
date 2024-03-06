@@ -22,8 +22,8 @@ Course title: **Mathematical Techniques for Economic Analysis**
 | 1 | Feb 20 | 📖 [Introduction to mathematical economics](01.intro_to_economics) <br/> ☕️ [Wason selection paradox](01.intro_wason) | |
 | 2 | Feb 27 | 📖 [Sets, numbers, coordinates, and distances](02.sets_numbers_coordinates_distances.md) | Tutorials start |
 | | | 🔬 [Tutorial problems (alpha)](ps01.alpha) | |
-| 3 | March 5 | 📖 Mappings: functions and correspondences | |
-| | | 🔬 Tutorial problems (beta) | |
+| 3 | March 5 | 📖 [Mappings: functions and correspondences](03.mappings_functions_correspondences) | |
+| | | 🔬 [Tutorial problems (beta)](ps02.beta) | |
 | | March 11 | Online test 10% | 30min, open book |
 | 4 | March 12 | 📖 Equations, inequalities, and binary relations | |
 | | | 🔬 Tutorial problems (gamma) | |
