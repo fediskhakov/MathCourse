@@ -86,7 +86,7 @@ html:
 
 #######################################################################################
 # A banner announcement at the top of the site.
-  announcement: "" 
+  announcement: "Solutions for tutorial problems alpha and beta published" 
 
 #######################################################################################
 # LaTeX-specific settings
