@@ -24,28 +24,28 @@ Course title: **Mathematical Techniques for Economic Analysis**
 | | | 🔬 [Tutorial problems (alpha)](ps01.alpha) | |
 | 3 | March 5 | 📖 [Mappings: functions and correspondences](03.mappings_functions_correspondences) | |
 | | | 🔬 [Tutorial problems (beta)](ps02.beta) | |
-| | March 11 | Online test 10% | 30min, open book |
+| | March 11 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
 | 4 | March 12 | 📖 Equations, inequalities, and binary relations | |
 | | | 🔬 Tutorial problems (gamma) | |
 | 5 | March 19 | 📖 Sequences, series and limits | |
 | | | 🔬 Tutorial problems (delta) | |
-| | March 25 | Online test 10% | 30min, open book |
+| | March 25 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
 | 6 | March 26 | 📖 Univariate differentiation | |
 | | | 🔬 Tutorial problems (epsilon) | |
 | | | Teaching break | 2 weeks |
 | 7 | April 16 | 📖 Linear algebra | |
 | | | 🔬 Tutorial problems (zeta) | |
-| | April 22 | Online test 10% | 30min, open book |
+| | April 22 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
 | 8 | April 23 | 📖 Linear algebra | |
 | | | 🔬 Tutorial problems (eta) | |
 | 9 | April 30 | 📖 Multivariate differential calculus | |
 | | | 🔬 Tutorial problems (theta) | |
-| | May 6 | Online test 10% | 30min, open book |
+| | May 6 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
 | 10 | May 7 | 📖 Multivariate differential calculus | |
 |0 | | 🔬 Tutorial problems (iota) | |
 | 11 | May 14 | 📖 Introduction to optimisation | |
 |1 | | 🔬 Tutorial problems (kappa) | |
-| | May 20 | Online test 10% | 30min, open book |
+| | May 20 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
 | 12 | May 21 | 📖 Univariate integration <br/> 📖 Revision | |
 | 12 | | Consultation hours | |
 | | | Final exam 50% | 3h, invigilated |
