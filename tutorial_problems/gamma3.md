@@ -1,0 +1,2 @@
+The Geometric Products Company produces a product at a variable cost per unit of \$2.20. The company’s fixed costs are \$95,000.00 and each unit sells for \$3.00. Find a function that expresses the company’s profit as a function of its output choice. What type of function is it?
+Compute the break-even point for the firm.
