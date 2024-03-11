@@ -25,7 +25,7 @@ Course title: **Mathematical Techniques for Economic Analysis**
 | 3 | March 5 | 📖 [Mappings: functions and correspondences](03.mappings_functions_correspondences) | |
 | | | 🔬 [Tutorial problems (beta)](ps02.beta) | |
 | | March 11 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
-| 4 | March 12 | 📖 Equations, inequalities, and binary relations | |
+| 4 | March 12 | 📖 [Equations and inequalities](04.equations_inequalities) <br/> ☕️ [Numerical equation solving](13_bisections_newton) | |
 | | | 🔬 Tutorial problems (gamma) | |
 | 5 | March 19 | 📖 Sequences, series and limits | |
 | | | 🔬 Tutorial problems (delta) | |
