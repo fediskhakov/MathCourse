@@ -1,1 +1,0 @@
-A company finds that if it produces and sells $q$ units of a product, its total sales revenue in dollars is $100\sqrt{q}$. If the variable cost per unit is \$2.00 and the fixed cost is \$1200.00, find all of the values of $q$ for which the company will make positive profit.
