@@ -12,7 +12,8 @@ chapters:
 - file: 03.mappings_functions_correspondences
 - file: 03.desmos
 - file: ps02.beta
-- file: 04.equations_inequalities_binary_relations
+- file: 04.equations_inequalities
+- file: 13_bisections_newton.ipynb
 - file: 05.sequences_series_limits
 - file: 06.univariate_differentiation
 - file: 07.linear_algebra
