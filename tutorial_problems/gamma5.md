@@ -5,10 +5,10 @@ cocoa market in Ghana. It is also a monopolist (that is, the only
 seller) in the cocoa market in the United Kingdom. 
 
 The price that the company receives per tonne of cocoa that it sells in the United
-Kingdom is given by the United Kingdom Cocoa Inverse Demand Equation, $P_{UK} = \alpha_1 - \sqrt{Q}$, where $Q$ is the number of tonnes of cocoa that it sells in the United Kingdom.
+Kingdom is given by the United Kingdom Cocoa Inverse Demand Equation, $P_{UK} = \alpha_1 - \tfrac{1}{3}Q$, where $Q$ is the number of tonnes of cocoa that it sells in the United Kingdom.
 
 The price that it must pay per tonne of cocoa that it purchases in Ghana is given by the
-Ghana Cocoa Inverse Supply Equation, $P_G = \alpha_2 + \sqrt{Q}$, where $Q$ is the number of tonnes of cocoa that it purchases in Ghana. 
+Ghana Cocoa Inverse Supply Equation, $P_G = \alpha_2 + \tfrac{1}{6}Q$, where $Q$ is the number of tonnes of cocoa that it purchases in Ghana. 
 
 It costs the company $\gamma$ per tonne of cocoa to ship it from Ghana to the United Kingdom. No cocoa is lost or spoiled in this process. As such, you may assume that the quantity of cocoa purchased in Ghana, the quantity shipped from Ghana to the United Kingdom, and the quantity sold in the United Kingdom, are all identical.
 
