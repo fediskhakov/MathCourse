@@ -15,7 +15,7 @@ chapters:
 - file: 04.equations_inequalities
 - file: 13_bisections_newton.ipynb
 - file: ps03.gamma
-- file: 05.sequences_series_limits
+- file: 05.sequences_series
 - file: 06.univariate_differentiation
 - file: 07.linear_algebra
 - file: 08.multivariate_differential_calculus
