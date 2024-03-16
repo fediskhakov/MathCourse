@@ -27,7 +27,7 @@ Course title: **Mathematical Techniques for Economic Analysis**
 | | March 11 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
 | 4 | March 12 | 📖 [Equations and inequalities](04.equations_inequalities) <br/> ☕️ [Numerical equation solving](13_bisections_newton) | |
 | | | 🔬 [Tutorial problems (gamma)](ps03.gamma) | |
-| 5 | March 19 | 📖 Sequences, series and limits | |
+| 5 | March 19 | 📖 [Sequences, series and limits](05.sequences_series) | |
 | | | 🔬 Tutorial problems (delta) | |
 | | March 25 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
 | 6 | March 26 | 📖 Univariate differentiation | |
