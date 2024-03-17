@@ -16,9 +16,10 @@ chapters:
 - file: 13_bisections_newton.ipynb
 - file: ps03.gamma
 - file: 05.sequences_series
+- file: ps04.delta
 # - file: 06.univariate_differentiation
 # - file: 07.linear_algebra
+# - file: 07.linear_systems
 # - file: 08.multivariate_differential_calculus
-# - file: 09.intro_to_optimisation
 # - file: 10.univariate_integration
 - file: bibliography
