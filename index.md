@@ -31,7 +31,7 @@ Course title: **Mathematical Techniques for Economic Analysis**
 | | | 🔬 [Tutorial problems (delta)](ps04.delta) | |
 | | March 25 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
 | 6 | March 26 | 📖 [Univariate differentiation](06.univariate_differentiation) | |
-| | | 🔬 Tutorial problems (epsilon) | |
+| | | 🔬 [Tutorial problems (epsilon)](ps05.epsilon) | |
 | | | Teaching break | 2 weeks |
 | 7 | April 16 | 📖 Vector and matrix arithmetics | |
 | | | 🔬 Tutorial problems (zeta) | |

@@ -1,0 +1,1 @@
+Consider a function $f: X \longrightarrow \mathbb{R}$ where $X \subseteq \mathbb{R}$. Suppose that $\lim _{h \rightarrow 0}\left(\frac{f(a+h)-f(a)}{h}\right)$ exists. Show that this implies that $f(x)$ is continuous at the point $a \in X$.
