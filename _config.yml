@@ -86,7 +86,7 @@ html:
 
 #######################################################################################
 # A banner announcement at the top of the site.
-  announcement: "" 
+  announcement: "NOTE that lecture 6 (Univariate differentiation) will be re-uploaded before Tuesday" 
 
 #######################################################################################
 # LaTeX-specific settings
