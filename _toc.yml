@@ -18,9 +18,15 @@ chapters:
 - file: 05.sequences_series
 - file: ps04.delta
 - file: 06.univariate_differentiation
-- file: ps05.epsilon
 - file: 07.linear_algebra
 - file: 07.linear_systems
-# - file: 08.multivariate_differential_calculus
-# - file: 10.univariate_integration
+- file: 08.multivariate_differential_calculus
+- file: 10.univariate_integration
 - file: bibliography
+
+
+- file: 09.intro_to_optimisation
+- file: 99.function_shape_deriv
+- file: 99.quadratic_forms
+- file: 99.vector_inequalities
+- file: 99.taylor_series
