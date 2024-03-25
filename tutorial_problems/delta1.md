@@ -8,4 +8,4 @@ What are the first five terms of each of the following sequences?
 
 (d) $\left\{ \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \cdots + \frac{1}{2^n}\right\}_{n \in \mathbb{N}}$
 
-(e) $\left\{\frac{(-1)^{n - 1} x^{2n+1}}{(2n+1)!} \right\}_{n \in \mathbb{N}}$
+(e) $\left\{\frac{(-1)^{n - 1} x^{2n-1}}{(2n-1)!} \right\}_{n \in \mathbb{N}}$
