@@ -33,10 +33,10 @@ Course title: **Mathematical Techniques for Economic Analysis**
 | 6 | March 26 | 📖 [Univariate differentiation](06.univariate_differentiation) | |
 | | | 🔬 [Tutorial problems (epsilon)](ps05.epsilon) | |
 | | | Teaching break | 2 weeks |
-| 7 | April 16 | 📖 Vector and matrix arithmetics | |
+| 7 | April 16 | 📖 [Vector and matrix arithmetics](07.linear_algebra) | |
 | | | 🔬 Tutorial problems (zeta) | |
 | | April 22 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
-| 8 | April 23 | 📖 Linear systems of equations | |
+| 8 | April 23 | 📖 [Linear systems of equations](07.linear_systems) | |
 | | | 🔬 Tutorial problems (eta) | |
 | 9 | April 30 | 📖 Multivariate differential calculus | |
 | | | 🔬 Tutorial problems (theta) | |

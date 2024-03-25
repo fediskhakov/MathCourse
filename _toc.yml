@@ -19,8 +19,8 @@ chapters:
 - file: ps04.delta
 - file: 06.univariate_differentiation
 - file: ps05.epsilon
-# - file: 07.linear_algebra
-# - file: 07.linear_systems
+- file: 07.linear_algebra
+- file: 07.linear_systems
 # - file: 08.multivariate_differential_calculus
 # - file: 10.univariate_integration
 - file: bibliography
