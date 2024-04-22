@@ -48,7 +48,7 @@ The remainder term for this cubic Taylor series approximation of the function $f
 
 $$
 \begin{array}{ll}
-R_{4}(x) & =\left(\frac{1}{4 !}\right) f^{(4)}(z)(x-2)^{4} \\
+R_{3}(x) & =\left(\frac{1}{4 !}\right) f^{(4)}(z)(x-2)^{4} \\
 & =\left(\frac{1}{4 !}\right)\left(\left(\frac{1}{2^{4}}\right) e^{\frac{z}{2}}\right)(x-2)^{4} \\
 & =\left(\frac{1}{24}\right)\left(\frac{1}{16}\right) e^{\frac{z}{2}}(x-2)^{4} \\
 & =\left(\frac{1}{384}\right) e^{\frac{z}{2}}(x-2)^{4},

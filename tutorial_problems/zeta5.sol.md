@@ -10,7 +10,7 @@ $$
 0,& 1 
 \end{array}
 \right)
-= 5\cdot 1 + 0\cdot 1 = 5
+= 5\cdot 1 - 0\cdot 1 = 5
 $$
 
 (d) By recursive definition of a $(3 \times 3)$ determinant, using the last raw for the recursive expansion (it has most zeros!), we have
