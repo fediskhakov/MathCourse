@@ -1,4 +1,4 @@
-It is a linear version of a three market Marshallian Cross model.
+This problem is a linear version of a three market Marshallian Cross model.
 
 Assuming that all three markets are in equilibrium, solve the following system of linear equations.
 

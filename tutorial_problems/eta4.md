@@ -1,4 +1,4 @@
-It appears to be part of an application of a linear version of a three market Marshallian cross model.
+This problem is a part of an application of a linear version of a three market Marshallian cross model.
 
 Solve the following system of linear equations:
 

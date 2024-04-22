@@ -1,4 +1,4 @@
-It is an example of the Keynesian cross model.
+This problem is an example of the Keynesian cross model.
 
 Use Cramer's rule to solve the following system of linear equations:
 
