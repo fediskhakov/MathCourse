@@ -8,7 +8,7 @@
 
 (e) $\frac{d y}{d x}=4 x^{3}+2 e^{x}$
 
-(f) $\frac{d y}{d x}=10 + 1 = 11$
+(f) $\frac{d y}{d x}=\frac{10}{x}$
 
 (g) $\frac{\mathrm{dc}}{\mathrm{dq}}=0+8(1)-2 \mathrm{q}^{-2}=8-2 \mathrm{q}^{-2}$
 
