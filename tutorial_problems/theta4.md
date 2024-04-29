@@ -1,0 +1,1 @@
+Let $D(p, m)$ indicate a typical consumer's demand for a particular commodity, as a function of its price $p$ and the consumer's own income $m$.  Show that the proportion $pD/m$ of income spent on the commodity increases with income if $El_m D > 1$ (in which case the good is a "luxury", whereas it is a "necessity" if $El_m D < 1$).
