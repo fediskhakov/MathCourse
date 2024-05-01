@@ -24,5 +24,6 @@ chapters:
 - file: 07.linear_systems
 - file: ps07.eta
 - file: 08.multivariate_differential_calculus
+- file: ps08.theta
 # - file: 10.univariate_integration
 - file: bibliography
