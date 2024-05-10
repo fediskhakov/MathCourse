@@ -42,7 +42,7 @@ Course title: **Mathematical Techniques for Economic Analysis**
 | | | 🔬 [Tutorial problems (theta)](ps08.theta) | |
 | | May 6 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
 | 10 | May 7 | 📖 [Multivariate differential calculus (2)](08.multivariate_differential_calculus) | |
-|0 | | 🔬 Tutorial problems (iota) | |
+|0 | | 🔬 [Tutorial problems (iota)](ps09.iota) | |
 | 11 | May 14 | 📖 Univariate integration | |
 |1 | | 🔬 Tutorial problems (kappa) | |
 | | May 20 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
