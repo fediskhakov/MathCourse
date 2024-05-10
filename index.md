@@ -34,12 +34,12 @@ Course title: **Mathematical Techniques for Economic Analysis**
 | | | 🔬 [Tutorial problems (epsilon)](ps05.epsilon) | |
 | | | Teaching break | 2 weeks |
 | 7 | April 16 | 📖 [Vector and matrix arithmetics](07.linear_algebra) | |
-| | | 🔬 Tutorial problems (zeta) | |
+| | | 🔬 [Tutorial problems (zeta)](ps06.zeta) | |
 | | April 22 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
 | 8 | April 23 | 📖 [Linear systems of equations](07.linear_systems) | |
-| | | 🔬 Tutorial problems (eta) | |
+| | | 🔬 [Tutorial problems (eta)](ps07.eta) | |
 | 9 | April 30 | 📖 [Multivariate differential calculus (1)](08.multivariate_differential_calculus) | |
-| | | 🔬 Tutorial problems (theta) | |
+| | | 🔬 [Tutorial problems (theta)](ps08.theta) | |
 | | May 6 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
 | 10 | May 7 | 📖 [Multivariate differential calculus (2)](08.multivariate_differential_calculus) | |
 |0 | | 🔬 Tutorial problems (iota) | |

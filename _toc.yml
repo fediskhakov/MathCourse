@@ -20,14 +20,12 @@ chapters:
 - file: 06.univariate_differentiation
 - file: ps05.epsilon
 - file: 07.linear_algebra
+- file: ps06.zeta
 - file: 07.linear_systems
+- file: ps07.eta
 - file: 08.multivariate_differential_calculus
-- file: 10.univariate_integration
+- file: ps08.theta
+- file: 09.multivariate_differential_calculus
+- file: ps09.iota
+# - file: 10.univariate_integration
 - file: bibliography
-
-
-- file: 09.intro_to_optimisation
-- file: 99.function_shape_deriv
-- file: 99.quadratic_forms
-- file: 99.vector_inequalities
-- file: 99.taylor_series
