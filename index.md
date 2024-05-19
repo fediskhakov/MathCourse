@@ -46,8 +46,8 @@ Course title: **Mathematical Techniques for Economic Analysis**
 | 11 | May 14 | 📖 [Univariate integration](10.univariate_integration) | |
 |1 | | 🔬 [Tutorial problems (kappa)](ps10.kappa) | |
 | | May 20 | Online test 10% [link](https://wattlecourses.anu.edu.au/course/view.php?id=42532#section-1) | 30min, open book |
-| 12 | May 21 | 📖 Revision | |
-| 12 | | Consultation hours <br/> 🔬 [Practice materials](12.practice_for_exam) | |
+| 12 | May 21 | 🛟 [Revision](12.practice_for_exam) | |
+| 12 | | Consultation hours | |
 | | | Final exam 50% | 3h, invigilated |
 
 
